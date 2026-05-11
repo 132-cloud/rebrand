@@ -6,7 +6,7 @@ import { FlowFieldShader } from "@/components/animations/FlowFieldShader";
 
 export function AISection() {
   return (
-    <section className="section-padding bg-charcoal overflow-hidden">
+    <section className="section-padding bg-black overflow-hidden">
       <div className="container-site">
         {/* Heading and button above */}
         <ScrollReveal>

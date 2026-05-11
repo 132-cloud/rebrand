@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 
 export function FlowFieldShader() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mouseRef = useRef({ x: 0.5, y: 0.5, active: false });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -13,140 +12,84 @@ export function FlowFieldShader() {
     if (!ctx) return;
 
     let animationId: number;
-    let lines: {
-      points: { x: number; y: number; baseX: number; baseY: number }[];
-      color: string;
-    }[] = [];
+    let w = 0;
+    let h = 0;
+
+    const fontSize = 14;
+    const lineHeight = fontSize * 1.5;
+    const charWidth = fontSize * 0.85;
+    let cols = 0;
+    let rows = 0;
+    let time = 0;
 
     const resize = () => {
-      const dpr = window.devicePixelRatio || 1;
+      const dpr = Math.min(window.devicePixelRatio, 2);
       const rect = canvas.getBoundingClientRect();
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
+      w = rect.width;
+      h = rect.height;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
       ctx.scale(dpr, dpr);
-      initLines(rect.width, rect.height);
+      cols = Math.ceil(w / charWidth) + 2;
+      rows = Math.ceil(h / lineHeight) + 2;
     };
 
-    const initLines = (w: number, h: number) => {
-      lines = [];
-      const lineCount = 60;
-      const centerX = w / 2;
-      const centerY = h / 2;
-
-      for (let i = 0; i < lineCount; i++) {
-        const points: { x: number; y: number; baseX: number; baseY: number }[] = [];
-        const segments = 20;
-        const angle = ((i / lineCount) * Math.PI * 2) - Math.PI;
-        const spread = 0.25 + Math.random() * 0.2;
-
-        for (let j = 0; j <= segments; j++) {
-          const t = j / segments;
-          // Lines converge at center then spread outward (butterfly/hourglass shape)
-          const curveT = t < 0.5 ? t * 2 : (1 - t) * 2;
-          const narrowing = Math.pow(curveT, 1.5);
-
-          let x: number, y: number;
-          if (t < 0.5) {
-            // Left side - spreading from center to left
-            const progress = 1 - t * 2;
-            x = centerX - progress * centerX * 0.98;
-            y = centerY + Math.sin(angle) * progress * h * spread * (1 - narrowing * 0.7);
-          } else {
-            // Right side - spreading from center to right
-            const progress = (t - 0.5) * 2;
-            x = centerX + progress * centerX * 0.98;
-            y = centerY + Math.sin(angle + Math.PI * 0.1) * progress * h * spread * (1 - narrowing * 0.7);
-          }
-
-          // Add slight curve variation
-          y += Math.sin(t * Math.PI * 2 + i * 0.5) * 15;
-
-          points.push({ x, y, baseX: x, baseY: y });
-        }
-
-        const opacity = 0.15 + Math.random() * 0.35;
-        lines.push({
-          points,
-          color: `rgba(0, 100, 255, ${opacity})`,
-        });
-      }
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouseRef.current = {
-        x: (e.clientX - rect.left) / rect.width,
-        y: (e.clientY - rect.top) / rect.height,
-        active: true,
-      };
-    };
-
-    const handleMouseLeave = () => {
-      mouseRef.current.active = false;
-    };
-
-    const draw = (time: number) => {
-      const rect = canvas.getBoundingClientRect();
-      const w = rect.width;
-      const h = rect.height;
+    const draw = () => {
+      time += 0.003;
       ctx.clearRect(0, 0, w, h);
+      ctx.font = `${fontSize}px monospace`;
+      ctx.textBaseline = "middle";
 
-      const mouse = mouseRef.current;
-      const mx = mouse.x * w;
-      const my = mouse.y * h;
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+          const x = col * charWidth;
+          const y = row * lineHeight;
 
-      for (const line of lines) {
-        ctx.beginPath();
-        for (let i = 0; i < line.points.length; i++) {
-          const p = line.points[i];
+          const nx = col / cols;
+          const ny = row / rows;
 
-          // Animate points with gentle wave
-          let targetX = p.baseX + Math.sin(time * 0.0005 + i * 0.3) * 3;
-          let targetY = p.baseY + Math.cos(time * 0.0004 + i * 0.2) * 2;
+          // Diagonal wave moving from right-top to left-bottom
+          // The wave front is a diagonal line that sweeps across
+          const diagonal = nx * 0.6 + (1 - ny) * 0.4;
 
-          // Mouse interaction - push points away
-          if (mouse.active) {
-            const dx = targetX - mx;
-            const dy = targetY - my;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            const radius = 120;
-            if (dist < radius) {
-              const force = (1 - dist / radius) * 40;
-              targetX += (dx / dist) * force;
-              targetY += (dy / dist) * force;
-            }
-          }
+          // Multiple slow eased waves
+          const wave1 = Math.sin(diagonal * 5 - time * 1.8) * 0.5 + 0.5;
+          const wave2 = Math.sin(diagonal * 3.5 - time * 1.2 + 1.5) * 0.5 + 0.5;
+          const wave3 = Math.sin(nx * 4 - time * 0.9 + ny * 2) * 0.5 + 0.5;
 
-          // Smooth interpolation
-          p.x += (targetX - p.x) * 0.08;
-          p.y += (targetY - p.y) * 0.08;
+          // Ease the waves for smoother motion
+          const eased1 = wave1 * wave1 * (3 - 2 * wave1);
+          const eased2 = wave2 * wave2 * (3 - 2 * wave2);
+          const eased3 = wave3 * wave3 * (3 - 2 * wave3);
 
-          if (i === 0) {
-            ctx.moveTo(p.x, p.y);
-          } else {
-            const prev = line.points[i - 1];
-            const cpx = (prev.x + p.x) / 2;
-            const cpy = (prev.y + p.y) / 2;
-            ctx.quadraticCurveTo(prev.x, prev.y, cpx, cpy);
-          }
+          // Combine - this creates the rolling wave shape
+          let intensity = eased1 * 0.45 + eased2 * 0.35 + eased3 * 0.2;
+
+          // Fade from top-left (dark) to bottom-right (bright) - the diagonal gradient
+          const positionBias = nx * 0.4 + ny * 0.6;
+          intensity *= positionBias;
+
+          // Soft edge fade at the wave boundary
+          if (intensity < 0.05) continue;
+
+          // Smooth the edge with a soft curve
+          const edgeFade = Math.min(1, (intensity - 0.05) / 0.15);
+          const alpha = edgeFade * intensity * 1.6;
+
+          if (alpha < 0.02) continue;
+
+          // All characters are ✳ (asterisk/star) as in the reference
+          const char = "✳";
+
+          // Color: #0065ff with boosted brightness
+          const brightness = Math.min(1, alpha * 1.3);
+          const r = Math.floor(brightness * 20);
+          const g = Math.floor(brightness * 120);
+          const b = Math.floor(brightness * 255);
+
+          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${Math.min(1, alpha * 1.4)})`;
+          ctx.fillText(char, x, y);
         }
-        // Draw final segment to the last point
-        const lastPoint = line.points[line.points.length - 1];
-        ctx.lineTo(lastPoint.x, lastPoint.y);
-        ctx.strokeStyle = line.color;
-        ctx.lineWidth = 0.8;
-        ctx.stroke();
-
-        // Draw endpoint dots at actual last drawn positions
-        const firstPt = line.points[0];
-        const lastPt = line.points[line.points.length - 1];
-        ctx.fillStyle = "rgba(0, 100, 255, 0.6)";
-        ctx.beginPath();
-        ctx.arc(firstPt.x, firstPt.y, 2, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(lastPt.x, lastPt.y, 2, 0, Math.PI * 2);
-        ctx.fill();
       }
 
       animationId = requestAnimationFrame(draw);
@@ -154,15 +97,10 @@ export function FlowFieldShader() {
 
     resize();
     animationId = requestAnimationFrame(draw);
-
-    canvas.addEventListener("mousemove", handleMouseMove);
-    canvas.addEventListener("mouseleave", handleMouseLeave);
     window.addEventListener("resize", resize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      canvas.removeEventListener("mousemove", handleMouseMove);
-      canvas.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("resize", resize);
     };
   }, []);
@@ -170,8 +108,8 @@ export function FlowFieldShader() {
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full cursor-crosshair"
-      style={{ minHeight: "500px" }}
+      className="w-full h-full"
+      style={{ minHeight: "500px", background: "transparent" }}
     />
   );
 }
