@@ -1,0 +1,194 @@
+@import url("https://use.typekit.net/kuk6noc.css");
+@import "tailwindcss";
+
+@theme {
+  /* Primary Brand Colors */
+  --color-blue: #0065FF;
+  --color-blue-50: #DEEBFF;
+  --color-blue-75: #B3D4FF;
+  --color-blue-100: #4C9AFF;
+  --color-blue-200: #2684FF;
+  --color-blue-300: #0065FF;
+  --color-blue-400: #0052CC;
+  --color-blue-500: #0747A6;
+  --color-sky-blue: #0094FF;
+  --color-charcoal: #262B36;
+  --color-charcoal-dark: #1F222A;
+  --color-charcoal-medium: #32363F;
+  --color-charcoal-light: #A9AAAE;
+
+  /* Secondary Colors */
+  --color-red-50: #FFEBE6;
+  --color-red-75: #FFBDAD;
+  --color-red-100: #FF8F73;
+  --color-red-200: #FF7452;
+  --color-red-300: #FF5630;
+  --color-red-400: #DE350B;
+  --color-red-500: #BF2600;
+
+  --color-yellow-50: #FFFAE6;
+  --color-yellow-75: #FFF0B3;
+  --color-yellow-100: #FFE380;
+  --color-yellow-200: #FFC400;
+  --color-yellow-300: #FFAB00;
+  --color-yellow-400: #FF991F;
+  --color-yellow-500: #FF8B00;
+
+  --color-green-50: #E3FCEF;
+  --color-green-75: #ABF5D1;
+  --color-green-100: #79F2C0;
+  --color-green-200: #57D9A3;
+  --color-green-300: #36B37E;
+  --color-green-400: #00875A;
+  --color-green-500: #006644;
+
+  --color-teal-50: #E6FCFF;
+  --color-teal-75: #B3F5FF;
+  --color-teal-100: #79E2F2;
+  --color-teal-200: #00C7E6;
+  --color-teal-300: #00B8D9;
+  --color-teal-400: #00A3BF;
+  --color-teal-500: #008DA6;
+
+  --color-purple-50: #EAE6FF;
+  --color-purple-75: #C0B6F2;
+  --color-purple-100: #998DD9;
+  --color-purple-200: #8777D9;
+  --color-purple-300: #6554C0;
+  --color-purple-400: #5243AA;
+  --color-purple-500: #403294;
+
+  /* Neutral Scale */
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-10: #FAFBFC;
+  --color-neutral-20: #F4F5F7;
+  --color-neutral-30: #EBECF0;
+  --color-neutral-40: #DFE1E6;
+  --color-neutral-50: #C1C7D0;
+  --color-neutral-60: #B3BAC5;
+  --color-neutral-70: #A5ADBA;
+  --color-neutral-80: #97A0AF;
+  --color-neutral-90: #8993A4;
+  --color-neutral-100: #7A869A;
+  --color-neutral-200: #6B778C;
+  --color-neutral-300: #5E6C84;
+  --color-neutral-400: #505F79;
+  --color-neutral-500: #42526E;
+  --color-neutral-600: #344563;
+  --color-neutral-700: #253858;
+  --color-neutral-800: #172B4D;
+  --color-neutral-900: #091E42;
+
+  /* Font Families */
+  --font-sans: "proxima-nova", sans-serif;
+  --font-heading: "source-sans-pro", sans-serif;
+  --font-serif: "source-serif-pro", Georgia, serif;
+  --font-mono: "Roboto Mono", "code-saver", monospace;
+
+  /* Max Width */
+  --container-site: 1140px;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  --animate-slide-up: slide-up 0.6s ease-out forwards;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "tnum";
+  }
+
+  body {
+    background-color: var(--color-charcoal-dark);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    color: white;
+    letter-spacing: -0.015em;
+  }
+
+  a {
+    color: var(--color-sky-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--color-blue-75);
+  }
+}
+
+@layer components {
+  .container-site {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-site);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-site {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-site {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    background: linear-gradient(to right, var(--color-sky-blue), var(--color-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .caption {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
