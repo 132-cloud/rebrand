@@ -1,8 +1,7 @@
 "use client";
 
+import React, { useState } from "react";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
-import { Button } from "@/components/ui/Button";
-import Image from "next/image";
 
 const bentoItems = [
   {
@@ -37,6 +36,72 @@ const bentoItems = [
   },
 ];
 
+function DashboardEmbed() {
+  const [showOverlay, setShowOverlay] = useState(false);
+  const iframeRef = React.useRef<HTMLIFrameElement>(null);
+
+  React.useEffect(() => {
+    // Detect clicks inside the iframe by listening for window blur
+    // When user clicks inside an iframe, the parent window loses focus
+    const handleBlur = () => {
+      // Check if the iframe is the active element (received focus)
+      setTimeout(() => {
+        if (document.activeElement === iframeRef.current) {
+          setShowOverlay(true);
+          // Return focus to the main window so subsequent clicks work
+          window.focus();
+        }
+      }, 0);
+    };
+
+    window.addEventListener("blur", handleBlur);
+    return () => window.removeEventListener("blur", handleBlur);
+  }, []);
+
+  return (
+    <div
+      className="relative mt-12 rounded-2xl overflow-hidden"
+      style={{ height: "600px" }}
+    >
+      {/* Live embedded site - hovers work naturally since iframe receives pointer events */}
+      <iframe
+        ref={iframeRef}
+        src="/business-dashboard.html"
+        title="Nymbus banking platform dashboard"
+        className="w-full h-full border-0 rounded-2xl"
+      />
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-b from-transparent to-charcoal-dark/90 pointer-events-none z-20" />
+
+      {/* Click overlay with CTA button */}
+      {showOverlay && (
+        <div
+          className="absolute inset-0 bg-black/60 z-30 flex items-center justify-center cursor-pointer transition-opacity duration-300"
+          onClick={() => setShowOverlay(false)}
+        >
+          <div className="flex flex-col items-center gap-4" onClick={(e) => e.stopPropagation()}>
+            <a
+              href="https://nymbus-joy.nymbus.com/business-dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-blue text-white text-base font-semibold rounded-[4px] shadow-lg shadow-blue/30 hover:bg-blue/90 transition-colors no-underline"
+            >
+              Explore the live demo
+            </a>
+            <button
+              onClick={() => setShowOverlay(false)}
+              className="text-white/60 text-sm hover:text-white transition-colors mt-2"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function PlatformOverview() {
   return (
     <section className="section-padding bg-charcoal-dark">
@@ -53,7 +118,7 @@ export function PlatformOverview() {
         {/* Bento Grid: 2/1 / 1/1 / 2 */}
         <ScrollReveal delay={0.1}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {bentoItems.map((item, index) => (
+            {bentoItems.map((item) => (
               <div
                 key={item.title}
                 className={`${item.span === "col-span-2" ? "md:col-span-2" : item.span === "col-span-3" ? "md:col-span-3" : "md:col-span-1"} 
@@ -74,25 +139,9 @@ export function PlatformOverview() {
           </div>
         </ScrollReveal>
 
-        {/* Dashboard preview */}
+        {/* Dashboard preview - embedded live site */}
         <ScrollReveal delay={0.3}>
-          <div className="relative mt-12 rounded-2xl overflow-hidden group cursor-pointer">
-            <Image
-              src="/images/Dashboard.svg"
-              alt="Nymbus banking platform dashboard"
-              width={1920}
-              height={1080}
-              className="w-full h-auto"
-              unoptimized
-            />
-            <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-b from-transparent to-charcoal-dark/90 pointer-events-none" />
-            {/* Hover overlay with button */}
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span className="px-6 py-3 bg-blue text-white text-sm font-semibold rounded-[4px] shadow-lg shadow-blue/30">
-                Try the demo
-              </span>
-            </div>
-          </div>
+          <DashboardEmbed />
         </ScrollReveal>
 
         {/* Three-column value props */}
