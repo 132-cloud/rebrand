@@ -78,8 +78,8 @@ export function FlowFieldShader() {
 
           if (alpha < 0.02) continue;
 
-          // All characters are ✳ (asterisk/star) as in the reference
-          const char = "✳";
+          // Alternate between 1 and 0 in a pseudo-random pattern
+          const char = ((col * 7 + row * 13) % 2 === 0) ? "1" : "0";
 
           // Color: #0065ff with boosted brightness
           const brightness = Math.min(1, alpha * 1.3);
