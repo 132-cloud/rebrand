@@ -1,6 +1,10 @@
 @import url("https://use.typekit.net/kuk6noc.css");
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   /* Primary Brand Colors */
   --color-blue: #0065FF;

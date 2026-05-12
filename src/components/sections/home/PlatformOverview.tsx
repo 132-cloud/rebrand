@@ -141,7 +141,9 @@ export function PlatformOverview() {
 
         {/* Dashboard preview - embedded live site */}
         <ScrollReveal delay={0.3}>
-          <DashboardEmbed />
+          <div id="dashboard-preview" style={{ scrollMarginTop: "120px" }}>
+            <DashboardEmbed />
+          </div>
         </ScrollReveal>
 
         {/* Three-column value props */}

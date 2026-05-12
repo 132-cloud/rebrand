@@ -172,7 +172,7 @@ export function HeroNew() {
               who are done managing around legacy systems.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button href="/products/" variant="primary" size="lg">
+              <Button href="#dashboard-preview" variant="primary" size="lg">
                 Explore the platform
               </Button>
               <Button href="/contact/" variant="outline" size="lg" className="!border-[#0065ff] !text-[#0065ff] hover:!bg-[#0065ff]/10">

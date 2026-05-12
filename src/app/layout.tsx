@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     "Nymbus' cloud-native Banking-as-a-Service model means you can skip a core conversion. We'll help you establish a new digital brand under an existing charter.",
   keywords:
     "banking software, fintech, digital banking, Nymbus, digital banking platform, banking-as-a-service",
+  robots: {
+    index: false,
+    follow: false,
+  },
   metadataBase: new URL("https://www.nymbus.com"),
   openGraph: {
     type: "website",
