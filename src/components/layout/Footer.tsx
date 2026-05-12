@@ -59,7 +59,6 @@ const footerColumns = [
     links: [
       { title: "Privacy policy", href: "/privacy-policy/" },
       { title: "Terms of service", href: "/legal-information/master-agreement/" },
-      { title: "Third-party terms", href: "/legal-information/third-party-terms/" },
     ],
   },
 ];
