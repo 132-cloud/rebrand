@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsent } from "@/components/layout/CookieConsent";
+import { BrandSwitcher } from "@/components/layout/BrandSwitcher";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -61,6 +62,7 @@ export default function RootLayout({
           />
         </noscript>
 
+        <BrandSwitcher />
         <Header />
         <main>{children}</main>
         <Footer />
