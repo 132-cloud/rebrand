@@ -7,6 +7,7 @@ interface MenuItem {
   title: string;
   description?: string;
   href: string;
+  indent?: boolean;
 }
 
 interface MenuColumn {
@@ -30,12 +31,15 @@ export function MegaDropdown({ menu, isActive, onOpen, onClose }: MegaDropdownPr
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
     onOpen();
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(onClose, 250);
+    timeoutRef.current = setTimeout(onClose, 100);
   };
 
   useEffect(() => {
@@ -84,7 +88,7 @@ export function MegaDropdown({ menu, isActive, onOpen, onClose }: MegaDropdownPr
                       <li key={item.title}>
                         <Link
                           href={item.href}
-                          className="block px-2 py-2 -mx-2 rounded-lg hover:bg-white/5 transition-colors group"
+                          className={`block px-2 py-2 -mx-2 rounded-lg hover:bg-white/5 transition-colors group ${item.indent ? "ml-4" : ""}`}
                           onClick={onClose}
                         >
                           <span className="text-white text-sm font-medium group-hover:text-sky-blue transition-colors">

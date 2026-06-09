@@ -8,36 +8,52 @@ import { MobileNav } from "./MobileNav";
 import { MegaDropdown } from "./MegaDropdown";
 
 const productsMenu = {
-  label: "Products",
+  label: "Platform",
   columns: [
     {
-      category: "Core Banking",
+      category: "Banking Technology",
       items: [
         { title: "Core Processing", description: "Banking system of record", href: "/products/core-processing/" },
-        { title: "Back Office", description: "Operational banking workflows", href: "/products/back-office/" },
-        { title: "Front Office", description: "Modern service tools", href: "/products/front-office/" },
-      ],
-    },
-    {
-      category: "Digital Experience",
-      items: [
         { title: "Digital Banking", description: "Consumer and business experiences", href: "/products/digital-banking/" },
         { title: "Account Opening", description: "Fast account onboarding", href: "/products/account-opening/" },
-        { title: "Levels", description: "Rewards and engagement", href: "/products/levels/" },
-      ],
-    },
-    {
-      category: "Data and Connectivity",
-      items: [
         { title: "Connect", description: "APIs, streaming, and MCP", href: "/products/connect/" },
         { title: "Insights", description: "Analytics and intelligence", href: "/products/insights/" },
+        { title: "Levels", description: "Rewards and engagement", href: "/products/levels/" },
+        { title: "Engage", description: "Customer engagement and rewards", href: "/products/engage/" },
       ],
     },
     {
-      category: "Growth and Operations",
+      category: "Managed Services",
       items: [
-        { title: "Managed Services", description: "Launch and operations support", href: "/products/managed-services/" },
-        { title: "Nymbus Labs", description: "Growth strategy and execution", href: "/labs/" },
+        { title: "Contact Center", description: "Member and customer support", href: "/managed-services/contact-center/" },
+        { title: "Onboarding", description: "Applicant onboarding support", href: "/managed-services/onboarding/" },
+        { title: "Servicing", description: "Customer servicing support", href: "/managed-services/servicing/" },
+        { title: "Compliance", description: "Compliance workflow support", href: "/managed-services/compliance/" },
+        { title: "Fraud", description: "Fraud operations support", href: "/managed-services/fraud/" },
+        { title: "Back Office", description: "Processing and operations support", href: "/managed-services/back-office/" },
+        { title: "Business Banking Support", description: "Business account operations", href: "/managed-services/business-banking/" },
+        { title: "Labs", description: "Growth strategy and execution", href: "/labs/" },
+        { title: "Governed AI", description: "Controlled AI workflows", href: "/ai/" },
+      ],
+    },
+  ],
+};
+
+const managedServicesMenu = {
+  label: "Managed Services",
+  columns: [
+    {
+      category: "Managed Services",
+      items: [
+        { title: "Contact Center", description: "Member and customer support", href: "/managed-services/contact-center/" },
+        { title: "Onboarding", description: "Applicant onboarding support", href: "/managed-services/onboarding/" },
+        { title: "Servicing", description: "Customer servicing support", href: "/managed-services/servicing/" },
+        { title: "Compliance", description: "Compliance workflow support", href: "/managed-services/compliance/" },
+        { title: "Fraud", description: "Fraud operations support", href: "/managed-services/fraud/" },
+        { title: "Back Office", description: "Processing and operations support", href: "/managed-services/back-office/" },
+        { title: "Business Banking Support", description: "Business account operations", href: "/managed-services/business-banking/" },
+        { title: "Labs", description: "Growth strategy support", href: "/labs/" },
+        { title: "Governed AI", description: "Controlled AI workflows", href: "/ai/" },
       ],
     },
   ],
@@ -47,29 +63,43 @@ const solutionsMenu = {
   label: "Solutions",
   columns: [
     {
-      category: "By growth strategy",
+      category: "Launch a new core",
       items: [
-        { title: "Launch a digital brand", href: "/solutions/launch-digital-brand/" },
-        { title: "Enter a new market or vertical", href: "/solutions/new-market/" },
-        { title: "Accelerate M&A", href: "/solutions/accelerate-ma/" },
-        { title: "Launch private label banking", href: "/solutions/private-label/" },
+        { title: "Brick and mortar core replacement", href: "/solutions/core-replacement/" },
+        { title: "De novo launch", href: "/solutions/de-novo/" },
       ],
     },
     {
-      category: "By modernization path",
+      category: "Launch a parallel core",
       items: [
-        { title: "Deploy a parallel core", href: "/solutions/parallel-core/" },
-        { title: "Modernize your core", href: "/solutions/modernize-core/" },
-        { title: "Launch a de novo bank", href: "/solutions/de-novo/" },
+        { title: "Vertical brand launches", href: "/solutions/vertical-brands/" },
+        { title: "New lines of business", href: "/solutions/new-line-of-business/" },
+        { title: "M&A acceleration", href: "/solutions/accelerate-ma/" },
+        { title: "Private label banking", href: "/solutions/private-label/" },
+        { title: "Sandbox innovation", href: "/solutions/sandbox/" },
       ],
     },
     {
-      category: "By institution type",
+      category: "Segments",
       items: [
-        { title: "Community banks", href: "/solutions/community-banks/" },
-        { title: "Credit unions", href: "/solutions/credit-unions/" },
-        { title: "De novo banks", href: "/solutions/de-novo-banks/" },
-        { title: "Fintechs", href: "/solutions/fintechs/" },
+        { title: "Business banking", href: "/solutions/business-banking/" },
+        { title: "Solo business banking", href: "/solutions/business-banking/#solo", indent: true },
+        { title: "Small business banking", href: "/solutions/business-banking/#small", indent: true },
+        { title: "Personal banking", href: "/solutions/personal-banking/" },
+      ],
+    },
+  ],
+};
+
+const aiMenu = {
+  label: "AI",
+  columns: [
+    {
+      category: "AI",
+      items: [
+        { title: "Our AI Approach", description: "Governed by design", href: "/ai/" },
+        { title: "AI Workflows", description: "Controlled banking automation", href: "/ai/workflows/" },
+        { title: "Applied AI", description: "AI-native product and workflow design", href: "/ai/applied/" },
       ],
     },
   ],
@@ -142,25 +172,31 @@ export function Header() {
                 menu={productsMenu}
                 isActive={activeDropdown === "products"}
                 onOpen={() => setActiveDropdown("products")}
-                onClose={() => setActiveDropdown(null)}
+                onClose={() => setActiveDropdown((prev) => prev === "products" ? null : prev)}
+              />
+              <MegaDropdown
+                menu={managedServicesMenu}
+                isActive={activeDropdown === "managed-services"}
+                onOpen={() => setActiveDropdown("managed-services")}
+                onClose={() => setActiveDropdown((prev) => prev === "managed-services" ? null : prev)}
               />
               <MegaDropdown
                 menu={solutionsMenu}
                 isActive={activeDropdown === "solutions"}
                 onOpen={() => setActiveDropdown("solutions")}
-                onClose={() => setActiveDropdown(null)}
+                onClose={() => setActiveDropdown((prev) => prev === "solutions" ? null : prev)}
               />
-              <Link
-                href="/ai/"
-                className="px-4 py-2 text-white/70 hover:text-white text-sm font-medium transition-colors rounded-lg hover:bg-white/5"
-              >
-                AI
-              </Link>
+              <MegaDropdown
+                menu={aiMenu}
+                isActive={activeDropdown === "ai"}
+                onOpen={() => setActiveDropdown("ai")}
+                onClose={() => setActiveDropdown((prev) => prev === "ai" ? null : prev)}
+              />
               <MegaDropdown
                 menu={resourcesMenu}
                 isActive={activeDropdown === "resources"}
                 onOpen={() => setActiveDropdown("resources")}
-                onClose={() => setActiveDropdown(null)}
+                onClose={() => setActiveDropdown((prev) => prev === "resources" ? null : prev)}
               />
             </nav>
 
