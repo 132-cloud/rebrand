@@ -36,7 +36,7 @@ const resources = [
 
 export function ResourcesSection() {
   return (
-    <section className="section-padding bg-charcoal-dark">
+    <section className="section-padding bg-black">
       <div className="container-site">
         <ScrollReveal>
           <h2 className="text-[2rem] md:text-[2.75rem] font-bold mb-12 leading-tight text-white">
