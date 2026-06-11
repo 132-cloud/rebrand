@@ -26,8 +26,6 @@ const PROMPT_ROUTES: Record<string, PromptRoute> = {
     body: "Activate managed services for onboarding, servicing, contact center, fraud, compliance workflows, and back-office operations, supported by the Nymbus platform.",
     buttons: [
       { label: "Explore managed services", href: "/managed-services/" },
-      { label: "See operating model", href: "/managed-services/#model" },
-      { label: "Talk to an expert", href: "/contact/?topic=managed-services" },
     ],
   },
   "launch a digital brand": {
@@ -426,7 +424,7 @@ export function HeroNew() {
   }
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 lg:pt-52 lg:pb-36 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative pt-32 pb-10 md:pt-44 md:pb-14 lg:pt-52 lg:pb-16 overflow-hidden min-h-[90vh] flex items-center">
       {/* Interactive shader background */}
       <ShaderBackground />
 
@@ -439,7 +437,7 @@ export function HeroNew() {
       />
 
       {/* Bottom fade to white */}
-      <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-b from-transparent to-white pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-[15%] bg-gradient-to-b from-transparent to-white pointer-events-none" />
 
       <div className="container-site relative z-10 w-full">
         <ScrollReveal direction="up" delay={0.1}>

@@ -85,6 +85,7 @@ const solutionsMenu = {
         { title: "Business banking", href: "/solutions/business-banking/" },
         { title: "Solo business banking", href: "/solutions/business-banking/#solo", indent: true },
         { title: "Small business banking", href: "/solutions/business-banking/#small", indent: true },
+        { title: "Commercial banking", href: "/solutions/business-banking/#commercial", indent: true },
         { title: "Personal banking", href: "/solutions/personal-banking/" },
       ],
     },

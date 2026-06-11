@@ -1,27 +1,37 @@
 import { HeroNew } from "@/components/sections/home/HeroNew";
-import { ProofStrip } from "@/components/sections/home/ProofStrip";
-import { PlatformOverview } from "@/components/sections/home/PlatformOverview";
-import { QuoteCarousel } from "@/components/sections/home/QuoteCarousel";
-import { ArchitectureDiagram } from "@/components/sections/home/ArchitectureDiagram";
-import { ManagedServices } from "@/components/sections/home/ManagedServices";
-import { ActivationPaths } from "@/components/sections/home/ActivationPaths";
-import { AISection } from "@/components/sections/home/AISection";
-import { CustomerProof } from "@/components/sections/home/CustomerProof";
-import { FinalCTA } from "@/components/sections/home/FinalCTA";
+import { LogoBar } from "@/components/sections/home/LogoBar";
+import { GovernedAIApproach } from "@/components/sections/home/GovernedAIApproach";
+import { ProofSection } from "@/components/sections/home/ProofSection";
+import { PlatformOverviewNew } from "@/components/sections/home/PlatformOverviewNew";
+import { PlatformSection } from "@/components/sections/home/PlatformSection";
+import { BankingTechnology } from "@/components/sections/home/BankingTechnology";
+import { ManagedServicesNew } from "@/components/sections/home/ManagedServicesNew";
+import { CustomerSegments } from "@/components/sections/home/CustomerSegments";
+import { GovernedAISection } from "@/components/sections/home/GovernedAISection";
+import { CustomerProofNew } from "@/components/sections/home/CustomerProofNew";
+import { ActivationPathsNew } from "@/components/sections/home/ActivationPathsNew";
+import { LabsSection } from "@/components/sections/home/LabsSection";
+import { ResourcesSection } from "@/components/sections/home/ResourcesSection";
+import { FooterCTA } from "@/components/sections/home/FooterCTA";
 
 export default function HomePage() {
   return (
     <>
       <HeroNew />
-      <ProofStrip />
-      <PlatformOverview />
-      <QuoteCarousel />
-      <ArchitectureDiagram />
-      <ManagedServices />
-      <ActivationPaths />
-      <AISection />
-      <CustomerProof />
-      <FinalCTA />
+      <LogoBar />
+      <GovernedAIApproach />
+      <ProofSection />
+      <PlatformOverviewNew />
+      <PlatformSection />
+      <BankingTechnology />
+      <ManagedServicesNew />
+      <CustomerSegments />
+      <GovernedAISection />
+      <CustomerProofNew />
+      <ActivationPathsNew />
+      <LabsSection />
+      <ResourcesSection />
+      <FooterCTA />
     </>
   );
 }
