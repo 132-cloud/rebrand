@@ -455,7 +455,7 @@ export function HeroNew() {
               className="text-white/60"
               style={{ fontSize: "28px", lineHeight: 1.3, marginBottom: "30px" }}
             >
-              What do you want to build next?
+              What do you want to build?
             </p>
 
             {/* Prompt Box - expands downward when active */}

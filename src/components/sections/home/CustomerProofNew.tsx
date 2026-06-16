@@ -12,7 +12,7 @@ const stories = [
     logo: "/images/logos/peoplesbank-logo-wht.svg",
     quote: "The consensus is this is the best core we've ever worked on.",
     author: "Aleda DeMaria, EVP & COO",
-    summary: "The largest U.S. community bank to fully adopt a modern core with Nymbus.",
+    summary: "",
     href: "/customers/peoplesbank/",
   },
   {
@@ -22,7 +22,7 @@ const stories = [
     logo: "/images/logos/msufcu-logo.svg",
     quote: "Aligning with Nymbus on this vital project is a strategic move for MSUFCU, as it allows us to enhance our product offerings and deliver top-tier services to small business owners.",
     author: "April Clobes, President & CEO",
-    summary: "A digital growth program built to support small business owners.",
+    summary: "",
     href: "/customers/msufcu/",
   },
   {

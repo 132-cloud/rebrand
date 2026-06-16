@@ -10,12 +10,8 @@ const aiCards = [
     description: "Connect AI workflows to defined banking actions, not open-ended automation.",
   },
   {
-    title: "Control access",
-    description: "Use permissions and approvals to manage who can initiate, review, and complete sensitive work.",
-  },
-  {
-    title: "Preserve auditability",
-    description: "Create a clearer record of AI-supported activity across banking operations.",
+    title: "Control access and auditability",
+    description: "Approve who can initiate, review, and complete sensitive work, plus clear records of AI-supported activity.",
   },
   {
     title: "Apply AI to real work",
@@ -35,9 +31,9 @@ export function GovernedAISection() {
         <ScrollReveal>
           <div className="max-w-5xl mb-4">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
-              <span className="font-bold">AI built for banking control.</span>{" "}
+              <span className="font-bold text-white">Build with governed AI.</span>{" "}
               <span className="font-normal text-white/60">
-                Deploy AI-enabled workflows inside a governed operating model, with approved actions, role-based access, human review paths, and auditability.
+                Deploy AI-enabled workflows inside a controlled operating model, with approved actions, role-based access, human review paths, and auditability.
               </span>
             </h4>
           </div>
@@ -45,7 +41,7 @@ export function GovernedAISection() {
 
         {/* 4-column cards */}
         <ScrollReveal delay={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
             {aiCards.map((card) => (
               <div
                 key={card.title}

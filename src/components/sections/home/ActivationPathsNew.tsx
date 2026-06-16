@@ -1,32 +1,29 @@
 "use client";
 
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
-import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 const paths = [
   {
-    title: "Managed services",
-    description: "Add operational support for servicing, onboarding, fraud, compliance workflows, contact center, and back-office work.",
-    cta: "Start with managed services",
-    href: "/managed-services/",
-  },
-  {
-    title: "Digital growth",
-    description: "Launch a digital brand, vertical strategy, private-label program, or new line of business.",
-    cta: "Launch digital growth",
-    href: "/solutions/digital-brand/",
-  },
-  {
-    title: "Parallel core",
-    description: "Deploy a parallel core to support new growth without disrupting current operations.",
-    cta: "Launch a parallel core",
-    href: "/core-banking/#parallel",
-  },
-  {
-    title: "Primary core",
-    description: "Modernize the core foundation with digital, data, operations, and implementation support connected.",
-    cta: "Modernize the core",
+    title: "Modernize core infrastructure",
+    description:
+      "Deploy Nymbus as a primary core or parallel core to support modernization, new growth, or digital brand expansion.",
     href: "/core-banking/",
+    image: "/images/peoples-bg.jpg",
+  },
+  {
+    title: "Activate managed services",
+    description:
+      "Add operating capacity across onboarding, servicing, fraud, compliance, contact center, and back-office workflows.",
+    href: "/managed-services/",
+    image: "/images/msu-bg.jpeg",
+  },
+  {
+    title: "Build with Labs",
+    description:
+      "Embed growth, product, and applied AI expertise into your launch motion, from strategy and offer design to acquisition and optimization.",
+    href: "/labs/",
+    image: "/images/zynlo-bg.jpg",
   },
 ];
 
@@ -35,28 +32,43 @@ export function ActivationPathsNew() {
     <section className="section-padding bg-white">
       <div className="container-site">
         <ScrollReveal>
-          <div className="max-w-5xl mx-auto text-center mb-12">
-            <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
-              <span className="font-bold text-neutral-900">Choose the path that fits your strategy.</span>{" "}
-              <span className="font-normal text-neutral-500">
-                Start with managed services, onboarding, digital growth, a parallel core, or full modernization, then expand across one connected platform.
-              </span>
-            </h4>
-          </div>
+          <h2 className="text-[2rem] md:text-[2.75rem] font-bold text-center mb-14 text-neutral-900 leading-tight">
+            Choose the path that fits your growth strategy.
+          </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {paths.map((path) => (
-              <div
-                key={path.title}
-                className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-all duration-300 flex flex-col"
-              >
-                <h4 className="text-neutral-900 font-bold text-lg mb-3">{path.title}</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed mb-6 flex-1">{path.description}</p>
-                <Button href={path.href} variant="primary" size="sm">
-                  {path.cta}
-                </Button>
+              <div key={path.title} className="flex flex-col">
+                {/* Image */}
+                <div className="relative aspect-[3/2] rounded-2xl overflow-hidden mb-6 bg-neutral-200">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={path.image}
+                    alt={path.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Title */}
+                <h4 className="text-neutral-900 font-bold text-lg mb-2">{path.title}</h4>
+
+                {/* Description */}
+                <p className="text-neutral-500 text-sm leading-relaxed mb-4 flex-1">
+                  {path.description}
+                </p>
+
+                {/* Learn more link */}
+                <Link
+                  href={path.href}
+                  className="inline-flex items-center text-sky-blue text-sm font-medium hover:text-blue-75 transition-colors no-underline"
+                >
+                  Learn more
+                  <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
               </div>
             ))}
           </div>

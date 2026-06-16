@@ -39,14 +39,19 @@ export function LogoBar() {
   const allLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <section className="relative py-3 bg-white overflow-hidden -mt-1">
+    <section className="relative pt-0 pb-6 bg-white overflow-hidden -mt-1">
+      {/* Tagline above logos */}
+      <p className="text-center text-neutral-500 text-sm font-medium tracking-wide mt-0 mb-4 px-4">
+        Trusted by top financial institutions
+      </p>
+
       {/* Left fade */}
       <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
       {/* Right fade */}
       <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling track */}
-      <div ref={trackRef} className="flex will-change-transform">
+      <div ref={trackRef} className="flex will-change-transform" style={{ marginTop: "20px" }}>
         {allLogos.map((logo, i) => (
           <div
             key={`${logo.alt}-${i}`}

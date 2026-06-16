@@ -34,15 +34,9 @@ export function GovernedAIApproach() {
                 zIndex: 1,
               }}
             >
-              <p className="text-white/70 text-sm font-medium uppercase tracking-wider mb-3">
-                Built from within. Not bolted on top.
-              </p>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
                 Building the banking infrastructure for governed AI
               </h3>
-              <p className="text-white/70 text-base leading-relaxed max-w-3xl mb-6">
-                AI only creates value in banking when it is governed by design, connected to approved data and actions, and built into the workflows that move the institution forward.
-              </p>
               <span className="inline-flex items-center text-white text-sm font-semibold">
                 Read our AI approach
                 <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
