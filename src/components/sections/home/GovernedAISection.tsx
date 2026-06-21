@@ -31,7 +31,7 @@ export function GovernedAISection() {
         <ScrollReveal>
           <div className="max-w-5xl mb-4">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
-              <span className="font-bold text-white">Build with governed AI.</span>{" "}
+              <span className="font-bold text-white">Governed AI connected to real banking work.</span>{" "}
               <span className="font-normal text-white/60">
                 Deploy AI-enabled workflows inside a controlled operating model, with approved actions, role-based access, human review paths, and auditability.
               </span>

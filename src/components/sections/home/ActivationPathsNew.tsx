@@ -19,9 +19,9 @@ const paths = [
     image: "/images/msu-bg.jpeg",
   },
   {
-    title: "Build with Labs",
+    title: "Grow deposits",
     description:
-      "Embed growth, product, and applied AI expertise into your launch motion, from strategy and offer design to acquisition and optimization.",
+      "Embed growth, product, and marketing expertise into your launch motion, from strategy and offer design to acquisition and optimization.",
     href: "/labs/",
     image: "/images/zynlo-bg.jpg",
   },
