@@ -189,7 +189,7 @@ export function ArchitectureDiagram() {
           <div className="relative w-full -mt-8 overflow-hidden" style={{ marginLeft: "-15%", marginRight: "-15%", width: "130%" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/Asset 1.svg"
+              src="/images/Platform Diagram.svg"
               alt="Nymbus platform architecture diagram"
               className="w-full h-auto"
               style={{ marginTop: "-12%", marginBottom: "-8%" }}
