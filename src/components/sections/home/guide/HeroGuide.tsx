@@ -522,10 +522,11 @@ export function HeroGuide() {
                             <a
                               key={btn.label}
                               href={btn.href}
-                              className={
+                              className="px-4 py-2 text-sm font-medium rounded-full transition-colors"
+                              style={
                                 isExpert
-                                  ? "px-4 py-2 bg-neutral-900 hover:bg-neutral-700 border border-neutral-900 text-white text-sm font-medium rounded-full transition-colors"
-                                  : "px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white text-sm font-medium rounded-full transition-colors"
+                                  ? { backgroundColor: "#171216", color: "#ffffff", border: "1px solid #171216" }
+                                  : { backgroundColor: "rgba(219,219,219,0.4)", color: "#171216", border: "1px solid rgba(0,0,0,0.08)" }
                               }
                             >
                               {btn.label}
@@ -562,7 +563,8 @@ export function HeroGuide() {
               {/* Talk to an expert pill - filled black */}
               <a
                 href="/contact/"
-                className="px-4 py-2 bg-neutral-900 hover:bg-neutral-700 border border-neutral-900 text-white text-sm font-medium rounded-full transition-colors"
+                className="px-4 py-2 text-sm font-medium rounded-full transition-colors"
+                style={{ backgroundColor: "#171216", color: "#ffffff", border: "1px solid #171216" }}
               >
                 Talk to an expert
               </a>
