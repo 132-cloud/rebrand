@@ -186,13 +186,12 @@ export function ArchitectureDiagram() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="relative w-full -mt-8 overflow-hidden" style={{ marginLeft: "-15%", marginRight: "-15%", width: "130%" }}>
+          <div className="relative w-full max-w-5xl mx-auto">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/Platform Diagram.svg"
               alt="Nymbus platform architecture diagram"
               className="w-full h-auto"
-              style={{ marginTop: "-12%", marginBottom: "-8%" }}
             />
           </div>
         </ScrollReveal>
