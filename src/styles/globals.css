@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/kuk6noc.css");
+@import url("https://use.typekit.net/bpi2fje.css");
 @import "tailwindcss";
 
 html {
@@ -194,5 +195,134 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+}
+
+/* ─── "The Guide" Visual Identity Theme ─────────────────────────────────────── */
+/* Light editorial theme based on Figma Campaign Page design.
+   Font: Neue Haas Grotesk Display Pro
+   Background: #fcfbfc (warm off-white)
+   Primary text: #171216 (near-black)
+   Body text: #42526e
+   Accent surfaces: rgba(219,219,219,0.4)
+*/
+
+@layer components {
+  .theme-guide {
+    --guide-bg: #fcfbfc;
+    --guide-text: #171216;
+    --guide-text-body: #42526e;
+    --guide-surface: rgba(219, 219, 219, 0.4);
+    --guide-border: rgba(0, 0, 0, 0.08);
+    --guide-accent: #000000;
+    --guide-accent-text: #ffffff;
+    --guide-muted: rgba(0, 0, 0, 0.5);
+
+    background-color: var(--guide-bg) !important;
+    color: var(--guide-text) !important;
+    font-family: "neue-haas-grotesk-display", "proxima-nova", sans-serif !important;
+  }
+
+  .theme-guide h1,
+  .theme-guide h2,
+  .theme-guide h3,
+  .theme-guide h4,
+  .theme-guide h5,
+  .theme-guide h6 {
+    color: var(--guide-text) !important;
+    font-family: "neue-haas-grotesk-display", "proxima-nova", sans-serif !important;
+    letter-spacing: -0.02em;
+  }
+
+  .theme-guide p,
+  .theme-guide span,
+  .theme-guide li {
+    color: var(--guide-text-body);
+  }
+
+  .theme-guide a {
+    color: var(--guide-text);
+  }
+
+  .theme-guide a:hover {
+    color: var(--guide-accent);
+  }
+
+  /* Override dark section backgrounds to light */
+  .theme-guide section,
+  .theme-guide [class*="bg-charcoal"],
+  .theme-guide [class*="bg-[#0a0a"],
+  .theme-guide [class*="bg-[#0f0f"],
+  .theme-guide [class*="bg-[#111"],
+  .theme-guide [class*="bg-[#1"],
+  .theme-guide [class*="bg-[#0"] {
+    background-color: var(--guide-bg) !important;
+  }
+
+  /* Make text that was white now dark */
+  .theme-guide [class*="text-white"],
+  .theme-guide .text-white {
+    color: var(--guide-text) !important;
+  }
+
+  .theme-guide [class*="text-white/"] {
+    color: var(--guide-text-body) !important;
+  }
+
+  /* Buttons - primary becomes black pill */
+  .theme-guide .btn-primary,
+  .theme-guide [class*="bg-blue"],
+  .theme-guide [class*="bg-sky-blue"] {
+    background-color: var(--guide-accent) !important;
+    color: var(--guide-accent-text) !important;
+    border-color: var(--guide-accent) !important;
+  }
+
+  /* Outline buttons become light surface */
+  .theme-guide .btn-outline,
+  .theme-guide [class*="border-white"],
+  .theme-guide [class*="border-sky-blue"] {
+    background-color: var(--guide-surface) !important;
+    border-color: var(--guide-border) !important;
+    color: var(--guide-text) !important;
+  }
+
+  /* Cards and surfaces */
+  .theme-guide [class*="bg-charcoal-medium"],
+  .theme-guide [class*="bg-charcoal-dark"],
+  .theme-guide [class*="bg-neutral"] {
+    background-color: var(--guide-surface) !important;
+    border-radius: 20px;
+  }
+
+  /* Caption and label text */
+  .theme-guide .caption,
+  .theme-guide [class*="text-sky-blue"],
+  .theme-guide [class*="text-blue"] {
+    color: var(--guide-text) !important;
+    opacity: 0.7;
+  }
+
+  /* Border overrides */
+  .theme-guide [class*="border-white/"],
+  .theme-guide [class*="border-charcoal"] {
+    border-color: var(--guide-border) !important;
+  }
+
+  /* Gradient text override */
+  .theme-guide .text-gradient-blue {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: var(--guide-text) !important;
+    background-clip: unset !important;
+  }
+
+  /* Soften radial gradients and glows */
+  .theme-guide [class*="from-"],
+  .theme-guide [class*="via-"],
+  .theme-guide [class*="to-"] {
+    --tw-gradient-from: transparent !important;
+    --tw-gradient-to: transparent !important;
+    --tw-gradient-via: transparent !important;
   }
 }
