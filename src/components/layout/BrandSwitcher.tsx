@@ -10,8 +10,6 @@ export function BrandSwitcher() {
     { label: "Nymbus", href: "/" },
     { label: "The Guide", href: "/v3" },
     { label: "The Neighbour", href: "/v2" },
-    { label: "v4", href: "/v4" },
-    { label: "v5", href: "/v5" },
   ];
 
   return (
