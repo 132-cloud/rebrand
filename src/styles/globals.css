@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/kuk6noc.css");
 @import url("https://use.typekit.net/bpi2fje.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 html {
@@ -200,7 +201,7 @@ html {
 
 /* ─── "The Guide" Visual Identity Theme ─────────────────────────────────────── */
 /* Light editorial theme based on Figma Campaign Page design.
-   Font: Neue Haas Grotesk Display Pro
+   Font: Inter Tight
    Background: #fcfbfc (warm off-white)
    Primary text: #171216 (near-black)
    Body text: #42526e
@@ -220,7 +221,7 @@ html {
 
     background-color: var(--guide-bg) !important;
     color: var(--guide-text) !important;
-    font-family: "neue-haas-grotesk-display", "proxima-nova", sans-serif !important;
+    font-family: "Inter Tight", "proxima-nova", sans-serif !important;
   }
 
   .theme-guide h1,
@@ -230,7 +231,7 @@ html {
   .theme-guide h5,
   .theme-guide h6 {
     color: var(--guide-text) !important;
-    font-family: "neue-haas-grotesk-display", "proxima-nova", sans-serif !important;
+    font-family: "Inter Tight", "proxima-nova", sans-serif !important;
     letter-spacing: -0.02em;
   }
 
@@ -238,14 +239,38 @@ html {
   .theme-guide span,
   .theme-guide li {
     color: var(--guide-text-body);
+    font-family: "Inter Tight", "proxima-nova", sans-serif !important;
   }
 
   .theme-guide a {
     color: var(--guide-text);
+    font-family: "Inter Tight", "proxima-nova", sans-serif !important;
   }
 
   .theme-guide a:hover {
     color: var(--guide-accent);
+  }
+
+  .theme-guide input,
+  .theme-guide button,
+  .theme-guide label {
+    font-family: "Inter Tight", "proxima-nova", sans-serif !important;
+  }
+
+  /* Hero section - background image */
+  .theme-guide section:first-child {
+    background: url("/background---.png") center center / cover no-repeat !important;
+  }
+
+  /* Hero section - remove canvas/shader background */
+  .theme-guide section:first-child canvas {
+    display: none !important;
+  }
+
+  /* Hero heading - ALL CAPS */
+  .theme-guide section:first-child h1 {
+    text-transform: uppercase !important;
+    letter-spacing: -0.01em;
   }
 
   /* Override dark section backgrounds to light */
@@ -257,6 +282,11 @@ html {
   .theme-guide [class*="bg-[#1"],
   .theme-guide [class*="bg-[#0"] {
     background-color: var(--guide-bg) !important;
+  }
+
+  /* ActivationPaths section - "Choose the path" bg image */
+  .theme-guide section.bg-white {
+    background: url("/images/bg (5).png") center center / cover no-repeat !important;
   }
 
   /* Make text that was white now dark */
@@ -324,5 +354,18 @@ html {
     --tw-gradient-from: transparent !important;
     --tw-gradient-to: transparent !important;
     --tw-gradient-via: transparent !important;
+  }
+
+  /* FooterCTA section - "Built for a bigger platform" bg image
+     Target the last section which has the radial-gradient inline style */
+  .theme-guide > section:last-of-type,
+  .theme-guide section.py-32 {
+    background: url("/images/bg (6).png") center center / cover no-repeat !important;
+  }
+
+  /* Hide the stars animation and gradient overlay in FooterCTA */
+  .theme-guide > section:last-of-type .bg-gradient-to-b,
+  .theme-guide section.py-32 .bg-gradient-to-b {
+    display: none !important;
   }
 }
