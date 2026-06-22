@@ -23,7 +23,7 @@ const quotes = [
     text: "Our partnership with Nymbus allows us to deliver the modern banking experience our members expect while maintaining the personal service that sets us apart.",
     author: "Sean Rayment",
     title: "SVP & Chief Digital Officer, First Entertainment CU",
-    logoSrc: "/images/logos/first-entertainment-logo.svg",
+    logoSrc: "/images/logo bar logos/FECU.png",
     logoAlt: "First Entertainment CU",
   },
 ];

@@ -176,9 +176,9 @@ const MORE_PILLS = [
   { label: "Grow deposits", route: "grow deposits" },
 ];
 
-// ─── Shader Background ───────────────────────────────────────────────────────
+// ─── Shader Overlay (mouse-reactive, semi-transparent) ───────────────────────
 
-function ShaderBackground() {
+function ShaderOverlay() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
   const animRef = useRef<number>(0);
@@ -187,7 +187,7 @@ function ShaderBackground() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const gl = canvas.getContext("webgl");
+    const gl = canvas.getContext("webgl", { premultipliedAlpha: false, alpha: true });
     if (!gl) return;
 
     const vertSrc = `
@@ -201,38 +201,25 @@ function ShaderBackground() {
       uniform vec2 u_mouse;
       uniform float u_time;
 
-      float hash(vec2 p) {
-        p = fract(p * vec2(443.8975, 397.2973));
-        p += dot(p, p + 19.19);
-        return fract(p.x * p.y);
-      }
-
       void main() {
         vec2 uv = gl_FragCoord.xy / u_resolution;
         vec2 mouse = u_mouse;
-        float y = uv.y;
-        vec3 col;
-        
-        col = vec3(0.0);
-        col = mix(col, vec3(0.0, 0.05, 0.25), smoothstep(0.85, 0.65, y));
-        col = mix(col, vec3(0.0, 0.2, 0.8), smoothstep(0.7, 0.5, y));
-        col = mix(col, vec3(0.0, 0.4, 1.0), smoothstep(0.55, 0.38, y));
-        float bottomGlow = smoothstep(0.35, 0.0, y);
-        float arcDist = length((uv - vec2(0.5, -0.4)) * vec2(0.55, 1.0));
-        float arc = smoothstep(0.9, 0.25, arcDist);
-        col = mix(col, vec3(1.0), bottomGlow * arc);
 
+        // Mouse-reactive glow
         vec2 glowCenter = vec2(mouse.x, 1.0 - mouse.y);
-        float glowDist = length((uv - glowCenter) * vec2(1.4, 1.0));
-        float glow = exp(-glowDist * 3.0) * 0.35;
-        col += vec3(0.1, 0.4, 1.0) * glow;
+        float glowDist = length((uv - glowCenter) * vec2(1.2, 1.0));
+        float glow = exp(-glowDist * 2.5) * 0.3;
 
-        float wave = sin(uv.x * 6.0 + u_time * 0.5 + mouse.x * 3.0) * 0.02;
-        wave += sin(uv.x * 3.0 - u_time * 0.3 + mouse.y * 2.0) * 0.015;
-        float waveMask = smoothstep(0.3, 0.8, 1.0 - uv.y);
-        col += vec3(0.05, 0.2, 0.5) * wave * waveMask * 3.0;
+        // Subtle animated wave distortion
+        float wave = sin(uv.x * 5.0 + u_time * 0.4 + mouse.x * 2.0) * 0.015;
+        wave += sin(uv.x * 3.0 - u_time * 0.25 + mouse.y * 1.5) * 0.01;
+        float waveMask = smoothstep(0.2, 0.7, 1.0 - uv.y);
 
-        gl_FragColor = vec4(col, 1.0);
+        // Combine: soft white/light glow that follows cursor
+        float alpha = glow + wave * waveMask * 2.0;
+        alpha = clamp(alpha, 0.0, 0.25);
+
+        gl_FragColor = vec4(1.0, 1.0, 1.0, alpha);
       }
     `;
 
@@ -261,6 +248,9 @@ function ShaderBackground() {
     const uMouse = gl.getUniformLocation(prog, "u_mouse");
     const uTime = gl.getUniformLocation(prog, "u_time");
 
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
     function resize() {
       const dpr = Math.min(window.devicePixelRatio, 2);
       canvas!.width = canvas!.clientWidth * dpr;
@@ -269,6 +259,8 @@ function ShaderBackground() {
     }
 
     function render(t: number) {
+      gl!.clearColor(0, 0, 0, 0);
+      gl!.clear(gl!.COLOR_BUFFER_BIT);
       gl!.uniform2f(uRes, canvas!.width, canvas!.height);
       gl!.uniform2f(uMouse, mouseRef.current.x, mouseRef.current.y);
       gl!.uniform1f(uTime, t * 0.001);
@@ -297,8 +289,8 @@ function ShaderBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full"
-      style={{ display: "block" }}
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{ display: "block", zIndex: 1 }}
     />
   );
 }
@@ -435,6 +427,9 @@ export function HeroGuide() {
           backgroundPosition: "center",
         }}
       />
+
+      {/* Interactive mouse-tracking shader overlay */}
+      <ShaderOverlay />
 
       {/* Film grain overlay */}
       <div

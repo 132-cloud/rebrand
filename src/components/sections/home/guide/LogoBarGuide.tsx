@@ -39,7 +39,7 @@ export function LogoBarGuide() {
   const allLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <section id="logo-bar" className="relative pt-[30px] pb-6 bg-white overflow-hidden -mt-1">
+    <div id="logo-bar" className="relative pt-[30px] pb-[26px] overflow-hidden -mt-1" style={{ backgroundColor: "#ffffff" }}>
       {/* Tagline above logos */}
       <p className="text-center text-neutral-500 text-sm font-medium tracking-wide mt-0 mb-4 px-4">
         Trusted by top financial institutions
@@ -66,6 +66,6 @@ export function LogoBarGuide() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

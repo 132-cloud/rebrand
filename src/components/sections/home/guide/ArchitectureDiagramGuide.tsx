@@ -90,7 +90,7 @@ function BlueprintGrid({ sectionRef }: { sectionRef: React.RefObject<HTMLElement
             }
 
             ctx.lineTo(x + gridSize + nextOffsetX, y + nextOffsetY);
-            ctx.strokeStyle = `rgba(0, 100, 255, ${baseOpacity})`;
+            ctx.strokeStyle = `rgba(140, 140, 140, ${baseOpacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -120,7 +120,7 @@ function BlueprintGrid({ sectionRef }: { sectionRef: React.RefObject<HTMLElement
             else if (ny > fadeEnd) nextFade = (h - ny) / (h - fadeEnd);
 
             ctx.lineTo(x + nextOffsetX2, y + gridSize + nextOffsetY2);
-            ctx.strokeStyle = `rgba(0, 100, 255, ${0.18 * Math.min(fadeOpacity, nextFade)})`;
+            ctx.strokeStyle = `rgba(140, 140, 140, ${0.18 * Math.min(fadeOpacity, nextFade)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

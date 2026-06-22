@@ -35,11 +35,12 @@ export default function V3Layout({ children }: { children: React.ReactNode }) {
           background-color: rgba(0,0,0,0.04) !important;
         }
         
-        /* Contact sales: black text */
+        /* Contact sales: black text, rounded */
         body.is-guide-theme header a[href="/contact"],
         body.is-guide-theme header a[href="/contact/"] {
           color: #171216 !important;
           border-color: rgba(0,0,0,0.2) !important;
+          border-radius: 9999px !important;
         }
         body.is-guide-theme header a[href="/contact"]:hover,
         body.is-guide-theme header a[href="/contact/"]:hover {
@@ -74,6 +75,10 @@ export default function V3Layout({ children }: { children: React.ReactNode }) {
         body.is-guide-theme .bg-charcoal-dark .text-white\/40 {
           color: rgba(0,0,0,0.5) !important;
         }
+        body.is-guide-theme .bg-charcoal-dark [class*="text-white/40"],
+        body.is-guide-theme .bg-charcoal-dark [class*="text-xs"] {
+          color: rgba(0,0,0,0.45) !important;
+        }
         body.is-guide-theme .bg-charcoal-dark a:hover {
           background-color: rgba(0,0,0,0.04) !important;
         }
@@ -91,6 +96,10 @@ export default function V3Layout({ children }: { children: React.ReactNode }) {
         .theme-guide section.bg-white {
           background-color: #ffffff !important;
         }
+        .theme-guide #logo-bar {
+          background-color: #ffffff !important;
+          background-image: none !important;
+        }
 
         /* Governed AI Approach card: liquid glass effect */
         .theme-guide a[href="/ai"][class*="rounded-2xl"],
@@ -103,6 +112,23 @@ export default function V3Layout({ children }: { children: React.ReactNode }) {
         /* Hide the animated pulse border in Guide theme */
         .theme-guide .relative.rounded-2xl > .absolute {
           display: none !important;
+        }
+
+        /* Platform overview heading: black */
+        .theme-guide .section-padding.bg-charcoal-dark h4 .font-bold {
+          color: #000000 !important;
+        }
+
+        /* Architecture diagram heading: black */
+        .theme-guide #architecture-diagram h4 .font-bold {
+          color: #000000 !important;
+        }
+
+        /* Scrolled header: white background instead of grey */
+        body.is-guide-theme header[class*="bg-charcoal-dark"] {
+          background-color: rgba(255, 255, 255, 0.95) !important;
+          border-color: rgba(0,0,0,0.06) !important;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
         }
       `}</style>
       <div className="v3-layout">
