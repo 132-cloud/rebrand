@@ -110,7 +110,7 @@ export function PlatformOverview() {
           <div className="max-w-5xl mb-12">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
               <span className="font-bold">Flexible solutions for every growth strategy.</span>{" "}
-              <span className="font-normal text-white/60">Grow your bank or credit union with a unified platform of modern banking tools⁠ – designed to work individually or together.</span>
+              <span className="font-normal text-white/60">Grow your bank or credit union with a unified platform of modern banking tools⁠ – built to work seperately or together.</span>
             </h4>
           </div>
         </ScrollReveal>
@@ -124,7 +124,7 @@ export function PlatformOverview() {
                 className={`${item.span === "col-span-2" ? "md:col-span-2" : item.span === "col-span-3" ? "md:col-span-3" : "md:col-span-1"} 
                   relative rounded-2xl border border-white/5 bg-charcoal-medium/40 p-6 md:p-8 
                   min-h-[300px] md:min-h-[390px] flex flex-col justify-end
-                  hover:border-white/15 transition-all duration-300 group overflow-hidden`}
+                  hover:border-white/15 transition-[border-color] duration-300 group overflow-hidden`}
               >
                 {/* Subtle gradient background per card */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

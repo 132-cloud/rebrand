@@ -147,14 +147,19 @@ function matchRoute(input: string): PromptRoute | null {
 
 // Rotating placeholder texts
 const PLACEHOLDERS = [
+  "What do you want to build?",
   "Launch a new core",
   "Launch a parallel core",
+  "What do you want to build?",
   "Activate managed services",
   "Explore governed AI",
+  "What do you want to build?",
   "Launch a de novo",
   "Launch a digital brand",
+  "What do you want to build?",
   "Build a new line of business",
   "Grow deposits",
+  "What do you want to build?",
   "Build a growth strategy",
 ];
 
@@ -447,18 +452,18 @@ export function HeroGuide() {
           <div className="max-w-5xl mx-auto text-center">
             {/* H1 - Primary headline at 71px, force 2 lines max */}
             <h1
-              className="font-bold leading-[1.05] tracking-tight mb-8 text-white mx-auto uppercase whitespace-nowrap"
-              style={{ fontSize: "clamp(36px, 4.5vw, 71px)" }}
+              className="font-bold leading-[1.05] tracking-[-0.03em] mb-4 text-white mx-auto whitespace-nowrap"
+              style={{ fontSize: "clamp(41px, 5vw, 76px)" }}
             >
-              The modern banking platform<br />for financial innovators.
+              Banking, built to move
             </h1>
 
-            {/* Sub-question at 28px */}
+            {/* Body text */}
             <p
-              className="text-white/60"
-              style={{ fontSize: "28px", lineHeight: 1.3, marginBottom: "30px" }}
+              className="text-lg md:text-xl max-w-2xl mx-auto mb-8 tracking-[-0.01em]"
+              style={{ color: "var(--guide-text-body, rgba(255,255,255,0.6))", lineHeight: 1.5 }}
             >
-              What do you want to build?
+              Launch, operate, and scale on the banking platform built to move with your strategy.
             </p>
 
             {/* Prompt Box - expands downward when active */}

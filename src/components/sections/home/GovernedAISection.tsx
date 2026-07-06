@@ -45,7 +45,7 @@ export function GovernedAISection() {
             {aiCards.map((card) => (
               <div
                 key={card.title}
-                className="p-6 rounded-xl border border-white/10 bg-black/60 backdrop-blur-sm hover:border-white/20 transition-all duration-300"
+                className="p-6 rounded-xl border border-white/10 bg-black/60 backdrop-blur-sm hover:border-white/20 transition-[border-color] duration-300"
               >
                 <h4 className="text-white font-semibold text-sm mb-2">{card.title}</h4>
                 <p className="text-white/40 text-sm leading-relaxed">{card.description}</p>

@@ -22,7 +22,7 @@ export function PlatformOverviewNew() {
           <div className="max-w-5xl mb-4">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
               <span className="font-bold">One platform for core processing, managed services, digital banking, account opening, data, engagement, and governed AI workflows</span>{" "}
-              <span className="font-normal text-white/60">— designed to work individually or together.</span>
+              <span className="font-normal text-white/60">— built to work seperately or together.</span>
             </h4>
             <Link href="/platform/" className="text-sky-blue text-sm font-medium hover:text-blue-75 transition-colors no-underline inline-flex items-center gap-1 mt-3">
               Explore the platform
@@ -44,7 +44,7 @@ export function PlatformOverviewNew() {
                   href={cap.href}
                   className="relative rounded-2xl border border-white/5 bg-charcoal-medium/40 p-6 md:p-8
                     min-h-[280px] md:min-h-[340px] flex flex-col justify-between
-                    hover:border-white/15 transition-all duration-300 group overflow-hidden no-underline"
+                    hover:border-white/15 transition-[border-color,transform] duration-300 group overflow-hidden no-underline"
                 >
                   <div className="relative z-10 flex items-start justify-between">
                     <p className="text-white text-lg md:text-xl font-medium max-w-[80%]">
@@ -67,7 +67,7 @@ export function PlatformOverviewNew() {
                   href={cap.href}
                   className="relative rounded-2xl border border-white/5 bg-charcoal-medium/40 p-6 md:p-8
                     min-h-[280px] md:min-h-[340px] flex flex-col justify-between
-                    hover:border-white/15 transition-all duration-300 group overflow-hidden no-underline"
+                    hover:border-white/15 transition-[border-color,transform] duration-300 group overflow-hidden no-underline"
                 >
                   <div className="relative z-10 flex items-start justify-between">
                     <p className="text-white text-lg md:text-xl font-medium max-w-[80%]">
@@ -86,7 +86,7 @@ export function PlatformOverviewNew() {
             <div
               className="relative rounded-2xl border border-white/5 bg-charcoal-medium/40 p-6 md:p-8
                 min-h-[300px] md:min-h-[360px] flex flex-col md:flex-row items-start
-                hover:border-white/15 transition-all duration-300 group overflow-hidden"
+                hover:border-white/15 transition-[border-color,transform] duration-300 group overflow-hidden"
             >
               {/* Left: title + arrow */}
               <div className="relative z-10 flex items-start justify-between md:w-[30%] flex-shrink-0">

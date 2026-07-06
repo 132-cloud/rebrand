@@ -6,6 +6,11 @@ import { NymbusLogo } from "@/components/icons/NymbusLogo";
 import { NymbusLogomark } from "@/components/icons/NymbusLogomark";
 import { MobileNav } from "./MobileNav";
 import { MegaDropdown } from "./MegaDropdown";
+import { PlatformDropdown } from "./PlatformDropdown";
+import { ManagedServicesDropdown } from "./ManagedServicesDropdown";
+import { SolutionsDropdown } from "./SolutionsDropdown";
+import { AIDropdown } from "./AIDropdown";
+import { ResourcesDropdown } from "./ResourcesDropdown";
 
 const productsMenu = {
   label: "Platform",
@@ -169,32 +174,27 @@ export function Header() {
 
             {/* Center Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
-              <MegaDropdown
-                menu={productsMenu}
+              <PlatformDropdown
                 isActive={activeDropdown === "products"}
                 onOpen={() => setActiveDropdown("products")}
                 onClose={() => setActiveDropdown((prev) => prev === "products" ? null : prev)}
               />
-              <MegaDropdown
-                menu={managedServicesMenu}
+              <ManagedServicesDropdown
                 isActive={activeDropdown === "managed-services"}
                 onOpen={() => setActiveDropdown("managed-services")}
                 onClose={() => setActiveDropdown((prev) => prev === "managed-services" ? null : prev)}
               />
-              <MegaDropdown
-                menu={solutionsMenu}
+              <SolutionsDropdown
                 isActive={activeDropdown === "solutions"}
                 onOpen={() => setActiveDropdown("solutions")}
                 onClose={() => setActiveDropdown((prev) => prev === "solutions" ? null : prev)}
               />
-              <MegaDropdown
-                menu={aiMenu}
+              <AIDropdown
                 isActive={activeDropdown === "ai"}
                 onOpen={() => setActiveDropdown("ai")}
                 onClose={() => setActiveDropdown((prev) => prev === "ai" ? null : prev)}
               />
-              <MegaDropdown
-                menu={resourcesMenu}
+              <ResourcesDropdown
                 isActive={activeDropdown === "resources"}
                 onOpen={() => setActiveDropdown("resources")}
                 onClose={() => setActiveDropdown((prev) => prev === "resources" ? null : prev)}

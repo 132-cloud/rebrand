@@ -32,7 +32,7 @@ export function StatsBar() {
                 key={stat.value}
                 className="group text-center px-6 opacity-60 hover:opacity-100 transition-opacity duration-300"
               >
-                <p className="text-[48px] font-light text-[#0065ff] mb-2 tracking-tight">
+                <p className="text-[48px] font-light text-[#0065ff] mb-2 tracking-tight tabular-nums">
                   {stat.value}
                 </p>
                 <p className="text-[16px] text-neutral-500 leading-relaxed">

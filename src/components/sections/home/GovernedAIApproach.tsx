@@ -28,7 +28,7 @@ export function GovernedAIApproach() {
             {/* Card content */}
             <Link
               href="/ai/"
-              className="relative block rounded-2xl p-8 md:p-12 transition-all duration-300 hover:scale-[1.003] no-underline"
+              className="relative block rounded-2xl p-8 md:p-12 transition-[transform,box-shadow] duration-300 hover:scale-[1.003] hover:shadow-[0_8px_30px_rgba(0,101,255,0.3),0_2px_8px_rgba(0,0,0,0.2)] no-underline"
               style={{
                 background: "linear-gradient(135deg, #0052CC 0%, #0065FF 50%, #4C9AFF 100%)",
                 zIndex: 1,

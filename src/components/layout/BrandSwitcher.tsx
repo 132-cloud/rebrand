@@ -7,8 +7,9 @@ export function BrandSwitcher() {
   const pathname = usePathname();
 
   const links = [
-    { label: "Nymbus", href: "/" },
-    { label: "The Guide", href: "/v3" },
+    { label: "Guide v5", href: "/" },
+    { label: "Guide v4", href: "/v4" },
+    { label: "Nymbus", href: "/nymbus" },
     { label: "The Neighbour", href: "/v2" },
   ];
 

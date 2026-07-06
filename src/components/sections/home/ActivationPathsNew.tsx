@@ -49,6 +49,8 @@ export function ActivationPathsNew() {
                     alt={path.title}
                     className="w-full h-full object-cover"
                   />
+                  {/* Subtle outline for depth */}
+                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/10 pointer-events-none" />
                 </div>
 
                 {/* Title */}

@@ -78,6 +78,8 @@ export function ResourcesSection() {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
                   />
+                  {/* Subtle outline for depth */}
+                  <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 pointer-events-none" />
                 </div>
 
                 {/* Title */}

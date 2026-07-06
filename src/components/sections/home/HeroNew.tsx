@@ -447,7 +447,7 @@ export function HeroNew() {
               className="font-bold leading-[1.05] tracking-tight mb-8 text-white mx-auto"
               style={{ fontSize: "clamp(48px, 5vw, 71px)", maxWidth: "1100px" }}
             >
-              The modern banking platform<br />for financial innovators.
+              Modern banking platform<br />for financial innovators.
             </h1>
 
             {/* Sub-question at 28px */}
@@ -490,7 +490,7 @@ export function HeroNew() {
                   </div>
                   <button
                     type="submit"
-                    className="ml-4 w-9 h-9 flex items-center justify-center bg-[#0065ff] hover:bg-[#0050cc] text-white rounded-full transition-colors flex-shrink-0"
+                    className="ml-4 w-10 h-10 flex items-center justify-center bg-[#0065ff] hover:bg-[#0050cc] text-white rounded-full transition-colors active:scale-[0.96] flex-shrink-0"
                     aria-label="Submit"
                   >
                     <ArrowUpIcon />

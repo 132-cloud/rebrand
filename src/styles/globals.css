@@ -126,6 +126,11 @@ html {
     font-family: var(--font-sans);
     color: white;
     letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p, li, blockquote {
+    text-wrap: pretty;
   }
 
   a {
@@ -267,9 +272,9 @@ html {
     display: none !important;
   }
 
-  /* Hero heading - ALL CAPS */
+  /* Hero heading - sentence case */
   .theme-guide section:first-child h1 {
-    text-transform: uppercase !important;
+    text-transform: none !important;
     letter-spacing: -0.01em;
   }
 
@@ -368,4 +373,58 @@ html {
   .theme-guide section.py-32 .bg-gradient-to-b {
     display: none !important;
   }
+}
+
+/* ─── Guide Theme: Header Overrides (body.is-guide-theme) ───────────────────── */
+/* Applied globally so the Guide theme works on any route including / */
+
+body.is-guide-theme header .hidden.md\:block {
+  display: none !important;
+}
+body.is-guide-theme header .flex-shrink-0::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 24px;
+  background: url('/images/Logo (7).svg') no-repeat center / contain;
+}
+body.is-guide-theme header .flex-shrink-0 svg {
+  display: none !important;
+}
+
+body.is-guide-theme header nav button {
+  color: #171216 !important;
+}
+body.is-guide-theme header nav button:hover {
+  color: #000 !important;
+  background-color: rgba(0,0,0,0.04) !important;
+}
+
+body.is-guide-theme header a[href="/contact"],
+body.is-guide-theme header a[href="/contact/"] {
+  color: #171216 !important;
+  border-color: rgba(0,0,0,0.2) !important;
+  border-radius: 9999px !important;
+}
+body.is-guide-theme header a[href="/contact"]:hover,
+body.is-guide-theme header a[href="/contact/"]:hover {
+  background-color: rgba(0,0,0,0.04) !important;
+  color: #000 !important;
+}
+
+body.is-guide-theme header a[href="/demo"],
+body.is-guide-theme header a[href="/demo/"] {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-radius: 9999px !important;
+}
+body.is-guide-theme header a[href="/demo"]:hover,
+body.is-guide-theme header a[href="/demo/"]:hover {
+  background-color: #333 !important;
+}
+
+body.is-guide-theme header[class*="bg-charcoal-dark"] {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0,0,0,0.06) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
 }

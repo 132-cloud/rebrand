@@ -38,7 +38,7 @@ export function CustomerQuotes() {
           <div className="max-w-3xl mx-auto text-center">
             {/* Quote */}
             <div className="min-h-[180px] flex items-center justify-center">
-              <AnimatePresence mode="wait">
+              <AnimatePresence initial={false} mode="wait">
                 <motion.blockquote
                   key={activeIndex}
                   initial={{ opacity: 0, y: 10 }}
@@ -53,7 +53,7 @@ export function CustomerQuotes() {
             </div>
 
             {/* Author */}
-            <AnimatePresence mode="wait">
+            <AnimatePresence initial={false} mode="wait">
               <motion.div
                 key={activeIndex}
                 initial={{ opacity: 0 }}
@@ -79,7 +79,7 @@ export function CustomerQuotes() {
                 <button
                   key={quote.logoAlt}
                   onClick={() => setActiveIndex(index)}
-                  className={`transition-opacity duration-300 cursor-pointer ${
+                  className={`relative min-h-[40px] min-w-[40px] flex items-center justify-center transition-opacity duration-300 cursor-pointer ${
                     activeIndex === index ? "opacity-100" : "opacity-30 hover:opacity-60"
                   }`}
                   aria-label={`Show ${quote.logoAlt} quote`}
