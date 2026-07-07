@@ -110,15 +110,6 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                         <span className="block text-neutral-500 text-xs mt-0.5">Processing and operations</span>
                       </Link>
                     </li>
-                  </ul>
-                </div>
-
-                {/* Column 2 continued (right) */}
-                <div>
-                  <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4 invisible">
-                    &nbsp;
-                  </h4>
-                  <ul className="space-y-0.5">
                     <li>
                       <Link href="/managed-services/compliance/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Compliance</span>
@@ -137,9 +128,18 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                         <span className="block text-neutral-500 text-xs mt-0.5">Business account operations, covered</span>
                       </Link>
                     </li>
+                  </ul>
+                </div>
+
+                {/* Column 2 continued (right) */}
+                <div>
+                  <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
+                    Growth
+                  </h4>
+                  <ul className="space-y-0.5">
                     <li>
                       <Link href="/labs/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Labs</span>
+                        <span className="text-sm font-semibold group-hover:text-blue transition-colors bg-gradient-to-r from-[#0065FF] via-[#7c3aed] to-[#FF5630] bg-clip-text text-transparent">Labs</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Growth strategy and execution</span>
                       </Link>
                     </li>

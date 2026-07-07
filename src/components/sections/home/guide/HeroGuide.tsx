@@ -455,7 +455,7 @@ export function HeroGuide() {
               className="font-bold leading-[1.05] tracking-[-0.03em] mb-4 text-white mx-auto whitespace-nowrap"
               style={{ fontSize: "clamp(41px, 5vw, 76px)" }}
             >
-              Banking, built to move
+              BANKING, BUILT TO MOVE
             </h1>
 
             {/* Body text */}

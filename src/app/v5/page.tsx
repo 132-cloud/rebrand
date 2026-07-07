@@ -111,7 +111,7 @@ export default function V5GuidePage() {
       <ArchitectureDiagramGuide />
       <CustomerQuotes />
       <ResourcesSection />
-      <FooterCTAGuide heading="THE PLATFORM TO BUILD AGAIN." />
+      <FooterCTAGuide heading="READY TO MOVE?" />
     </div>
   );
 }

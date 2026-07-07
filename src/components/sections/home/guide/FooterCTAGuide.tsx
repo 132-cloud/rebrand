@@ -88,17 +88,8 @@ export function FooterCTAGuide({ heading }: { heading?: string }) {
               className="font-bold leading-[1.05] tracking-tight text-white text-center"
               style={{ fontSize: "clamp(3rem, 6vw, 85px)" }}
             >
-              {heading ? (
-                <>
-                  THE PLATFORM<br />TO BUILD AGAIN.
-                </>
-              ) : (
-                "Built for a bigger platform."
-              )}
+              {heading || "Built for a bigger platform."}
             </h2>
-            <p className="mt-6 text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
-              One platform for core processing, managed services, digital banking, account opening, data, engagement, and governed AI workflows.
-            </p>
             <div className="flex flex-wrap justify-center gap-4 mt-10">
               <Button href="/contact/" variant="primary" size="lg">
                 Talk to Nymbus

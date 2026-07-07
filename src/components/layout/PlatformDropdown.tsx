@@ -104,12 +104,12 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                         <span className="block text-neutral-500 text-xs mt-0.5">From intent to funded</span>
                       </Link>
                     </li>
-                    <li>
-                      <Link href="/solutions/launch/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Launch</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Consumer, business, and vertical banking in parallel</span>
-                      </Link>
-                    </li>
+                  </ul>
+
+                  <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4 mt-6">
+                    Loyalty and Engagement
+                  </h4>
+                  <ul className="space-y-0.5">
                     <li>
                       <Link href="/products/levels/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Levels</span>
