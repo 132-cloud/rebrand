@@ -46,13 +46,14 @@ export function PlatformOverviewNew() {
                   href={cap.href}
                   className="relative rounded-2xl border border-white/5 bg-charcoal-medium/40 p-6 md:p-8
                     min-h-[280px] md:min-h-[340px] flex flex-col justify-between
-                    hover:border-white/15 transition-[border-color,transform] duration-300 group overflow-hidden no-underline"
+                    hover:border-white/15 hover:shadow-[0_8px_32px_-4px_rgba(0,101,255,0.12)] hover:-translate-y-0.5
+                    transition-all duration-300 ease-out group overflow-hidden no-underline"
                 >
                   <div className="relative z-10 flex items-start justify-between">
                     <p className="text-white text-lg md:text-xl font-medium max-w-[80%]">
                       {cap.title}
                     </p>
-                    <svg className="w-5 h-5 text-white/30 group-hover:text-white/70 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <svg className="w-5 h-5 text-white/30 group-hover:text-white/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                     </svg>
                   </div>
@@ -69,13 +70,14 @@ export function PlatformOverviewNew() {
                   href={cap.href}
                   className="relative rounded-2xl border border-white/5 bg-charcoal-medium/40 p-6 md:p-8
                     min-h-[280px] md:min-h-[340px] flex flex-col justify-between
-                    hover:border-white/15 transition-[border-color,transform] duration-300 group overflow-hidden no-underline"
+                    hover:border-white/15 hover:shadow-[0_8px_32px_-4px_rgba(0,101,255,0.12)] hover:-translate-y-0.5
+                    transition-all duration-300 ease-out group overflow-hidden no-underline"
                 >
                   <div className="relative z-10 flex items-start justify-between">
                     <p className="text-white text-lg md:text-xl font-medium max-w-[80%]">
                       {cap.title}
                     </p>
-                    <svg className="w-5 h-5 text-white/30 group-hover:text-white/70 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <svg className="w-5 h-5 text-white/30 group-hover:text-white/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                     </svg>
                   </div>
@@ -84,49 +86,45 @@ export function PlatformOverviewNew() {
               ))}
             </div>
 
-            {/* Row 3: full width — Launch intelligent digital banking with embedded dashboard */}
-            <div
-              className="relative rounded-2xl border border-white/5 bg-charcoal-medium/40 p-6 md:p-8
-                min-h-[300px] md:min-h-[360px] flex flex-col md:flex-row items-start
-                hover:border-white/15 transition-[border-color,transform] duration-300 group overflow-hidden"
+            {/* Row 3: full width — Launch intelligent digital banking with dashboard image */}
+            <Link
+              href="https://nymbus-joy.nymbus.com/dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative rounded-2xl border border-white/5 bg-charcoal-medium/40
+                h-[530px] md:h-[600px] flex flex-col
+                hover:border-white/15 hover:shadow-[0_8px_32px_-4px_rgba(0,101,255,0.12)] hover:-translate-y-0.5
+                transition-all duration-300 ease-out group overflow-hidden no-underline"
             >
-              {/* Left: title + arrow */}
-              <div className="relative z-10 flex items-start justify-between md:w-[30%] flex-shrink-0">
+              {/* Top: title + link */}
+              <div className="relative z-10 flex-shrink-0 p-6 md:p-8 pb-4 md:pb-4">
                 <div>
                   <p className="text-white text-lg md:text-xl font-medium mb-3">
                     Launch intelligent digital banking
                   </p>
-                  <Link
-                    href="https://nymbus-joy.nymbus.com/dashboard"
-                    className="inline-flex items-center text-sky-blue text-sm font-medium hover:text-blue-75 transition-colors no-underline"
-                  >
-                    Learn more
+                  <span className="inline-flex items-center text-sky-blue text-sm font-medium group-hover:text-blue-75 transition-colors">
+                    Try the demo
                     <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
-                  </Link>
+                  </span>
                 </div>
               </div>
 
-              {/* Right: interactive dashboard preview, offset right */}
-              <div className="absolute top-6 right-0 bottom-0 w-[75%] md:w-[65%] hidden md:block">
-                <div className="relative w-full h-full rounded-tl-xl overflow-hidden">
-                  <iframe
-                    src="/business-dashboard.html"
-                    title="Nymbus digital banking platform"
-                    className="w-full h-full border-0"
-                  />
-                  {/* Fade edges */}
-                  <div className="absolute bottom-0 left-0 right-0 h-[20%] bg-gradient-to-b from-transparent to-charcoal-medium/80 pointer-events-none" />
-                  <div className="absolute top-0 left-0 bottom-0 w-[15%] bg-gradient-to-r from-charcoal-medium/60 to-transparent pointer-events-none" />
-                </div>
+              {/* Dashboard screenshot — cropped at bottom by overflow-hidden on parent */}
+              <div className="relative flex-1 w-full hidden md:block min-h-0 px-6 md:px-8">
+                <img
+                  src="/images/Dashboard2.png"
+                  alt="Nymbus digital banking platform"
+                  className="w-full h-auto rounded-tl-2xl rounded-tr-2xl"
+                />
               </div>
 
               {/* Arrow icon top-right */}
-              <svg className="absolute top-6 right-6 md:top-8 md:right-8 w-5 h-5 text-white/30 group-hover:text-white/70 transition-colors z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <svg className="absolute top-6 right-6 md:top-8 md:right-8 w-5 h-5 text-white/30 group-hover:text-white/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
-            </div>
+            </Link>
           </div>
         </ScrollReveal>
       </div>
