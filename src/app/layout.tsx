@@ -52,6 +52,7 @@ export default function RootLayout({
         {/* Adobe Fonts (Typekit) */}
         <link rel="stylesheet" href="https://use.typekit.net/kuk6noc.css" />
         <link rel="stylesheet" href="https://use.typekit.net/bpi2fje.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/gdh4tcp.css" />
       </head>
       <body className="bg-charcoal-dark text-white/80 font-sans antialiased">
         <PasswordGate>

@@ -143,12 +143,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                         <span className="block text-neutral-500 text-xs mt-0.5">Growth strategy and execution</span>
                       </Link>
                     </li>
-                    <li>
-                      <Link href="/ai/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Governed AI</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">AI workflows, built from within</span>
-                      </Link>
-                    </li>
+
                   </ul>
                 </div>
 

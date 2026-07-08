@@ -149,15 +149,16 @@ const PLACEHOLDERS = [
   "Launch a parallel core",
   "What do you want to build?",
   "Activate managed services",
-  "Explore governed AI",
+  "Where do you need help moving?",
   "What do you want to build?",
   "Launch a de novo",
   "Launch a digital brand",
-  "What do you want to build?",
+  "Where do you need help moving?",
   "Build a new line of business",
   "Grow deposits",
   "What do you want to build?",
   "Build a growth strategy",
+  "Where do you need help moving?",
 ];
 
 const PRIMARY_PILLS = [
@@ -165,6 +166,7 @@ const PRIMARY_PILLS = [
   { label: "Run smarter operations", route: "run smarter operations" },
   { label: "Launch a digital brand", route: "launch a digital brand" },
   { label: "Build with governed AI", route: "build with governed ai" },
+  { label: "Catch fraud early", route: "catch fraud early" },
 ];
 
 const MORE_PILLS = [
@@ -173,8 +175,6 @@ const MORE_PILLS = [
   { label: "Launch a de novo", route: "launch a de novo" },
   { label: "Build a new line of business", route: "build a new line of business" },
   { label: "Accelerate M&A", route: "accelerate m&a" },
-  { label: "Private label banking", route: "private label banking" },
-  { label: "Sandbox innovation", route: "sandbox innovation" },
   { label: "Grow deposits", route: "grow deposits" },
 ];
 
@@ -419,7 +419,7 @@ export function HeroGuide() {
   }
 
   return (
-    <section className="relative pt-32 pb-10 md:pt-44 md:pb-14 lg:pt-52 lg:pb-16 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative pt-24 pb-10 md:pt-36 md:pb-14 lg:pt-40 lg:pb-16 overflow-hidden min-h-[90vh] flex items-center">
       {/* Background image */}
       <div
         className="absolute inset-0 w-full h-full"
@@ -449,15 +449,15 @@ export function HeroGuide() {
           <div className="max-w-5xl mx-auto text-center">
             {/* H1 - Primary headline at 71px, force 2 lines max */}
             <h1
-              className="font-bold leading-[1.05] tracking-[-0.03em] mb-4 text-white mx-auto whitespace-nowrap"
-              style={{ fontSize: "clamp(41px, 5vw, 76px)" }}
+              className="font-bold leading-[1.05] tracking-[-0.03em] mb-4 text-white mx-auto"
+              style={{ fontSize: "clamp(48px, 6.5vw, 96px)" }}
             >
-              BANKING, BUILT TO MOVE
+              MODERN BANKING,<br />BUILT TO MOVE
             </h1>
 
             {/* Body text */}
             <p
-              className="text-lg md:text-xl max-w-2xl mx-auto mb-8 tracking-[-0.01em]"
+              className="text-lg md:text-xl max-w-3xl mx-auto mb-8 tracking-[-0.01em] whitespace-nowrap"
               style={{ color: "var(--guide-text-body, rgba(255,255,255,0.6))", lineHeight: 1.5 }}
             >
               Launch, operate, and scale on the banking platform built to move with your strategy.

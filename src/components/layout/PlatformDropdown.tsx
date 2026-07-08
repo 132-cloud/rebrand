@@ -113,13 +113,13 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                     <li>
                       <Link href="/platform/#loyalty-engagement" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Levels</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Rewards program built into the account</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Incentivize and reward profitable behaviors</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#loyalty-engagement" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Engage</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Turn accounts into relationships</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Nurture accounts into loyal relationships</span>
                       </Link>
                     </li>
                   </ul>

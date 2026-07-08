@@ -13,7 +13,7 @@ export function StrategyBand() {
               <h2 className="text-[2rem] md:text-[2.75rem] leading-[1.1] tracking-[-0.02em]">
                 <span className="text-white/50 font-light">The strategy is ready.</span>
                 <br />
-                <span className="text-white font-bold">The stack is not.</span>
+                <span className="text-white font-bold">Your stack is not.</span>
               </h2>
             </div>
 

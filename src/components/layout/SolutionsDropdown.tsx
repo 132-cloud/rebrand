@@ -69,22 +69,7 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   <p className="text-neutral-500 text-sm leading-relaxed">
                     Stand up something new next to what you run today, or modernize the foundation itself. One platform, two paths to market.
                   </p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    <Link
-                      href="/request-demo/"
-                      onClick={onClose}
-                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors no-underline"
-                    >
-                      See a demo
-                    </Link>
-                    <Link
-                      href="/contact/"
-                      onClick={onClose}
-                      className="inline-block px-5 py-2.5 text-sm font-semibold text-neutral-900 border border-neutral-300 rounded-full hover:bg-neutral-50 transition-colors no-underline"
-                    >
-                      Contact sales
-                    </Link>
-                  </div>
+
                 </div>
 
                 {/* Column 2: LAUNCH A PRIMARY CORE + LAUNCH A PARALLEL CORE */}
@@ -155,7 +140,7 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                     </li>
                     <li>
                       <Link href="/solutions/personal-banking/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Personal</span>
+                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Retail</span>
                       </Link>
                     </li>
                   </ul>

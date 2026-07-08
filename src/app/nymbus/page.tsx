@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import { HeroNew } from "@/components/sections/home/HeroNew";
 import { LogoBar } from "@/components/sections/home/LogoBar";
 import { StatsBar } from "@/components/sections/home/StatsBar";
@@ -11,8 +14,15 @@ import { ResourcesSection } from "@/components/sections/home/ResourcesSection";
 import { FooterCTA } from "@/components/sections/home/FooterCTA";
 
 export default function NymbusPage() {
+  useEffect(() => {
+    document.body.classList.add("is-nymbus-theme");
+    return () => {
+      document.body.classList.remove("is-nymbus-theme");
+    };
+  }, []);
+
   return (
-    <>
+    <div className="theme-nymbus">
       <HeroNew />
       <LogoBar />
       <StatsBar />
@@ -24,6 +34,6 @@ export default function NymbusPage() {
       <CustomerQuotes />
       <ResourcesSection />
       <FooterCTA />
-    </>
+    </div>
   );
 }
