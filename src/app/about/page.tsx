@@ -1,68 +1,181 @@
-import { Metadata } from "next";
-import { ScrollReveal } from "@/components/animations/ScrollReveal";
-import { CTAFooter } from "@/components/sections/CTAFooter";
+"use client";
 
-export const metadata: Metadata = {
-  title: "About Nymbus",
-  description:
-    "Nymbus is a fintech company providing modern core banking and digital solutions for banks and credit unions.",
-};
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { Button } from "@/components/ui/Button";
+
+// ─── Leadership Team ─────────────────────────────────────────────────────────
+
+const leadership = [
+  { name: "Jeffery Kendall", title: "Chairman & CEO", image: "/images/leadership/jeffery_kendall_small-5.jpg" },
+  { name: "Jeffrey Fonda", title: "Chief Financial Officer", image: "/images/leadership/jeffrey_fonda_small.jpg" },
+  { name: "Ed Gross", title: "Chief Product Officer", image: "/images/leadership/ed_gross_small.jpg" },
+  { name: "Michelle Prohaska", title: "Chief Banking & Risk Officer", image: "/images/leadership/michelle_prohaska_small-2.jpg" },
+  { name: "David Barone", title: "Chief Strategy & Marketing Officer", image: "/images/leadership/david_barone_small-2.jpg" },
+  { name: "Matthew Terry", title: "Chief Technology Officer", image: "/images/leadership/matthew_terry_small.jpg" },
+  { name: "Meredythe Miles", title: "EVP, Client Consulting Services", image: "/images/leadership/meredythe_miles_small.jpg" },
+  { name: "Ashlie Jenkins", title: "EVP, Development Services", image: "/images/leadership/ashlie_jenkins_small.jpg" },
+  { name: "Matthew Flood", title: "EVP, Client Support", image: "/images/leadership/matt_flood_small-2.jpg" },
+  { name: "Aimee Ford", title: "Chief Revenue Officer", image: "/images/leadership/Aimee_Ford2.png" },
+];
+
+// ─── Board of Directors ──────────────────────────────────────────────────────
+
+const board = [
+  { name: "Peter Sobiloff", title: "Insight Partners", image: "/images/leadership/peter_sobiloff_small.jpg" },
+  { name: "Rilla Delorier", title: "Independent Board Director, Coastal Community Bank", image: "/images/leadership/rilla_delorier_small.jpg" },
+  { name: "AJ Malhotra", title: "Insight Partners", image: "/images/leadership/aj_malhotra_small.jpg" },
+  { name: "Rajiv Gihwala", title: "Insight Partners", image: "/images/leadership/rajiv_gihwala_small.jpg" },
+  { name: "Casey Callinsky", title: "VyStar Credit Union", image: "/images/leadership/casey_callinsky_small.jpg" },
+];
+
+// ─── Investors ───────────────────────────────────────────────────────────────
+
+const investors = [
+  "Insight Partners",
+  "Financial Services Capital",
+  "VyStar Credit Union",
+  "Michigan State University Federal Credit Union",
+  "Curql",
+  "ConnectOne Bank",
+  "PeoplesBank",
+  "The Banc Funds",
+  "Mendon Venture Partners",
+];
+
+// ─── Main Page ───────────────────────────────────────────────────────────────
 
 export default function AboutPage() {
   return (
-    <>
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="container-site">
+    <div className="bg-white text-neutral-900">
+      {/* ─── Section 1: About Hero ────────────────────────────────────────── */}
+      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url('/background---.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold mb-6">
-                About Nymbus
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+                Nymbus is banking built to move.
               </h1>
-              <p className="text-white/60 text-lg leading-relaxed mb-6">
-                Nymbus is a fintech company that provides a modern banking
-                platform for banks and credit unions. Our cloud-native
-                technology and managed services enable financial institutions to
-                launch new digital brands, modernize their core, and grow
-                without limits.
-              </p>
-              <p className="text-white/60 text-lg leading-relaxed">
-                Headquartered in Jacksonville, Florida, Nymbus serves community
-                banks and credit unions across the United States with a
-                comprehensive suite of products including core banking, digital
-                banking, onboarding, lending, and data analytics.
+              <p className="text-neutral-500 text-lg md:text-xl leading-relaxed max-w-2xl">
+                Legacy systems and vendor roadmaps turn movement into maintenance, so the plan on the whiteboard never reaches production. Nymbus closes that gap, bringing together the infrastructure to launch, the operations to run, and the growth strategy to make the model work in market.
               </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="section-padding bg-charcoal">
+      {/* ─── Section 3: Leadership ────────────────────────────────────────── */}
+      <section className="py-20 md:py-28">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-2xl md:text-3xl font-bold mb-8">Leadership</h2>
+            <div className="max-w-3xl mb-14">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Leadership</p>
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+                Led by banking, product, and growth operators.
+              </h2>
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
+                Nymbus leadership brings experience across banking, product, technology, risk, operations, revenue, and growth strategy.
+              </p>
+            </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Placeholder leadership cards */}
-            {[
-              "Executive Team",
-              "Board of Directors",
-              "Advisory Board",
-              "Investors",
-            ].map((group, index) => (
-              <ScrollReveal key={group} delay={index * 0.1}>
-                <div className="p-6 rounded-xl border border-white/5 bg-charcoal-dark/50">
-                  <h3 className="text-white font-semibold mb-2">{group}</h3>
-                  <p className="text-white/50 text-sm">
-                    View our {group.toLowerCase()}.
-                  </p>
+
+          <ScrollReveal delay={0.1}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+              {leadership.map((person) => (
+                <div key={person.name} className="text-center">
+                  <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-neutral-100">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-neutral-900 text-sm font-bold mb-0.5">{person.name}</h4>
+                  <p className="text-neutral-500 text-xs leading-snug">{person.title}</p>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      <CTAFooter />
-    </>
+      {/* ─── Section 4: Board of Directors ────────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-neutral-50">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="max-w-3xl mb-14">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Board of Directors</p>
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+                Governed with banking and investor experience.
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+              {board.map((person) => (
+                <div key={person.name} className="text-center">
+                  <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-neutral-100">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-neutral-900 text-sm font-bold mb-0.5">{person.name}</h4>
+                  <p className="text-neutral-500 text-xs leading-snug">{person.title}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── Section 5: Investors ─────────────────────────────────────────── */}
+      <section id="investors" className="py-20 md:py-28">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Investors</p>
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900">
+                Backed by leaders in banking, fintech, and financial services.
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 max-w-3xl mx-auto">
+              {investors.map((name) => (
+                <span key={name} className="text-neutral-600 text-sm font-medium">
+                  {name}
+                </span>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── Section 6: Final CTA ─────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="max-w-2xl mx-auto text-center">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Build on Nymbus</p>
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+                See the platform behind modern banking growth.
+              </h2>
+              <p className="text-neutral-500 text-base leading-relaxed mb-8">
+                Explore how Nymbus connects platform, operations, and growth support for institutions ready to launch, modernize, and scale.
+              </p>
+              <Button href="/contact/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                Talk to an expert
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </div>
   );
 }

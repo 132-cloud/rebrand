@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { BrandSwitcher } from "@/components/layout/BrandSwitcher";
+import { PasswordGate } from "@/components/layout/PasswordGate";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -52,6 +53,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/bpi2fje.css" />
       </head>
       <body className="bg-charcoal-dark text-white/80 font-sans antialiased">
+        <PasswordGate>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -80,6 +82,7 @@ export default function RootLayout({
               })(window,document,'script','dataLayer','GTM-TM7M5PM');`,
           }}
         />
+        </PasswordGate>
       </body>
     </html>
   );

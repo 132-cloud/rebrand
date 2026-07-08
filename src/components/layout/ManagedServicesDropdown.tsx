@@ -87,43 +87,43 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
-                      <Link href="/managed-services/contact-center/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/managed-services/#contact-center" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Contact Center</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Member and customer support</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/managed-services/onboarding/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/managed-services/#onboarding" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Onboarding</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Applicant onboarding, end to end</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/managed-services/servicing/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/managed-services/#contact-center" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Servicing</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Customer servicing that keeps pace</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/managed-services/back-office/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/managed-services/#back-office" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Back Office</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Processing and operations</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/managed-services/compliance/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/managed-services/#compliance" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Compliance</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Compliance workflows, monitored and managed</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/managed-services/fraud/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/managed-services/#back-office" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Fraud</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Fraud operations, built for scale</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/managed-services/business-banking/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/managed-services/#business-banking" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Business Banking Support</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Business account operations, covered</span>
                       </Link>

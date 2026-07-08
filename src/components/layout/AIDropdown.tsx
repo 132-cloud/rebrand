@@ -99,7 +99,7 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/ai/applied/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/ai/#applied" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Applied AI</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Building the banking infrastructure for AI</span>
                       </Link>

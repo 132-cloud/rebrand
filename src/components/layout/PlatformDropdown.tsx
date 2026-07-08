@@ -87,19 +87,19 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
-                      <Link href="/products/core-processing/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#core-processing" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Core Processing</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Banking system of record</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/products/digital-banking/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#digital-banking" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Digital Banking</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Modern experience customers demand</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/products/account-opening/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#account-opening" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Account Opening</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">From intent to funded</span>
                       </Link>
@@ -111,13 +111,13 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
-                      <Link href="/products/levels/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#loyalty-engagement" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Levels</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Rewards program built into the account</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/products/engage/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#loyalty-engagement" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Engage</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Turn accounts into relationships</span>
                       </Link>
@@ -132,19 +132,19 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
-                      <Link href="/products/connect/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#connect" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Connect</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">APIs and streaming</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/products/insights/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#insights" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Analytics that show what&apos;s working</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/ai/#nymbus-mcp" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/platform/#nymbus-mcp" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Nymbus MCP</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">AI that drives real banking workflows</span>
                       </Link>

@@ -94,12 +94,12 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
-                      <Link href="/solutions/core-replacement/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/primary-core/#core-replacement" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Core replacement</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/de-novo/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/primary-core/#de-novo" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">De novo launch</span>
                       </Link>
                     </li>
@@ -110,27 +110,27 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
-                      <Link href="/solutions/vertical-brands/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/parallel-core/#vertical-brands" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Vertical brand launches</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/new-line-of-business/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/parallel-core/#new-lines" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">New lines of business</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/accelerate-ma/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/parallel-core/#ma-acceleration" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">M&A acceleration</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/private-label/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/parallel-core/#private-label" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Private label banking</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/sandbox/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/parallel-core/#sandbox" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Sandbox innovation</span>
                       </Link>
                     </li>
@@ -149,7 +149,7 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/business-banking/#commercial" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/solutions/commercial-banking/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Commercial</span>
                       </Link>
                     </li>
