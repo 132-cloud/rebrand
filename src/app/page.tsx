@@ -71,7 +71,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="theme-guide relative">
+    <div className="theme-guide relative overflow-x-clip">
       {/* Floating chrome blob - left side of hero, 50% size */}
       <FloatingBlob
         src="/images/13 - SPECTRA - 3D LIQUID METAL CHROME BLOB SHAPES COLLECTION 2.png"

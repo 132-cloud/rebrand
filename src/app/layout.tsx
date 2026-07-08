@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { BrandSwitcher } from "@/components/layout/BrandSwitcher";
 import { PasswordGate } from "@/components/layout/PasswordGate";
+import { CommentSystem } from "@/components/comments/CommentSystem";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -69,6 +70,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <CookieConsent />
+        <CommentSystem />
 
         {/* Google Tag Manager */}
         <Script
