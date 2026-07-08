@@ -6,25 +6,32 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 const quotes = [
   {
-    text: "The successful go-live affirmed our decision to modernize our entire banking infrastructure and positions us to deliver real, simple banking services to our customers faster and more efficiently than ever before.",
-    author: "Thomas Senecal",
-    title: "President & CEO, PeoplesBank",
-    logoSrc: "/images/logos/peoplesbank-logo.svg",
-    logoAlt: "PeoplesBank",
+    text: "Speed to market and cost to serve is what this business is all about - and Nymbus has nailed both.",
+    author: "Stephen Owen",
+    title: "CEO, First Entertainment Credit Union",
+    logoSrc: "/images/logo bar logos/FECU.png",
+    logoAlt: "First Entertainment CU",
   },
   {
-    text: "Aligning with Nymbus on this vital project is a strategic move for MSUFCU, as it allows us to enhance our product offerings and deliver top-tier services to small business owners. Through this collaboration, we're showing our dedication to the businesses that are the connectors of our communities.",
-    author: "April Clobes",
-    title: "President & CEO, MSUFCU",
+    text: "This is the most user-friendly banking system I've ever trained on - fast, simple and intuitive.",
+    author: "Aleda DeMaria",
+    title: "Executive Vice President, Chief Operating Officer",
+    logoSrc: "/images/logo bar logos/Vector.png",
+    logoAlt: "Client",
+  },
+  {
+    text: "All of the products necessary to run it. Online banking, core, marketing, service channel. It's a single source of entry.",
+    author: "Ami Iceman",
+    title: "CEO, MSUFCU",
     logoSrc: "/images/logos/msufcu-logo.svg",
     logoAlt: "MSUFCU",
   },
   {
-    text: "Our partnership with Nymbus allows us to deliver the modern banking experience our members expect while maintaining the personal service that sets us apart.",
-    author: "Placeholder Name",
-    title: "SVP & Chief Digital Officer, First Entertainment CU",
-    logoSrc: "/images/logo bar logos/FECU.png",
-    logoAlt: "First Entertainment CU",
+    text: "The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.",
+    author: "Jill Castilla",
+    title: "President & CEO, Citizens Bank of Edmond",
+    logoSrc: "/images/logo bar logos/Vector-1.png",
+    logoAlt: "Citizens Bank of Edmond",
   },
 ];
 

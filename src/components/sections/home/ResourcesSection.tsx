@@ -6,28 +6,25 @@ import Link from "next/link";
 
 const resources = [
   {
-    title: "PeoplesBank modernizes its core",
-    description: "The largest U.S. community bank to fully adopt a modern core with Nymbus.",
-    image: "/images/peoples-bg.jpg",
-    href: "/customers/peoplesbank/",
+    category: "Webinar",
+    title: "How parallel cores are reshaping community banking growth",
+    date: "2025",
+    readTime: "45 min",
+    href: "/insights-hub/",
   },
   {
-    title: "MSUFCU expands business banking",
-    description: "A digital growth program built to support small business owners.",
-    image: "/images/msu-bg.jpeg",
-    href: "/customers/msufcu/",
+    category: "Article",
+    title: "The governed AI approach to banking automation",
+    date: "2025",
+    readTime: "8 min",
+    href: "/insights-hub/",
   },
   {
-    title: "The Nymbus AI approach",
-    description: "How governed AI workflows connect to real banking work.",
-    image: "/images/ai-approach-thumb.jpg",
-    href: "/ai/",
-  },
-  {
-    title: "Building AI-native managed services",
-    description: "Operational support for onboarding, servicing, fraud, compliance, contact center, and back-office work.",
-    image: "/images/managed-services-thumb.jpg",
-    href: "/managed-services/",
+    category: "Case Study",
+    title: "PeoplesBank modernizes its core with Nymbus",
+    date: "2025",
+    readTime: "5 min",
+    href: "/insights-hub/",
   },
 ];
 
@@ -57,39 +54,35 @@ export function ResourcesSection() {
         <ScrollReveal delay={0.1}>
           <div
             ref={scrollRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto scrollbar-hide"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto scrollbar-hide"
             style={{ scrollSnapType: "x mandatory" }}
           >
-            {resources.map((resource) => (
+            {resources.map((resource, i) => (
               <Link
-                key={resource.title}
+                key={`${resource.title}-${i}`}
                 href={resource.href}
-                className="group flex flex-col no-underline min-w-[250px] scroll-snap-start"
+                className="group flex flex-col no-underline min-w-[280px] scroll-snap-start"
                 style={{ scrollSnapAlign: "start" }}
               >
                 {/* Thumbnail */}
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-5 bg-charcoal-medium/40">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={resource.image}
-                    alt={resource.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                  {/* Subtle outline for depth */}
+                <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-charcoal-medium/40">
+                  <div className="w-full h-full bg-white/5 group-hover:bg-white/10 transition-colors duration-300" />
                   <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 pointer-events-none" />
                 </div>
+
+                {/* Category */}
+                <p className="text-[#697CB2] text-[10px] font-semibold uppercase tracking-wider mb-1.5">
+                  {resource.category}
+                </p>
 
                 {/* Title */}
                 <h4 className="text-white font-bold text-base mb-2 leading-snug group-hover:text-sky-blue transition-colors">
                   {resource.title}
                 </h4>
 
-                {/* Description */}
-                <p className="text-white/40 text-sm leading-relaxed">
-                  {resource.description}
+                {/* Meta */}
+                <p className="text-white/30 text-xs">
+                  {resource.date} · {resource.readTime}
                 </p>
               </Link>
             ))}
@@ -101,7 +94,7 @@ export function ResourcesSection() {
           <div className="flex items-center gap-3 mt-10">
             <button
               onClick={() => scroll("left")}
-              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 transition-all duration-200"
+              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 transition-[color,border-color] duration-200"
               aria-label="Previous"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -110,7 +103,7 @@ export function ResourcesSection() {
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 transition-all duration-200"
+              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 transition-[color,border-color] duration-200"
               aria-label="Next"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

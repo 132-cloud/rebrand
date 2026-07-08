@@ -106,7 +106,7 @@ export default function AIPage() {
               <div className="flex-1">
                 <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Permissioned Automation</p>
                 <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                  The connective tissue, permissioned end to end.
+                  Nymbus MCP, permissioned end to end.
                 </h2>
                 <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
                   Nymbus MCP connects AI to real banking data and workflows under permissions, approvals, and a full audit trail. Not a flat file from last night, a live path to the core, so automation acts on current data and nothing executes without the sign-off your policy requires.

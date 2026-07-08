@@ -8,52 +8,31 @@ export function GovernedAIApproach() {
     <section className="py-12 md:py-16 bg-white">
       <div className="container-site">
         <ScrollReveal>
-          {/* Outer wrapper with animated pulse border */}
-          <div className="relative rounded-2xl">
-            {/* Static subtle border */}
-            <div
-              className="absolute -inset-[1px] rounded-[17px]"
-              style={{ background: "rgba(76, 154, 255, 0.2)", zIndex: 0 }}
-            />
-            {/* Animated pulse that travels along the perimeter */}
-            <div className="absolute -inset-[1px] rounded-[17px] overflow-hidden" style={{ zIndex: 0 }}>
-              <div
-                className="absolute inset-[-50%] animate-[borderPulse_4s_linear_infinite]"
-                style={{
-                  background: "conic-gradient(from 0deg, transparent 0%, transparent 70%, rgba(76, 154, 255, 0.9) 75%, rgba(179, 212, 255, 1) 80%, rgba(76, 154, 255, 0.9) 85%, transparent 90%, transparent 100%)",
-                }}
-              />
-            </div>
-
-            {/* Card content */}
-            <Link
-              href="/ai/"
-              className="relative block rounded-2xl p-8 md:p-12 transition-[transform,box-shadow] duration-300 hover:scale-[1.003] hover:shadow-[0_8px_30px_rgba(0,101,255,0.3),0_2px_8px_rgba(0,0,0,0.2)] no-underline"
-              style={{
-                background: "linear-gradient(135deg, #0052CC 0%, #0065FF 50%, #4C9AFF 100%)",
-                zIndex: 1,
-              }}
-            >
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-                Building the banking infrastructure for governed AI
-              </h3>
-              <span className="inline-flex items-center text-white text-sm font-semibold">
+          <div className="relative rounded-2xl bg-neutral-100 border border-neutral-200/60 overflow-hidden">
+            <div className="flex items-center justify-between p-8 md:p-10 gap-8">
+              {/* Left: text */}
+              <div className="flex-1">
+                <h3 className="text-neutral-900 text-lg md:text-xl font-bold mb-2 leading-snug">
+                  See what AI can run inside your institution.
+                </h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">
+                  Get an inside look at the real banking work AI can take on, and the infrastructure we&apos;re building to keep it permissioned every step of the way.
+                </p>
+              </div>
+              {/* Right: CTA */}
+              <Link
+                href="/ai/"
+                className="flex-shrink-0 inline-flex items-center px-5 py-2.5 bg-neutral-900 text-white text-sm font-semibold rounded-full hover:bg-neutral-800 transition-colors no-underline"
+              >
                 Read our AI approach
                 <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-              </span>
-            </Link>
+              </Link>
+            </div>
           </div>
         </ScrollReveal>
       </div>
-
-      <style jsx>{`
-        @keyframes borderPulse {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-      `}</style>
     </section>
   );
 }
