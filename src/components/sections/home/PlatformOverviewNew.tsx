@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const capabilities = [
   // Row 1: two half-width cards
-  { title: "Modernize core infrastructure", href: "/core-banking/" },
+  { title: "Modernize core infrastructure", href: "/solutions/primary-core/" },
   { title: "Activate managed services", href: "/managed-services/" },
   // Row 2: three third-width cards
-  { title: "Connect data and operations", href: "/products/connect/" },
+  { title: "Connect data and operations", href: "/platform/#connect" },
   { title: "Accelerate with governed AI", href: "/ai/" },
   { title: "Build with Labs", href: "/labs/" },
 ];

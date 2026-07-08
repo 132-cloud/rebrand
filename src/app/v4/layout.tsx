@@ -49,14 +49,14 @@ export default function V4Layout({ children }: { children: React.ReactNode }) {
         }
         
         /* See a demo: black fill, white text, rounded */
-        body.is-guide-theme header a[href="/demo"],
-        body.is-guide-theme header a[href="/demo/"] {
+        body.is-guide-theme header a[href="/request-demo"],
+        body.is-guide-theme header a[href="/request-demo/"] {
           background-color: #000 !important;
           color: #fff !important;
           border-radius: 9999px !important;
         }
-        body.is-guide-theme header a[href="/demo"]:hover,
-        body.is-guide-theme header a[href="/demo/"]:hover {
+        body.is-guide-theme header a[href="/request-demo"]:hover,
+        body.is-guide-theme header a[href="/request-demo/"]:hover {
           background-color: #333 !important;
         }
 

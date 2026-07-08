@@ -204,7 +204,7 @@ export function Header() {
             {/* Right CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                href="/demo/"
+                href="/request-demo/"
                 className="px-5 py-2.5 text-sm font-semibold text-white bg-blue rounded-[4px] hover:bg-blue-200 transition-colors"
               >
                 See a demo
