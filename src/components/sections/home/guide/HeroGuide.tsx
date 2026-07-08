@@ -16,9 +16,9 @@ const PROMPT_ROUTES: Record<string, PromptRoute> = {
     heading: "Modernize from the core outward.",
     body: "Deploy Nymbus as a primary core or parallel core, with digital banking, account opening, data, engagement, and managed operations connected around your strategy.",
     buttons: [
-      { label: "Explore core banking", href: "/core-banking/" },
-      { label: "Compare primary and parallel core", href: "/core-banking/#comparison" },
-      { label: "Talk to an expert", href: "/contact/?topic=core-modernization" },
+      { label: "Explore primary core", href: "/solutions/primary-core/" },
+      { label: "Compare primary and parallel core", href: "/solutions/" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "run smarter operations": {
@@ -26,16 +26,16 @@ const PROMPT_ROUTES: Record<string, PromptRoute> = {
     body: "Activate managed services for onboarding, servicing, contact center, fraud, compliance workflows, and back-office operations, supported by the Nymbus platform.",
     buttons: [
       { label: "Explore managed services", href: "/managed-services/" },
-      { label: "Talk to an expert", href: "/contact/?topic=managed-services" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "launch a digital brand": {
     heading: "Launch a digital brand on connected banking infrastructure.",
     body: "Bring core processing, digital banking, account opening, managed operations, and Labs support together to move from growth strategy to live banking model.",
     buttons: [
-      { label: "Explore digital brands", href: "/solutions/digital-brand/" },
+      { label: "Explore parallel core", href: "/solutions/parallel-core/" },
       { label: "See how Labs supports launch", href: "/labs/" },
-      { label: "Talk to an expert", href: "/contact/?topic=digital-brand" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "build with governed ai": {
@@ -43,8 +43,8 @@ const PROMPT_ROUTES: Record<string, PromptRoute> = {
     body: "Explore governed AI workflows connected to banking data, actions, permissions, approvals, and auditability.",
     buttons: [
       { label: "Explore governed AI", href: "/ai/" },
-      { label: "See banking workflow examples", href: "/ai/#workflows" },
-      { label: "Talk to an expert", href: "/contact/?topic=ai" },
+      { label: "See Nymbus MCP", href: "/ai/#nymbus-mcp" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "build a growth strategy with labs": {
@@ -52,71 +52,68 @@ const PROMPT_ROUTES: Record<string, PromptRoute> = {
     body: "Use Nymbus Labs for audience strategy, offer design, brand development, launch planning, acquisition support, and performance optimization.",
     buttons: [
       { label: "Explore Labs", href: "/labs/" },
-      { label: "See launch support", href: "/labs/#launch" },
-      { label: "Talk to an expert", href: "/contact/?topic=labs" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "improve account opening": {
     heading: "Move applicants from intent to funded accounts faster.",
     body: "Use connected account opening, digital banking, data, decisioning, and operational workflows to support consumer, business, and niche banking models.",
     buttons: [
-      { label: "Explore account opening", href: "/account-opening/" },
-      { label: "See onboarding workflows", href: "/account-opening/#workflows" },
-      { label: "Talk to an expert", href: "/contact/?topic=account-opening" },
+      { label: "Explore account opening", href: "/platform/#account-opening" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "launch a de novo": {
     heading: "Launch a new institution on a connected banking platform.",
     body: "Deploy core processing, digital banking, account opening, managed operations, data, and growth support around the model you want to build.",
     buttons: [
-      { label: "Explore de novo launch", href: "/solutions/de-novo/" },
-      { label: "Explore core banking", href: "/core-banking/" },
-      { label: "Talk to an expert", href: "/contact/?topic=de-novo" },
+      { label: "Explore de novo launch", href: "/solutions/primary-core/#de-novo" },
+      { label: "Explore primary core", href: "/solutions/primary-core/" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "build a new line of business": {
     heading: "Launch a new banking line without waiting on full-institution change.",
     body: "Use a parallel core, digital banking, account opening, managed operations, and Labs support to build around a specific market, segment, or product strategy.",
     buttons: [
-      { label: "Explore parallel core", href: "/core-banking/#parallel" },
-      { label: "Explore launch pathways", href: "/solutions/" },
-      { label: "Talk to an expert", href: "/contact/?topic=new-line" },
+      { label: "Explore parallel core", href: "/solutions/parallel-core/#new-lines" },
+      { label: "Explore solutions", href: "/solutions/" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "accelerate m&a": {
     heading: "Move faster on acquisition and integration strategy.",
     body: "Use a parallel core path to support acquired relationships, new portfolios, or integration strategies without forcing immediate change across the full institution.",
     buttons: [
-      { label: "Explore M&A acceleration", href: "/solutions/m-and-a/" },
-      { label: "Explore parallel core", href: "/core-banking/#parallel" },
-      { label: "Talk to an expert", href: "/contact/?topic=m-and-a" },
+      { label: "Explore M&A acceleration", href: "/solutions/parallel-core/#ma-acceleration" },
+      { label: "Explore parallel core", href: "/solutions/parallel-core/" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "private label banking": {
     heading: "Launch partner-led banking models on modern infrastructure.",
     body: "Use Nymbus to support private-label banking programs with core processing, digital experience, account opening, data, and managed operations connected from the start.",
     buttons: [
-      { label: "Explore private label banking", href: "/solutions/private-label/" },
-      { label: "Explore platform capabilities", href: "/platform/" },
-      { label: "Talk to an expert", href: "/contact/?topic=private-label" },
+      { label: "Explore private label banking", href: "/solutions/parallel-core/#private-label" },
+      { label: "Explore the platform", href: "/platform/" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "sandbox innovation": {
     heading: "Test new banking models without disrupting current operations.",
     body: "Use a parallel core environment to explore new products, segments, digital experiences, or operating models before scaling them across the institution.",
     buttons: [
-      { label: "Explore sandbox innovation", href: "/solutions/sandbox/" },
-      { label: "Explore parallel core", href: "/core-banking/#parallel" },
-      { label: "Talk to an expert", href: "/contact/?topic=sandbox" },
+      { label: "Explore sandbox innovation", href: "/solutions/parallel-core/#sandbox" },
+      { label: "Explore parallel core", href: "/solutions/parallel-core/" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
   "grow deposits": {
     heading: "Build deposit growth around a focused strategy.",
     body: "Use Labs, digital banking, account opening, engagement, data, and managed operations to support acquisition, activation, and ongoing growth.",
     buttons: [
-      { label: "Explore deposit growth", href: "/solutions/grow-deposits/" },
       { label: "Explore Labs", href: "/labs/" },
-      { label: "Talk to an expert", href: "/contact/?topic=deposits" },
+      { label: "Talk to an expert", href: "/contact/" },
     ],
   },
 };

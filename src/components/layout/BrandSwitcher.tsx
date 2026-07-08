@@ -8,7 +8,6 @@ export function BrandSwitcher() {
 
   const links = [
     { label: "Guide v5", href: "/" },
-    { label: "Guide v4", href: "/v4" },
     { label: "Nymbus", href: "/nymbus" },
     { label: "The Neighbour", href: "/v2" },
   ];
