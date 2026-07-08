@@ -149,6 +149,12 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                         <span className="block text-neutral-500 text-xs mt-0.5">AI that drives real banking workflows</span>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/platform/#fraud-intelligence" onClick={onClose} className="block py-2 group no-underline">
+                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Fraud Intelligence</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Investigate fraud in one place</span>
+                      </Link>
+                    </li>
                   </ul>
 
                   {/* SERVICES sub-section */}
@@ -159,7 +165,7 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                     <li>
                       <Link href="/managed-services/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Managed Services</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Add operational capacity</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Run the operations</span>
                       </Link>
                     </li>
                   </ul>

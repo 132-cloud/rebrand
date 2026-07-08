@@ -101,14 +101,21 @@ export default function AIPage() {
       <section id="nymbus-mcp" className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Permissioned Automation</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                The connective tissue, permissioned end to end.
-              </h2>
-              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Nymbus MCP connects AI to real banking data and workflows under permissions, approvals, and a full audit trail. Not a flat file from last night, a live path to the core, so automation acts on current data and nothing executes without the sign-off your policy requires.
-              </p>
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+              {/* Text — left */}
+              <div className="flex-1">
+                <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Permissioned Automation</p>
+                <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+                  The connective tissue, permissioned end to end.
+                </h2>
+                <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
+                  Nymbus MCP connects AI to real banking data and workflows under permissions, approvals, and a full audit trail. Not a flat file from last night, a live path to the core, so automation acts on current data and nothing executes without the sign-off your policy requires.
+                </p>
+              </div>
+              {/* Image placeholder — right */}
+              <div className="flex-1 w-full">
+                <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60" />
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -118,14 +125,21 @@ export default function AIPage() {
       <section id="applied" className="py-20 md:py-28">
         <div className="container-site">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Building the Infrastructure for AI</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                From model to banking outcome.
-              </h2>
-              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Applied AI builds the infrastructure that makes AI usable in production, turning models into governed, operational workflows that drive real banking outcomes. It&apos;s the unglamorous integration work that separates AI that changes how a bank operates from AI that only demos well.
-              </p>
+            <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-16">
+              {/* Text — right */}
+              <div className="flex-1">
+                <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Building the Infrastructure for AI</p>
+                <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+                  From model to banking outcome.
+                </h2>
+                <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
+                  Applied AI builds the infrastructure that makes AI usable in production, turning models into governed, operational workflows that drive real banking outcomes. It&apos;s the unglamorous integration work that separates AI that changes how a bank operates from AI that only demos well.
+                </p>
+              </div>
+              {/* Image placeholder — left */}
+              <div className="flex-1 w-full">
+                <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60" />
+              </div>
             </div>
           </ScrollReveal>
         </div>

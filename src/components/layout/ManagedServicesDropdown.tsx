@@ -83,7 +83,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                 {/* Column 2: WHAT WE RUN (left) */}
                 <div>
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
-                    Add Operational Capacity
+                    Run the operations
                   </h4>
                   <ul className="space-y-0.5">
                     <li>

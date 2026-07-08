@@ -87,7 +87,7 @@ export function ResourcesDropdown({ isActive, onOpen, onClose }: ResourcesDropdo
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
-                      <Link href="/insights/" onClick={onClose} className="block py-2 group no-underline">
+                      <Link href="/insights-hub/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Ideas and analysis for financial innovators</span>
                       </Link>
