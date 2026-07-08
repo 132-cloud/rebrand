@@ -29,17 +29,29 @@ export function CommentOverlay() {
 
   const overlayRef = useRef<HTMLDivElement>(null);
 
-  // Load comments and listen for updates
-  const refresh = useCallback(() => {
-    setAllComments(getAllComments());
-    setPageComments(getCommentsForPage(pathname));
-    setUnseenCount(getUnseenCount());
+  // Load comments from API and compute unseen count
+  const refresh = useCallback(async () => {
+    const [all, page] = await Promise.all([
+      getAllComments(),
+      getCommentsForPage(pathname),
+    ]);
+    setAllComments(all);
+    setPageComments(page);
+    const totalOpen = all.filter((c) => !c.resolved).length;
+    setUnseenCount(getUnseenCount(totalOpen));
   }, [pathname]);
 
   useEffect(() => {
     refresh();
+    // Listen for local events (optimistic after mutations)
     window.addEventListener("comments-updated", refresh);
     return () => window.removeEventListener("comments-updated", refresh);
+  }, [refresh]);
+
+  // Poll for new comments every 10 seconds so you see others' comments
+  useEffect(() => {
+    const interval = setInterval(refresh, 10000);
+    return () => clearInterval(interval);
   }, [refresh]);
 
   // Handle hash-based navigation (from sidebar clicking a comment on the same page)
@@ -61,7 +73,6 @@ export function CommentOverlay() {
   // Keyboard shortcuts
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
-      // "C" to toggle comment mode (only when not typing)
       if (
         e.key === "c" &&
         !e.metaKey &&
@@ -72,7 +83,6 @@ export function CommentOverlay() {
       ) {
         setCommentMode((prev) => !prev);
       }
-      // Escape to cancel
       if (e.key === "Escape") {
         setCommentMode(false);
         setFormPosition(null);
@@ -87,27 +97,22 @@ export function CommentOverlay() {
   // Handle clicking on the page to place a comment
   function handleOverlayClick(e: React.MouseEvent) {
     if (!commentMode) return;
-    if (formPosition) return; // already showing form
-
-    // Calculate position as % of viewport width and absolute px from top of document
-    const rect = overlayRef.current?.getBoundingClientRect();
-    if (!rect) return;
+    if (formPosition) return;
 
     const xPercent = ((e.clientX) / window.innerWidth) * 100;
     const yAbsolute = e.clientY + window.scrollY;
 
     setPendingComment({ x: xPercent, y: yAbsolute });
 
-    // Position the form near the click but offset so it doesn't cover the pin
     setFormPosition({
       x: Math.min(e.clientX + 12, window.innerWidth - 300),
       y: Math.min(e.clientY + 12, window.innerHeight - 260),
     });
   }
 
-  function handleFormSubmit(author: string, text: string) {
+  async function handleFormSubmit(author: string, text: string) {
     if (!pendingComment) return;
-    addComment({
+    await addComment({
       page: pathname,
       x: pendingComment.x,
       y: pendingComment.y,
@@ -117,6 +122,7 @@ export function CommentOverlay() {
     setFormPosition(null);
     setPendingComment(null);
     setCommentMode(false);
+    refresh();
   }
 
   function handleFormCancel() {
@@ -136,8 +142,9 @@ export function CommentOverlay() {
 
   function handleOpenSidebar() {
     setSidebarOpen(true);
-    markAllSeen();
-    refresh();
+    const totalOpen = allComments.filter((c) => !c.resolved).length;
+    markAllSeen(totalOpen);
+    setUnseenCount(0);
   }
 
   return (
@@ -153,7 +160,6 @@ export function CommentOverlay() {
           <svg className="w-5 h-5 text-neutral-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
           </svg>
-          {/* Notification badge */}
           {unseenCount > 0 && (
             <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
               {unseenCount > 9 ? "9+" : unseenCount}
@@ -181,7 +187,7 @@ export function CommentOverlay() {
 
       {/* Comment mode indicator */}
       {commentMode && (
-        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-[9999] bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-lg flex items-center gap-2 animate-bounce-once">
+        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-[9999] bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
           <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
           Click anywhere to leave a comment
           <button
@@ -229,6 +235,7 @@ export function CommentOverlay() {
         comments={allComments}
         currentPage={pathname}
         onNavigateToComment={handleNavigateToComment}
+        onRefresh={refresh}
       />
     </>
   );

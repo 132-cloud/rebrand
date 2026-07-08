@@ -1,4 +1,4 @@
-// ─── Comment System: Types & localStorage Persistence ───────────────────────
+// ─── Comment System: Types & API-backed persistence (Upstash Redis) ─────────
 
 export interface Comment {
   id: string;
@@ -19,69 +19,83 @@ export interface Reply {
   createdAt: string;
 }
 
-const STORAGE_KEY = "nymbus-comments";
 const SEEN_KEY = "nymbus-comments-seen";
 
-// ─── CRUD helpers ───────────────────────────────────────────────────────────
+// ─── API helpers ────────────────────────────────────────────────────────────
 
-export function getAllComments(): Comment[] {
-  if (typeof window === "undefined") return [];
+export async function getAllComments(): Promise<Comment[]> {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
+    const res = await fetch("/api/comments", { cache: "no-store" });
+    if (!res.ok) return [];
+    return await res.json();
   } catch {
     return [];
   }
 }
 
-export function getCommentsForPage(page: string): Comment[] {
-  return getAllComments().filter((c) => c.page === page);
+export async function getCommentsForPage(page: string): Promise<Comment[]> {
+  try {
+    const res = await fetch(`/api/comments?page=${encodeURIComponent(page)}`, { cache: "no-store" });
+    if (!res.ok) return [];
+    return await res.json();
+  } catch {
+    return [];
+  }
 }
 
-export function addComment(comment: Omit<Comment, "id" | "createdAt" | "resolved" | "replies">): Comment {
-  const comments = getAllComments();
-  const newComment: Comment = {
-    ...comment,
-    id: crypto.randomUUID(),
-    createdAt: new Date().toISOString(),
-    resolved: false,
-    replies: [],
-  };
-  comments.push(newComment);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
-  window.dispatchEvent(new Event("comments-updated"));
-  return newComment;
+export async function addComment(
+  comment: Omit<Comment, "id" | "createdAt" | "resolved" | "replies">
+): Promise<Comment | null> {
+  try {
+    const res = await fetch("/api/comments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(comment),
+    });
+    if (!res.ok) return null;
+    const newComment = await res.json();
+    window.dispatchEvent(new Event("comments-updated"));
+    return newComment;
+  } catch {
+    return null;
+  }
 }
 
-export function addReply(commentId: string, reply: Omit<Reply, "id" | "createdAt">): void {
-  const comments = getAllComments();
-  const target = comments.find((c) => c.id === commentId);
-  if (!target) return;
-  target.replies.push({
-    ...reply,
-    id: crypto.randomUUID(),
-    createdAt: new Date().toISOString(),
-  });
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
-  window.dispatchEvent(new Event("comments-updated"));
+export async function addReply(
+  commentId: string,
+  reply: Omit<Reply, "id" | "createdAt">
+): Promise<void> {
+  try {
+    await fetch(`/api/comments/${commentId}/reply`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(reply),
+    });
+    window.dispatchEvent(new Event("comments-updated"));
+  } catch {
+    // silent fail
+  }
 }
 
-export function resolveComment(commentId: string): void {
-  const comments = getAllComments();
-  const target = comments.find((c) => c.id === commentId);
-  if (!target) return;
-  target.resolved = true;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
-  window.dispatchEvent(new Event("comments-updated"));
+export async function resolveComment(commentId: string): Promise<void> {
+  try {
+    await fetch(`/api/comments/${commentId}`, { method: "PATCH" });
+    window.dispatchEvent(new Event("comments-updated"));
+  } catch {
+    // silent fail
+  }
 }
 
-export function deleteComment(commentId: string): void {
-  const comments = getAllComments().filter((c) => c.id !== commentId);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
-  window.dispatchEvent(new Event("comments-updated"));
+export async function deleteComment(commentId: string): Promise<void> {
+  try {
+    await fetch(`/api/comments/${commentId}`, { method: "DELETE" });
+    window.dispatchEvent(new Event("comments-updated"));
+  } catch {
+    // silent fail
+  }
 }
 
-// ─── Notification / "seen" tracking ─────────────────────────────────────────
+// ─── Notification / "seen" tracking (still localStorage, per-user) ──────────
 
 export function getSeenCount(): number {
   if (typeof window === "undefined") return 0;
@@ -92,14 +106,12 @@ export function getSeenCount(): number {
   }
 }
 
-export function markAllSeen(): void {
-  const total = getAllComments().filter((c) => !c.resolved).length;
-  localStorage.setItem(SEEN_KEY, String(total));
+export function markAllSeen(totalOpen: number): void {
+  localStorage.setItem(SEEN_KEY, String(totalOpen));
   window.dispatchEvent(new Event("comments-updated"));
 }
 
-export function getUnseenCount(): number {
-  const total = getAllComments().filter((c) => !c.resolved).length;
+export function getUnseenCount(totalOpen: number): number {
   const seen = getSeenCount();
-  return Math.max(0, total - seen);
+  return Math.max(0, totalOpen - seen);
 }

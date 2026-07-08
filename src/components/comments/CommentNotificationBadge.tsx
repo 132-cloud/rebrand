@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { getUnseenCount, markAllSeen, getAllComments } from "@/lib/comments";
+import { getAllComments, getUnseenCount } from "@/lib/comments";
 
 interface CommentNotificationBadgeProps {
   onClick: () => void;
@@ -11,9 +11,11 @@ export function CommentNotificationBadge({ onClick }: CommentNotificationBadgePr
   const [count, setCount] = useState(0);
   const [total, setTotal] = useState(0);
 
-  const refresh = useCallback(() => {
-    setCount(getUnseenCount());
-    setTotal(getAllComments().filter((c) => !c.resolved).length);
+  const refresh = useCallback(async () => {
+    const all = await getAllComments();
+    const openCount = all.filter((c) => !c.resolved).length;
+    setTotal(openCount);
+    setCount(getUnseenCount(openCount));
   }, []);
 
   useEffect(() => {

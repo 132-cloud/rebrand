@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Comment,
-  getAllComments,
   resolveComment,
   deleteComment,
   addReply,
@@ -16,6 +15,7 @@ interface CommentSidebarProps {
   comments: Comment[];
   currentPage: string;
   onNavigateToComment: (comment: Comment) => void;
+  onRefresh: () => void;
 }
 
 export function CommentSidebar({
@@ -24,6 +24,7 @@ export function CommentSidebar({
   comments,
   currentPage,
   onNavigateToComment,
+  onRefresh,
 }: CommentSidebarProps) {
   const router = useRouter();
   const [filter, setFilter] = useState<"all" | "open" | "resolved">("all");
@@ -59,20 +60,30 @@ export function CommentSidebar({
 
   function handleGoToComment(comment: Comment) {
     if (comment.page !== currentPage) {
-      // Navigate to the page first, then scroll
       router.push(comment.page + `#comment-${comment.id}`);
     } else {
       onNavigateToComment(comment);
     }
   }
 
-  function handleReplySubmit(commentId: string) {
+  async function handleReplySubmit(commentId: string) {
     if (!replyText.trim()) return;
     const author = replyAuthor.trim() || "Anonymous";
     localStorage.setItem("nymbus-comment-author", author);
-    addReply(commentId, { author, text: replyText.trim() });
+    await addReply(commentId, { author, text: replyText.trim() });
     setReplyText("");
     setReplyingTo(null);
+    onRefresh();
+  }
+
+  async function handleResolve(commentId: string) {
+    await resolveComment(commentId);
+    onRefresh();
+  }
+
+  async function handleDelete(commentId: string) {
+    await deleteComment(commentId);
+    onRefresh();
   }
 
   function formatTime(iso: string) {
@@ -184,7 +195,7 @@ export function CommentSidebar({
               {/* Comments in this page */}
               {pageComments
                 .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-                .map((comment, idx) => (
+                .map((comment) => (
                   <div
                     key={comment.id}
                     className={`px-5 py-3 hover:bg-blue-50/50 transition-colors cursor-pointer border-b border-neutral-50 last:border-b-0 ${
@@ -244,14 +255,14 @@ export function CommentSidebar({
                           </button>
                           {!comment.resolved && (
                             <button
-                              onClick={() => resolveComment(comment.id)}
+                              onClick={() => handleResolve(comment.id)}
                               className="text-[11px] text-neutral-500 hover:text-green-600 font-medium transition-colors"
                             >
                               Resolve
                             </button>
                           )}
                           <button
-                            onClick={() => deleteComment(comment.id)}
+                            onClick={() => handleDelete(comment.id)}
                             className="text-[11px] text-neutral-500 hover:text-red-600 font-medium transition-colors"
                           >
                             Delete
