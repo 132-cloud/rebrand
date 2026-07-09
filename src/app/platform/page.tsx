@@ -525,12 +525,9 @@ export default function PlatformPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
-                One connected platform.
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-8">
+                Ready to move?
               </h2>
-              <p className="text-neutral-500 text-base leading-relaxed mb-8">
-                See how core, digital banking, onboarding, intelligence, and managed operations run together on one platform built to move with your strategy.
-              </p>
               <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
                 Book a demo
               </Button>
