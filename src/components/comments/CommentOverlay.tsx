@@ -212,8 +212,8 @@ export function CommentOverlay() {
         />
       )}
 
-      {/* Render pins for current page */}
-      {pageComments.map((comment, idx) => (
+      {/* Render pins for current page (hide resolved) */}
+      {pageComments.filter((c) => !c.resolved).map((comment, idx) => (
         <CommentPin
           key={comment.id}
           comment={comment}

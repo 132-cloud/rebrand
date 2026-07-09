@@ -191,7 +191,7 @@ export default function LabsPage() {
       <section id="labs-method" className="py-20 md:py-28 bg-neutral-900">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white text-center mb-14">
+            <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-white text-center mb-14">
               The Labs method.
             </h2>
           </ScrollReveal>
@@ -226,7 +226,7 @@ export default function LabsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 Paths to growth.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -256,7 +256,7 @@ export default function LabsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 From first idea to live brand.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">

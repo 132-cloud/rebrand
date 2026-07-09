@@ -112,7 +112,7 @@ export function PortfolioCarousel() {
           Live banking brands
         </p>
         <div className="flex items-end justify-between gap-6">
-          <h2 className="text-[1.5rem] md:text-[2rem] font-bold leading-tight tracking-[-0.02em] text-white max-w-xl">
+          <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-white max-w-xl">
             Agencies pitch. We ship brands that grow. Here are a few.
           </h2>
           {/* Navigation arrows */}

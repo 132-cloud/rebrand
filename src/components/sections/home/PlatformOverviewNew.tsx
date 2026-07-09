@@ -10,7 +10,7 @@ const capabilities = [
   { title: "Activate managed services", href: "/managed-services/" },
   // Row 2: three third-width cards
   { title: "Connect data and operations", href: "/platform/#connect" },
-  { title: "Accelerate with governed AI", href: "/ai/" },
+  { title: "Onboard to funded, faster", href: "/ai/" },
   { title: "Build with Labs", href: "/labs/" },
 ];
 
@@ -20,7 +20,7 @@ export function PlatformOverviewNew() {
       <div className="container-site">
         <ScrollReveal>
           <div className="max-w-5xl mx-auto text-center mb-10">
-            <h4 className="text-[2rem] md:text-[2.15rem] font-bold mb-3 leading-tight">
+            <h4 className="text-[2.5rem] md:text-[3.25rem] font-bold mb-3 leading-[1.1] tracking-[-0.02em]">
               One connected platform
             </h4>
             <p className="text-white/60 text-lg md:text-xl mb-4">
