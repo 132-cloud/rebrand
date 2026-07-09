@@ -9,6 +9,8 @@ import {
   addComment,
   markAllSeen,
   getUnseenCount,
+  findAnchor,
+  resolveCommentY,
 } from "@/lib/comments";
 import { CommentPin } from "./CommentPin";
 import { CommentForm } from "./CommentForm";
@@ -62,7 +64,8 @@ export function CommentOverlay() {
       const comment = pageComments.find((c) => c.id === id);
       if (comment) {
         setTimeout(() => {
-          window.scrollTo({ top: comment.y - window.innerHeight / 3, behavior: "smooth" });
+          const y = resolveCommentY(comment);
+          window.scrollTo({ top: y - window.innerHeight / 3, behavior: "smooth" });
           setActiveComment(id);
           window.history.replaceState(null, "", pathname);
         }, 100);
@@ -112,12 +115,17 @@ export function CommentOverlay() {
 
   async function handleFormSubmit(author: string, text: string) {
     if (!pendingComment) return;
+
+    // Resolve anchor for stable positioning
+    const anchor = findAnchor(pendingComment.y);
+
     await addComment({
       page: pathname,
       x: pendingComment.x,
       y: pendingComment.y,
       author,
       text,
+      ...(anchor && { anchorId: anchor.anchorId, offsetY: anchor.offsetY }),
     });
     setFormPosition(null);
     setPendingComment(null);
@@ -139,7 +147,8 @@ export function CommentOverlay() {
   }
 
   function handleNavigateToComment(comment: Comment) {
-    window.scrollTo({ top: comment.y - window.innerHeight / 3, behavior: "smooth" });
+    const y = resolveCommentY(comment);
+    window.scrollTo({ top: y - window.innerHeight / 3, behavior: "smooth" });
     setActiveComment(comment.id);
     setSidebarOpen(false);
   }

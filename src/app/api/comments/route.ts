@@ -8,6 +8,8 @@ export interface CommentData {
   page: string;
   x: number;
   y: number;
+  anchorId?: string;
+  offsetY?: number;
   author: string;
   text: string;
   createdAt: string;
@@ -32,7 +34,7 @@ export async function GET(request: NextRequest) {
 // POST /api/comments — add a new comment
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const { page, x, y, author, text } = body;
+  const { page, x, y, author, text, anchorId, offsetY } = body;
 
   if (!page || x == null || y == null || !author || !text) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
@@ -46,6 +48,8 @@ export async function POST(request: NextRequest) {
     page,
     x,
     y,
+    ...(anchorId && { anchorId }),
+    ...(offsetY != null && { offsetY }),
     author,
     text,
     createdAt: new Date().toISOString(),

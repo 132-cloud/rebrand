@@ -63,7 +63,7 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
                     AI
                   </h4>
-                  <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4">
+                  <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4 max-w-[280px]">
                     AI that answers to permissions, approvals, and audit.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">

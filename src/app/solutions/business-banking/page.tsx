@@ -295,10 +295,10 @@ export default function BusinessBankingPage() {
       </section>
 
       {/* ─── Why Band (Testimonials) ──────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-900">
+      <section className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white text-center mb-14">
+            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 text-center mb-14">
               Why institutions build business banking on Nymbus.
             </h2>
           </ScrollReveal>
@@ -308,14 +308,14 @@ export default function BusinessBankingPage() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5"
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
-                  <blockquote className="text-white/70 text-sm leading-relaxed mb-6 italic">
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
                     &ldquo;Testimonial placeholder — shortest quotable line, outcome first.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-white text-sm font-semibold">Name Placeholder</p>
-                    <p className="text-white/40 text-xs">Title, Institution</p>
+                    <p className="text-neutral-900 text-sm font-semibold">Name Placeholder</p>
+                    <p className="text-neutral-400 text-xs">Title, Institution</p>
                   </div>
                 </div>
               ))}

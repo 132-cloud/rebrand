@@ -51,14 +51,14 @@ export default function AIPage() {
       </section>
 
       {/* ─── Point-of-View Band ───────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-900">
+      <section className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white mb-6">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-6">
                 Agents are a task. Not a strategy.
               </h2>
-              <p className="text-white/60 text-base md:text-lg leading-relaxed">
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
                 A model that triages a fraud alert or summarizes a loan file is useful work. But a collection of agents is a collection of demos until something connects them to your data, your approvals, and your core in real time. The hard part of AI in banking is that connective tissue. It&apos;s the part Nymbus built.
               </p>
             </div>

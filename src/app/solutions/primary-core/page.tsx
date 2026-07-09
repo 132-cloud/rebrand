@@ -82,7 +82,7 @@ const faqs = [
   },
   {
     question: "What if we want to launch something new before replacing the core?",
-    answer: "You can. A parallel core lets you launch a new brand or line alongside your existing system first, then modernize the primary core when the timing is right.",
+    answer: "You can. A parallel core lets you launch a new brand or line alongside your existing system first, then replace the primary core when the timing is right.",
   },
   {
     question: "What makes Nymbus different from a traditional core provider?",
@@ -192,7 +192,7 @@ export default function PrimaryCorePage() {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                Modernize the foundation, not just the front end.
+                Replace the foundation, not just the front end.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
                 A modern app on a rigid core still moves at the core&apos;s pace. Nymbus replaces the foundation itself, so accounts, deposits, servicing, and every product decision run on infrastructure built to move with your strategy.
@@ -285,11 +285,11 @@ export default function PrimaryCorePage() {
       </section>
 
       {/* ─── Why Band (Testimonials) ──────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-900">
+      <section className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white text-center mb-14">
-              Why institutions modernize their core on Nymbus.
+            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 text-center mb-14">
+              Why institutions move their core to Nymbus.
             </h2>
           </ScrollReveal>
 
@@ -298,14 +298,14 @@ export default function PrimaryCorePage() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5"
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
-                  <blockquote className="text-white/70 text-sm leading-relaxed mb-6 italic">
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
                     &ldquo;Testimonial placeholder — shortest quotable line, outcome first.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-white text-sm font-semibold">Name Placeholder</p>
-                    <p className="text-white/40 text-xs">Title, Institution</p>
+                    <p className="text-neutral-900 text-sm font-semibold">Name Placeholder</p>
+                    <p className="text-neutral-400 text-xs">Title, Institution</p>
                   </div>
                 </div>
               ))}

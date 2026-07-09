@@ -187,11 +187,11 @@ export default function LabsPage() {
         </ScrollReveal>
       </section>
 
-      {/* ─── 5. The Labs Method (dark) ────────────────────────────────────── */}
-      <section id="labs-method" className="py-20 md:py-28 bg-neutral-900">
+      {/* ─── 5. The Labs Method ─────────────────────────────────────────── */}
+      <section id="labs-method" className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-white text-center mb-14">
+            <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 text-center mb-14">
               The Labs method.
             </h2>
           </ScrollReveal>
@@ -201,10 +201,10 @@ export default function LabsPage() {
               {methods.map((item) => (
                 <div
                   key={item.title}
-                  className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5"
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
-                  <h4 className="text-white text-base font-bold mb-3">{item.title}</h4>
-                  <p className="text-white/60 text-sm leading-relaxed">{item.body}</p>
+                  <h4 className="text-neutral-900 text-base font-bold mb-3">{item.title}</h4>
+                  <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -212,8 +212,8 @@ export default function LabsPage() {
 
           <ScrollReveal delay={0.2}>
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-white/80 text-base md:text-lg leading-relaxed">
-                <span className="font-bold text-white">One difference: we are wired into the platform.</span>{" "}
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
+                <span className="font-bold text-neutral-900">One difference: we are wired into the platform.</span>{" "}
                 An agency hands you a deck. We build on the same core, digital banking, onboarding, and operations that run the brand, so strategy becomes a live, growing bank instead of a slide.
               </p>
             </div>

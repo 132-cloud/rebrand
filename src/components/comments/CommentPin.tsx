@@ -1,6 +1,7 @@
 "use client";
 
-import { Comment } from "@/lib/comments";
+import { useEffect, useState } from "react";
+import { Comment, resolveCommentY } from "@/lib/comments";
 
 interface CommentPinProps {
   comment: Comment;
@@ -10,6 +11,20 @@ interface CommentPinProps {
 }
 
 export function CommentPin({ comment, index, isActive, onClick }: CommentPinProps) {
+  const [topPx, setTopPx] = useState(comment.y);
+
+  // Recompute position from anchor on mount and when layout changes
+  useEffect(() => {
+    function updatePosition() {
+      setTopPx(resolveCommentY(comment));
+    }
+    updatePosition();
+
+    // Recompute on resize (layout shifts can change anchor positions)
+    window.addEventListener("resize", updatePosition);
+    return () => window.removeEventListener("resize", updatePosition);
+  }, [comment]);
+
   return (
     <button
       onClick={(e) => {
@@ -29,7 +44,7 @@ export function CommentPin({ comment, index, isActive, onClick }: CommentPinProp
       `}
       style={{
         left: `${comment.x}%`,
-        top: `${comment.y}px`,
+        top: `${topPx}px`,
         transform: "translate(-50%, -50%)",
       }}
       title={`${comment.author}: ${comment.text}`}

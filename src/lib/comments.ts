@@ -4,7 +4,9 @@ export interface Comment {
   id: string;
   page: string; // pathname, e.g. "/" or "/platform"
   x: number; // percentage from left (0-100)
-  y: number; // px from top of document
+  y: number; // px from top of document (legacy fallback)
+  anchorId?: string; // id of nearest anchoring element (section, div, etc.)
+  offsetY?: number; // px offset from anchor element's top
   author: string;
   text: string;
   createdAt: string; // ISO string
@@ -20,6 +22,62 @@ export interface Reply {
 }
 
 const SEEN_KEY = "nymbus-comments-seen";
+
+// ─── Anchor resolution helpers ──────────────────────────────────────────────
+
+/**
+ * Find the nearest element with an `id` attribute at or above the click point.
+ * Walks up from the clicked element looking for sections/divs with IDs.
+ * Returns the anchor id and the offset (click y - anchor element top).
+ */
+export function findAnchor(clickY: number): { anchorId: string; offsetY: number } | null {
+  // Gather all elements with an id on the page
+  const candidates = Array.from(document.querySelectorAll("[id]")).filter((el) => {
+    const tag = el.tagName.toLowerCase();
+    // Only anchor to semantic/structural elements
+    return ["section", "div", "main", "article", "header", "footer"].includes(tag);
+  });
+
+  if (candidates.length === 0) return null;
+
+  // Find the closest anchor element whose top is at or above the click point
+  let best: { el: Element; top: number } | null = null;
+  for (const el of candidates) {
+    const rect = el.getBoundingClientRect();
+    const elTop = rect.top + window.scrollY;
+    if (elTop <= clickY) {
+      if (!best || elTop > best.top) {
+        best = { el, top: elTop };
+      }
+    }
+  }
+
+  if (!best) {
+    // Fallback: use the first element with an id
+    const first = candidates[0];
+    const rect = first.getBoundingClientRect();
+    const elTop = rect.top + window.scrollY;
+    return { anchorId: first.id, offsetY: clickY - elTop };
+  }
+
+  return { anchorId: best.el.id, offsetY: clickY - best.top };
+}
+
+/**
+ * Resolve the current absolute Y position of a comment.
+ * Uses anchor-based positioning if available, falls back to raw `y`.
+ */
+export function resolveCommentY(comment: Comment): number {
+  if (comment.anchorId && comment.offsetY != null) {
+    const anchor = document.getElementById(comment.anchorId);
+    if (anchor) {
+      const rect = anchor.getBoundingClientRect();
+      return rect.top + window.scrollY + comment.offsetY;
+    }
+  }
+  // Fallback to legacy absolute position
+  return comment.y;
+}
 
 // ─── API helpers ────────────────────────────────────────────────────────────
 

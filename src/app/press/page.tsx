@@ -195,22 +195,22 @@ export default function PressPage() {
       </section>
 
       {/* ─── Section 6: Media Contact ─────────────────────────────────────── */}
-      <section id="media-contact" className="py-20 md:py-28 bg-neutral-900">
+      <section id="media-contact" className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <p className="text-white/40 text-[11px] font-semibold uppercase tracking-wider mb-4">Media Inquiries</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white mb-5">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Media Inquiries</p>
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
                 Contact the Nymbus media team.
               </h2>
-              <p className="text-white/60 text-base md:text-lg leading-relaxed mb-3">
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-3">
                 For press, media, and communications inquiries, reach the Nymbus media team.
               </p>
-              <a href="mailto:media@nymbus.com" className="text-white/80 text-base font-medium hover:text-white transition-colors no-underline">
+              <a href="mailto:media@nymbus.com" className="text-neutral-700 text-base font-medium hover:text-neutral-900 transition-colors no-underline">
                 media@nymbus.com
               </a>
               <div className="mt-8">
-                <Button href="mailto:media@nymbus.com" variant="primary" size="lg" className="!bg-white !text-neutral-900 !shadow-none hover:!bg-neutral-100">
+                <Button href="mailto:media@nymbus.com" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
                   Contact media team
                 </Button>
               </div>
