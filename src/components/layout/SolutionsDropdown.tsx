@@ -64,7 +64,7 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                     Solutions
                   </h4>
                   <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4">
-                    Launch alongside your core, or modernize from it.
+                    Launch alongside your core, or replace it.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
                     Stand up something new next to what you run today, or modernize the foundation itself. One platform, two paths to market.
