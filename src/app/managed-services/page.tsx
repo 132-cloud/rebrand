@@ -3,24 +3,46 @@
 import { useState } from "react";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
-import Link from "next/link";
 
 // ─── FAQ Data ────────────────────────────────────────────────────────────────
 
-const faqGeneral = [
-  { question: "What are Nymbus Managed Services?", answer: "The operational functions behind a running bank, staffed and run by Nymbus: contact center, onboarding, back-office processing, risk and compliance support, fraud operations, and business banking support." },
-  { question: "How does the shared-services model work?", answer: "Nymbus executes and manages operational processes against the policies and thresholds you define. Your institution retains regulatory responsibility, risk management, and oversight of all outsourced activity." },
-  { question: "Do we keep control of compliance and risk?", answer: "Yes. Nymbus supports and executes controls; your institution holds ultimate responsibility for regulatory compliance and reporting. Findings specific to your program are shared with you." },
-  { question: "Can we set our own approval thresholds and decisioning rules?", answer: "Yes. You define approval limits, KYC decisioning criteria, and exception rules. Nymbus operates within them and escalates anything above your thresholds." },
-  { question: "What is included, and what is an enhanced add-on?", answer: "Standard reporting runs monthly by default. Dedicated support, client-specific QA and fraud reporting, and more frequent reporting are available as enhanced services." },
-];
-
-const faqOperations = [
-  { question: "How does application onboarding and decisioning work?", answer: "Every application is scored by Socure ID+ on submission and routed to auto-approve, auto-deny, or refer. The onboarding team works all refer cases, including document verification and fraud review." },
-  { question: "Can Nymbus support business and commercial accounts?", answer: "Yes. Business onboarding adds KYB verification through Socure and Middesk, plus ACH origination, Positive Pay, authorized signer, and secondary-user management." },
-  { question: "Is customer support provided under our brand?", answer: "Yes. The Digital Experience Center handles calls, secure messages, and email during your business hours, under your brand, with quality scored on every interaction." },
-  { question: "How are fraud disputes handled?", answer: "The fraud team processes ACH, P2P, bill pay, and debit card disputes under Reg E and NACHA rules, investigates each one, issues required notices, and coordinates any account credit." },
-  { question: "What reporting do we receive?", answer: "Monthly support, complaint, and fraud reports, plus a quarterly debit card dispute report. Enhanced and more frequent reporting is available as an add-on." },
+const faqs = [
+  {
+    question: "What are Nymbus Managed Services?",
+    answer: "A shared-services operation, built and run by Nymbus, covering six domains behind your brand: the Digital Experience Center (member and business support), Digital Onboarding, Digital Operations, Risk and Compliance, Fraud Operations, and Business-Specific Support.",
+  },
+  {
+    question: "How does the shared-services model work?",
+    answer: "Nymbus executes and manages the operational processes in alignment with the policies and procedures your institution defines. Your institution retains ultimate responsibility for regulatory compliance, risk management, and oversight of the work run on your behalf.",
+  },
+  {
+    question: "Do we keep control of compliance and risk?",
+    answer: "Yes. Your institution retains regulatory responsibility and program ownership. Nymbus executes the operational work under your policies and escalates anything requiring your decision.",
+  },
+  {
+    question: "Can we set our own approval thresholds and decisioning rules?",
+    answer: "Yes. Client-defined thresholds govern fee reimbursements, mobile deposit and payment limit increases, ACH exception decisioning, MRDC pay/return/refer criteria, and Positive Pay exception handling. Nymbus operates to those thresholds and escalates anything above them.",
+  },
+  {
+    question: "How does application onboarding and decisioning work?",
+    answer: "Every application is scored on intake by Socure ID+ and routed to one of three outcomes: auto-approve, auto-deny, or refer. Referred applicants receive a document and selfie verification link (Socure DocV) that expires in 72 hours, and referred cases are reviewed manually by the Onboarding team against your KYC rules.",
+  },
+  {
+    question: "Can Nymbus support business and commercial accounts?",
+    answer: "Yes. Business Digital Onboarding runs KYC on individual signers and beneficial owners through Socure ID+, and KYB verification through Socure and Middesk. Ongoing servicing includes ACH origination and Positive Pay enrollment (configurable as default-on or opt-in), wire transfer support, secondary-user access management, and business-account maintenance. Your institution retains underwriting, exposure limits, and Positive Pay exception decisioning.",
+  },
+  {
+    question: "Is customer support provided under our brand?",
+    answer: "Yes. The Digital Experience Center handles inbound and outbound calls, secure messaging through your online and mobile banking platform, and email during your business hours, all under your brand. Email is unsecure by design and is limited to non-account-specific inquiries.",
+  },
+  {
+    question: "How are fraud disputes handled?",
+    answer: "The Fraud team investigates ACH, P2P, Bill Pay, and debit card disputes under Regulation E and NACHA rules, coordinating with DXC on intake and Digital Operations on money movement. Suspicious or unusual activity of $5,000 or more (individually or combined) is escalated to your institution via a USA ticket with investigation details, so your team gets the case already built.",
+  },
+  {
+    question: "What reporting do we receive?",
+    answer: "Monthly reporting covers support statistics (phone, chat, email), complaints, and fraud. A quarterly report covers debit card disputes. Enhanced, client-specific reporting and QA visibility are available as an additional service.",
+  },
 ];
 
 // ─── FAQ Accordion Item ──────────────────────────────────────────────────────
@@ -35,7 +57,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
         </svg>
       </button>
-      <div className="overflow-hidden transition-[max-height,opacity] duration-300" style={{ maxHeight: open ? "300px" : "0", opacity: open ? 1 : 0 }}>
+      <div className="overflow-hidden transition-[max-height,opacity] duration-300" style={{ maxHeight: open ? "400px" : "0", opacity: open ? 1 : 0 }}>
         <p className="text-neutral-500 text-sm leading-relaxed pb-5 pr-12">{answer}</p>
       </div>
     </div>
@@ -66,10 +88,10 @@ export default function ManagedServicesPage() {
             <div className="max-w-3xl">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Managed Services</p>
               <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
-                We build it. We run it.
+                We don&apos;t just deploy it. We run it.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-                The team that builds your operations runs them too. Problems get fixed by the people who built them, not forwarded. Your staff stays focused on the institution.
+                The team that builds your operations runs them too. Problems get fixed by the people who built them, not forwarded.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button href="/contact/?topic=managed-services" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
@@ -88,23 +110,56 @@ export default function ManagedServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <p className="text-[2.5rem] font-bold text-neutral-900 mb-1 tabular-nums">6</p>
-                <p className="text-neutral-500 text-sm">Operational domains Nymbus staffs and runs</p>
+                <p className="text-neutral-500 text-sm">Operational domains run behind your brand</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1 tabular-nums">24/7</p>
-                <p className="text-neutral-500 text-sm">Monitoring and fraud response</p>
+                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">TBD</p>
+                <p className="text-neutral-500 text-sm">Placeholder stat</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1 tabular-nums">100%</p>
-                <p className="text-neutral-500 text-sm">Interactions quality scored</p>
+                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">TBD</p>
+                <p className="text-neutral-500 text-sm">Placeholder stat</p>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ─── 3. Meet the Team ─────────────────────────────────────────────── */}
-      <section id="meet-the-team" className="py-20 md:py-28">
+      {/* ─── 3. The Operating Model (shared-services) ─────────────────────── */}
+      <section id="compliance" className="py-20 md:py-28">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="max-w-3xl mb-14">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">The shared-services model</p>
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+                We run the work. You keep control.
+              </h2>
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
+                Outsourcing the operation should not mean giving up oversight. You define the rules. Nymbus executes inside them.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+                <h4 className="text-neutral-900 text-base font-bold mb-3">You set the thresholds.</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">Define approval limits, decisioning criteria, and exception rules. Nymbus operates to them and escalates anything above your thresholds instead of acting alone.</p>
+              </div>
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+                <h4 className="text-neutral-900 text-base font-bold mb-3">You keep regulatory ownership.</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">Nymbus executes and manages the operational controls. Your institution retains regulatory responsibility, risk management, and oversight of everything run on your behalf.</p>
+              </div>
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+                <h4 className="text-neutral-900 text-base font-bold mb-3">Automation runs inside your rules.</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">Where Nymbus applies AI to operational work, it runs under the same permissions, approvals, and audit trail as everything else your team controls.</p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── 4. The Team ──────────────────────────────────────────────────── */}
+      <section id="meet-the-team" className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
@@ -119,7 +174,7 @@ export default function ManagedServicesPage() {
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {domains.map((domain) => (
-                <div key={domain} className="p-5 rounded-xl border border-neutral-200 bg-neutral-50">
+                <div key={domain} className="p-5 rounded-xl border border-neutral-200 bg-white">
                   <p className="text-neutral-900 text-sm font-medium">{domain}</p>
                 </div>
               ))}
@@ -128,21 +183,21 @@ export default function ManagedServicesPage() {
         </div>
       </section>
 
-      {/* ─── 4. Customer Proof ────────────────────────────────────────────── */}
-      <section className="py-16 md:py-20 bg-neutral-50 border-y border-neutral-100">
+      {/* ─── 5. Proof Quote ───────────────────────────────────────────────── */}
+      <section className="py-16 md:py-20 border-y border-neutral-100">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
               <blockquote className="text-neutral-700 text-xl md:text-2xl font-light leading-relaxed italic mb-6">
-                &ldquo;Placeholder — requires written customer approval. Suggested angle: a credit union or bank that launched a digital brand and ran it without adding an operations team, citing how fast issues get resolved because the team that built the service runs it.&rdquo;
+                &ldquo;Placeholder — shortest quotable line, outcome first, on how fast issues get resolved because the team that built the service runs it.&rdquo;
               </blockquote>
-              <p className="text-neutral-500 text-sm">Name, Title, Institution — pending written approval</p>
+              <p className="text-neutral-500 text-sm">— Name, Title, Institution (pending written approval)</p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ─── 5. Digital Onboarding (dark section) ─────────────────────────── */}
+      {/* ─── 6. Front-of-house: Digital Onboarding ────────────────────────── */}
       <section id="onboarding" className="py-20 md:py-28 bg-neutral-900">
         <div className="container-site">
           <ScrollReveal>
@@ -160,18 +215,18 @@ export default function ManagedServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5">
                 <h4 className="text-white text-base font-bold mb-3">Auto-approve, auto-deny, or refer.</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Socure ID+ scores each application on intake and routes it to one of three outcomes. Clean applicants are approved without anyone touching the file.</p>
+                <p className="text-white/60 text-sm leading-relaxed">Socure ID+ scores each application on intake and routes it to one of three outcomes, so clean applicants are approved without anyone touching the file.</p>
               </div>
               <div className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5">
                 <h4 className="text-white text-base font-bold mb-3">Every refer, worked end to end.</h4>
-                <p className="text-white/60 text-sm leading-relaxed">The onboarding team runs manual review, document and selfie verification, and fraud coordination on flagged cases, deciding each one against your KYC rules. Business applications add KYB through Socure and Middesk.</p>
+                <p className="text-white/60 text-sm leading-relaxed">The onboarding team runs manual review, document and selfie verification, and fraud coordination on flagged cases, so a referred application clears with a decision, not a delay.</p>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ─── 6. Operational Breadth (three columns) ───────────────────────── */}
+      {/* ─── 7. Ongoing Operations ────────────────────────────────────────── */}
       <section id="back-office" className="py-20 md:py-28">
         <div className="container-site">
           <ScrollReveal>
@@ -188,11 +243,11 @@ export default function ManagedServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
                 <h4 className="text-neutral-900 text-base font-bold mb-3">Back office runs without you.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">Digital Operations reconciles GLs daily, posts and works ACH files, runs Positive Pay, and matches every card transaction to Core, so nothing sits unbalanced.</p>
+                <p className="text-neutral-500 text-sm leading-relaxed">Digital Operations reconciles GLs daily, posts and matches every card transaction to Core, and works ACH files, Positive Pay, and exceptions, so nothing sits unbalanced.</p>
               </div>
               <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
                 <h4 className="text-neutral-900 text-base font-bold mb-3">Fraud is worked, not just flagged.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">The fraud team investigates disputes under Reg E and NACHA, works suspicious activity, manages card rules and CAMS alerts, and reports what it finds.</p>
+                <p className="text-neutral-500 text-sm leading-relaxed">The fraud team investigates disputes under Reg E and NACHA, works suspicious activity, and manages card rules and CAMS alerts, so cases close, not just open.</p>
               </div>
               <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
                 <h4 className="text-neutral-900 text-base font-bold mb-3">Compliance is monitored, not filed away.</h4>
@@ -203,69 +258,7 @@ export default function ManagedServicesPage() {
         </div>
       </section>
 
-      {/* ─── 7. Shared-Services Model ─────────────────────────────────────── */}
-      <section id="compliance" className="py-20 md:py-28 bg-neutral-50">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-3xl mb-14">
-              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">The shared-services model</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                We run the work. You keep control.
-              </h2>
-              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Outsourcing the operation should not mean giving up oversight. You define the rules; Nymbus executes inside them.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
-                <h4 className="text-neutral-900 text-base font-bold mb-3">You set the thresholds.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">You define approval limits, decisioning criteria, and exception rules. Nymbus operates to them and escalates anything above your thresholds instead of acting alone.</p>
-              </div>
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
-                <h4 className="text-neutral-900 text-base font-bold mb-3">You keep regulatory ownership.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">Nymbus executes and manages the operational controls. Your institution retains regulatory responsibility, risk management, and oversight of everything run on your behalf.</p>
-              </div>
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
-                <h4 className="text-neutral-900 text-base font-bold mb-3">Automation runs inside your rules.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">Where Nymbus applies AI to operational work, it runs under the same permissions, approvals, and audit trail as everything else your team controls.</p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ─── 8. Support and Business Banking ──────────────────────────────── */}
-      <section id="contact-center" className="py-20 md:py-28">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-3xl mb-14">
-              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Support and servicing</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                Support that scales with your brand.
-              </h2>
-              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Members and business customers reach trained support under your name, and your commercial operations are covered without a specialist team.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
-                <h4 className="text-neutral-900 text-base font-bold mb-3">Support staffed under your brand.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">The Digital Experience Center handles calls, secure messages, and email during your hours, with quality scored against standardized scorecards on every interaction.</p>
-              </div>
-              <div id="business-banking" className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
-                <h4 className="text-neutral-900 text-base font-bold mb-3">Business banking, fully covered.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">KYB verification, ACH origination, Positive Pay, and signer and secondary-user management run behind your commercial accounts, so you serve businesses without new headcount.</p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ─── 9. Reporting ─────────────────────────────────────────────────── */}
+      {/* ─── 8. Reporting ─────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
@@ -282,37 +275,17 @@ export default function ManagedServicesPage() {
         </div>
       </section>
 
-      {/* ─── 10. Labs (closing band) ──────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-900">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-white/40 text-[11px] font-semibold uppercase tracking-wider mb-4">Nymbus Labs</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white mb-5">
-                The growth layer around launch.
-              </h2>
-              <p className="text-white/60 text-base md:text-lg leading-relaxed mb-8">
-                Nymbus Labs embeds growth experts with your team to architect, launch, and optimize your digital brand, from the first account to the ten-thousandth.
-              </p>
-              <Link href="/labs/" className="inline-flex items-center text-white/70 text-sm font-semibold hover:text-white transition-colors no-underline">
-                Explore Labs
-                <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ─── 11. Final CTA ────────────────────────────────────────────────── */}
+      {/* ─── 9. Closing CTA ───────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-white border-t border-neutral-100">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-6">
-                Launch it. Run it. Grow it.
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+                We build it. We run it.
               </h2>
+              <p className="text-neutral-500 text-base leading-relaxed mb-8">
+                See how Nymbus operates the back office behind your products, run by the team that built it.
+              </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Button href="/contact/?topic=managed-services" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
                   Talk to an expert
@@ -323,7 +296,7 @@ export default function ManagedServicesPage() {
         </div>
       </section>
 
-      {/* ─── 12. FAQ ──────────────────────────────────────────────────────── */}
+      {/* ─── 10. FAQ ──────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
@@ -334,13 +307,7 @@ export default function ManagedServicesPage() {
 
           <ScrollReveal delay={0.1}>
             <div className="max-w-3xl">
-              <h3 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Nymbus Managed Services</h3>
-              {faqGeneral.map((faq) => (
-                <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
-              ))}
-
-              <h3 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4 mt-10">Onboarding, Operations and Support</h3>
-              {faqOperations.map((faq) => (
+              {faqs.map((faq) => (
                 <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
               ))}
             </div>
