@@ -181,7 +181,7 @@ export default function LabsPage() {
       </section>
 
       {/* ─── 4. The Work (Portfolio Carousel) ─────────────────────────────── */}
-      <section id="portfolio" className="py-20 md:py-28 bg-neutral-50">
+      <section id="portfolio" className="py-0">
         <ScrollReveal>
           <PortfolioCarousel />
         </ScrollReveal>
