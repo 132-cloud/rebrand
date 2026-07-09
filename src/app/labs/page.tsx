@@ -122,7 +122,7 @@ export default function LabsPage() {
                 Growth layer that drives the launch.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-                A cross-functional growth team embeds with yours to architect, launch, and scale a digital banking brand, from the first account to the ten thousandth.
+                A cross-functional growth team embeds with yours to architect, launch, and scale a digital banking brand, from launch through scale.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button href="/contact/?topic=labs" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">

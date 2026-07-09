@@ -156,7 +156,7 @@ export default function HomePage() {
                   Experts that drive banking growth.
                 </h3>
                 <p className="text-neutral-500 text-base leading-relaxed mb-6">
-                  Nymbus Labs embeds growth experts with your team to architect, launch, and optimize your digital brand from the first account to the ten thousandth.
+                  Nymbus Labs embeds growth experts with your team to architect, launch, and optimize your digital brand from launch through scale.
                 </p>
                 <Link
                   href="/labs/"

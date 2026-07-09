@@ -7,13 +7,13 @@ const paths = [
   {
     title: "Launch in parallel.",
     description:
-      "Stand up a digital brand, vertical offering, or new line of business alongside your existing stack. Less disruption, faster to market.",
+      "Stand up a digital brand, vertical offering, or new line of business alongside your existing stack.",
     href: "/solutions/parallel-core/",
   },
   {
-    title: "Launch a primary core.",
+    title: "Replace your core.",
     description:
-      "Modernize from the foundation up. Nymbus becomes your core, with digital, onboarding, data, and operations connected around it.",
+      "Move onto a modern core, with digital, onboarding, data, and operations connected around it, so every decision runs at your pace, not a legacy vendor\u2019s.",
     href: "/solutions/primary-core/",
   },
 ];
@@ -24,7 +24,7 @@ export function ActivationPathsNew() {
       <div className="container-site">
         <ScrollReveal>
           <h2 className="text-[2rem] md:text-[2.75rem] font-bold text-center mb-14 text-neutral-900 leading-tight">
-            Launch alongside your core, or modernize from it.
+            Launch beside your core, or replace the one holding you back.
           </h2>
         </ScrollReveal>
 

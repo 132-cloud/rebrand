@@ -211,17 +211,8 @@ const intelligenceFeatures = [
 
 const summaryItems = [
   {
-    title: "Run the bank.",
-    body: "Core, digital banking, and account opening on modern infrastructure built for primary or parallel deployment.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" />
-      </svg>
-    ),
-  },
-  {
-    title: "See and automate.",
-    body: "APIs, analytics, governed AI, and fraud intelligence connected across every product and channel.",
+    title: "Real-time where it matters.",
+    body: "Live transaction processing, event-driven services, and modern APIs power banking that responds in the moment, not just at the end of it.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -229,11 +220,20 @@ const summaryItems = [
     ),
   },
   {
-    title: "Operate at scale.",
-    body: "Managed Services built and run by the same team, so what breaks gets fixed, not forwarded.",
+    title: "API-first by design.",
+    body: "Modern APIs connect Core, Digital, Onboarding, payments, and partner ecosystems, so integration takes days, not a proprietary rebuild.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+      </svg>
+    ),
+  },
+  {
+    title: "One platform, deployed your way.",
+    body: "Run Nymbus as your primary banking platform, or modernize alongside the system you run today, on your timeline.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21" />
       </svg>
     ),
   },
@@ -270,7 +270,7 @@ export default function PlatformPage() {
                 One connected platform.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-                Core processing, digital banking, account opening, managed operations, and governed AI built to work separately or together.
+                Core processing, digital banking, account opening, managed operations, and governed AI, running as one system, not five vendor contracts stitched together.
               </p>
               <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
                 Book a demo
@@ -442,47 +442,6 @@ export default function PlatformPage() {
       </section>
 
       {/* ─── Deploy Your Way Band ─────────────────────────────────────────── */}
-      <section className="py-20 md:py-28">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                One platform. Primary or parallel.
-              </h2>
-              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Deploy Nymbus as your system of record, or run it as a parallel core beside the system you operate today. Launch alongside your core, or modernize from it.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              {deployOptions.map((option) => (
-                <Link
-                  key={option.title}
-                  href={option.href}
-                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300 no-underline group"
-                >
-                  <h4 className="text-neutral-900 text-base font-bold mb-3 group-hover:text-[#697CB2] transition-colors">{option.title}</h4>
-                  <p className="text-neutral-500 text-sm leading-relaxed">{option.body}</p>
-                </Link>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <div className="mt-10 text-center">
-              <Link href="/solutions/" className="inline-flex items-center text-[#697CB2] text-sm font-semibold hover:text-[#4a5d8a] transition-colors no-underline">
-                Explore solutions
-                <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* ─── Closing CTA ──────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
         <div className="container-site">

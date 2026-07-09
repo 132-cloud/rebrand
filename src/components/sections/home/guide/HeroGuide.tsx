@@ -162,7 +162,7 @@ const PLACEHOLDERS = [
 ];
 
 const PRIMARY_PILLS = [
-  { label: "Modernize core infrastructure", route: "modernize core infrastructure" },
+  { label: "Move to a modern core", route: "modernize core infrastructure" },
   { label: "Run smarter operations", route: "run smarter operations" },
   { label: "Launch a digital brand", route: "launch a digital brand" },
   { label: "Build with governed AI", route: "build with governed ai" },
@@ -460,7 +460,7 @@ export function HeroGuide() {
               className="text-lg md:text-xl max-w-3xl mx-auto mb-8 tracking-[-0.01em] whitespace-nowrap"
               style={{ color: "var(--guide-text-body, rgba(255,255,255,0.6))", lineHeight: 1.5 }}
             >
-              Launch, operate, and scale on the banking platform built to move with your strategy.
+              Launch, operate, and scale on the banking platform built to move.
             </p>
 
             {/* Prompt Box - expands downward when active */}
