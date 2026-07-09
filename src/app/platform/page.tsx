@@ -362,8 +362,8 @@ export default function PlatformPage() {
         <ScrollReveal delay={0.1}>
           <div
             id="banking-carousel"
-            className="flex gap-6 overflow-x-auto overflow-y-visible scrollbar-hide pl-[max(1.5rem,calc((100vw-1140px)/2+2rem))] pr-6 py-6 snap-x snap-mandatory"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-6 overflow-x-auto overflow-y-visible scrollbar-hide pl-[max(1.5rem,calc((100vw-1140px)/2+2rem))] pr-6 py-6 snap-x snap-proximity"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', scrollPaddingLeft: 'max(1.5rem, calc((100vw - 1140px) / 2 + 2rem))' }}
           >
             {bankingTechFeatures.map((feature) => (
               <Link
@@ -399,7 +399,7 @@ export default function PlatformPage() {
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 Move faster with a flexible, modern platform built for growth
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-6">
@@ -467,8 +467,8 @@ export default function PlatformPage() {
         <ScrollReveal delay={0.1}>
           <div
             id="intel-carousel"
-            className="flex gap-6 overflow-x-auto overflow-y-visible scrollbar-hide pl-[max(1.5rem,calc((100vw-1140px)/2+2rem))] pr-6 py-6 snap-x snap-mandatory"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-6 overflow-x-auto overflow-y-visible scrollbar-hide pl-[max(1.5rem,calc((100vw-1140px)/2+2rem))] pr-6 py-6 snap-x snap-proximity"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', scrollPaddingLeft: 'max(1.5rem, calc((100vw - 1140px) / 2 + 2rem))' }}
           >
             {intelligenceFeatures.map((feature) => (
               <Link
