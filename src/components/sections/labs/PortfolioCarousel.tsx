@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 // ─── Brand Data ──────────────────────────────────────────────────────────────
 
@@ -74,21 +74,32 @@ const brands: Brand[] = [
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export function PortfolioCarousel() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [modalBrand, setModalBrand] = useState<Brand | null>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const scroll = (dir: "left" | "right") => {
-    if (scrollRef.current) {
-      const cardWidth = 300;
-      scrollRef.current.scrollBy({ left: dir === "left" ? -cardWidth * 2 : cardWidth * 2, behavior: "smooth" });
-    }
+  const goLeft = () => {
+    setActiveIndex((prev) => (prev === 0 ? brands.length - 1 : prev - 1));
   };
+
+  const goRight = () => {
+    setActiveIndex((prev) => (prev === brands.length - 1 ? 0 : prev + 1));
+  };
+
+  // Get visible cards: active + up to 3 to the right
+  const getVisibleIndices = () => {
+    const indices: number[] = [];
+    for (let i = 0; i < Math.min(4, brands.length); i++) {
+      indices.push((activeIndex + i) % brands.length);
+    }
+    return indices;
+  };
+
+  const visibleIndices = getVisibleIndices();
 
   return (
     <div className="bg-[#141414] py-16 md:py-24 -mx-[calc((100vw-100%)/2)] px-[calc((100vw-100%)/2)]">
       {/* Header */}
-      <div className="container-site mb-6">
+      <div className="container-site mb-8">
         <p className="text-[#e5e5e5] text-xs font-semibold uppercase tracking-widest mb-3">
           Live banking brands
         </p>
@@ -100,7 +111,7 @@ export function PortfolioCarousel() {
           <div className="flex gap-2 flex-shrink-0">
             <button
               aria-label="Previous"
-              onClick={() => scroll("left")}
+              onClick={goLeft}
               className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/40 transition-colors"
             >
               <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -109,7 +120,7 @@ export function PortfolioCarousel() {
             </button>
             <button
               aria-label="Next"
-              onClick={() => scroll("right")}
+              onClick={goRight}
               className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/40 transition-colors"
             >
               <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -120,88 +131,125 @@ export function PortfolioCarousel() {
         </div>
       </div>
 
-      {/* Netflix-style carousel track */}
-      <div
-        ref={scrollRef}
-        className="flex gap-2 overflow-x-auto overflow-y-visible scrollbar-hide px-[calc(max(1.5rem,(100vw-1140px)/2))] py-8 snap-x snap-mandatory"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        role="list"
-        aria-label="Brand portfolio"
-      >
-        {brands.map((brand, index) => (
-          <button
-            key={brand.brandName}
-            onClick={() => setModalBrand(brand)}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className={`
-              relative flex-shrink-0 w-[260px] md:w-[300px] aspect-[16/9] snap-start rounded-md overflow-hidden
-              transition-all duration-300 ease-out text-left group cursor-pointer
-              focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50
-              ${hoveredIndex === index ? "scale-[1.3] z-30 shadow-2xl shadow-black/80 rounded-t-md rounded-b-none" : "z-10"}
-              ${hoveredIndex !== null && hoveredIndex !== index ? "opacity-60" : ""}
-            `}
-            role="listitem"
-            aria-label={`${brand.brandName} — ${brand.descriptor}`}
-            style={{ transformOrigin: index === 0 ? "left center" : index === brands.length - 1 ? "right center" : "center center" }}
-          >
-            {/* Card image */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={brand.image}
-              alt={`${brand.brandName} website`}
-              className="w-full h-full object-cover object-top"
+      {/* Carousel */}
+      <div className="container-site">
+        <div
+          className="flex gap-3 items-stretch h-[420px] md:h-[480px]"
+          role="list"
+          aria-label="Brand portfolio"
+        >
+          {visibleIndices.map((brandIndex, posIndex) => {
+            const brand = brands[brandIndex];
+            const isActive = posIndex === 0;
+
+            return (
+              <button
+                key={brand.brandName}
+                onClick={() => {
+                  if (isActive) {
+                    setModalBrand(brand);
+                  } else {
+                    setActiveIndex(brandIndex);
+                  }
+                }}
+                className={`
+                  relative overflow-hidden rounded-lg transition-all duration-500 ease-out
+                  text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50
+                  ${isActive
+                    ? "flex-[2.2] md:flex-[2.5]"
+                    : "flex-[0.6] md:flex-[0.7]"
+                  }
+                `}
+                role="listitem"
+                aria-label={`${brand.brandName} — ${brand.descriptor}`}
+              >
+                {/* Image */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={brand.image}
+                  alt={`${brand.brandName} website`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
+                    isActive ? "object-top" : "object-center"
+                  }`}
+                />
+
+                {/* Gradient overlay */}
+                <div className={`absolute inset-0 transition-opacity duration-500 ${
+                  isActive
+                    ? "bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+                    : "bg-gradient-to-t from-black/80 via-black/30 to-black/10"
+                }`} />
+
+                {/* Active card content (bottom) */}
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    {/* Badges row */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-green-400 text-[11px] font-bold border border-green-400/40 px-2 py-0.5 rounded">
+                        LIVE
+                      </span>
+                      <span className="text-white/50 text-[11px]">{brand.institution}</span>
+                    </div>
+
+                    {/* Brand name */}
+                    <h3 className="text-white text-2xl md:text-3xl font-bold tracking-wide mb-2">
+                      {brand.brandName}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-white/80 text-sm leading-relaxed mb-3 max-w-md">
+                      {brand.playLine}
+                    </p>
+
+                    {/* Stat + action row */}
+                    <div className="flex items-center gap-4">
+                      <span className="text-white text-sm font-bold">{brand.resultStat}</span>
+                      {brand.caseUrl && (
+                        <a
+                          href={brand.caseUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-white/70 hover:text-white transition-colors no-underline"
+                        >
+                          Visit brand
+                          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Inactive card: just brand name vertically or at bottom */}
+                {!isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                    <h3 className="text-white text-xs md:text-sm font-bold tracking-wide text-center">
+                      {brand.brandName}
+                    </h3>
+                  </div>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Dots indicator */}
+        <div className="flex items-center justify-center gap-1.5 mt-6">
+          {brands.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveIndex(idx)}
+              className={`rounded-full transition-all duration-300 ${
+                idx === activeIndex
+                  ? "w-6 h-2 bg-white"
+                  : "w-2 h-2 bg-white/30 hover:bg-white/50"
+              }`}
+              aria-label={`Go to brand ${idx + 1}`}
             />
-
-            {/* Dark gradient overlay (always visible, stronger on hover) */}
-            <div className={`absolute inset-0 transition-opacity duration-300 ${
-              hoveredIndex === index
-                ? "bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100"
-                : "bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100"
-            }`} />
-
-            {/* Bottom info (always visible) */}
-            <div className="absolute bottom-0 left-0 right-0 p-3">
-              <h3 className="text-white text-sm font-bold tracking-wide">
-                {brand.brandName}
-              </h3>
-              <p className={`text-white/70 text-xs transition-opacity duration-200 ${
-                hoveredIndex === index ? "opacity-100" : "opacity-0"
-              }`}>
-                {brand.descriptor}
-              </p>
-            </div>
-
-            {/* Expanded info panel (Netflix-style bottom dropdown on hover) */}
-            {hoveredIndex === index && (
-              <div className="absolute top-full left-0 right-0 bg-[#1a1a1a] p-3 rounded-b-md shadow-2xl shadow-black/80 z-40">
-                <div className="flex items-center gap-2 mb-2">
-                  {/* Play-style button */}
-                  <span className="w-7 h-7 rounded-full bg-white flex items-center justify-center flex-shrink-0">
-                    <svg className="w-3.5 h-3.5 text-[#141414] ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                  {/* Info circle */}
-                  <span className="w-7 h-7 rounded-full border-2 border-white/40 flex items-center justify-center flex-shrink-0 hover:border-white transition-colors">
-                    <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                    </svg>
-                  </span>
-                  <span className="ml-auto text-[10px] text-green-400 font-semibold border border-white/20 px-1.5 py-0.5 rounded">
-                    LIVE
-                  </span>
-                </div>
-                <p className="text-white/80 text-[11px] leading-relaxed mb-1.5">{brand.playLine}</p>
-                <div className="flex items-center gap-2">
-                  <span className="text-white text-[11px] font-bold">{brand.resultStat}</span>
-                  <span className="text-white/40 text-[11px]">·</span>
-                  <span className="text-white/50 text-[11px]">{brand.institution}</span>
-                </div>
-              </div>
-            )}
-          </button>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Case Modal */}
