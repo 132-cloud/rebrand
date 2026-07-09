@@ -294,16 +294,16 @@ export default function LabsPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">#1</p>
-                <p className="text-neutral-500 text-sm">In live digital brand launches</p>
+                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">+459%</p>
+                <p className="text-neutral-500 text-sm">Deposits growth across the Labs portfolio YoY 2025</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">270%</p>
-                <p className="text-neutral-500 text-sm">Deposit growth across digital brands in 2025</p>
+                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">$50M</p>
+                <p className="text-neutral-500 text-sm">In deposits in as little as 1.4 months</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1 tabular-nums">25+</p>
-                <p className="text-neutral-500 text-sm">Digital banks launched and cores deployed</p>
+                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">97%</p>
+                <p className="text-neutral-500 text-sm">12-month customer retention</p>
               </div>
             </div>
           </ScrollReveal>

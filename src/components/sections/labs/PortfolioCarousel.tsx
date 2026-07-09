@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 // ─── Brand Data ──────────────────────────────────────────────────────────────
 
@@ -19,7 +19,7 @@ const brands: Brand[] = [
     brandName: "PILLUR",
     institution: "MSU Federal Credit Union",
     descriptor: "Banking for small businesses",
-    playLine: "Serve SMBs the primary brand cannot reach",
+    playLine: "Serving growing small businesses",
     resultStat: "10,000+ accounts in 12 months",
     image: "/images/labs/pillur.png",
     caseUrl: "https://pillur.org/",
@@ -75,14 +75,22 @@ const brands: Brand[] = [
 
 export function PortfolioCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [modalBrand, setModalBrand] = useState<Brand | null>(null);
 
+  const navigate = useCallback((newIndex: number) => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setActiveIndex(newIndex);
+    setTimeout(() => setIsAnimating(false), 600);
+  }, [isAnimating]);
+
   const goLeft = () => {
-    setActiveIndex((prev) => (prev === 0 ? brands.length - 1 : prev - 1));
+    navigate(activeIndex === 0 ? brands.length - 1 : activeIndex - 1);
   };
 
   const goRight = () => {
-    setActiveIndex((prev) => (prev === brands.length - 1 ? 0 : prev + 1));
+    navigate(activeIndex === brands.length - 1 ? 0 : activeIndex + 1);
   };
 
   // Get visible cards: active + up to 3 to the right
@@ -143,65 +151,65 @@ export function PortfolioCarousel() {
             const isActive = posIndex === 0;
 
             return (
-              <button
-                key={brand.brandName}
-                onClick={() => {
-                  if (isActive) {
-                    setModalBrand(brand);
-                  } else {
-                    setActiveIndex(brandIndex);
-                  }
-                }}
+              <div
+                key={`pos-${posIndex}`}
                 className={`
-                  relative overflow-hidden rounded-lg transition-all duration-500 ease-out
-                  text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50
-                  ${isActive
-                    ? "flex-[2.2] md:flex-[2.5]"
-                    : "flex-[0.6] md:flex-[0.7]"
-                  }
+                  relative overflow-hidden rounded-lg
+                  transition-[flex] duration-[600ms] cubic-bezier(0.4, 0, 0.2, 1)
+                  ${isActive ? "flex-[2.2] md:flex-[2.5]" : "flex-[0.6] md:flex-[0.7]"}
                 `}
-                role="listitem"
-                aria-label={`${brand.brandName} — ${brand.descriptor}`}
               >
-                {/* Image */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={brand.image}
-                  alt={`${brand.brandName} website`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
-                    isActive ? "object-top" : "object-center"
-                  }`}
-                />
+                {/* Inner content wrapper with fade animation */}
+                <button
+                  onClick={() => {
+                    if (isActive) {
+                      setModalBrand(brand);
+                    } else {
+                      navigate(brandIndex);
+                    }
+                  }}
+                  className="absolute inset-0 w-full h-full text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                  aria-label={`${brand.brandName} — ${brand.descriptor}`}
+                  role="listitem"
+                >
+                  {/* Image */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={brand.image}
+                    alt={`${brand.brandName} website`}
+                    className={`
+                      absolute inset-0 w-full h-full object-cover
+                      transition-[object-position,transform] duration-[600ms] cubic-bezier(0.4, 0, 0.2, 1)
+                      ${isActive ? "object-top scale-100" : "object-center scale-105"}
+                    `}
+                  />
 
-                {/* Gradient overlay */}
-                <div className={`absolute inset-0 transition-opacity duration-500 ${
-                  isActive
-                    ? "bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-                    : "bg-gradient-to-t from-black/80 via-black/30 to-black/10"
-                }`} />
+                  {/* Gradient overlay */}
+                  <div className={`
+                    absolute inset-0
+                    transition-opacity duration-[600ms] cubic-bezier(0.4, 0, 0.2, 1)
+                    ${isActive
+                      ? "bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+                      : "bg-gradient-to-t from-black/80 via-black/40 to-black/20"
+                    }
+                  `} />
 
-                {/* Active card content (bottom) */}
-                {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                    {/* Badges row */}
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-green-400 text-[11px] font-bold border border-green-400/40 px-2 py-0.5 rounded">
-                        LIVE
-                      </span>
-                      <span className="text-white/50 text-[11px]">{brand.institution}</span>
-                    </div>
+                  {/* Active card content */}
+                  <div className={`
+                    absolute bottom-0 left-0 right-0 p-6 md:p-8
+                    transition-[opacity,transform] duration-[600ms] cubic-bezier(0.4, 0, 0.2, 1)
+                    ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}
+                  `}>
+                    <span className="text-white/50 text-[11px] block mb-2">{brand.institution}</span>
 
-                    {/* Brand name */}
                     <h3 className="text-white text-2xl md:text-3xl font-bold tracking-wide mb-2">
                       {brand.brandName}
                     </h3>
 
-                    {/* Description */}
                     <p className="text-white/80 text-sm leading-relaxed mb-3 max-w-md">
                       {brand.playLine}
                     </p>
 
-                    {/* Stat + action row */}
                     <div className="flex items-center gap-4">
                       <span className="text-white text-sm font-bold">{brand.resultStat}</span>
                       {brand.caseUrl && (
@@ -220,17 +228,19 @@ export function PortfolioCarousel() {
                       )}
                     </div>
                   </div>
-                )}
 
-                {/* Inactive card: just brand name vertically or at bottom */}
-                {!isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                  {/* Inactive card label */}
+                  <div className={`
+                    absolute bottom-0 left-0 right-0 p-3 md:p-4
+                    transition-[opacity,transform] duration-[600ms] cubic-bezier(0.4, 0, 0.2, 1)
+                    ${!isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"}
+                  `}>
                     <h3 className="text-white text-xs md:text-sm font-bold tracking-wide text-center">
                       {brand.brandName}
                     </h3>
                   </div>
-                )}
-              </button>
+                </button>
+              </div>
             );
           })}
         </div>
@@ -240,12 +250,15 @@ export function PortfolioCarousel() {
           {brands.map((_, idx) => (
             <button
               key={idx}
-              onClick={() => setActiveIndex(idx)}
-              className={`rounded-full transition-all duration-300 ${
-                idx === activeIndex
+              onClick={() => navigate(idx)}
+              className={`
+                rounded-full
+                transition-all duration-[400ms] cubic-bezier(0.4, 0, 0.2, 1)
+                ${idx === activeIndex
                   ? "w-6 h-2 bg-white"
                   : "w-2 h-2 bg-white/30 hover:bg-white/50"
-              }`}
+                }
+              `}
               aria-label={`Go to brand ${idx + 1}`}
             />
           ))}
@@ -261,15 +274,12 @@ export function PortfolioCarousel() {
           aria-modal="true"
           aria-label={`${modalBrand.brandName} case study`}
         >
-          {/* Backdrop */}
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
 
-          {/* Modal */}
           <div
             className="relative bg-[#1a1a1a] rounded-xl max-w-lg w-full shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close */}
             <button
               onClick={() => setModalBrand(null)}
               className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 flex items-center justify-center hover:bg-black/80 transition-colors"
@@ -280,7 +290,6 @@ export function PortfolioCarousel() {
               </svg>
             </button>
 
-            {/* Brand hero image */}
             <div className="h-[220px] overflow-hidden relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -295,16 +304,12 @@ export function PortfolioCarousel() {
             </div>
 
             <div className="p-6 pt-2">
-              {/* Meta row */}
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-green-400 text-sm font-bold">LIVE</span>
                 <span className="text-white/50 text-sm">{modalBrand.institution}</span>
               </div>
 
-              {/* Description */}
               <p className="text-white/90 text-sm leading-relaxed mb-4">{modalBrand.playLine}</p>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5">
                 {["Strategy", "Brand", "Launch", "Growth"].map((chip) => (
                   <span key={chip} className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-white/80 border border-white/10">
@@ -313,13 +318,11 @@ export function PortfolioCarousel() {
                 ))}
               </div>
 
-              {/* Result stat */}
               <div className="p-4 rounded-lg bg-white/5 border border-white/10 mb-5">
                 <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Headline result</p>
                 <p className="text-white text-xl font-bold">{modalBrand.resultStat}</p>
               </div>
 
-              {/* CTA */}
               {modalBrand.caseUrl && (
                 <a
                   href={modalBrand.caseUrl}
