@@ -67,7 +67,7 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
                     AI that answers to permissions, approvals, and audit.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
-                    Governed and operational, built from within. Nymbus AI works inside the rules your institution already runs on.
+                    Governed and operational. Build with AI works inside the rules your institution already runs on.
                   </p>
                   <div className="mt-6">
                     <Link
