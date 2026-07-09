@@ -78,11 +78,10 @@ const paths = [
 // ─── Process Steps ───────────────────────────────────────────────────────────
 
 const steps = [
-  { num: "1", title: "Define the audience.", body: "Who it is for, why the segment matters, what need you are built to serve." },
-  { num: "2", title: "Shape the offer.", body: "Turn the opportunity into product, pricing, and positioning that sells." },
-  { num: "3", title: "Build the brand.", body: "Name, identity, message, and market approach that earn trust." },
-  { num: "4", title: "Plan the launch.", body: "Acquisition, operations, and platform readiness before day one." },
-  { num: "5", title: "Grow the model.", body: "Refine acquisition, engagement, and growth on live data after launch." },
+  { num: "1", title: "Define the audience and offer.", body: "Who it is for, why the segment matters, and how to turn the opportunity into product, pricing, and positioning that sells." },
+  { num: "2", title: "Build the brand.", body: "Name, identity, message, and market approach that earn trust." },
+  { num: "3", title: "Plan the launch.", body: "Acquisition, operations, and platform readiness before day one." },
+  { num: "4", title: "Grow the model.", body: "Refine acquisition, engagement, and growth on live data after launch." },
 ];
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
