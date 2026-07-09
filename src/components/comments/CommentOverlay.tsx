@@ -131,7 +131,11 @@ export function CommentOverlay() {
   }
 
   function handlePinClick(comment: Comment) {
-    setActiveComment(activeComment === comment.id ? null : comment.id);
+    const isAlreadyActive = activeComment === comment.id;
+    setActiveComment(isAlreadyActive ? null : comment.id);
+    if (!isAlreadyActive) {
+      setSidebarOpen(true);
+    }
   }
 
   function handleNavigateToComment(comment: Comment) {
@@ -236,6 +240,7 @@ export function CommentOverlay() {
         currentPage={pathname}
         onNavigateToComment={handleNavigateToComment}
         onRefresh={refresh}
+        activeCommentId={activeComment}
       />
     </>
   );

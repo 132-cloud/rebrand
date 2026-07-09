@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   Comment,
@@ -17,6 +17,7 @@ interface CommentSidebarProps {
   currentPage: string;
   onNavigateToComment: (comment: Comment) => void;
   onRefresh: () => void;
+  activeCommentId?: string | null;
 }
 
 export function CommentSidebar({
@@ -26,6 +27,7 @@ export function CommentSidebar({
   currentPage,
   onNavigateToComment,
   onRefresh,
+  activeCommentId,
 }: CommentSidebarProps) {
   const router = useRouter();
   const [filter, setFilter] = useState<"all" | "open" | "resolved">("all");
@@ -37,6 +39,18 @@ export function CommentSidebar({
     }
     return "";
   });
+
+  // Auto-scroll to active comment when sidebar opens
+  useEffect(() => {
+    if (isOpen && activeCommentId) {
+      setTimeout(() => {
+        const el = document.getElementById(`sidebar-comment-${activeCommentId}`);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 150);
+    }
+  }, [isOpen, activeCommentId]);
 
   // Group comments by page
   const grouped = comments.reduce<Record<string, Comment[]>>((acc, c) => {
@@ -204,9 +218,10 @@ export function CommentSidebar({
                 .map((comment) => (
                   <div
                     key={comment.id}
+                    id={`sidebar-comment-${comment.id}`}
                     className={`px-5 py-3 hover:bg-blue-50/50 transition-colors cursor-pointer border-b border-neutral-50 last:border-b-0 ${
                       comment.resolved ? "opacity-60" : ""
-                    }`}
+                    } ${activeCommentId === comment.id ? "bg-blue-50 ring-1 ring-blue-200" : ""}`}
                     onClick={() => handleGoToComment(comment)}
                   >
                     <div className="flex items-start gap-3">
