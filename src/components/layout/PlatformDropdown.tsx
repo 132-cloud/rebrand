@@ -103,19 +103,19 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                     <li>
                       <Link href="/platform/#core-processing" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Core Processing</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Banking system of record</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Grow without core limits</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#digital-banking" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Digital Banking</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Modern experience customers demand</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Grow deposits everywhere</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#account-opening" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Account Opening</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">From intent to funded</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Fund accounts faster</span>
                       </Link>
                     </li>
                   </ul>
@@ -148,25 +148,25 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                     <li>
                       <Link href="/platform/#connect" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Connect</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">APIs and streaming</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Connect your stack without the lift</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#insights" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Analytics that show what&apos;s working</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">See what drives growth</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#nymbus-mcp" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Nymbus MCP</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">AI that drives real banking workflows</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Automation you control</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#fraud-intelligence" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Fraud Intelligence</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Investigate fraud in one place</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Stop fraud early</span>
                       </Link>
                     </li>
                   </ul>
@@ -179,7 +179,7 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                     <li>
                       <Link href="/managed-services/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Managed Services</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Run the operations</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Scale without headcount</span>
                       </Link>
                     </li>
                   </ul>

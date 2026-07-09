@@ -89,43 +89,43 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                     <li>
                       <Link href="/managed-services/#contact-center" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Contact Center</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Member and customer support</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Support without hiring</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#onboarding" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Onboarding</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Applicant onboarding, end to end</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Fund more accounts</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#contact-center" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Servicing</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Customer servicing that keeps pace</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Fast service at any volume</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#back-office" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Back Office</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Processing and operations</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Back office, handled</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#compliance" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Compliance</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Compliance workflows, monitored and managed</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Stay covered as rules change</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#back-office" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Fraud</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Fraud operations, built for scale</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Contain losses at scale</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#business-banking" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Business Banking Support</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Business account operations, covered</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Business ops, covered</span>
                       </Link>
                     </li>
                   </ul>
@@ -140,7 +140,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                     <li>
                       <Link href="/labs/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-sm font-semibold group-hover:text-blue transition-colors bg-gradient-to-r from-[#0065FF] via-[#7c3aed] to-[#FF5630] bg-clip-text text-transparent">Labs</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Growth strategy and execution</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Launch and grow</span>
                       </Link>
                     </li>
 

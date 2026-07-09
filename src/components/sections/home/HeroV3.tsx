@@ -293,7 +293,7 @@ const NAV_ITEMS: { label: string; items?: { title: string; description?: string;
       { title: "Private label banking", href: "/solutions/private-label/" },
       { title: "Sandbox innovation", href: "/solutions/sandbox/" },
       { title: "Business banking", href: "/solutions/business-banking/" },
-      { title: "Personal banking", href: "/solutions/personal-banking/" },
+      { title: "Retail banking", href: "/solutions/personal-banking/" },
     ],
   },
   {

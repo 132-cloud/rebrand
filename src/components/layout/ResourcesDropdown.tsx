@@ -89,25 +89,25 @@ export function ResourcesDropdown({ isActive, onOpen, onClose }: ResourcesDropdo
                     <li>
                       <Link href="/insights-hub/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Ideas and analysis for financial innovators</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Ideas for growth</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/customers/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Customers</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Institutions shaping the future of banking</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">See who launched</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/integrations/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Integrations</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Connect your banking stack</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Plug in your partners</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/product-releases/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Product releases</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">What&apos;s new on the platform</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">See what shipped</span>
                       </Link>
                     </li>
                   </ul>

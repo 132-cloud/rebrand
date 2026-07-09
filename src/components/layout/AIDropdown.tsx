@@ -89,19 +89,19 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
                     <li>
                       <Link href="/ai/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">AI Approach</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Governed by design, not bolted on top.</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Governed by design, not bolted on top</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ai/#nymbus-mcp" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Nymbus MCP</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Controlled automation, permissioned end to end.</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Automation you control</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ai/#applied" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Applied AI</span>
-                        <span className="block text-neutral-500 text-xs mt-0.5">Building the banking infrastructure for AI</span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">AI results, not roadmaps</span>
                       </Link>
                     </li>
                   </ul>

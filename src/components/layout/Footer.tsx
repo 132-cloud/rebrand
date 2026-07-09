@@ -39,7 +39,7 @@ const footerColumns = [
       { title: "M&A acceleration", href: "/solutions/accelerate-ma/" },
       { title: "Private label banking", href: "/solutions/private-label/" },
       { title: "Sandbox innovation", href: "/solutions/sandbox/" },
-      { title: "Personal banking", href: "/solutions/personal-banking/" },
+      { title: "Retail banking", href: "/solutions/personal-banking/" },
       { title: "Business banking", href: "/solutions/business-banking/" },
       { title: "Commercial banking", href: "/solutions/business-banking/#commercial" },
     ],

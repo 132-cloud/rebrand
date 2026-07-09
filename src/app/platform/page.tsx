@@ -178,11 +178,11 @@ const bankingTechFeatures = [
 
 const intelligenceFeatures = [
   {
-    id: "connect",
-    eyebrow: "Connect",
-    headline: "Your systems and data, connected.",
-    body: "Connect integrates third-party partners and streams live data through modern APIs and event-driven architecture, so you onboard new vendors in days and put real-time data to work across the institution.",
-    link: { label: "Explore Connect", href: "/products/connect/" },
+    id: "fraud-intelligence",
+    eyebrow: "Fraud Intelligence",
+    headline: "Contain fraud in one pass.",
+    body: "Customer data, case investigation, and enforcement live in one workspace, so analysts contain threats in one pass instead of chasing five systems.",
+    link: { label: "Explore fraud intelligence", href: "/managed-services/#back-office" },
   },
   {
     id: "insights",
@@ -199,11 +199,11 @@ const intelligenceFeatures = [
     link: { label: "Explore Nymbus MCP", href: "/ai/#nymbus-mcp" },
   },
   {
-    id: "fraud-intelligence",
-    eyebrow: "Fraud Intelligence",
-    headline: "Contain fraud in one pass.",
-    body: "Customer data, case investigation, and enforcement live in one workspace, so analysts contain threats in one pass instead of chasing five systems.",
-    link: { label: "Explore fraud intelligence", href: "/managed-services/#back-office" },
+    id: "connect",
+    eyebrow: "Connect",
+    headline: "Your systems and data, connected.",
+    body: "Integrate third-parties and stream live data through modern APIs and event-driven architecture, so you onboard new vendors in days and put real-time data to work across the institution.",
+    link: { label: "Explore Connect", href: "/products/connect/" },
   },
 ];
 
@@ -317,33 +317,79 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* ─── Banking Technology Feature Blocks ─────────────────────────────── */}
-      {bankingTechFeatures.map((feature, index) => (
-        <section key={feature.headline} id={feature.id} className={`py-16 md:py-24 ${index % 2 === 0 ? "bg-white" : "bg-neutral-50"}`}>
-          <div className="container-site">
-            <ScrollReveal>
-              <div className={`flex flex-col md:flex-row items-center gap-12 md:gap-16 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
-                <div className="flex-1">
-                  <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">{feature.eyebrow}</p>
-                  <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-neutral-900 mb-4">
+      {/* ─── Banking Technology Carousel ─────────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="flex items-center justify-between mb-10">
+              <div>
+                <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Banking Technology</p>
+                <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900">
+                  Modern banking. Built without limits.
+                </h2>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  aria-label="Previous"
+                  className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-50 transition-colors"
+                  onClick={() => {
+                    const el = document.getElementById('banking-carousel');
+                    if (el) el.scrollBy({ left: -420, behavior: 'smooth' });
+                  }}
+                >
+                  <svg className="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Next"
+                  className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-50 transition-colors"
+                  onClick={() => {
+                    const el = document.getElementById('banking-carousel');
+                    if (el) el.scrollBy({ left: 420, behavior: 'smooth' });
+                  }}
+                >
+                  <svg className="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Carousel track — first card aligns with container left edge, scrolls right */}
+        <ScrollReveal delay={0.1}>
+          <div
+            id="banking-carousel"
+            className="flex gap-6 overflow-x-auto overflow-y-visible scrollbar-hide pl-[max(1.5rem,calc((100vw-1140px)/2+2rem))] pr-6 py-6 snap-x snap-mandatory"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {bankingTechFeatures.map((feature) => (
+              <Link
+                key={feature.headline}
+                href={feature.link.href}
+                id={feature.id}
+                className="flex-shrink-0 w-[380px] md:w-[500px] h-[650px] snap-start rounded-2xl bg-white shadow-[0_0_20px_0_rgba(0,0,0,0.08)] p-4 flex flex-col
+                  hover:shadow-[0_0_32px_0_rgba(0,101,255,0.12)] hover:-translate-y-0.5
+                  transition-all duration-300 no-underline group"
+              >
+                {/* Top: placeholder visual */}
+                <div className="h-[320px] rounded-xl bg-neutral-50 mb-4 flex-shrink-0" />
+
+                {/* Bottom: text content */}
+                <div className="px-2 pb-2 pt-4">
+                  <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-2">{feature.eyebrow}</p>
+                  <h3 className="text-neutral-900 text-[1.5rem] md:text-[1.75rem] font-bold leading-tight mb-3">
                     {feature.headline}
                   </h3>
-                  <p className="text-neutral-500 text-base leading-relaxed mb-6">{feature.body}</p>
-                  <Link href={feature.link.href} className="inline-flex items-center text-[#697CB2] text-sm font-semibold hover:text-[#4a5d8a] transition-colors no-underline">
-                    {feature.link.label}
-                    <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </Link>
+                  <p className="text-neutral-500 text-base leading-relaxed">{feature.body}</p>
                 </div>
-                <div className="flex-1 w-full">
-                  <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60" />
-                </div>
-              </div>
-            </ScrollReveal>
+              </Link>
+            ))}
           </div>
-        </section>
-      ))}
+        </ScrollReveal>
+      </section>
 
       {/* ─── Platform Diagram (Centerpiece) ───────────────────────────────── */}
       <section className="relative py-20 md:py-28 bg-white overflow-hidden">
@@ -354,7 +400,7 @@ export default function PlatformPage() {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
-                Build on a connected platform.
+                Move faster with a flexible, modern platform built for growth
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-6">
                 Unify banking workflows, simplify vendor management, and connect existing systems through APIs, extensible integrations, and Nymbus MCP.
@@ -376,33 +422,79 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* ─── Intelligence Feature Blocks ───────────────────────────────────── */}
-      {intelligenceFeatures.map((feature, index) => (
-        <section key={feature.headline} id={feature.id} className={`py-16 md:py-24 ${index % 2 === 0 ? "bg-white" : "bg-neutral-50"}`}>
-          <div className="container-site">
-            <ScrollReveal>
-              <div className={`flex flex-col md:flex-row items-center gap-12 md:gap-16 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
-                <div className="flex-1">
-                  <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">{feature.eyebrow}</p>
-                  <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-neutral-900 mb-4">
+      {/* ─── Intelligence Feature Carousel ──────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="flex items-center justify-between mb-10">
+              <div>
+                <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Intelligence</p>
+                <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900">
+                  One layer. Every signal.
+                </h2>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  aria-label="Previous"
+                  className="carousel-prev-intel w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-50 transition-colors"
+                  onClick={() => {
+                    const el = document.getElementById('intel-carousel');
+                    if (el) el.scrollBy({ left: -420, behavior: 'smooth' });
+                  }}
+                >
+                  <svg className="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Next"
+                  className="carousel-next-intel w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-50 transition-colors"
+                  onClick={() => {
+                    const el = document.getElementById('intel-carousel');
+                    if (el) el.scrollBy({ left: 420, behavior: 'smooth' });
+                  }}
+                >
+                  <svg className="w-4 h-4 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Carousel track — first card aligns with container left edge, scrolls right */}
+        <ScrollReveal delay={0.1}>
+          <div
+            id="intel-carousel"
+            className="flex gap-6 overflow-x-auto overflow-y-visible scrollbar-hide pl-[max(1.5rem,calc((100vw-1140px)/2+2rem))] pr-6 py-6 snap-x snap-mandatory"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {intelligenceFeatures.map((feature) => (
+              <Link
+                key={feature.headline}
+                href={feature.link.href}
+                id={feature.id}
+                className="flex-shrink-0 w-[380px] md:w-[500px] h-[650px] snap-start rounded-2xl bg-white shadow-[0_0_20px_0_rgba(0,0,0,0.08)] p-4 flex flex-col
+                  hover:shadow-[0_0_32px_0_rgba(0,101,255,0.12)] hover:-translate-y-0.5
+                  transition-all duration-300 no-underline group"
+              >
+                {/* Top: placeholder visual */}
+                <div className="h-[320px] rounded-xl bg-neutral-50 mb-4 flex-shrink-0" />
+
+                {/* Bottom: text content */}
+                <div className="px-2 pb-2 pt-4">
+                  <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-2">{feature.eyebrow}</p>
+                  <h3 className="text-neutral-900 text-[1.5rem] md:text-[1.75rem] font-bold leading-tight mb-3">
                     {feature.headline}
                   </h3>
-                  <p className="text-neutral-500 text-base leading-relaxed mb-6">{feature.body}</p>
-                  <Link href={feature.link.href} className="inline-flex items-center text-[#697CB2] text-sm font-semibold hover:text-[#4a5d8a] transition-colors no-underline">
-                    {feature.link.label}
-                    <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </Link>
+                  <p className="text-neutral-500 text-base leading-relaxed">{feature.body}</p>
                 </div>
-                <div className="flex-1 w-full">
-                  <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60" />
-                </div>
-              </div>
-            </ScrollReveal>
+              </Link>
+            ))}
           </div>
-        </section>
-      ))}
+        </ScrollReveal>
+      </section>
 
       {/* ─── Proof Quote ──────────────────────────────────────────────────── */}
       <section className="py-16 md:py-20 bg-neutral-50 border-y border-neutral-100">
@@ -410,36 +502,15 @@ export default function PlatformPage() {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
               <blockquote className="text-neutral-700 text-xl md:text-2xl font-light leading-relaxed italic mb-6">
-                &ldquo;Placeholder — shortest quotable line, outcome first, on running the whole institution on one platform.&rdquo;
+                &ldquo;The successful go-live affirmed our decision to modernize our entire banking infrastructure and positions us to deliver real, simple banking services to our customers faster and more efficiently than ever before.&rdquo;
               </blockquote>
-              <p className="text-neutral-500 text-sm">Name, Title, Institution — pending written approval</p>
+              <p className="text-neutral-500 text-sm">Thomas Senecal, CEO and Chairman, PeoplesBank</p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ─── Managed Services Band ────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-900">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-3xl">
-              <p className="text-white/40 text-[11px] font-semibold uppercase tracking-wider mb-4">Services</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white mb-5">
-                We don&apos;t just build the platform. We run it.
-              </h2>
-              <p className="text-white/60 text-base md:text-lg leading-relaxed mb-6">
-                Nymbus Managed Services operates the back office behind your products, onboarding, servicing, compliance, fraud, and more, built and run by the same team that built the platform, so what breaks gets fixed, not forwarded.
-              </p>
-              <Link href="/managed-services/" className="inline-flex items-center text-white/70 text-sm font-semibold hover:text-white transition-colors no-underline">
-                Explore Managed Services
-                <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+
 
       {/* ─── Deploy Your Way Band ─────────────────────────────────────────── */}
       {/* ─── Closing CTA ──────────────────────────────────────────────────── */}

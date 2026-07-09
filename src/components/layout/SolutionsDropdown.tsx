@@ -129,6 +129,11 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   </h4>
                   <ul className="space-y-0.5">
                     <li>
+                      <Link href="/solutions/personal-banking/" onClick={onClose} className="block py-2 group no-underline">
+                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Retail</span>
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/solutions/business-banking/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Business</span>
                       </Link>
@@ -136,11 +141,6 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                     <li>
                       <Link href="/solutions/commercial-banking/" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Commercial</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/solutions/personal-banking/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Retail</span>
                       </Link>
                     </li>
                   </ul>
