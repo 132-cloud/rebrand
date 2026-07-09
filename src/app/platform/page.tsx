@@ -168,11 +168,18 @@ const bankingTechFeatures = [
     link: { label: "Explore account opening", href: "/products/account-opening/" },
   },
   {
-    id: "loyalty-engagement",
-    eyebrow: "Loyalty and Engagement",
-    headline: "Turn accounts into relationships.",
-    body: "Levels builds rewards into the account itself, turning everyday balances and activity into loyalty. Engage reaches customers with targeted communication where they already bank, so a transactional account becomes a lasting relationship.",
-    link: { label: "Explore engagement", href: "/products/engage/" },
+    id: "engage",
+    eyebrow: "Engage",
+    headline: "Nurture accounts into loyal relationships.",
+    body: "Guide account holders from signup to first meaningful transaction with targeted, timely communications based on real account behavior, lifecycle stage, and engagement signals, instead of relying on broad campaigns that miss the moments that matter.",
+    link: { label: "Explore Engage", href: "/products/engage/" },
+  },
+  {
+    id: "levels",
+    eyebrow: "Levels",
+    headline: "Incentivize and reward profitable behaviors.",
+    body: "Reward the behaviors that drive primacy, deposits, and deeper relationships, from direct deposit to recurring account activity, without the cost, complexity, or long build cycle of creating an enterprise-grade loyalty program from scratch.",
+    link: { label: "Explore Levels", href: "/products/levels/" },
   },
 ];
 
