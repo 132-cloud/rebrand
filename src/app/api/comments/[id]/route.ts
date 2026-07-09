@@ -15,12 +15,13 @@ interface CommentData {
   replies: { id: string; author: string; text: string; createdAt: string }[];
 }
 
-// PATCH /api/comments/[id] — resolve a comment
+// PATCH /api/comments/[id] — toggle resolve state of a comment
 export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
+  const body = await request.json().catch(() => ({}));
   const raw = await redis.get<CommentData[]>(COMMENTS_KEY);
   const comments: CommentData[] = raw || [];
 
@@ -29,7 +30,7 @@ export async function PATCH(
     return NextResponse.json({ error: "Comment not found" }, { status: 404 });
   }
 
-  target.resolved = true;
+  target.resolved = typeof body.resolved === "boolean" ? body.resolved : true;
   await redis.set(COMMENTS_KEY, comments);
 
   return NextResponse.json(target);

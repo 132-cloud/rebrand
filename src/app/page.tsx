@@ -121,7 +121,7 @@ export default function HomePage() {
               <div className="flex-1">
                 <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Run the operations</p>
                 <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-neutral-900 mb-4">
-                  We do not just deploy the model. We help you run it.
+                  We don&apos;t just deploy it. We run it.
                 </h3>
                 <p className="text-neutral-500 text-base leading-relaxed mb-6">
                   Contact center, onboarding, servicing, compliance workflows, fraud operations, and back office, built and operated by Nymbus. Ship the model without standing up an operation behind it.

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import {
   Comment,
   resolveComment,
+  unresolveComment,
   deleteComment,
   addReply,
 } from "@/lib/comments";
@@ -78,6 +79,11 @@ export function CommentSidebar({
 
   async function handleResolve(commentId: string) {
     await resolveComment(commentId);
+    onRefresh();
+  }
+
+  async function handleUnresolve(commentId: string) {
+    await unresolveComment(commentId);
     onRefresh();
   }
 
@@ -253,12 +259,19 @@ export function CommentSidebar({
                           >
                             Reply
                           </button>
-                          {!comment.resolved && (
+                          {!comment.resolved ? (
                             <button
                               onClick={() => handleResolve(comment.id)}
                               className="text-[11px] text-neutral-500 hover:text-green-600 font-medium transition-colors"
                             >
                               Resolve
+                            </button>
+                          ) : (
+                            <button
+                              onClick={() => handleUnresolve(comment.id)}
+                              className="text-[11px] text-neutral-500 hover:text-orange-600 font-medium transition-colors"
+                            >
+                              Unresolve
                             </button>
                           )}
                           <button

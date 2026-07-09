@@ -79,7 +79,24 @@ export async function addReply(
 
 export async function resolveComment(commentId: string): Promise<void> {
   try {
-    await fetch(`/api/comments/${commentId}`, { method: "PATCH" });
+    await fetch(`/api/comments/${commentId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ resolved: true }),
+    });
+    window.dispatchEvent(new Event("comments-updated"));
+  } catch {
+    // silent fail
+  }
+}
+
+export async function unresolveComment(commentId: string): Promise<void> {
+  try {
+    await fetch(`/api/comments/${commentId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ resolved: false }),
+    });
     window.dispatchEvent(new Event("comments-updated"));
   } catch {
     // silent fail
