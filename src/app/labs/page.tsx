@@ -8,12 +8,13 @@ import { PortfolioCarousel } from "@/components/sections/labs/PortfolioCarousel"
 // ─── Logo Strip ──────────────────────────────────────────────────────────────
 
 const logos = [
-  { src: "/images/logo bar logos/Vector.png", alt: "PILLUR" },
-  { src: "/images/logo bar logos/FECU.png", alt: "ZYNLO" },
-  { src: "/images/logo bar logos/Gesa.png", alt: "HUSTL" },
-  { src: "/images/logo bar logos/VantageWest.png", alt: "VALORFI" },
-  { src: "/images/logo bar logos/Vector-1.png", alt: "ALUMNIFI" },
-  { src: "/images/logo bar logos/Vector.png", alt: "COLLEGIATE" },
+  { src: "/images/logos/AlumniFi.svg", alt: "AlumniFi" },
+  { src: "/images/logos/Cinefi.svg", alt: "Cinefi" },
+  { src: "/images/logos/Collegiate.svg", alt: "Collegiate" },
+  { src: "/images/logos/Pillur.svg", alt: "Pillur", className: "!h-10 md:!h-12" },
+  { src: "/images/logos/Roger.svg", alt: "Roger" },
+  { src: "/images/logos/ValorFi.svg", alt: "ValorFi" },
+  { src: "/images/logos/Zynlo.svg", alt: "Zynlo" },
 ];
 
 // ─── Challenge Pillars ───────────────────────────────────────────────────────
@@ -142,7 +143,7 @@ export default function LabsPage() {
                   key={i}
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-5 md:h-6 w-auto opacity-50 grayscale"
+                  className={`w-auto opacity-50 grayscale ${logo.className || "h-5 md:h-6"}`}
                 />
               ))}
             </div>
@@ -214,7 +215,7 @@ export default function LabsPage() {
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
                 <span className="font-bold text-neutral-900">One difference: we are wired into the platform.</span>{" "}
-                An agency hands you a deck. We build on the same core, digital banking, onboarding, and operations that run the brand, so strategy becomes a live, growing bank instead of a slide.
+                We build on the same core, digital banking, onboarding, and operations that run the brand, so strategy becomes a live, growing bank.
               </p>
             </div>
           </ScrollReveal>

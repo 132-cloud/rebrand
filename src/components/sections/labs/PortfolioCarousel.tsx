@@ -6,6 +6,8 @@ import { useState, useCallback } from "react";
 
 interface Brand {
   brandName: string;
+  logo: string;
+  logoScale?: number;
   institution: string;
   descriptor: string;
   playLine: string;
@@ -17,6 +19,8 @@ interface Brand {
 const brands: Brand[] = [
   {
     brandName: "PILLUR",
+    logo: "/images/logos/Pillur.svg",
+    logoScale: 3,
     institution: "MSU Federal Credit Union",
     descriptor: "Banking for small businesses",
     playLine: "Serving growing small businesses",
@@ -26,6 +30,7 @@ const brands: Brand[] = [
   },
   {
     brandName: "HUSTL",
+    logo: "/images/logos/Cinefi.svg",
     institution: "Gesa Credit Union",
     descriptor: "Banking for gig workers",
     playLine: "Reach underserved freelancers and side-hustlers",
@@ -35,6 +40,7 @@ const brands: Brand[] = [
   },
   {
     brandName: "ZYNLO",
+    logo: "/images/logos/Zynlo.svg",
     institution: "Vantage West Credit Union",
     descriptor: "Digital-first deposit growth",
     playLine: "Pull deposits from a younger digital audience",
@@ -44,6 +50,7 @@ const brands: Brand[] = [
   },
   {
     brandName: "VALORFI",
+    logo: "/images/logos/ValorFi.svg",
     institution: "Partner institution",
     descriptor: "Banking for veterans and military",
     playLine: "Serve a community with purpose-built banking",
@@ -53,6 +60,7 @@ const brands: Brand[] = [
   },
   {
     brandName: "ALUMNIFI",
+    logo: "/images/logos/AlumniFi.svg",
     institution: "Partner institution",
     descriptor: "Alumni-powered banking",
     playLine: "Turn alumni networks into depositors",
@@ -62,6 +70,7 @@ const brands: Brand[] = [
   },
   {
     brandName: "COLLEGIATE",
+    logo: "/images/logos/Collegiate.svg",
     institution: "Partner institution",
     descriptor: "Banking built for students",
     playLine: "Enter the student market with a purpose-built brand",
@@ -113,7 +122,7 @@ export function PortfolioCarousel() {
         </p>
         <div className="flex items-end justify-between gap-6">
           <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-white max-w-xl">
-            Agencies pitch. We ship brands that grow. Here are a few.
+            We ship brands that grow. Here are a few.
           </h2>
           {/* Navigation arrows */}
           <div className="flex gap-2 flex-shrink-0">
@@ -203,7 +212,8 @@ export function PortfolioCarousel() {
                     <span className="text-white/50 text-[11px] block mb-2">{brand.institution}</span>
 
                     <h3 className="text-white text-2xl md:text-3xl font-bold tracking-wide mb-2">
-                      {brand.brandName}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={brand.logo} alt={brand.brandName} className="w-auto brightness-0 invert" style={{ height: `${(brand.logoScale || 1) * 28}px` }} />
                     </h3>
 
                     <p className="text-white/80 text-sm leading-relaxed mb-3 max-w-md">
@@ -236,7 +246,8 @@ export function PortfolioCarousel() {
                     ${!isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"}
                   `}>
                     <h3 className="text-white text-xs md:text-sm font-bold tracking-wide text-center">
-                      {brand.brandName}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={brand.logo} alt={brand.brandName} className="w-auto mx-auto brightness-0 invert" style={{ height: `${(brand.logoScale || 1) * 16}px` }} />
                     </h3>
                   </div>
                 </button>
@@ -299,7 +310,8 @@ export function PortfolioCarousel() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent" />
               <div className="absolute bottom-4 left-6">
-                <h3 className="text-3xl font-bold text-white tracking-wide">{modalBrand.brandName}</h3>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={modalBrand.logo} alt={modalBrand.brandName} className="h-8 w-auto brightness-0 invert" />
               </div>
             </div>
 
