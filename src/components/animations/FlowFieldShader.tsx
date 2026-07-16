@@ -81,7 +81,7 @@ export function FlowFieldShader() {
           // Alternate between 1 and 0 in a pseudo-random pattern
           const char = ((col * 7 + row * 13) % 2 === 0) ? "1" : "0";
 
-          // Color: #0065ff with boosted brightness
+          // Color: #697CB2 with boosted brightness
           const brightness = Math.min(1, alpha * 1.3);
           const r = Math.floor(brightness * 20);
           const g = Math.floor(brightness * 120);

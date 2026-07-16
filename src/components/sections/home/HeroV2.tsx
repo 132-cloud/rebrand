@@ -241,7 +241,7 @@ function BrandSwitcherV2() {
   return (
     <div
       className="absolute top-0 left-0 right-0 flex items-center justify-center gap-6 py-2 px-4 text-[12px] tracking-wide"
-      style={{ zIndex: 60, background: "rgba(0,0,0,0.85)", color: "rgba(255,255,255,0.6)", fontFamily: "'Inter Tight', sans-serif" }}
+      style={{ zIndex: 60, background: "rgba(0,0,0,0.85)", color: "rgba(255,255,255,0.6)", fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
     >
       <span className="font-medium text-white/40 uppercase tracking-wider mr-2">Visual Brand Switcher</span>
       {links.map((link) => (
@@ -339,7 +339,7 @@ function HeaderV2() {
             >
               <span
                 className="text-[14px] tracking-[0.56px] cursor-pointer transition-colors hover:opacity-70 flex items-center gap-1"
-                style={{ color: "#0b0217", fontFamily: "'Inter Tight', sans-serif" }}
+                style={{ color: "#0b0217", fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
               >
                 {navItem.label}
                 {navItem.items && (
@@ -370,14 +370,14 @@ function HeaderV2() {
                     >
                       <span
                         className="text-[14px] font-medium block"
-                        style={{ color: "#0b0217", fontFamily: "'Inter Tight', sans-serif" }}
+                        style={{ color: "#0b0217", fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
                       >
                         {item.title}
                       </span>
                       {item.description && (
                         <span
                           className="text-[12px] block mt-0.5"
-                          style={{ color: "rgba(11, 2, 23, 0.5)", fontFamily: "'Inter Tight', sans-serif" }}
+                          style={{ color: "rgba(11, 2, 23, 0.5)", fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
                         >
                           {item.description}
                         </span>
@@ -395,14 +395,14 @@ function HeaderV2() {
           <Link
             href="/demo/"
             className="px-6 py-2.5 text-[14px] font-medium tracking-[0.3px] rounded-full bg-[#0b0217] text-white hover:bg-[#1a1030] transition-colors"
-            style={{ fontFamily: "'Inter Tight', sans-serif" }}
+            style={{ fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
           >
             See a demo
           </Link>
           <Link
             href="/contact/"
             className="px-6 py-2.5 text-[14px] font-medium tracking-[0.3px] rounded-full border border-[#0b0217]/15 bg-white text-[#0b0217] hover:bg-gray-50 transition-colors"
-            style={{ fontFamily: "'Inter Tight', sans-serif" }}
+            style={{ fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
           >
             Contact Sales
           </Link>
@@ -535,7 +535,7 @@ export function HeroV2() {
         <p
           className="mb-[30px]"
           style={{
-            fontFamily: "'Inter Tight', sans-serif",
+            fontFamily: "'neue-haas-grotesk-text', sans-serif",
             fontSize: "28px",
             lineHeight: 1.3,
             color: "rgba(11, 2, 23, 0.5)",
@@ -581,7 +581,7 @@ export function HeroV2() {
                     if (activeRoute) setActiveRoute(null);
                   }}
                   className="w-full bg-transparent text-lg outline-none relative z-10"
-                  style={{ color: "#0b0217", fontFamily: "'Inter Tight', sans-serif" }}
+                  style={{ color: "#0b0217", fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
                   placeholder={activeRoute ? "Ask something else" : ""}
                 />
                 {!inputValue && !activeRoute && (
@@ -606,13 +606,13 @@ export function HeroV2() {
                 <div className="pt-5" style={{ borderTop: "1px solid rgba(11, 2, 23, 0.08)" }}>
                   <h2
                     className="text-lg md:text-xl font-semibold mb-2"
-                    style={{ color: "#0b0217", fontFamily: "'Inter Tight', sans-serif", letterSpacing: "normal" }}
+                    style={{ color: "#0b0217", fontFamily: "'neue-haas-grotesk-text', sans-serif", letterSpacing: "normal" }}
                   >
                     {activeRoute.heading}
                   </h2>
                   <p
                     className="text-sm leading-relaxed mb-5"
-                    style={{ color: "rgba(11, 2, 23, 0.6)", fontFamily: "'Inter Tight', sans-serif" }}
+                    style={{ color: "rgba(11, 2, 23, 0.6)", fontFamily: "'neue-haas-grotesk-text', sans-serif" }}
                   >
                     {activeRoute.body}
                   </p>
@@ -626,8 +626,8 @@ export function HeroV2() {
                           className="px-4 py-2 text-sm font-medium rounded-full transition-colors"
                           style={
                             isExpert
-                              ? { background: "#0b0217", color: "white", fontFamily: "'Inter Tight', sans-serif" }
-                              : { background: "rgba(11, 2, 23, 0.06)", color: "#0b0217", border: "1px solid rgba(11, 2, 23, 0.1)", fontFamily: "'Inter Tight', sans-serif" }
+                              ? { background: "#0b0217", color: "white", fontFamily: "'neue-haas-grotesk-text', sans-serif" }
+                              : { background: "rgba(11, 2, 23, 0.06)", color: "#0b0217", border: "1px solid rgba(11, 2, 23, 0.1)", fontFamily: "'neue-haas-grotesk-text', sans-serif" }
                           }
                         >
                           {btn.label}
@@ -652,7 +652,7 @@ export function HeroV2() {
                 background: "rgba(11, 2, 23, 0.05)",
                 border: "1px solid rgba(11, 2, 23, 0.1)",
                 color: "#0b0217",
-                fontFamily: "'Inter Tight', sans-serif",
+                fontFamily: "'neue-haas-grotesk-text', sans-serif",
               }}
             >
               {pill.label}
@@ -666,7 +666,7 @@ export function HeroV2() {
               background: "rgba(11, 2, 23, 0.05)",
               border: "1px solid rgba(11, 2, 23, 0.1)",
               color: "#0b0217",
-              fontFamily: "'Inter Tight', sans-serif",
+              fontFamily: "'neue-haas-grotesk-text', sans-serif",
             }}
           >
             {moreOpen ? "Less" : "More"}
@@ -678,7 +678,7 @@ export function HeroV2() {
             style={{
               background: "#0b0217",
               color: "white",
-              fontFamily: "'Inter Tight', sans-serif",
+              fontFamily: "'neue-haas-grotesk-text', sans-serif",
             }}
           >
             Talk to an expert
@@ -693,7 +693,7 @@ export function HeroV2() {
                 background: "rgba(11, 2, 23, 0.03)",
                 border: "1px solid rgba(11, 2, 23, 0.08)",
                 color: "rgba(11, 2, 23, 0.7)",
-                fontFamily: "'Inter Tight', sans-serif",
+                fontFamily: "'neue-haas-grotesk-text', sans-serif",
               }}
             >
               {pill.label}

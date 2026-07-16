@@ -63,7 +63,7 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
                     Solutions
                   </h4>
-                  <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4">
+                  <h3 className="text-[#171216] text-[1.65rem] font-bold leading-tight mb-4">
                     Launch alongside your core, or replace it.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
@@ -80,27 +80,27 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/solutions/parallel-core/#vertical-brands" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Vertical brand launches</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Vertical brand launches</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/solutions/parallel-core/#new-lines" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">New lines of business</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">New lines of business</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/solutions/parallel-core/#ma-acceleration" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">M&A acceleration</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">M&A acceleration</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/solutions/parallel-core/#private-label" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Private label banking</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Private label banking</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/solutions/parallel-core/#sandbox" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Sandbox innovation</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Sandbox innovation</span>
                       </Link>
                     </li>
                   </ul>
@@ -111,12 +111,12 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/solutions/primary-core/#core-replacement" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Core replacement</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Core replacement</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/solutions/primary-core/#de-novo" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">De novo launch</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">De novo launch</span>
                       </Link>
                     </li>
                   </ul>
@@ -130,17 +130,17 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/solutions/personal-banking/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Retail</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Retail</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/solutions/business-banking/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Business</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Business</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/solutions/commercial-banking/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Commercial</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Commercial</span>
                       </Link>
                     </li>
                   </ul>

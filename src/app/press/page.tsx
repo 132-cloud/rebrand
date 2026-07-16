@@ -34,25 +34,29 @@ const pressReleases = [
 
 export default function PressPage() {
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── Section 1: Hero ──────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url('/background---.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Press Room</p>
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 News and resources from Nymbus.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
                 Press releases, approved brand assets, company information, and media resources, in one place.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button href="#press-kit" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="#press-kit" variant="primary" size="lg">
                   Download press kit
                 </Button>
-                <Button href="#media-contact" variant="outline" size="lg" className="!text-neutral-900 !border-neutral-300 !bg-white/60 hover:!bg-white/80">
+                <Button href="#media-contact" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 !bg-white/60 hover:!bg-white/80">
                   Contact media team
                 </Button>
               </div>
@@ -87,7 +91,7 @@ export default function PressPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-12">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-4">
                 Press kit.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -100,12 +104,12 @@ export default function PressPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
               {pressKitItems.map((item) => (
                 <div key={item.title} className="p-5 rounded-xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300">
-                  <h4 className="text-neutral-900 text-sm font-bold mb-2">{item.title}</h4>
+                  <h4 className="text-[#171216] text-sm font-bold mb-2">{item.title}</h4>
                   <p className="text-neutral-500 text-xs leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
-            <Button href="#" variant="primary" size="md" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+            <Button href="#" variant="primary" size="md">
               Download press kit
             </Button>
           </ScrollReveal>
@@ -118,7 +122,7 @@ export default function PressPage() {
           <ScrollReveal>
             <div className="max-w-3xl mb-12">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Featured Coverage</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-4">
                 Nymbus in the news.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -139,7 +143,7 @@ export default function PressPage() {
                     <div className="w-20 h-6 rounded bg-neutral-200 flex items-center justify-center flex-shrink-0">
                       <span className="text-neutral-400 text-[9px] font-medium">{item.publication}</span>
                     </div>
-                    <span className="text-neutral-900 text-sm font-medium group-hover:text-[#697CB2] transition-colors">{item.headline}</span>
+                    <span className="text-[#171216] text-sm font-medium group-hover:text-[#697CB2] transition-colors">{item.headline}</span>
                   </div>
                   <span className="text-[#697CB2] text-sm font-medium flex-shrink-0 ml-4">
                     Read coverage ›
@@ -160,7 +164,7 @@ export default function PressPage() {
           <ScrollReveal>
             <div className="max-w-3xl mb-12">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Press Releases</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-4">
                 Latest company news.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -179,7 +183,7 @@ export default function PressPage() {
                 >
                   <div className="flex items-center gap-5">
                     <span className="text-neutral-400 text-xs font-medium w-16 flex-shrink-0">{item.date}</span>
-                    <span className="text-neutral-900 text-sm font-medium group-hover:text-[#697CB2] transition-colors">{item.headline}</span>
+                    <span className="text-[#171216] text-sm font-medium group-hover:text-[#697CB2] transition-colors">{item.headline}</span>
                   </div>
                   <span className="text-[#697CB2] text-sm font-medium flex-shrink-0 ml-4">
                     Read release ›
@@ -200,17 +204,17 @@ export default function PressPage() {
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Media Inquiries</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Contact the Nymbus media team.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-3">
                 For press, media, and communications inquiries, reach the Nymbus media team.
               </p>
-              <a href="mailto:media@nymbus.com" className="text-neutral-700 text-base font-medium hover:text-neutral-900 transition-colors no-underline">
+              <a href="mailto:media@nymbus.com" className="text-neutral-700 text-base font-medium hover:text-[#171216] transition-colors no-underline">
                 media@nymbus.com
               </a>
               <div className="mt-8">
-                <Button href="mailto:media@nymbus.com" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="mailto:media@nymbus.com" variant="primary" size="lg">
                   Contact media team
                 </Button>
               </div>

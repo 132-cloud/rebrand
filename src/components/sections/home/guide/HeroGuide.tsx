@@ -47,6 +47,14 @@ const PROMPT_ROUTES: Record<string, PromptRoute> = {
       { label: "Talk to an expert", href: "/contact/" },
     ],
   },
+  "catch fraud early": {
+    heading: "Contain fraud in one pass.",
+    body: "Customer data, case investigation, and enforcement live in one workspace, so analysts contain threats in one pass instead of chasing five systems.",
+    buttons: [
+      { label: "Enable Fraud Intelligence", href: "/managed-services/#fraud-intelligence" },
+      { label: "Talk to an expert", href: "/contact/" },
+    ],
+  },
   "build a growth strategy with labs": {
     heading: "Turn a growth idea into a funded banking model.",
     body: "Use Nymbus Labs for audience strategy, offer design, brand development, launch planning, acquisition support, and performance optimization.",
@@ -127,6 +135,7 @@ function matchRoute(input: string): PromptRoute | null {
     [["digital brand", "digital bank", "neobank"], "launch a digital brand"],
     [["operations", "managed", "servicing", "back-office", "reduce lift"], "run smarter operations"],
     [["ai", "artificial intelligence", "governed"], "build with governed ai"],
+    [["fraud", "fraud early", "fraud intelligence"], "catch fraud early"],
     [["labs", "growth strategy", "growth"], "build a growth strategy with labs"],
     [["account opening", "onboarding", "applicant"], "improve account opening"],
     [["de novo", "new institution", "charter"], "launch a de novo"],

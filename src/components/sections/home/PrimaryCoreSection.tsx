@@ -10,11 +10,11 @@ export function PrimaryCoreSection() {
         <ScrollReveal>
           <div className="max-w-3xl">
             <h3 className="text-[2.25rem] md:text-[3rem] leading-tight mb-6">
-              <span className="font-bold text-neutral-900">Transform your financial institution with modern banking infrastructure.</span>
+              <span className="font-bold text-[#171216]">Transform your financial institution with modern banking infrastructure.</span>
             </h3>
             <Link
               href="/core-banking/"
-              className="inline-flex items-center text-neutral-500 text-sm font-medium hover:text-neutral-900 transition-colors no-underline"
+              className="inline-flex items-center text-neutral-500 text-sm font-medium hover:text-[#171216] transition-colors no-underline"
             >
               Learn more
               <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

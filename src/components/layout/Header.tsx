@@ -203,7 +203,7 @@ export function Header() {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="https://nymbus-joy.nymbus.com/dashboard"
-                className="px-5 py-2.5 text-sm font-semibold text-white bg-black rounded-full hover:bg-neutral-800 transition-colors"
+                className="px-5 py-2.5 text-sm font-semibold text-white bg-[#171216] rounded-full hover:bg-[#2a2329] transition-colors"
               >
                 Try the demo
               </Link>

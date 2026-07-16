@@ -208,24 +208,24 @@ export function ArchitectureDiagram() {
                 `}</style>
               </defs>
 
-              {/* === TOP ROW: Onboard, Digital, Engage, Levels — solid fill #0065ff with hover === */}
+              {/* === TOP ROW: Onboard, Digital, Engage, Levels — solid fill #697CB2 with hover === */}
               <a href="#" className="group">
-                <rect x="60" y="40" width="110" height="44" rx="8" fill="#0065FF" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
+                <rect x="60" y="40" width="110" height="44" rx="8" fill="#697CB2" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
                 <text x="115" y="67" textAnchor="middle" fill="white" fontSize="14" fontFamily="proxima-nova, sans-serif" fontWeight="700">Onboard</text>
               </a>
 
               <a href="#" className="group">
-                <rect x="220" y="40" width="110" height="44" rx="8" fill="#0065FF" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
+                <rect x="220" y="40" width="110" height="44" rx="8" fill="#697CB2" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
                 <text x="275" y="67" textAnchor="middle" fill="white" fontSize="14" fontFamily="proxima-nova, sans-serif" fontWeight="700">Digital</text>
               </a>
 
               <a href="#" className="group">
-                <rect x="380" y="40" width="110" height="44" rx="8" fill="#0065FF" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
+                <rect x="380" y="40" width="110" height="44" rx="8" fill="#697CB2" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
                 <text x="435" y="67" textAnchor="middle" fill="white" fontSize="14" fontFamily="proxima-nova, sans-serif" fontWeight="700">Engage</text>
               </a>
 
               <a href="#" className="group">
-                <rect x="540" y="40" width="110" height="44" rx="8" fill="#0065FF" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
+                <rect x="540" y="40" width="110" height="44" rx="8" fill="#697CB2" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
                 <text x="595" y="67" textAnchor="middle" fill="white" fontSize="14" fontFamily="proxima-nova, sans-serif" fontWeight="700">Levels</text>
               </a>
 
@@ -262,7 +262,7 @@ export function ArchitectureDiagram() {
                 <rect x="275" y="200" width="160" height="160" rx="12" stroke="rgba(0,100,255,0.4)" strokeWidth="1.5" fill="rgba(0, 30, 76, 1)" className="transition-all duration-200 group-hover:fill-[rgba(0,100,255,0.2)] group-hover:stroke-[rgba(0,100,255,0.7)]" />
                 {/* Core icon */}
                 <g transform="translate(330, 240)">
-                  <path d="M25 2 L48 23 L2 23 Z" fill="#0065FF" />
+                  <path d="M25 2 L48 23 L2 23 Z" fill="#697CB2" />
                   <path d="M25 2 L25 23 L2 23 Z" fill="#0094FF" />
                   <path d="M25 2 L36 23 L14 23 Z" fill="#00AAFF" opacity="0.6" />
                   <path d="M25 48 L48 27 L2 27 Z" fill="#00BBFF" />
@@ -277,7 +277,7 @@ export function ArchitectureDiagram() {
 
               {/* Insights box — solid fill with hover */}
               <a href="#" className="group">
-                <rect x="560" y="258" width="100" height="44" rx="8" fill="#0065FF" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
+                <rect x="560" y="258" width="100" height="44" rx="8" fill="#697CB2" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
                 <text x="610" y="285" textAnchor="middle" fill="white" fontSize="14" fontFamily="proxima-nova, sans-serif" fontWeight="700">Insights</text>
               </a>
 
@@ -285,7 +285,7 @@ export function ArchitectureDiagram() {
 
               {/* Connect box — solid fill with hover */}
               <a href="#" className="group">
-                <rect x="720" y="258" width="100" height="44" rx="8" fill="#0065FF" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
+                <rect x="720" y="258" width="100" height="44" rx="8" fill="#697CB2" className="transition-all duration-200 group-hover:fill-[#2684FF]" />
                 <text x="770" y="285" textAnchor="middle" fill="white" fontSize="14" fontFamily="proxima-nova, sans-serif" fontWeight="700">Connect</text>
               </a>
 

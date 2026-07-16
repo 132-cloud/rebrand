@@ -101,7 +101,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-5 text-left cursor-pointer"
       >
-        <span className="text-neutral-900 text-base font-semibold pr-4">{question}</span>
+        <span className="text-[#171216] text-base font-semibold pr-4">{question}</span>
         <svg
           className={`w-5 h-5 text-neutral-400 flex-shrink-0 transition-transform duration-200 ${open ? "rotate-45" : ""}`}
           fill="none"
@@ -128,31 +128,28 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function PrimaryCorePage() {
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: "url('/background---.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 Start with a core built to move.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
                 When the foundation is rigid, every plan waits on a vendor roadmap. Move your institution onto a modern core built to move with your strategy.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="/request-demo/" variant="primary" size="lg">
                   Book a demo
                 </Button>
-                <Button href="/platform/" variant="outline" size="lg" className="!text-neutral-900 !border-neutral-300 !bg-white/60 hover:!bg-white/80">
+                <Button href="/platform/" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 !bg-white/60 hover:!bg-white/80">
                   See the platform
                 </Button>
               </div>
@@ -191,7 +188,7 @@ export default function PrimaryCorePage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Replace the foundation, not just the front end.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -213,7 +210,7 @@ export default function PrimaryCorePage() {
             <ScrollReveal>
               <div className={`flex flex-col md:flex-row items-center gap-12 md:gap-16 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
                 <div className="flex-1">
-                  <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-neutral-900 mb-4">
+                  <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-[#171216] mb-4">
                     {feature.headline}
                   </h3>
                   <p className="text-neutral-500 text-base leading-relaxed mb-6">
@@ -245,7 +242,7 @@ export default function PrimaryCorePage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Built for every way institutions start.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -261,7 +258,7 @@ export default function PrimaryCorePage() {
                   key={stage.title}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300"
                 >
-                  <h4 className="text-neutral-900 text-base font-bold mb-3">{stage.title}</h4>
+                  <h4 className="text-[#171216] text-base font-bold mb-3">{stage.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{stage.description}</p>
                 </div>
               ))}
@@ -288,7 +285,7 @@ export default function PrimaryCorePage() {
       <section className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 text-center mb-14">
+            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] text-center mb-14">
               Why institutions move their core to Nymbus.
             </h2>
           </ScrollReveal>
@@ -302,7 +299,7 @@ export default function PrimaryCorePage() {
                     &ldquo;The successful go-live affirmed our decision to modernize our entire banking infrastructure and positions us to deliver real, simple banking services to our customers faster and more efficiently than ever before.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Thomas Senecal</p>
+                    <p className="text-[#171216] text-sm font-semibold">Thomas Senecal</p>
                     <p className="text-neutral-400 text-xs">CEO and Chairman, PeoplesBank</p>
                   </div>
                 </div>
@@ -313,7 +310,7 @@ export default function PrimaryCorePage() {
                     &ldquo;Speed to market and cost to serve is what this business is all about — and Nymbus has nailed both.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Ami Iceman</p>
+                    <p className="text-[#171216] text-sm font-semibold">Ami Iceman</p>
                     <p className="text-neutral-400 text-xs">CEO, MSUFCU</p>
                   </div>
                 </div>
@@ -324,7 +321,7 @@ export default function PrimaryCorePage() {
                     &ldquo;Pillur allows us to deliver faster, smarter, and more personalized banking experiences, and Nymbus was instrumental in ensuring a smooth, secure migration for our SMB members.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Sara Dolan</p>
+                    <p className="text-[#171216] text-sm font-semibold">Sara Dolan</p>
                     <p className="text-neutral-400 text-xs">CFO, MSUFCU</p>
                   </div>
                 </div>
@@ -337,7 +334,7 @@ export default function PrimaryCorePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-10">
+            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-10">
               FAQs
             </h2>
           </ScrollReveal>
@@ -357,14 +354,14 @@ export default function PrimaryCorePage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-6">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-6">
                 Start with a core built to move.
               </h2>
               <div className="flex flex-wrap justify-center gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="/request-demo/" variant="primary" size="lg">
                   Book a demo
                 </Button>
-                <Button href="/platform/" variant="outline" size="lg" className="!text-neutral-900 !border-neutral-300 hover:!bg-neutral-100">
+                <Button href="/platform/" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 hover:!bg-neutral-100">
                   See the platform
                 </Button>
               </div>

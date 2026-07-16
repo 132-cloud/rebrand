@@ -84,7 +84,7 @@ export default function V4Layout({ children }: { children: React.ReactNode }) {
         }
 
         /* Proof strip: blue values → black */
-        .theme-guide .text-\\[\\#0065ff\\] {
+        .theme-guide .text-\\[\\#697CB2\\] {
           color: #000000 !important;
         }
 

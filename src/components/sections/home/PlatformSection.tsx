@@ -23,7 +23,7 @@ export function PlatformSection() {
         <ScrollReveal>
           <div className="max-w-5xl mb-12">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
-              <span className="font-bold text-neutral-900">One platform for core processing, managed services, digital banking, account opening, data, engagement, and governed AI workflows</span>{" "}
+              <span className="font-bold text-[#171216]">One platform for core processing, managed services, digital banking, account opening, data, engagement, and governed AI workflows</span>{" "}
               <span className="font-normal text-neutral-500">— designed to work individually or together.</span>
             </h4>
           </div>
@@ -37,7 +37,7 @@ export function PlatformSection() {
                 key={track.title}
                 className="p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-all duration-300"
               >
-                <h4 className="text-neutral-900 text-lg font-bold mb-3">{track.title}</h4>
+                <h4 className="text-[#171216] text-lg font-bold mb-3">{track.title}</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">{track.description}</p>
               </div>
             ))}

@@ -63,7 +63,7 @@ export function ResourcesDropdown({ isActive, onOpen, onClose }: ResourcesDropdo
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
                     Resources
                   </h4>
-                  <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4">
+                  <h3 className="text-[#171216] text-[1.65rem] font-bold leading-tight mb-4">
                     See how modern banking is being built.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
@@ -73,7 +73,7 @@ export function ResourcesDropdown({ isActive, onOpen, onClose }: ResourcesDropdo
                     <Link
                       href="/insights-hub/"
                       onClick={onClose}
-                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors no-underline"
+                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-[#171216] rounded-full hover:bg-[#2a2329] transition-colors no-underline"
                     >
                       Latest insights
                     </Link>
@@ -88,25 +88,25 @@ export function ResourcesDropdown({ isActive, onOpen, onClose }: ResourcesDropdo
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/insights-hub/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Ideas for growth</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/customers/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Customers</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Customers</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">See who launched</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/integrations/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Integrations</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Integrations</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Plug in your partners</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/product-releases/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Product releases</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Product releases</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">See what shipped</span>
                       </Link>
                     </li>
@@ -121,27 +121,27 @@ export function ResourcesDropdown({ isActive, onOpen, onClose }: ResourcesDropdo
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/about/" onClick={onClose} className="block py-1.5 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">About Nymbus</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">About Nymbus</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/cuso/" onClick={onClose} className="block py-1.5 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">CUSO</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">CUSO</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/careers/" onClick={onClose} className="block py-1.5 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Jobs</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Jobs</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/press/" onClick={onClose} className="block py-1.5 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Pressroom</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Pressroom</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contact/" onClick={onClose} className="block py-1.5 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Contact</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Contact</span>
                       </Link>
                     </li>
                   </ul>

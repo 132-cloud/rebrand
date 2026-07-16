@@ -11,34 +11,8 @@ export default function IntegrationsLayout({ children }: { children: React.React
   }, []);
 
   return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet"
-      />
-      <style>{`
-        .integrations-layout {
-          font-family: "Inter Tight", "proxima-nova", sans-serif;
-        }
-        .integrations-layout h1,
-        .integrations-layout h2,
-        .integrations-layout h3,
-        .integrations-layout h4,
-        .integrations-layout h5,
-        .integrations-layout h6,
-        .integrations-layout p,
-        .integrations-layout span,
-        .integrations-layout a,
-        .integrations-layout button,
-        .integrations-layout li {
-          font-family: "Inter Tight", "proxima-nova", sans-serif;
-        }
-      `}</style>
-      <div className="integrations-layout">
-        {children}
-      </div>
-    </>
+    <div className="integrations-layout">
+      {children}
+    </div>
   );
 }

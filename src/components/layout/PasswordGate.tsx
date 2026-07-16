@@ -38,7 +38,7 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white">
       <div className="w-full max-w-sm px-6">
         <div className="text-center mb-8">
-          <h1 className="text-neutral-900 text-2xl font-bold mb-2" style={{ fontFamily: "'Inter Tight', 'proxima-nova', sans-serif" }}>
+          <h1 className="text-[#171216] text-2xl font-bold mb-2" style={{ fontFamily: "'neue-haas-grotesk-text', 'proxima-nova', sans-serif" }}>
             Nymbus
           </h1>
           <p className="text-neutral-400 text-sm">Enter password to continue</p>
@@ -50,7 +50,7 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
             onChange={(e) => { setInput(e.target.value); setError(false); }}
             placeholder="Password"
             autoFocus
-            className={`w-full px-4 py-3 rounded-lg border text-neutral-900 text-sm outline-none transition-colors ${
+            className={`w-full px-4 py-3 rounded-lg border text-[#171216] text-sm outline-none transition-colors ${
               error ? "border-red-400 bg-red-50" : "border-neutral-200 bg-neutral-50 focus:border-neutral-400"
             }`}
           />
@@ -59,7 +59,7 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
           )}
           <button
             type="submit"
-            className="w-full px-4 py-3 bg-neutral-900 text-white text-sm font-semibold rounded-lg hover:bg-neutral-800 transition-colors"
+            className="w-full px-4 py-3 bg-[#171216] text-white text-sm font-semibold rounded-full hover:bg-[#2a2329] transition-colors"
           >
             Enter
           </button>

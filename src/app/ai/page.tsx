@@ -24,24 +24,28 @@ const supportingPoints = [
 
 export default function AIPage() {
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url('/background---.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 AI that answers to permissions, approvals, and audit.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
                 Governed and operational, built from within. AI that works inside the rules your institution already runs on, so automation moves the work without moving outside your controls.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="/request-demo/" variant="primary" size="lg">
                   Book a demo
                 </Button>
-                <Button href="/contact/?topic=ai" variant="outline" size="lg" className="!text-neutral-900 !border-neutral-300 !bg-white/60 hover:!bg-white/80">
+                <Button href="/contact/?topic=ai" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 !bg-white/60 hover:!bg-white/80">
                   Talk to an expert
                 </Button>
               </div>
@@ -55,7 +59,7 @@ export default function AIPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-6">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-6">
                 Agents are a task. Not a strategy.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -72,7 +76,7 @@ export default function AIPage() {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Governed by Design</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Governed from within, not bolted on.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -88,7 +92,7 @@ export default function AIPage() {
                   key={point.title}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50"
                 >
-                  <h4 className="text-neutral-900 text-base font-bold mb-3">{point.title}</h4>
+                  <h4 className="text-[#171216] text-base font-bold mb-3">{point.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{point.body}</p>
                 </div>
               ))}
@@ -105,7 +109,7 @@ export default function AIPage() {
               {/* Text — left */}
               <div className="flex-1">
                 <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Permissioned Automation</p>
-                <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+                <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                   Nymbus MCP, permissioned end to end.
                 </h2>
                 <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -129,7 +133,7 @@ export default function AIPage() {
               {/* Text — right */}
               <div className="flex-1">
                 <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Building the Infrastructure for AI</p>
-                <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+                <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                   From model to banking outcome.
                 </h2>
                 <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -150,13 +154,13 @@ export default function AIPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-4">
                 AI your institution can put into production.
               </h2>
               <p className="text-neutral-500 text-base leading-relaxed mb-8">
                 See how Nymbus brings governed, operational AI to real banking workflows, inside the controls you already run on.
               </p>
-              <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+              <Button href="/request-demo/" variant="primary" size="lg">
                 Book a demo
               </Button>
             </div>

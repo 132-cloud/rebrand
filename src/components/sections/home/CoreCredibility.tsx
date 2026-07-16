@@ -28,7 +28,7 @@ export function CoreCredibility() {
         <ScrollReveal>
           <div className="max-w-5xl mb-4">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
-              <span className="font-bold text-neutral-900">A real core path, not just a launch layer.</span>{" "}
+              <span className="font-bold text-[#171216]">A real core path, not just a launch layer.</span>{" "}
               <span className="font-normal text-neutral-500">
                 Parallel-core deployments for new growth or primary-core paths for full modernization, with digital banking, account opening, data, engagement, managed services, and implementation support connected.
               </span>
@@ -44,7 +44,7 @@ export function CoreCredibility() {
                 key={card.title}
                 className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-all duration-300"
               >
-                <h4 className="text-neutral-900 font-bold text-lg mb-3">{card.title}</h4>
+                <h4 className="text-[#171216] font-bold text-lg mb-3">{card.title}</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">{card.description}</p>
               </div>
             ))}
@@ -54,7 +54,7 @@ export function CoreCredibility() {
         {/* Proof callout */}
         <ScrollReveal delay={0.2}>
           <div className="mt-12 py-8 px-8 rounded-xl border border-neutral-200 bg-neutral-50 text-center">
-            <p className="text-[48px] font-light text-[#0065ff] mb-2 tracking-tight">$4.4B</p>
+            <p className="text-[48px] font-light text-[#171216] mb-2 tracking-tight">$4.4B</p>
             <p className="text-neutral-500 text-base">Largest community bank on a modern core with Nymbus</p>
           </div>
         </ScrollReveal>

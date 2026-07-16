@@ -150,7 +150,7 @@ export function CommentSidebar({
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
           <div>
-            <h2 className="text-base font-bold text-neutral-900">Comments</h2>
+            <h2 className="text-base font-bold text-[#171216]">Comments</h2>
             <p className="text-xs text-neutral-500 mt-0.5">
               {totalOpen} open · {totalResolved} resolved
             </p>
@@ -235,7 +235,7 @@ export function CommentSidebar({
 
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
-                          <span className="text-sm font-semibold text-neutral-900 truncate">
+                          <span className="text-sm font-semibold text-[#171216] truncate">
                             {comment.author}
                           </span>
                           <span className="text-[11px] text-neutral-400 flex-shrink-0">
@@ -305,7 +305,7 @@ export function CommentSidebar({
                               placeholder="Your name"
                               value={replyAuthor}
                               onChange={(e) => setReplyAuthor(e.target.value)}
-                              className="w-full text-xs px-2.5 py-1.5 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+                              className="w-full text-xs px-2.5 py-1.5 rounded-md border border-neutral-200 bg-neutral-50 text-[#171216] placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
                             />
                             <div className="flex gap-2">
                               <input
@@ -317,7 +317,7 @@ export function CommentSidebar({
                                   if (e.key === "Enter") handleReplySubmit(comment.id);
                                   if (e.key === "Escape") setReplyingTo(null);
                                 }}
-                                className="flex-1 text-xs px-2.5 py-1.5 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+                                className="flex-1 text-xs px-2.5 py-1.5 rounded-md border border-neutral-200 bg-neutral-50 text-[#171216] placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30"
                                 autoFocus
                               />
                               <button

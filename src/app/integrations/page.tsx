@@ -168,21 +168,18 @@ export default function IntegrationsPage() {
   }, [activeFilter, search]);
 
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: "url('/background---.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 Integrations
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed max-w-2xl">
@@ -207,7 +204,7 @@ export default function IntegrationsPage() {
                   className={`px-5 py-2 rounded-full text-sm font-bold tracking-wide border transition-all duration-200 cursor-pointer ${
                     activeFilter === cat.id
                       ? "bg-neutral-900 border-neutral-900 text-white"
-                      : "bg-white border-neutral-200 text-neutral-500 hover:border-neutral-400 hover:text-neutral-900"
+                      : "bg-white border-neutral-200 text-neutral-500 hover:border-neutral-400 hover:text-[#171216]"
                   }`}
                 >
                   {cat.label}
@@ -225,7 +222,7 @@ export default function IntegrationsPage() {
                   placeholder="Search integrations..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="pl-9 pr-4 py-2 rounded-full border border-neutral-200 bg-white text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-400 focus:ring-0 w-56 transition-colors"
+                  className="pl-9 pr-4 py-2 rounded-full border border-neutral-200 bg-white text-sm text-[#171216] placeholder-neutral-400 focus:outline-none focus:border-neutral-400 focus:ring-0 w-56 transition-colors"
                 />
                 {search && (
                   <button
@@ -264,7 +261,7 @@ export default function IntegrationsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Don&apos;t see your integration?
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-8">

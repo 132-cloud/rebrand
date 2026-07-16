@@ -27,7 +27,7 @@ export function CommentNotificationBadge({ onClick }: CommentNotificationBadgePr
   return (
     <button
       onClick={onClick}
-      className="relative flex items-center gap-1.5 text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors px-2 py-1 rounded-lg hover:bg-neutral-100"
+      className="relative flex items-center gap-1.5 text-sm font-medium text-neutral-600 hover:text-[#171216] transition-colors px-2 py-1 rounded-lg hover:bg-neutral-100"
       title={`${total} open comment${total !== 1 ? "s" : ""}`}
     >
       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

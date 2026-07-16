@@ -63,7 +63,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
                     Managed Services
                   </h4>
-                  <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4">
+                  <h3 className="text-[#171216] text-[1.65rem] font-bold leading-tight mb-4">
                     We don&apos;t just deploy it. We run it.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
@@ -73,7 +73,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                     <Link
                       href="/managed-services/"
                       onClick={onClose}
-                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors no-underline"
+                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-[#171216] rounded-full hover:bg-[#2a2329] transition-colors no-underline"
                     >
                       Managed Services overview
                     </Link>
@@ -88,43 +88,43 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/managed-services/#contact-center" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Contact Center</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Contact Center</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Support without hiring</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#onboarding" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Onboarding</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Onboarding</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Fund more accounts</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#contact-center" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Servicing</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Servicing</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Fast service at any volume</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#back-office" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Back Office</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Back Office</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Back office, handled</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#compliance" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Compliance</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Compliance</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Stay covered as rules change</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#back-office" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Fraud</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Fraud</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Contain losses at scale</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/managed-services/#business-banking" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Business Banking Support</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Business Banking Support</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Business ops, covered</span>
                       </Link>
                     </li>
@@ -139,7 +139,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/labs/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors inline-flex items-center gap-1.5">
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors inline-flex items-center gap-1.5">
                           Labs
                           <span className="relative flex h-1.5 w-1.5">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#697CB2] opacity-75"></span>

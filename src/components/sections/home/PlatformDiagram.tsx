@@ -122,7 +122,7 @@ export function PlatformDiagram() {
                 <div className="w-[120px] h-[120px] rounded-xl bg-[#0a1628] border border-[#4C9AFF]/30 flex flex-col items-center justify-center gap-2 mb-4">
                   {/* Diamond logo */}
                   <svg width="28" height="22" viewBox="0 0 29 22" fill="none">
-                    <path d="M14.5 0L29 11L14.5 22L0 11L14.5 0Z" fill="#0065FF" />
+                    <path d="M14.5 0L29 11L14.5 22L0 11L14.5 0Z" fill="#697CB2" />
                     <path d="M14.5 0L29 11L14.5 11L0 11L14.5 0Z" fill="#4C9AFF" />
                   </svg>
                   <span className="text-white text-[10px] font-bold tracking-[0.2em] uppercase" style={{ fontFamily: "proxima-nova, sans-serif" }}>

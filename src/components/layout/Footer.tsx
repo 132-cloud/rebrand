@@ -132,7 +132,7 @@ export function Footer() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
               {footerColumns.map((column) => (
                 <div key={column.title}>
-                  <h4 className="text-neutral-900 text-sm font-semibold mb-4">
+                  <h4 className="text-[#171216] text-sm font-semibold mb-4">
                     {column.title}
                   </h4>
                   <ul className="space-y-2.5">
@@ -140,7 +140,7 @@ export function Footer() {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-neutral-500 hover:text-neutral-900 text-sm transition-colors no-underline"
+                          className="text-neutral-500 hover:text-[#171216] text-sm transition-colors no-underline"
                         >
                           {link.title}
                         </Link>

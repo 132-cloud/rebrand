@@ -63,7 +63,7 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
                     AI
                   </h4>
-                  <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4 max-w-[280px]">
+                  <h3 className="text-[#171216] text-[1.65rem] font-bold leading-tight mb-4 max-w-[280px]">
                     AI that answers to permissions, approvals, and audit.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
@@ -73,7 +73,7 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
                     <Link
                       href="/ai/"
                       onClick={onClose}
-                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors no-underline"
+                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-[#171216] rounded-full hover:bg-[#2a2329] transition-colors no-underline"
                     >
                       Build with AI
                     </Link>
@@ -88,19 +88,19 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/ai/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">AI Approach</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">AI Approach</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Governed by design, not bolted on top</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ai/#nymbus-mcp" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Nymbus MCP</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Nymbus MCP</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Automation you control</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/ai/#applied" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Applied AI</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Applied AI</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">AI results, not roadmaps</span>
                       </Link>
                     </li>

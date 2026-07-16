@@ -15,7 +15,7 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-blue text-white hover:bg-blue-200 shadow-[0_4px_14px_rgba(0,101,255,0.4)] hover:shadow-[0_6px_20px_rgba(0,101,255,0.6)] active:scale-[0.96]",
+    "bg-[#171216] text-white hover:bg-[#2a2329] shadow-none active:scale-[0.96]",
   secondary:
     "bg-white/10 text-white hover:bg-white/20 border border-white/20 active:scale-[0.96]",
   outline:
@@ -38,7 +38,7 @@ export function Button({
   external = false,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-semibold rounded-[4px] transition-[background-color,color,border-color,box-shadow,transform] duration-300";
+    "inline-flex items-center justify-center font-semibold rounded-full transition-[background-color,color,border-color,box-shadow,transform] duration-300";
   const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {

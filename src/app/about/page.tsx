@@ -46,14 +46,18 @@ const investors = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── Section 1: About Hero ────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url('/background---.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 Nymbus is banking built to move.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed max-w-2xl">
@@ -70,7 +74,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Leadership</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Led by banking, product, and growth operators.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -91,7 +95,7 @@ export default function AboutPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-neutral-900 text-sm font-bold mb-0.5">{person.name}</h4>
+                  <h4 className="text-[#171216] text-sm font-bold mb-0.5">{person.name}</h4>
                   <p className="text-neutral-500 text-xs leading-snug">{person.title}</p>
                 </div>
               ))}
@@ -106,7 +110,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Board of Directors</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Governed with banking and investor experience.
               </h2>
             </div>
@@ -124,7 +128,7 @@ export default function AboutPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-neutral-900 text-sm font-bold mb-0.5">{person.name}</h4>
+                  <h4 className="text-[#171216] text-sm font-bold mb-0.5">{person.name}</h4>
                   <p className="text-neutral-500 text-xs leading-snug">{person.title}</p>
                 </div>
               ))}
@@ -139,7 +143,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-12">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Investors</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216]">
                 Backed by leaders in banking, fintech, and financial services.
               </h2>
             </div>
@@ -163,13 +167,13 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Build on Nymbus</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-4">
                 See the platform behind modern banking growth.
               </h2>
               <p className="text-neutral-500 text-base leading-relaxed mb-8">
                 Explore how Nymbus connects platform, operations, and growth support for institutions ready to launch, modernize, and scale.
               </p>
-              <Button href="/contact/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+              <Button href="/contact/" variant="primary" size="lg">
                 Talk to an expert
               </Button>
             </div>

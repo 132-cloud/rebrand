@@ -490,7 +490,7 @@ export function HeroNew() {
                   </div>
                   <button
                     type="submit"
-                    className="ml-4 w-10 h-10 flex items-center justify-center bg-[#0065ff] hover:bg-[#0050cc] text-white rounded-full transition-colors active:scale-[0.96] flex-shrink-0"
+                    className="ml-4 w-10 h-10 flex items-center justify-center bg-[#697CB2] hover:bg-[#4a5d8a] text-white rounded-full transition-colors active:scale-[0.96] flex-shrink-0"
                     aria-label="Submit"
                   >
                     <ArrowUpIcon />
@@ -516,7 +516,7 @@ export function HeroNew() {
                               href={btn.href}
                               className={
                                 isExpert
-                                  ? "px-4 py-2 bg-[#0065ff] hover:bg-[#0050cc] border border-[#0065ff] text-white text-sm font-medium rounded-full transition-colors"
+                                  ? "px-4 py-2 bg-[#697CB2] hover:bg-[#4a5d8a] border border-[#697CB2] text-white text-sm font-medium rounded-full transition-colors"
                                   : "px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white text-sm font-medium rounded-full transition-colors"
                               }
                             >
@@ -554,7 +554,7 @@ export function HeroNew() {
               {/* Talk to an expert pill - filled blue */}
               <a
                 href="/contact/"
-                className="px-4 py-2 bg-[#0065ff] hover:bg-[#0050cc] border border-[#0065ff] text-white text-sm font-medium rounded-full transition-colors"
+                className="px-4 py-2 bg-[#697CB2] hover:bg-[#4a5d8a] border border-[#697CB2] text-white text-sm font-medium rounded-full transition-colors"
               >
                 Talk to an expert
               </a>

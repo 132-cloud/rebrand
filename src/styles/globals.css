@@ -9,12 +9,12 @@ html {
 
 @theme {
   /* Primary Brand Colors */
-  --color-blue: #0065FF;
+  --color-blue: #697CB2;
   --color-blue-50: #DEEBFF;
   --color-blue-75: #B3D4FF;
   --color-blue-100: #4C9AFF;
   --color-blue-200: #2684FF;
-  --color-blue-300: #0065FF;
+  --color-blue-300: #697CB2;
   --color-blue-400: #0052CC;
   --color-blue-500: #0747A6;
   --color-sky-blue: #0094FF;
@@ -399,7 +399,7 @@ body.is-guide-theme header nav button {
   color: #171216 !important;
 }
 body.is-guide-theme header nav button:hover {
-  color: #000 !important;
+  color: #697CB2 !important;
   background-color: rgba(0,0,0,0.04) !important;
 }
 

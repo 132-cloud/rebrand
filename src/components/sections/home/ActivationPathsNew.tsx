@@ -23,7 +23,7 @@ export function ActivationPathsNew() {
     <section className="section-padding bg-white">
       <div className="container-site">
         <ScrollReveal>
-          <h2 className="text-[2rem] md:text-[2.75rem] font-bold text-center mb-14 text-neutral-900 leading-tight">
+          <h2 className="text-[2rem] md:text-[2.75rem] font-bold text-center mb-14 text-[#171216] leading-tight">
             Launch beside your core, or replace the one holding you back.
           </h2>
         </ScrollReveal>
@@ -40,7 +40,7 @@ export function ActivationPathsNew() {
                 <div className="aspect-[4/3] rounded-xl bg-neutral-100 border border-neutral-200/60 mb-8" />
 
                 {/* Title */}
-                <h4 className="text-neutral-900 font-bold text-xl md:text-2xl mb-3 group-hover:text-[#697CB2] transition-colors">{path.title}</h4>
+                <h4 className="text-[#171216] font-bold text-xl md:text-2xl mb-3 group-hover:text-[#697CB2] transition-colors">{path.title}</h4>
 
                 {/* Description */}
                 <p className="text-neutral-500 text-base leading-relaxed">

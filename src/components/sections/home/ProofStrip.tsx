@@ -33,7 +33,7 @@ export function ProofStrip() {
       />
       <div className="container-site">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-[2.75rem] font-bold text-center mb-14 text-neutral-900 leading-tight">
+          <h2 className="text-3xl md:text-[2.75rem] font-bold text-center mb-14 text-[#171216] leading-tight">
             Powering community financial institutions at scale.
           </h2>
         </ScrollReveal>
@@ -45,7 +45,7 @@ export function ProofStrip() {
                 key={stat.value}
                 className="group text-center px-6 opacity-60 hover:opacity-100 transition-opacity duration-300"
               >
-                <p className="text-[48px] font-light text-[#0065ff] mb-2 tracking-tight">
+                <p className="text-[48px] font-light text-[#171216] mb-2 tracking-tight">
                   {stat.value}
                 </p>
                 <p className="text-[16px] text-neutral-500 leading-relaxed">

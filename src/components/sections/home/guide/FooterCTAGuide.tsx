@@ -74,7 +74,7 @@ export function FooterCTAGuide({ heading }: { heading?: string }) {
       className="relative py-32 md:py-44 lg:py-56 overflow-hidden"
       style={{
         background:
-          "radial-gradient(ellipse 120% 110% at 50% 100%, #ffffff 0%, #0065FF 40%, #000000 80%)",
+          "radial-gradient(ellipse 120% 110% at 50% 100%, #ffffff 0%, #697CB2 40%, #000000 80%)",
       }}
     >
       <Stars />

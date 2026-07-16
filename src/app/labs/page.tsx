@@ -96,31 +96,28 @@ export default function LabsPage() {
   }, []);
 
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── 1. Hero ──────────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: "url('/background---.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 Growth team that drives the launch.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
                 Embed growth experts with your team to architect, launch, and optimize your digital brand from launch through scale.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button href="/contact/?topic=labs" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="/contact/?topic=labs" variant="primary" size="lg">
                   Talk to a Labs expert
                 </Button>
-                <Button href="#portfolio" variant="outline" size="lg" className="!text-neutral-900 !border-neutral-300 !bg-white/60 hover:!bg-white/80">
+                <Button href="#portfolio" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 !bg-white/60 hover:!bg-white/80">
                   See the work
                 </Button>
               </div>
@@ -156,7 +153,7 @@ export default function LabsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 The platform launches the bank. We grow it.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -172,7 +169,7 @@ export default function LabsPage() {
                   key={item.title}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50"
                 >
-                  <h4 className="text-neutral-900 text-base font-bold mb-3">{item.title}</h4>
+                  <h4 className="text-[#171216] text-base font-bold mb-3">{item.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
                 </div>
               ))}
@@ -192,7 +189,7 @@ export default function LabsPage() {
       <section id="labs-method" className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 text-center mb-14">
+            <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] text-center mb-14">
               The Labs method.
             </h2>
           </ScrollReveal>
@@ -204,7 +201,7 @@ export default function LabsPage() {
                   key={item.title}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
-                  <h4 className="text-neutral-900 text-base font-bold mb-3">{item.title}</h4>
+                  <h4 className="text-[#171216] text-base font-bold mb-3">{item.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
                 </div>
               ))}
@@ -214,7 +211,7 @@ export default function LabsPage() {
           <ScrollReveal delay={0.2}>
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                <span className="font-bold text-neutral-900">One difference: we are wired into the platform.</span>{" "}
+                <span className="font-bold text-[#171216]">One difference: we are wired into the platform.</span>{" "}
                 We build on the same core, digital banking, onboarding, and operations that run the brand, so strategy becomes a live, growing bank.
               </p>
             </div>
@@ -227,7 +224,7 @@ export default function LabsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] mb-5">
                 Paths to growth.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -243,7 +240,7 @@ export default function LabsPage() {
                   key={item.title}
                   className="p-6 rounded-2xl border border-neutral-200 bg-white hover:border-neutral-300 transition-[border-color] duration-300"
                 >
-                  <h4 className="text-neutral-900 text-sm font-bold mb-2">{item.title}</h4>
+                  <h4 className="text-[#171216] text-sm font-bold mb-2">{item.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
                 </div>
               ))}
@@ -257,7 +254,7 @@ export default function LabsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] mb-5">
                 From first idea to live brand.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -274,7 +271,7 @@ export default function LabsPage() {
                     {step.num}
                   </div>
                   <div>
-                    <h4 className="text-neutral-900 text-base font-bold mb-1">{step.title}</h4>
+                    <h4 className="text-[#171216] text-base font-bold mb-1">{step.title}</h4>
                     <p className="text-neutral-500 text-sm leading-relaxed">{step.body}</p>
                   </div>
                 </div>
@@ -289,21 +286,21 @@ export default function LabsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-10">
-              <h2 className="text-[1.5rem] md:text-[1.75rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900">
+              <h2 className="text-[1.5rem] md:text-[1.75rem] font-bold leading-tight tracking-[-0.02em] text-[#171216]">
                 The numbers behind the brands.
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">+459%</p>
+                <p className="text-[2.5rem] font-bold text-[#171216] mb-1">+459%</p>
                 <p className="text-neutral-500 text-sm">Deposits growth across the Labs portfolio YoY 2025</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">$50M</p>
+                <p className="text-[2.5rem] font-bold text-[#171216] mb-1">$50M</p>
                 <p className="text-neutral-500 text-sm">In deposits in as little as 1.4 months</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-neutral-900 mb-1">97%</p>
+                <p className="text-[2.5rem] font-bold text-[#171216] mb-1">97%</p>
                 <p className="text-neutral-500 text-sm">12-month customer retention</p>
               </div>
             </div>
@@ -316,7 +313,7 @@ export default function LabsPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-4">
                 Build the growth model behind your launch.
               </h2>
               <p className="text-neutral-500 text-base mb-8">
@@ -327,33 +324,33 @@ export default function LabsPage() {
                   <input
                     type="text"
                     placeholder="Name"
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-neutral-900 text-sm outline-none focus:border-neutral-400 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-[#171216] text-sm outline-none focus:border-neutral-400 transition-colors"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Email"
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-neutral-900 text-sm outline-none focus:border-neutral-400 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-[#171216] text-sm outline-none focus:border-neutral-400 transition-colors"
                   />
                 </div>
                 <div>
                   <input
                     type="text"
                     placeholder="Company"
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-neutral-900 text-sm outline-none focus:border-neutral-400 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-[#171216] text-sm outline-none focus:border-neutral-400 transition-colors"
                   />
                 </div>
                 <div>
                   <textarea
                     placeholder="What do you want to grow?"
                     rows={3}
-                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-neutral-900 text-sm outline-none focus:border-neutral-400 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-neutral-200 bg-white text-[#171216] text-sm outline-none focus:border-neutral-400 transition-colors resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-neutral-900 text-white text-sm font-semibold rounded-lg hover:bg-neutral-800 transition-colors"
+                  className="w-full px-6 py-3 bg-[#171216] text-white text-sm font-semibold rounded-full hover:bg-[#2a2329] transition-colors"
                 >
                   Book a session
                 </button>

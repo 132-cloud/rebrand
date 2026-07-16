@@ -110,7 +110,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-5 text-left cursor-pointer"
       >
-        <span className="text-neutral-900 text-base font-semibold pr-4">{question}</span>
+        <span className="text-[#171216] text-base font-semibold pr-4">{question}</span>
         <svg
           className={`w-5 h-5 text-neutral-400 flex-shrink-0 transition-transform duration-200 ${open ? "rotate-45" : ""}`}
           fill="none"
@@ -137,31 +137,28 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function PersonalBankingPage() {
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: "url('/background---.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 Win the primary banking relationship.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
                 Consumers are moving their direct deposit and daily banking to apps that feel faster than your core. Launch the everyday experience they expect on a platform built to move with you.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="/request-demo/" variant="primary" size="lg">
                   Book a demo
                 </Button>
-                <Button href="/platform/" variant="outline" size="lg" className="!text-neutral-900 !border-neutral-300 !bg-white/60 hover:!bg-white/80">
+                <Button href="/platform/" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 !bg-white/60 hover:!bg-white/80">
                   See the platform
                 </Button>
               </div>
@@ -197,7 +194,7 @@ export default function PersonalBankingPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Earn primary, not just an open account.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -218,7 +215,7 @@ export default function PersonalBankingPage() {
             <ScrollReveal>
               <div className={`flex flex-col md:flex-row items-center gap-12 md:gap-16 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
                 <div className="flex-1">
-                  <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-neutral-900 mb-4">
+                  <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-[#171216] mb-4">
                     {feature.headline}
                   </h3>
                   <p className="text-neutral-500 text-base leading-relaxed mb-6">
@@ -250,7 +247,7 @@ export default function PersonalBankingPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Built to serve consumers across the relationship.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -266,7 +263,7 @@ export default function PersonalBankingPage() {
                   key={stage.title}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300"
                 >
-                  <h4 className="text-neutral-900 text-base font-bold mb-3">{stage.title}</h4>
+                  <h4 className="text-[#171216] text-base font-bold mb-3">{stage.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{stage.description}</p>
                 </div>
               ))}
@@ -279,7 +276,7 @@ export default function PersonalBankingPage() {
       <section className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 text-center mb-14">
+            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] text-center mb-14">
               Why institutions build retail banking on Nymbus.
             </h2>
           </ScrollReveal>
@@ -293,7 +290,7 @@ export default function PersonalBankingPage() {
                     &ldquo;Our partnership with Nymbus has enabled us to create a truly digital-first experience that serves our community&rsquo;s specific needs wherever they may go for work.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Stephen Owen</p>
+                    <p className="text-[#171216] text-sm font-semibold">Stephen Owen</p>
                     <p className="text-neutral-400 text-xs">President and CEO, First Entertainment Credit Union and CineFi</p>
                   </div>
                 </div>
@@ -304,7 +301,7 @@ export default function PersonalBankingPage() {
                     &ldquo;The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Jill Castilla</p>
+                    <p className="text-[#171216] text-sm font-semibold">Jill Castilla</p>
                     <p className="text-neutral-400 text-xs">President &amp; CEO, Citizens Bank of Edmond</p>
                   </div>
                 </div>
@@ -315,7 +312,7 @@ export default function PersonalBankingPage() {
                     &ldquo;This is the most user-friendly banking system I&rsquo;ve ever trained on — fast, simple and intuitive.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Aleda DeMaria</p>
+                    <p className="text-[#171216] text-sm font-semibold">Aleda DeMaria</p>
                     <p className="text-neutral-400 text-xs">Executive VP, COO, PeoplesBank</p>
                   </div>
                 </div>
@@ -328,7 +325,7 @@ export default function PersonalBankingPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-10">
+            <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-10">
               FAQs
             </h2>
           </ScrollReveal>
@@ -348,14 +345,14 @@ export default function PersonalBankingPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-6">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-6">
                 Win the primary banking relationship.
               </h2>
               <div className="flex flex-wrap justify-center gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+                <Button href="/request-demo/" variant="primary" size="lg">
                   Book a demo
                 </Button>
-                <Button href="/platform/" variant="outline" size="lg" className="!text-neutral-900 !border-neutral-300 hover:!bg-neutral-100">
+                <Button href="/platform/" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 hover:!bg-neutral-100">
                   See the platform
                 </Button>
               </div>

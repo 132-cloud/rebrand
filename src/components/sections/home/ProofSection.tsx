@@ -13,7 +13,7 @@ export function ProofSection() {
       />
       <div className="container-site">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-[2.75rem] font-bold text-center mb-0 text-neutral-900 leading-tight">
+          <h2 className="text-3xl md:text-[2.75rem] font-bold text-center mb-0 text-[#171216] leading-tight">
             Proven infrastructure for financial innovators.
           </h2>
         </ScrollReveal>

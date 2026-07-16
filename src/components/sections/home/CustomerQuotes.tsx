@@ -69,7 +69,7 @@ export function CustomerQuotes() {
                 transition={{ duration: 0.3, delay: 0.1 }}
                 className="mt-6"
               >
-                <p className="text-neutral-900 text-sm">
+                <p className="text-[#171216] text-sm">
                   <strong>{quotes[activeIndex].author},</strong>{" "}
                   <span className="text-neutral-500">{quotes[activeIndex].title}</span>
                 </p>

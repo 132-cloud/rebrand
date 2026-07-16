@@ -265,21 +265,25 @@ const deployOptions = [
 
 export default function PlatformPage() {
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full" style={{ backgroundImage: "url('/background---.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Modern Banking Platform</p>
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 One connected platform.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
                 Core processing, digital banking, account opening, managed operations, and governed AI, running as one system, not five vendor contracts stitched together.
               </p>
-              <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+              <Button href="/request-demo/" variant="primary" size="lg">
                 Book a demo
               </Button>
             </div>
@@ -298,7 +302,7 @@ export default function PlatformPage() {
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-neutral-900 text-sm font-bold mb-1">{item.title}</h4>
+                    <h4 className="text-[#171216] text-sm font-bold mb-1">{item.title}</h4>
                     <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
                   </div>
                 </div>
@@ -313,7 +317,7 @@ export default function PlatformPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
                 Every capability required to run a modern bank. Connected.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -331,7 +335,7 @@ export default function PlatformPage() {
             <div className="flex items-center justify-between mb-10">
               <div>
                 <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Banking Technology</p>
-                <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900">
+                <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216]">
                   Modern banking. Built without limits.
                 </h2>
               </div>
@@ -387,7 +391,7 @@ export default function PlatformPage() {
                 {/* Bottom: text content */}
                 <div className="px-2 pb-2 pt-4">
                   <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-2">{feature.eyebrow}</p>
-                  <h3 className="text-neutral-900 text-[1.5rem] md:text-[1.75rem] font-bold leading-tight mb-3">
+                  <h3 className="text-[#171216] text-[1.5rem] md:text-[1.75rem] font-bold leading-tight mb-3">
                     {feature.headline}
                   </h3>
                   <p className="text-neutral-500 text-base leading-relaxed">{feature.body}</p>
@@ -406,7 +410,7 @@ export default function PlatformPage() {
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] mb-5">
                 Move faster with a flexible, modern platform built for growth
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-6">
@@ -436,7 +440,7 @@ export default function PlatformPage() {
             <div className="flex items-center justify-between mb-10">
               <div>
                 <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Intelligence</p>
-                <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900">
+                <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216]">
                   One layer. Every signal.
                 </h2>
               </div>
@@ -492,7 +496,7 @@ export default function PlatformPage() {
                 {/* Bottom: text content */}
                 <div className="px-2 pb-2 pt-4">
                   <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-2">{feature.eyebrow}</p>
-                  <h3 className="text-neutral-900 text-[1.5rem] md:text-[1.75rem] font-bold leading-tight mb-3">
+                  <h3 className="text-[#171216] text-[1.5rem] md:text-[1.75rem] font-bold leading-tight mb-3">
                     {feature.headline}
                   </h3>
                   <p className="text-neutral-500 text-base leading-relaxed">{feature.body}</p>
@@ -525,10 +529,10 @@ export default function PlatformPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-8">
+              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-8">
                 Ready to move?
               </h2>
-              <Button href="/request-demo/" variant="primary" size="lg" className="!bg-neutral-900 !text-white !shadow-none hover:!bg-neutral-800">
+              <Button href="/request-demo/" variant="primary" size="lg">
                 Book a demo
               </Button>
             </div>

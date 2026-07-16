@@ -84,11 +84,11 @@ export default function V3Layout({ children }: { children: React.ReactNode }) {
         }
         body.is-guide-theme .bg-charcoal-dark .group-hover\\:text-sky-blue:hover,
         body.is-guide-theme .bg-charcoal-dark .group:hover .group-hover\\:text-sky-blue {
-          color: #0065ff !important;
+          color: #697CB2 !important;
         }
 
         /* Proof strip: blue values → black */
-        .theme-guide .text-\\[\\#0065ff\\] {
+        .theme-guide .text-\\[\\#697CB2\\] {
           color: #000000 !important;
         }
 

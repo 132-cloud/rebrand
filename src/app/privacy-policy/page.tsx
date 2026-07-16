@@ -8,20 +8,17 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-white text-neutral-900">
+    <div className="bg-white text-[#171216]">
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: "url('/background---.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          </video>
+        </div>
         <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.03em] text-[#171216] mb-6">
                 Privacy Policy
               </h1>
             </div>
@@ -38,7 +35,7 @@ export default function PrivacyPolicyPage() {
                 information and how NYMBUS tracks visits to its website.
               </p>
 
-              <h2 className="text-neutral-900 text-xl font-bold mt-8 mb-4">
+              <h2 className="text-[#171216] text-xl font-bold mt-8 mb-4">
                 Your Information
               </h2>
               <p>
@@ -49,14 +46,14 @@ export default function PrivacyPolicyPage() {
                 on relevant topics for informational or marketing purposes. You
                 may opt out of these communications at any time by following the
                 instructions contained in our emails.{" "}
-                <strong className="text-neutral-900">
+                <strong className="text-[#171216]">
                   We will never share your information with any third party at
                   any time
                 </strong>
                 .
               </p>
 
-              <h2 className="text-neutral-900 text-xl font-bold mt-8 mb-4">
+              <h2 className="text-[#171216] text-xl font-bold mt-8 mb-4">
                 Tracking Visits to Our Website
               </h2>
               <p>
@@ -110,7 +107,7 @@ export default function PrivacyPolicyPage() {
               <hr className="border-neutral-200 my-8" />
 
               <p>
-                <strong className="text-neutral-900">
+                <strong className="text-[#171216]">
                   Data Protection Officer (DPO):
                 </strong>
                 <br />

@@ -63,7 +63,7 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
                     Platform
                   </h4>
-                  <h3 className="text-neutral-900 text-[1.65rem] font-bold leading-tight mb-4">
+                  <h3 className="text-[#171216] text-[1.65rem] font-bold leading-tight mb-4">
                     One connected platform.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
@@ -73,7 +73,7 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                     <Link
                       href="/platform/"
                       onClick={onClose}
-                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors no-underline"
+                      className="inline-block px-5 py-2.5 text-sm font-semibold text-white bg-[#171216] rounded-full hover:bg-[#2a2329] transition-colors no-underline"
                     >
                       Platform overview
                     </Link>
@@ -84,7 +84,7 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={onClose}
-                      className="text-sm font-semibold text-neutral-900 hover:text-blue transition-colors no-underline inline-flex items-center gap-1"
+                      className="text-sm font-semibold text-[#171216] hover:text-blue transition-colors no-underline inline-flex items-center gap-1"
                     >
                       Try the demo
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -102,19 +102,19 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/platform/#core-processing" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Core Processing</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Core Processing</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Grow without core limits</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#digital-banking" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Digital Banking</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Digital Banking</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Grow deposits everywhere</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#account-opening" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Account Opening</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Account Opening</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Fund accounts faster</span>
                       </Link>
                     </li>
@@ -126,13 +126,13 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/platform/#loyalty-engagement" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Levels</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Levels</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Incentivize and reward profitable behaviors</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#loyalty-engagement" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Engage</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Engage</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Nurture accounts into loyal relationships</span>
                       </Link>
                     </li>
@@ -147,25 +147,25 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/platform/#connect" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Connect</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Connect</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Connect your stack without the lift</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#insights" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Insights</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">See what drives growth</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#nymbus-mcp" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Nymbus MCP</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Nymbus MCP</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Automation you control</span>
                       </Link>
                     </li>
                     <li>
                       <Link href="/platform/#fraud-intelligence" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Fraud Intelligence</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Fraud Intelligence</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Stop fraud early</span>
                       </Link>
                     </li>
@@ -178,7 +178,7 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/managed-services/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Managed Services</span>
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">Managed Services</span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Scale without headcount</span>
                       </Link>
                     </li>

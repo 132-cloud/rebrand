@@ -175,7 +175,7 @@ export function HeroNew() {
               <Button href="#dashboard-preview" variant="primary" size="lg">
                 Explore the platform
               </Button>
-              <Button href="/contact/" variant="outline" size="lg" className="!border-[#0065ff] !text-[#0065ff] hover:!bg-[#0065ff]/10">
+              <Button href="/contact/" variant="outline" size="lg" className="!border-[#697CB2] !text-[#697CB2] hover:!bg-[#697CB2]/10">
                 Talk to an expert
               </Button>
             </div>
