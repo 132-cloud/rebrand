@@ -146,7 +146,7 @@ export default function PressPage() {
                     <span className="text-[#171216] text-sm font-medium group-hover:text-[#697CB2] transition-colors">{item.headline}</span>
                   </div>
                   <span className="text-[#697CB2] text-sm font-medium flex-shrink-0 ml-4">
-                    Read coverage ›
+                    View coverage ›
                   </span>
                 </Link>
               ))}
