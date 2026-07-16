@@ -131,7 +131,7 @@ export default function ManagedServicesPage() {
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">The shared-services model</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 We run the work. You keep control.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -163,7 +163,7 @@ export default function ManagedServicesPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 Meet the team that runs your operations.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -189,37 +189,37 @@ export default function ManagedServicesPage() {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
               <blockquote className="text-neutral-700 text-xl md:text-2xl font-light leading-relaxed italic mb-6">
-                &ldquo;Placeholder — shortest quotable line, outcome first, on how fast issues get resolved because the team that built the service runs it.&rdquo;
+                &ldquo;This is the most user-friendly banking system I&rsquo;ve ever trained on — fast, simple and intuitive.&rdquo;
               </blockquote>
-              <p className="text-neutral-500 text-sm">— Name, Title, Institution (pending written approval)</p>
+              <p className="text-neutral-500 text-sm">— Aleda DeMaria, Executive VP, COO, PeoplesBank</p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ─── 6. Front-of-house: Digital Onboarding ────────────────────────── */}
-      <section id="onboarding" className="py-20 md:py-28 bg-neutral-900">
+      <section id="onboarding" className="py-20 md:py-28 bg-neutral-50">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
-              <p className="text-white/40 text-[11px] font-semibold uppercase tracking-wider mb-4">Digital Onboarding</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-white mb-5">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Digital Onboarding</p>
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 Every application, decisioned in seconds.
               </h2>
-              <p className="text-white/60 text-base md:text-lg leading-relaxed">
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
                 Nymbus scores every application the moment it is submitted and routes it automatically, so clean applicants get through fast and edge cases get worked by people, not left in a queue.
               </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5">
-                <h4 className="text-white text-base font-bold mb-3">Auto-approve, auto-deny, or refer.</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Socure ID+ scores each application on intake and routes it to one of three outcomes, so clean applicants are approved without anyone touching the file.</p>
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
+                <h4 className="text-neutral-900 text-base font-bold mb-3">Auto-approve, auto-deny, or refer.</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">Socure ID+ scores each application on intake and routes it to one of three outcomes, so clean applicants are approved without anyone touching the file.</p>
               </div>
-              <div className="p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5">
-                <h4 className="text-white text-base font-bold mb-3">Every refer, worked end to end.</h4>
-                <p className="text-white/60 text-sm leading-relaxed">The onboarding team runs manual review, document and selfie verification, and fraud coordination on flagged cases, so a referred application clears with a decision, not a delay.</p>
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
+                <h4 className="text-neutral-900 text-base font-bold mb-3">Every refer, worked end to end.</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">The onboarding team runs manual review, document and selfie verification, and fraud coordination on flagged cases, so a referred application clears with a decision, not a delay.</p>
               </div>
             </div>
           </ScrollReveal>
@@ -231,7 +231,7 @@ export default function ManagedServicesPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 Every operation, already handled.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -264,7 +264,7 @@ export default function ManagedServicesPage() {
           <ScrollReveal>
             <div className="max-w-3xl">
               <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">Reporting</p>
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-5">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-5">
                 Know what is running, every month.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
@@ -280,7 +280,7 @@ export default function ManagedServicesPage() {
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-neutral-900 mb-4">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-neutral-900 mb-4">
                 We build it. We run it.
               </h2>
               <p className="text-neutral-500 text-base leading-relaxed mb-8">

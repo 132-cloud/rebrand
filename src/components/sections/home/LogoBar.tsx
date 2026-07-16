@@ -3,15 +3,16 @@
 import { useEffect, useRef } from "react";
 
 const logos = [
-  { src: "/images/logo bar logos/Vector.png", alt: "Client logo" },
-  { src: "/images/logo bar logos/FECU.png", alt: "FECU" },
-  { src: "/images/logo bar logos/Gesa.png", alt: "Gesa Credit Union" },
-  { src: "/images/logo bar logos/VantageWest.png", alt: "Vantage West" },
-  { src: "/images/logo bar logos/Vector-1.png", alt: "Client logo" },
+  { src: "/images/logo bar logos/Vector.png", alt: "MSUFCU", url: "https://www.msufcu.org" },
+  { src: "/images/logo bar logos/FECU.png", alt: "First Entertainment Credit Union", url: "https://www.firstent.org" },
+  { src: "/images/logo bar logos/Gesa.png", alt: "Gesa Credit Union", url: "https://www.gesa.com" },
+  { src: "/images/logo bar logos/VantageWest.png", alt: "Vantage West Credit Union", url: "https://www.vantagewest.org" },
+  { src: "/images/logo bar logos/Vector-1.png", alt: "PeoplesBank", url: "https://www.bankatpeoples.com" },
 ];
 
 export function LogoBar() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -22,17 +23,29 @@ export function LogoBar() {
     const speed = 0.25; // px per frame
 
     function animate() {
-      offset -= speed;
-      const halfWidth = track!.scrollWidth / 2;
-      if (Math.abs(offset) >= halfWidth) {
-        offset = 0;
+      if (!pausedRef.current) {
+        offset -= speed;
+        const halfWidth = track!.scrollWidth / 2;
+        if (Math.abs(offset) >= halfWidth) {
+          offset = 0;
+        }
+        track!.style.transform = `translateX(${offset}px)`;
       }
-      track!.style.transform = `translateX(${offset}px)`;
       animationId = requestAnimationFrame(animate);
     }
 
+    const handleMouseEnter = () => { pausedRef.current = true; };
+    const handleMouseLeave = () => { pausedRef.current = false; };
+
+    track.addEventListener("mouseenter", handleMouseEnter);
+    track.addEventListener("mouseleave", handleMouseLeave);
+
     animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
+    return () => {
+      cancelAnimationFrame(animationId);
+      track.removeEventListener("mouseenter", handleMouseEnter);
+      track.removeEventListener("mouseleave", handleMouseLeave);
+    };
   }, []);
 
   // Triple the logos for a wider seamless loop
@@ -51,19 +64,22 @@ export function LogoBar() {
       <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling track */}
-      <div ref={trackRef} className="flex will-change-transform" style={{ marginTop: "20px" }}>
+      <div ref={trackRef} className="relative z-20 flex will-change-transform cursor-pointer" style={{ marginTop: "20px" }}>
         {allLogos.map((logo, i) => (
-          <div
+          <a
             key={`${logo.alt}-${i}`}
-            className="flex-shrink-0 flex items-center justify-center px-10 md:px-14"
+            href={logo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 flex items-center justify-center px-10 md:px-14 transition-opacity hover:opacity-80"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-4 md:h-5 w-auto opacity-60 grayscale"
+              className="h-4 md:h-5 w-auto opacity-60 grayscale pointer-events-none"
             />
-          </div>
+          </a>
         ))}
       </div>
     </section>

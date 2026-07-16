@@ -54,7 +54,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
       </button>
 
       {isActive && (
-        <div className="fixed top-16 md:top-20 left-0 right-0 pt-0 z-50">
+        <div className="fixed top-[calc(28px+4rem)] md:top-[calc(28px+5rem)] left-0 right-0 pt-0 z-50">
           <div className="bg-white border-b border-neutral-200 shadow-2xl shadow-black/10 px-8 py-10">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-4 gap-10">
@@ -139,7 +139,13 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                   <ul className="space-y-0.5">
                     <li>
                       <Link href="/labs/" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-sm font-semibold group-hover:text-blue transition-colors bg-gradient-to-r from-[#0065FF] via-[#7c3aed] to-[#FF5630] bg-clip-text text-transparent">Labs</span>
+                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors inline-flex items-center gap-1.5">
+                          Labs
+                          <span className="relative flex h-1.5 w-1.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#697CB2] opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#697CB2]"></span>
+                          </span>
+                        </span>
                         <span className="block text-neutral-500 text-xs mt-0.5">Launch and grow</span>
                       </Link>
                     </li>

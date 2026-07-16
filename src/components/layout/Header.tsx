@@ -66,13 +66,6 @@ const solutionsMenu = {
   label: "Solutions",
   columns: [
     {
-      category: "Launch a new core",
-      items: [
-        { title: "Brick and mortar core replacement", href: "/solutions/core-replacement/" },
-        { title: "De novo launch", href: "/solutions/de-novo/" },
-      ],
-    },
-    {
       category: "Launch a parallel core",
       items: [
         { title: "Vertical brand launches", href: "/solutions/vertical-brands/" },
@@ -80,6 +73,13 @@ const solutionsMenu = {
         { title: "M&A acceleration", href: "/solutions/accelerate-ma/" },
         { title: "Private label banking", href: "/solutions/private-label/" },
         { title: "Sandbox innovation", href: "/solutions/sandbox/" },
+      ],
+    },
+    {
+      category: "Launch a new core",
+      items: [
+        { title: "Brick and mortar core replacement", href: "/solutions/core-replacement/" },
+        { title: "De novo launch", href: "/solutions/de-novo/" },
       ],
     },
     {
@@ -202,16 +202,16 @@ export function Header() {
             {/* Right CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                href="/request-demo/"
-                className="px-5 py-2.5 text-sm font-semibold text-white bg-blue rounded-[4px] hover:bg-blue-200 transition-colors"
+                href="https://nymbus-joy.nymbus.com/dashboard"
+                className="px-5 py-2.5 text-sm font-semibold text-white bg-black rounded-full hover:bg-neutral-800 transition-colors"
               >
-                See a demo
+                Try the demo
               </Link>
               <Link
                 href="/contact/"
-                className="px-5 py-2.5 text-sm font-semibold text-white/80 border border-white/20 rounded-[4px] hover:bg-white/5 hover:text-white transition-colors"
+                className="px-5 py-2.5 text-sm font-semibold text-black border border-neutral-300 rounded-full hover:bg-neutral-50 transition-colors"
               >
-                Contact sales
+                Book a strategy call
               </Link>
             </div>
 

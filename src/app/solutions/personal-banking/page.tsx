@@ -286,20 +286,39 @@ export default function PersonalBankingPage() {
 
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
                 <div
-                  key={i}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
                   <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
-                    &ldquo;Testimonial placeholder — shortest quotable line, outcome first.&rdquo;
+                    &ldquo;Our partnership with Nymbus has enabled us to create a truly digital-first experience that serves our community&rsquo;s specific needs wherever they may go for work.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Name Placeholder</p>
-                    <p className="text-neutral-400 text-xs">Title, Institution</p>
+                    <p className="text-neutral-900 text-sm font-semibold">Stephen Owen</p>
+                    <p className="text-neutral-400 text-xs">President and CEO, First Entertainment Credit Union and CineFi</p>
                   </div>
                 </div>
-              ))}
+                <div
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
+                >
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                    &ldquo;The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.&rdquo;
+                  </blockquote>
+                  <div>
+                    <p className="text-neutral-900 text-sm font-semibold">Jill Castilla</p>
+                    <p className="text-neutral-400 text-xs">President &amp; CEO, Citizens Bank of Edmond</p>
+                  </div>
+                </div>
+                <div
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
+                >
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                    &ldquo;This is the most user-friendly banking system I&rsquo;ve ever trained on — fast, simple and intuitive.&rdquo;
+                  </blockquote>
+                  <div>
+                    <p className="text-neutral-900 text-sm font-semibold">Aleda DeMaria</p>
+                    <p className="text-neutral-400 text-xs">Executive VP, COO, PeoplesBank</p>
+                  </div>
+                </div>
             </div>
           </ScrollReveal>
         </div>

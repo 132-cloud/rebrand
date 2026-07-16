@@ -180,7 +180,7 @@ export default function HomePage() {
       <GovernedAISectionGuide />
       <CustomerQuotes />
       <ResourcesSection />
-      <FooterCTAGuide heading="READY TO MOVE?" />
+      <FooterCTAGuide heading="Ready to move?" />
     </div>
   );
 }

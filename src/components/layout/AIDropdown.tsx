@@ -54,7 +54,7 @@ export function AIDropdown({ isActive, onOpen, onClose }: AIDropdownProps) {
       </button>
 
       {isActive && (
-        <div className="fixed top-16 md:top-20 left-0 right-0 pt-0 z-50">
+        <div className="fixed top-[calc(28px+4rem)] md:top-[calc(28px+5rem)] left-0 right-0 pt-0 z-50">
           <div className="bg-white border-b border-neutral-200 shadow-2xl shadow-black/10 px-8 py-10">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-4 gap-10">

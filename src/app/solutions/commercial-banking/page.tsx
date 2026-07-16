@@ -306,20 +306,39 @@ export default function CommercialBankingPage() {
 
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
                 <div
-                  key={i}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
                   <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
-                    &ldquo;Testimonial placeholder — shortest quotable line, outcome first.&rdquo;
+                    &ldquo;This represents the future of specialized banking – combining deep industry knowledge with innovative technology.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Name Placeholder</p>
-                    <p className="text-neutral-400 text-xs">Title, Institution</p>
+                    <p className="text-neutral-900 text-sm font-semibold">Stephen Owen</p>
+                    <p className="text-neutral-400 text-xs">President and CEO, First Entertainment Credit Union and CineFi</p>
                   </div>
                 </div>
-              ))}
+                <div
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
+                >
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                    &ldquo;The successful go-live affirmed our decision to modernize our entire banking infrastructure and positions us to deliver real, simple banking services to our customers faster and more efficiently than ever before.&rdquo;
+                  </blockquote>
+                  <div>
+                    <p className="text-neutral-900 text-sm font-semibold">Thomas Senecal</p>
+                    <p className="text-neutral-400 text-xs">CEO and Chairman, PeoplesBank</p>
+                  </div>
+                </div>
+                <div
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
+                >
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                    &ldquo;Speed to market and cost to serve is what this business is all about — and Nymbus has nailed both.&rdquo;
+                  </blockquote>
+                  <div>
+                    <p className="text-neutral-900 text-sm font-semibold">Ami Iceman</p>
+                    <p className="text-neutral-400 text-xs">CEO, MSUFCU</p>
+                  </div>
+                </div>
             </div>
           </ScrollReveal>
         </div>

@@ -72,7 +72,7 @@ export function MegaDropdown({ menu, isActive, onOpen, onClose }: MegaDropdownPr
       </button>
 
       {isActive && (
-        <div className="fixed top-16 md:top-20 left-0 right-0 pt-0 z-50">
+        <div className="fixed top-[calc(28px+4rem)] md:top-[calc(28px+5rem)] left-0 right-0 pt-0 z-50">
           <div className="bg-charcoal-dark border-b border-white/10 shadow-2xl shadow-black/40 px-8 py-8">
             <div className="max-w-7xl mx-auto">
               <div className={`grid gap-10`}

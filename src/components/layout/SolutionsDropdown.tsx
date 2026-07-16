@@ -54,7 +54,7 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
       </button>
 
       {isActive && (
-        <div className="fixed top-16 md:top-20 left-0 right-0 pt-0 z-50">
+        <div className="fixed top-[calc(28px+4rem)] md:top-[calc(28px+5rem)] left-0 right-0 pt-0 z-50">
           <div className="bg-white border-b border-neutral-200 shadow-2xl shadow-black/10 px-8 py-10">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-4 gap-10">
@@ -72,25 +72,9 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
 
                 </div>
 
-                {/* Column 2: LAUNCH A PRIMARY CORE + LAUNCH A PARALLEL CORE */}
+                {/* Column 2: LAUNCH A PARALLEL CORE + LAUNCH A PRIMARY CORE */}
                 <div>
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">
-                    Launch a Primary Core
-                  </h4>
-                  <ul className="space-y-0.5">
-                    <li>
-                      <Link href="/solutions/primary-core/#core-replacement" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Core replacement</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/solutions/primary-core/#de-novo" onClick={onClose} className="block py-2 group no-underline">
-                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">De novo launch</span>
-                      </Link>
-                    </li>
-                  </ul>
-
-                  <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4 mt-6">
                     Launch a Parallel Core
                   </h4>
                   <ul className="space-y-0.5">
@@ -117,6 +101,22 @@ export function SolutionsDropdown({ isActive, onOpen, onClose }: SolutionsDropdo
                     <li>
                       <Link href="/solutions/parallel-core/#sandbox" onClick={onClose} className="block py-2 group no-underline">
                         <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Sandbox innovation</span>
+                      </Link>
+                    </li>
+                  </ul>
+
+                  <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4 mt-6">
+                    Launch a Primary Core
+                  </h4>
+                  <ul className="space-y-0.5">
+                    <li>
+                      <Link href="/solutions/primary-core/#core-replacement" onClick={onClose} className="block py-2 group no-underline">
+                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">Core replacement</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/solutions/primary-core/#de-novo" onClick={onClose} className="block py-2 group no-underline">
+                        <span className="text-neutral-900 text-sm font-semibold group-hover:text-blue transition-colors">De novo launch</span>
                       </Link>
                     </li>
                   </ul>

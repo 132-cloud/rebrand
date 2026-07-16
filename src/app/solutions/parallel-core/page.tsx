@@ -309,20 +309,39 @@ export default function ParallelCorePage() {
 
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
                 <div
-                  key={i}
                   className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
                   <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
-                    &ldquo;Testimonial placeholder — shortest quotable line, outcome first.&rdquo;
+                    &ldquo;We recognized that business owners need digital banking tools and services that fit how they operate today. Partnering with Nymbus allowed us to make that vision a reality.&rdquo;
                   </blockquote>
                   <div>
-                    <p className="text-neutral-900 text-sm font-semibold">Name Placeholder</p>
-                    <p className="text-neutral-400 text-xs">Title, Institution</p>
+                    <p className="text-neutral-900 text-sm font-semibold">Sara Dolan</p>
+                    <p className="text-neutral-400 text-xs">CFO, MSUFCU</p>
                   </div>
                 </div>
-              ))}
+                <div
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
+                >
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                    &ldquo;This represents the future of specialized banking – combining deep industry knowledge with innovative technology.&rdquo;
+                  </blockquote>
+                  <div>
+                    <p className="text-neutral-900 text-sm font-semibold">Stephen Owen</p>
+                    <p className="text-neutral-400 text-xs">President and CEO, First Entertainment Credit Union and CineFi</p>
+                  </div>
+                </div>
+                <div
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
+                >
+                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                    &ldquo;The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.&rdquo;
+                  </blockquote>
+                  <div>
+                    <p className="text-neutral-900 text-sm font-semibold">Jill Castilla</p>
+                    <p className="text-neutral-400 text-xs">President &amp; CEO, Citizens Bank of Edmond</p>
+                  </div>
+                </div>
             </div>
           </ScrollReveal>
         </div>

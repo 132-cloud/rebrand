@@ -49,7 +49,7 @@ const footerColumns = [
     links: [
       { title: "Insights", href: "/insights/" },
       { title: "Customers", href: "/customers/" },
-      { title: "Integrations", href: "/partners/" },
+      { title: "Integrations", href: "/integrations/" },
       { title: "Product releases", href: "/product-releases/" },
       { title: "AI", href: "/ai/" },
     ],
