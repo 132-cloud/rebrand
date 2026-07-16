@@ -428,7 +428,7 @@ export function HeroGuide() {
   }
 
   return (
-    <section className="relative pt-24 pb-10 md:pt-36 md:pb-14 lg:pt-40 lg:pb-16 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative pt-[26px] pb-10 md:pt-[74px] md:pb-14 lg:pt-[90px] lg:pb-16 overflow-hidden min-h-[90vh] flex items-center">
       {/* Background video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
