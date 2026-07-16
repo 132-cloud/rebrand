@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
-import { CTAFooter } from "@/components/sections/CTAFooter";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
 
 export const metadata: Metadata = {
   title: "CUSO",
@@ -34,7 +34,7 @@ export default function CUSOPage() {
           </ScrollReveal>
         </div>
       </section>
-      <CTAFooter />
+      <FooterCTAGuide heading="Get Started Now" buttonText="Request A Demo" buttonHref="/request-demo/" />
     </>
   );
 }

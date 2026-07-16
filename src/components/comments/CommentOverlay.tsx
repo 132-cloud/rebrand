@@ -24,6 +24,7 @@ export function CommentOverlay() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeComment, setActiveComment] = useState<string | null>(null);
   const [unseenCount, setUnseenCount] = useState(0);
+  const [pinsHidden, setPinsHidden] = useState(false);
 
   // Form state
   const [formPosition, setFormPosition] = useState<{ x: number; y: number } | null>(null);
@@ -222,7 +223,7 @@ export function CommentOverlay() {
       )}
 
       {/* Render pins for current page (hide resolved) */}
-      {pageComments.filter((c) => !c.resolved).map((comment, idx) => (
+      {!pinsHidden && pageComments.filter((c) => !c.resolved).map((comment, idx) => (
         <CommentPin
           key={comment.id}
           comment={comment}
@@ -250,6 +251,8 @@ export function CommentOverlay() {
         onNavigateToComment={handleNavigateToComment}
         onRefresh={refresh}
         activeCommentId={activeComment}
+        pinsHidden={pinsHidden}
+        onTogglePins={() => setPinsHidden((v) => !v)}
       />
     </>
   );

@@ -11,7 +11,7 @@ import { GovernedAISection } from "@/components/sections/home/GovernedAISection"
 import { ArchitectureDiagram } from "@/components/sections/home/ArchitectureDiagram";
 import { CustomerQuotes } from "@/components/sections/home/CustomerQuotes";
 import { ResourcesSection } from "@/components/sections/home/ResourcesSection";
-import { FooterCTA } from "@/components/sections/home/FooterCTA";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
 
 export default function NymbusPage() {
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function NymbusPage() {
       <ArchitectureDiagram />
       <CustomerQuotes />
       <ResourcesSection />
-      <FooterCTA />
+      <FooterCTAGuide />
     </div>
   );
 }

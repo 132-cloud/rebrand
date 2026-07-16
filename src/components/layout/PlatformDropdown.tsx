@@ -118,6 +118,15 @@ export function PlatformDropdown({ isActive, onOpen, onClose }: PlatformDropdown
                         <span className="block text-neutral-500 text-xs mt-0.5">Fund accounts faster</span>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/platform/#payments-hub" onClick={onClose} className="block py-2 group no-underline">
+                        <span className="text-[#171216] text-sm font-semibold group-hover:text-blue transition-colors">
+                          Payments Hub
+                          <span className="ml-1.5 text-[10px] font-bold text-blue uppercase">Beta</span>
+                        </span>
+                        <span className="block text-neutral-500 text-xs mt-0.5">Control every payment rail</span>
+                      </Link>
+                    </li>
                   </ul>
 
                   <h4 className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4 mt-6">

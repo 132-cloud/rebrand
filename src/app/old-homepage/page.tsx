@@ -6,7 +6,7 @@ import { CoreSection } from "@/components/sections/CoreSection";
 import { DigitalBankingSection } from "@/components/sections/DigitalBankingSection";
 import { InsightsPreview } from "@/components/sections/InsightsPreview";
 import { ClientStories } from "@/components/sections/ClientStories";
-import { CTAFooter } from "@/components/sections/CTAFooter";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
 
 export default function OldHomePage() {
   return (
@@ -19,7 +19,7 @@ export default function OldHomePage() {
       <DigitalBankingSection />
       <InsightsPreview />
       <ClientStories />
-      <CTAFooter />
+      <FooterCTAGuide heading="Get Started Now" buttonText="Request A Demo" buttonHref="/request-demo/" />
     </>
   );
 }

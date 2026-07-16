@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
-import { CTAFooter } from "@/components/sections/CTAFooter";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
 import { InsightsGrid } from "./InsightsGrid";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function InsightsPage() {
       </section>
 
       <InsightsGrid />
-      <CTAFooter />
+      <FooterCTAGuide heading="Get Started Now" buttonText="Request A Demo" buttonHref="/request-demo/" />
     </>
   );
 }

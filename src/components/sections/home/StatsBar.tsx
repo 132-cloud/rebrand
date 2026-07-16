@@ -23,7 +23,7 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section id="stats-bar" className="relative z-30 py-12 md:py-16" style={{ backgroundColor: '#ffffff' }}>
       <div className="container-site">
         <ScrollReveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-neutral-200">
