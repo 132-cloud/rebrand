@@ -3,45 +3,62 @@
 import { useState } from "react";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
+import { LogoBarGuide } from "@/components/sections/home/guide/LogoBarGuide";
 import Link from "next/link";
 
-// ─── Logo Strip ──────────────────────────────────────────────────────────────
+// ─── Three-Column Icons ──────────────────────────────────────────────────────
 
-const logos = [
-  { src: "/images/logo bar logos/Vector.png", alt: "Client logo" },
-  { src: "/images/logo bar logos/FECU.png", alt: "FECU" },
-  { src: "/images/logo bar logos/Gesa.png", alt: "Gesa Credit Union" },
-  { src: "/images/logo bar logos/VantageWest.png", alt: "Vantage West" },
-  { src: "/images/logo bar logos/Vector-1.png", alt: "Client logo" },
+const iconFeatures = [
+  {
+    title: "Automated business onboarding",
+    description: "Verify businesses and owners with integrated KYC, KYB, beneficial-ownership, and controlling-party workflows.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Complete commercial money movement",
+    description: "Originate ACH and wires, upload payment files, run Positive Pay, and deposit checks remotely.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Granular user controls",
+    description: "Give employees, accountants, and operators the right access with account-level permissions, custom roles, transaction limits, and approval workflows.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+      </svg>
+    ),
+  },
 ];
 
 // ─── Feature Blocks ──────────────────────────────────────────────────────────
 
 const features = [
   {
+    eyebrow: "ACCOUNT OPENING",
     headline: "From intent to funded.",
-    body: "Move applicants from intent to funded with onboarding flows built for business banking. Support sole proprietors, microbusinesses, and small businesses with digital account opening designed around how business customers apply, verify, and get started.",
+    body: "Open and fund business accounts in a single flow, with KYC, KYB, beneficial-ownership, and controlling-party verification decisioned on intake. From sole proprietors to complex commercial entities, the right applicants clear fast and the wrong ones never open.",
     link: { label: "Explore account opening", href: "/products/account-opening/" },
   },
   {
-    headline: "Give solopreneurs banking that fits how they work.",
-    body: "Serve solopreneurs, freelancers, creators, and one-person businesses with accounts and tools built around everyday business activity, not oversized commercial workflows. Help them open, manage, move money, and stay focused on the work.",
-    link: { label: "Explore the platform", href: "/platform/" },
-  },
-  {
-    headline: "Support small businesses beyond the account.",
-    body: "Give small businesses the accounts, payments, servicing, and digital experience they expect from a modern financial partner. Connect banking to the workflows that keep owners moving, from invoicing to accounting.",
-    link: { label: "Explore the platform", href: "/platform/" },
-  },
-  {
-    headline: "The tools businesses actually run on.",
-    body: "Invoicing, wire and ACH origination, Positive Pay, Remote Deposit Capture, and secondary-user controls run behind your business accounts, so tailored capabilities reach smaller business customers without a specialized build.",
+    eyebrow: "PAYMENTS",
+    headline: "The money movement businesses run on.",
+    body: "Originate ACH and wires, upload payment files, run Positive Pay, and deposit checks remotely. Payment depth scales with the relationship, so a solo operator and a commercial treasury team run on the same platform without a specialized build.",
     link: { label: "See business banking tools", href: "/products/digital-banking/" },
   },
   {
-    headline: "Run the operations behind business growth.",
-    body: "Business banking creates operational load. Nymbus Managed Services can support onboarding, servicing, contact center, back-office work, compliance workflows, fraud operations, and business banking support, so your team can scale without carrying every function alone.",
-    link: { label: "Explore managed services", href: "/managed-services/" },
+    eyebrow: "CONTROLS",
+    headline: "Controls their finance team expects.",
+    body: "Give employees, accountants, and operators the right access with account-level permissions, custom roles, transaction limits, and approval workflows. It\u2019s the control depth that turns a business account into a commercial relationship your institution can keep.",
+    link: { label: "Explore the platform", href: "/platform/" },
   },
 ];
 
@@ -91,7 +108,7 @@ const faqs = [
   },
   {
     question: "How does this connect to the systems we already use?",
-    answer: "Nymbus Connect integrates your tools and partners through modern APIs, so integration does not require custom middleware for every connection.",
+    answer: "Nymbus Connect integrates your tools and partners through modern APIs and event streaming, so new integrations move in days, not through a custom rebuild.",
   },
   {
     question: "What makes Nymbus different from a traditional core for business banking?",
@@ -140,10 +157,9 @@ export default function BusinessBankingPage() {
     <div className="bg-white text-[#171216]">
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        {/* Background image from Guide v5 */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">
@@ -156,11 +172,8 @@ export default function BusinessBankingPage() {
                 Solo operators, micros, and small businesses are leaving for fintechs that move faster than your core. Launch the banking they expect on a platform built to move with you.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg">
-                  Book a demo
-                </Button>
-                <Button href="/platform/" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 !bg-white/60 hover:!bg-white/80">
-                  See the platform
+                <Button href="https://nymbus-joy.nymbus.com/dashboard" variant="primary" size="lg" external>
+                  Try the demo
                 </Button>
               </div>
             </div>
@@ -168,27 +181,45 @@ export default function BusinessBankingPage() {
         </div>
       </section>
 
-      {/* ─── Logo Strip ───────────────────────────────────────────────────── */}
-      <section className="py-10 border-y border-neutral-100">
+      {/* ─── Platform Embed ───────────────────────────────────────────────── */}
+      <section className="py-12 md:py-16 bg-white border-b border-neutral-100">
+        <div className="mx-auto px-4" style={{ maxWidth: "1264px" }}>
+          <ScrollReveal>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src="/embeds/business-dashboard/index.html"
+                title="Nymbus Business Banking Dashboard"
+                className="w-full h-[500px] md:h-[650px]"
+                loading="lazy"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── Three-Column Icons ───────────────────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container-site">
           <ScrollReveal>
-            <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider text-center mb-6">
-              Trusted by top financial institutions
-            </p>
-            <div className="flex items-center justify-center gap-10 md:gap-14 flex-wrap">
-              {logos.map((logo, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={i}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-5 md:h-6 w-auto opacity-50 grayscale"
-                />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {iconFeatures.map((item) => (
+                <div key={item.title} className="flex gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0 text-neutral-600">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-[#171216] text-base font-bold mb-2">{item.title}</h4>
+                    <p className="text-neutral-500 text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* ─── Logo Strip (homepage scroll) ─────────────────────────────────── */}
+      <LogoBarGuide />
 
       {/* ─── Thesis Statement ─────────────────────────────────────────────── */}
       <section className="py-20 md:py-28">
@@ -199,7 +230,7 @@ export default function BusinessBankingPage() {
                 Launch business banking around the customer, not the category.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Small businesses are not one segment. Solo owners, growing operators, and established companies need different experiences, controls, and levels of support. Nymbus gives institutions the platform to serve them with more precision.
+                Businesses are not one segment. Solo owners, growing operators, and established companies need different experiences, controls, and levels of support. Nymbus gives institutions the platform to serve them all, without building a separate product for each.
               </p>
             </div>
           </ScrollReveal>
@@ -210,13 +241,13 @@ export default function BusinessBankingPage() {
       {features.map((feature, index) => (
         <section
           key={feature.headline}
-          className={`py-16 md:py-24 ${index % 2 === 0 ? "bg-white" : "bg-neutral-50"}`}
+          className="py-16 md:py-24 bg-white"
         >
           <div className="container-site">
             <ScrollReveal>
               <div className={`flex flex-col md:flex-row items-center gap-12 md:gap-16 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
-                {/* Text */}
                 <div className="flex-1">
+                  <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-4">{feature.eyebrow}</p>
                   <h3 className="text-[1.5rem] md:text-[1.875rem] font-bold leading-tight tracking-[-0.01em] text-[#171216] mb-4">
                     {feature.headline}
                   </h3>
@@ -233,13 +264,8 @@ export default function BusinessBankingPage() {
                     </svg>
                   </Link>
                 </div>
-                {/* Placeholder image area */}
                 <div className="flex-1 w-full">
-                  <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60 flex items-center justify-center">
-                    <div className="text-neutral-300 text-sm font-medium">
-                      {/* Placeholder for future imagery */}
-                    </div>
-                  </div>
+                  <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60 flex items-center justify-center" />
                 </div>
               </div>
             </ScrollReveal>
@@ -247,7 +273,7 @@ export default function BusinessBankingPage() {
         </section>
       ))}
 
-      {/* ─── Business Stage Callout ───────────────────────────────────────── */}
+      {/* ─── Segment Callout ──────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
@@ -256,7 +282,7 @@ export default function BusinessBankingPage() {
                 Built to serve businesses at every stage.
               </h2>
               <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Nymbus supports differentiated business banking experiences across the lifecycle, from solo operators and small businesses to more complex commercial relationships.
+                Nymbus supports differentiated business banking experiences across the lifecycle, from solo operators to complex commercial relationships, all on one platform.
               </p>
             </div>
           </ScrollReveal>
@@ -266,7 +292,7 @@ export default function BusinessBankingPage() {
               {stages.map((stage) => (
                 <div
                   key={stage.title}
-                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300"
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white hover:border-neutral-300 transition-[border-color] duration-300"
                 >
                   <h4 className="text-[#171216] text-base font-bold mb-3">{stage.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{stage.description}</p>
@@ -278,7 +304,7 @@ export default function BusinessBankingPage() {
           <ScrollReveal delay={0.2}>
             <div className="mt-10 text-center">
               <Link
-                href="/solutions/business-banking/#commercial"
+                href="/solutions/commercial-banking/"
                 className="inline-flex items-center text-[#697CB2] text-sm font-semibold hover:text-[#4a5d8a] transition-colors no-underline"
               >
                 Explore commercial banking
@@ -292,7 +318,7 @@ export default function BusinessBankingPage() {
       </section>
 
       {/* ─── Why Band (Testimonials) ──────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] text-center mb-14">
@@ -302,39 +328,33 @@ export default function BusinessBankingPage() {
 
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div
-                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
-                >
-                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
-                    &ldquo;We recognized that business owners need digital banking tools and services that fit how they operate today. Partnering with Nymbus allowed us to make that vision a reality.&rdquo;
-                  </blockquote>
-                  <div>
-                    <p className="text-[#171216] text-sm font-semibold">Sara Dolan</p>
-                    <p className="text-neutral-400 text-xs">CFO, MSUFCU</p>
-                  </div>
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
+                <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                  &ldquo;We recognized that business owners need digital banking tools and services that fit how they operate today. Partnering with Nymbus allowed us to make that vision a reality.&rdquo;
+                </blockquote>
+                <div>
+                  <p className="text-[#171216] text-sm font-semibold">Sara Dolan</p>
+                  <p className="text-neutral-400 text-xs">CFO, MSUFCU</p>
                 </div>
-                <div
-                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
-                >
-                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
-                    &ldquo;Speed to market and cost to serve is what this business is all about — and Nymbus has nailed both.&rdquo;
-                  </blockquote>
-                  <div>
-                    <p className="text-[#171216] text-sm font-semibold">Ami Iceman</p>
-                    <p className="text-neutral-400 text-xs">CEO, MSUFCU</p>
-                  </div>
+              </div>
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
+                <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                  &ldquo;Speed to market and cost to serve is what this business is all about — and Nymbus has nailed both.&rdquo;
+                </blockquote>
+                <div>
+                  <p className="text-[#171216] text-sm font-semibold">Ami Iceman</p>
+                  <p className="text-neutral-400 text-xs">CEO, MSUFCU</p>
                 </div>
-                <div
-                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
-                >
-                  <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
-                    &ldquo;The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.&rdquo;
-                  </blockquote>
-                  <div>
-                    <p className="text-[#171216] text-sm font-semibold">Jill Castilla</p>
-                    <p className="text-neutral-400 text-xs">President &amp; CEO, Citizens Bank of Edmond</p>
-                  </div>
+              </div>
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
+                <blockquote className="text-neutral-500 text-sm leading-relaxed mb-6 italic">
+                  &ldquo;The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.&rdquo;
+                </blockquote>
+                <div>
+                  <p className="text-[#171216] text-sm font-semibold">Jill Castilla</p>
+                  <p className="text-neutral-400 text-xs">President &amp; CEO, Citizens Bank of Edmond</p>
                 </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -360,25 +380,7 @@ export default function BusinessBankingPage() {
       </section>
 
       {/* ─── Closing CTA ──────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-6">
-                Banking built for how businesses actually operate.
-              </h2>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg">
-                  Book a demo
-                </Button>
-                <Button href="/platform/" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 hover:!bg-neutral-100">
-                  See the platform
-                </Button>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <FooterCTAGuide heading="Banking built for how businesses actually operate." buttonText="Try the demo" buttonHref="https://nymbus-joy.nymbus.com/dashboard" />
     </div>
   );
 }

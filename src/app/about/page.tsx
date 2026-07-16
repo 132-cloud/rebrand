@@ -51,7 +51,7 @@ export default function AboutPage() {
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">
@@ -105,7 +105,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Section 4: Board of Directors ────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
@@ -162,7 +162,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Section 6: Final CTA ─────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
+      <section className="py-20 md:py-28 bg-white border-t border-neutral-100">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">

@@ -37,7 +37,7 @@ function FlowFieldShaderGrey() {
     };
 
     const draw = () => {
-      time += 0.003;
+      time += 0.008;
       ctx.clearRect(0, 0, w, h);
       ctx.font = `${fontSize}px monospace`;
       ctx.textBaseline = "middle";
@@ -120,9 +120,9 @@ const aiCards = [
 
 export function GovernedAISectionGuide() {
   return (
-    <section className="relative section-padding bg-black overflow-hidden">
+    <section className="relative section-padding bg-white overflow-hidden">
       {/* FlowFieldShader background - grey */}
-      <div className="absolute inset-0 opacity-40 pointer-events-none">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         <FlowFieldShaderGrey />
       </div>
 
@@ -130,8 +130,8 @@ export function GovernedAISectionGuide() {
         <ScrollReveal>
           <div className="max-w-5xl mb-4">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
-              <span className="font-bold text-white">Governed AI connected to real banking work.</span>{" "}
-              <span className="font-normal text-white/60">
+              <span className="font-bold text-[#171216]">Governed AI connected to real banking work.</span>{" "}
+              <span className="font-normal text-neutral-400">
                 Deploy AI-enabled workflows inside a controlled operating model, with approved actions, role-based access, human review paths, and auditability.
               </span>
             </h4>
@@ -144,10 +144,10 @@ export function GovernedAISectionGuide() {
             {aiCards.map((card) => (
               <div
                 key={card.title}
-                className="p-6 rounded-xl border border-white/10 bg-black/60 backdrop-blur-sm hover:border-white/20 transition-all duration-300"
+                className="p-6 rounded-xl bg-neutral-50 hover:bg-neutral-100 transition-all duration-300"
               >
-                <h4 className="text-white font-semibold text-sm mb-2">{card.title}</h4>
-                <p className="text-white/40 text-sm leading-relaxed">{card.description}</p>
+                <h4 className="text-[#171216] font-semibold text-sm mb-2">{card.title}</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">{card.description}</p>
               </div>
             ))}
           </div>
@@ -157,7 +157,7 @@ export function GovernedAISectionGuide() {
           <div className="mt-8">
             <a
               href="/ai/"
-              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-[4px] transition-all"
+              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-full transition-all"
               style={{
                 backgroundColor: "#171216",
                 color: "#ffffff",

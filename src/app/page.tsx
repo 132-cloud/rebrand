@@ -138,14 +138,14 @@ export default function HomePage() {
               </div>
               {/* Image placeholder — right */}
               <div className="flex-1 w-full">
-                <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60" />
+                <div className="aspect-[4/3] rounded-2xl bg-neutral-100" />
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-neutral-50">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-16">
@@ -170,7 +170,7 @@ export default function HomePage() {
               </div>
               {/* Image placeholder — left */}
               <div className="flex-1 w-full">
-                <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-200/60" />
+                <div className="aspect-[4/3] rounded-2xl bg-neutral-100" />
               </div>
             </div>
           </ScrollReveal>

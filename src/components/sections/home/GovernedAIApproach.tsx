@@ -8,7 +8,7 @@ export function GovernedAIApproach() {
     <section className="py-12 md:py-16 bg-white">
       <div className="container-site">
         <ScrollReveal>
-          <div className="relative rounded-2xl bg-neutral-100 border border-neutral-200/60 overflow-hidden">
+          <div className="relative rounded-2xl bg-neutral-100 overflow-hidden">
             <div className="flex items-center justify-between p-8 md:p-10 gap-8">
               {/* Left: text */}
               <div className="flex-1">
@@ -22,7 +22,8 @@ export function GovernedAIApproach() {
               {/* Right: CTA */}
               <Link
                 href="/ai/"
-                className="flex-shrink-0 inline-flex items-center px-5 py-2.5 bg-[#171216] text-white text-sm font-semibold rounded-full hover:bg-[#2a2329] transition-colors no-underline"
+                className="flex-shrink-0 inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-full hover:bg-[#2a2329] transition-colors no-underline"
+                style={{ backgroundColor: '#171216', color: '#ffffff' }}
               >
                 Read our AI approach
                 <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

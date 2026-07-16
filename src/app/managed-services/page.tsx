@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
 
 // ─── FAQ Data ────────────────────────────────────────────────────────────────
 
@@ -84,7 +85,7 @@ export default function ManagedServicesPage() {
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">
@@ -117,8 +118,8 @@ export default function ManagedServicesPage() {
                 <p className="text-neutral-500 text-sm">Operational domains run behind your brand</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-[#171216] mb-1">TBD</p>
-                <p className="text-neutral-500 text-sm">Placeholder stat</p>
+                <p className="text-[2.5rem] font-bold text-[#171216] mb-1">140K</p>
+                <p className="text-neutral-500 text-sm">Customers supported</p>
               </div>
               <div>
                 <p className="text-[2.5rem] font-bold text-[#171216] mb-1">TBD</p>
@@ -145,15 +146,15 @@ export default function ManagedServicesPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
                 <h4 className="text-[#171216] text-base font-bold mb-3">You set the thresholds.</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">Define approval limits, decisioning criteria, and exception rules. Nymbus operates to them and escalates anything above your thresholds instead of acting alone.</p>
               </div>
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
                 <h4 className="text-[#171216] text-base font-bold mb-3">You keep regulatory ownership.</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">Nymbus executes and manages the operational controls. Your institution retains regulatory responsibility, risk management, and oversight of everything run on your behalf.</p>
               </div>
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
                 <h4 className="text-[#171216] text-base font-bold mb-3">Automation runs inside your rules.</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">Where Nymbus applies AI to operational work, it runs under the same permissions, approvals, and audit trail as everything else your team controls.</p>
               </div>
@@ -163,7 +164,7 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* ─── 4. The Team ──────────────────────────────────────────────────── */}
-      <section id="meet-the-team" className="py-20 md:py-28 bg-neutral-50">
+      <section id="meet-the-team" className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
@@ -202,7 +203,7 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* ─── 6. Front-of-house: Digital Onboarding ────────────────────────── */}
-      <section id="onboarding" className="py-20 md:py-28 bg-neutral-50">
+      <section id="onboarding" className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-14">
@@ -245,15 +246,15 @@ export default function ManagedServicesPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
                 <h4 className="text-[#171216] text-base font-bold mb-3">Back office runs without you.</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">Digital Operations reconciles GLs daily, posts and matches every card transaction to Core, and works ACH files, Positive Pay, and exceptions, so nothing sits unbalanced.</p>
               </div>
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
                 <h4 className="text-[#171216] text-base font-bold mb-3">Fraud is worked, not just flagged.</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">The fraud team investigates disputes under Reg E and NACHA, works suspicious activity, and manages card rules and CAMS alerts, so cases close, not just open.</p>
               </div>
-              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50">
+              <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
                 <h4 className="text-[#171216] text-base font-bold mb-3">Compliance is monitored, not filed away.</h4>
                 <p className="text-neutral-500 text-sm leading-relaxed">Compliance tracks regulatory change, handles complaints, subpoenas and levies, screens against OFAC, and shares findings on your program as they surface.</p>
               </div>
@@ -263,7 +264,7 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* ─── 8. Reporting ─────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl">
@@ -280,28 +281,10 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* ─── 9. Closing CTA ───────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-white border-t border-neutral-100">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] mb-4">
-                We build it. We run it.
-              </h2>
-              <p className="text-neutral-500 text-base leading-relaxed mb-8">
-                See how Nymbus operates the back office behind your products, run by the team that built it.
-              </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button href="/contact/?topic=managed-services" variant="primary" size="lg">
-                  Talk to an expert
-                </Button>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <FooterCTAGuide heading="We build it. We run it." subtitle="See how Nymbus operates the back office behind your products, run by the team that built it." buttonText="Talk to an expert" buttonHref="/contact/?topic=managed-services" />
 
       {/* ─── 10. FAQ ──────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-10">

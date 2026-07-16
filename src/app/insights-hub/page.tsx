@@ -48,8 +48,13 @@ export default function InsightsHubPage() {
   return (
     <div className="bg-white text-[#171216]">
       {/* ─── Featured Story ───────────────────────────────────────────────── */}
-      <section className="pt-36 pb-16 md:pt-44 md:pb-20 bg-neutral-50 border-b border-neutral-100">
-        <div className="container-site">
+      <section className="relative pt-36 pb-16 md:pt-44 md:pb-20 border-b border-neutral-100 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
+          </video>
+        </div>
+        <div className="container-site relative z-10">
           <ScrollReveal>
             <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
               {/* Text */}
@@ -74,7 +79,7 @@ export default function InsightsHubPage() {
               </div>
               {/* Image placeholder */}
               <div className="flex-1 w-full md:max-w-[400px]">
-                <div className="aspect-[4/3] rounded-2xl bg-neutral-200 border border-neutral-200/60" />
+                <div className="aspect-[4/3] rounded-2xl bg-neutral-100 border border-neutral-100" />
               </div>
             </div>
           </ScrollReveal>
@@ -108,7 +113,7 @@ export default function InsightsHubPage() {
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-48 px-3 py-1.5 text-sm border border-neutral-200 rounded-lg bg-neutral-50 text-[#171216] outline-none focus:border-neutral-400 transition-colors"
+                className="w-48 px-3 py-1.5 text-sm border-none rounded-lg bg-neutral-100 text-[#171216] outline-none focus:bg-neutral-50 transition-colors"
               />
               <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -128,19 +133,19 @@ export default function InsightsHubPage() {
               {filteredItems.map((item, i) => (
                 <Link key={i} href={item.href} className="group no-underline">
                   {/* Thumbnail */}
-                  <div className="aspect-[16/10] rounded-xl bg-neutral-100 border border-neutral-200/60 mb-4 overflow-hidden">
+                  <div className="aspect-[16/10] rounded-xl bg-neutral-50 border border-neutral-100 mb-4 overflow-hidden">
                     <div className="w-full h-full group-hover:scale-[1.02] transition-transform duration-300" />
                   </div>
                   {/* Category */}
-                  <p className="text-[#697CB2] text-[10px] font-semibold uppercase tracking-wider mb-1.5">
+                  <p className="text-[#697CB2] text-[11px] font-semibold uppercase tracking-wider mb-2">
                     {item.category}
                   </p>
                   {/* Headline */}
-                  <h3 className="text-[#171216] text-sm font-bold leading-snug group-hover:text-[#697CB2] transition-colors mb-1.5">
+                  <h3 className="text-[#171216] text-xl leading-snug group-hover:text-[#697CB2] transition-colors mb-2" style={{ fontWeight: 550 }}>
                     {item.headline}
                   </h3>
                   {/* Meta */}
-                  <p className="text-neutral-400 text-xs">
+                  <p className="text-neutral-400 text-sm">
                     {item.date} · {item.readTime}
                   </p>
                 </Link>

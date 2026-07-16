@@ -20,8 +20,23 @@ const paths = [
 
 export function ActivationPathsNew() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-site">
+    <section className="relative section-padding overflow-hidden bg-black">
+      {/* Video background — same as footer CTA */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/images/footer-cta-bg.webm" type="video/webm" />
+        </video>
+      </div>
+
+      {/* White gradient overlay: transparent at top, white at bottom */}
+      <div
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{
+          background: "linear-gradient(to bottom, transparent 50%, white 100%)",
+        }}
+      />
+
+      <div className="container-site relative z-10">
         <ScrollReveal>
           <h2 className="text-[2rem] md:text-[2.75rem] font-bold text-center mb-14 text-[#171216] leading-tight">
             Launch beside your core, or replace the one holding you back.
@@ -34,10 +49,10 @@ export function ActivationPathsNew() {
               <Link
                 key={path.title}
                 href={path.href}
-                className="group flex flex-col p-10 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300 no-underline"
+                className="group flex flex-col p-10 rounded-2xl bg-white no-underline"
               >
                 {/* Placeholder image area */}
-                <div className="aspect-[4/3] rounded-xl bg-neutral-100 border border-neutral-200/60 mb-8" />
+                <div className="aspect-[4/3] rounded-xl bg-neutral-100 mb-8" />
 
                 {/* Title */}
                 <h4 className="text-[#171216] font-bold text-xl md:text-2xl mb-3 group-hover:text-[#697CB2] transition-colors">{path.title}</h4>

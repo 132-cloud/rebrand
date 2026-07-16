@@ -5,6 +5,8 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
+
 // ─── Blueprint Grid (light version for white background) ─────────────────────
 
 function BlueprintGridLight() {
@@ -168,6 +170,13 @@ const bankingTechFeatures = [
     link: { label: "Explore account opening", href: "/products/account-opening/" },
   },
   {
+    id: "payments-hub",
+    eyebrow: "Payments Hub",
+    headline: "Control every payment rail.",
+    body: "Route, authorize, settle, and reconcile payments from one operational platform. Replace disconnected payment systems with real-time control, unified operations, and the flexibility to add new rails without rebuilding.",
+    link: { label: "Explore Payments Hub", href: "/platform/#payments-hub" },
+  },
+  {
     id: "engage",
     eyebrow: "Engage",
     headline: "Nurture accounts into loyal relationships.",
@@ -270,7 +279,7 @@ export default function PlatformPage() {
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">
@@ -508,7 +517,7 @@ export default function PlatformPage() {
       </section>
 
       {/* ─── Proof Quote ──────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-20 bg-neutral-50 border-y border-neutral-100">
+      <section className="py-16 md:py-20 bg-white border-y border-neutral-100">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
@@ -525,20 +534,7 @@ export default function PlatformPage() {
 
       {/* ─── Deploy Your Way Band ─────────────────────────────────────────── */}
       {/* ─── Closing CTA ──────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-8">
-                Ready to move?
-              </h2>
-              <Button href="/request-demo/" variant="primary" size="lg">
-                Book a demo
-              </Button>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <FooterCTAGuide heading="Ready to move?" buttonText="Book a demo" buttonHref="/request-demo/" />
     </div>
   );
 }

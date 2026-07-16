@@ -16,7 +16,8 @@ export function ManagedServicesBand() {
             </h2>
             <Link
               href="/managed-services/"
-              className="inline-flex items-center mt-4 px-5 py-2.5 text-sm font-semibold text-[#171216] border border-neutral-300 rounded-full hover:bg-neutral-50 transition-colors no-underline"
+              className="inline-flex items-center mt-4 px-5 py-2.5 text-sm font-semibold rounded-full hover:bg-[#2a2228] transition-colors no-underline"
+              style={{ backgroundColor: '#171216', color: '#ffffff' }}
             >
               Explore Managed Services
               <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

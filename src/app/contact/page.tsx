@@ -16,7 +16,7 @@ export default function ContactPage() {
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">

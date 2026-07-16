@@ -2,6 +2,7 @@
 
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
 
 // ─── Supporting Points ───────────────────────────────────────────────────────
 
@@ -29,7 +30,7 @@ export default function AIPage() {
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">
@@ -55,7 +56,7 @@ export default function AIPage() {
       </section>
 
       {/* ─── Point-of-View Band ───────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
@@ -90,7 +91,7 @@ export default function AIPage() {
               {supportingPoints.map((point) => (
                 <div
                   key={point.title}
-                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50"
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white"
                 >
                   <h4 className="text-[#171216] text-base font-bold mb-3">{point.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{point.body}</p>
@@ -102,7 +103,7 @@ export default function AIPage() {
       </section>
 
       {/* ─── Section 2: Nymbus MCP ────────────────────────────────────────── */}
-      <section id="nymbus-mcp" className="py-20 md:py-28 bg-neutral-50">
+      <section id="nymbus-mcp" className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -150,23 +151,7 @@ export default function AIPage() {
       </section>
 
       {/* ─── Closing CTA ──────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-4">
-                AI your institution can put into production.
-              </h2>
-              <p className="text-neutral-500 text-base leading-relaxed mb-8">
-                See how Nymbus brings governed, operational AI to real banking workflows, inside the controls you already run on.
-              </p>
-              <Button href="/request-demo/" variant="primary" size="lg">
-                Book a demo
-              </Button>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <FooterCTAGuide heading="AI your institution can put into production." subtitle="See how Nymbus brings governed, operational AI to real banking workflows, inside the controls you already run on." buttonText="Book a demo" buttonHref="/request-demo/" />
     </div>
   );
 }

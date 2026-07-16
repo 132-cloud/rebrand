@@ -43,10 +43,10 @@ export function ResourcesSection() {
   };
 
   return (
-    <section className="section-padding bg-black">
+    <section className="section-padding bg-white">
       <div className="container-site">
         <ScrollReveal>
-          <h2 className="text-[2rem] md:text-[2.75rem] font-bold mb-16 leading-tight text-white text-center">
+          <h2 className="text-[2rem] md:text-[2.75rem] font-bold mb-16 leading-tight text-[#171216] text-center">
             Get the latest insights on financial innovation.
           </h2>
         </ScrollReveal>
@@ -65,9 +65,9 @@ export function ResourcesSection() {
                 style={{ scrollSnapAlign: "start" }}
               >
                 {/* Thumbnail */}
-                <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-charcoal-medium/40">
-                  <div className="w-full h-full bg-white/5 group-hover:bg-white/10 transition-colors duration-300" />
-                  <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10 pointer-events-none" />
+                <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-neutral-100">
+                  <div className="w-full h-full bg-neutral-50 group-hover:bg-neutral-200/60 transition-colors duration-300" />
+                  <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-black/5 pointer-events-none" />
                 </div>
 
                 {/* Category */}
@@ -76,12 +76,12 @@ export function ResourcesSection() {
                 </p>
 
                 {/* Title */}
-                <h4 className="text-white font-bold text-base mb-2 leading-snug group-hover:text-sky-blue transition-colors">
+                <h4 className="text-[#171216] font-bold text-xl md:text-2xl mb-2 leading-snug group-hover:text-[#697CB2] transition-colors">
                   {resource.title}
                 </h4>
 
                 {/* Meta */}
-                <p className="text-white/30 text-xs">
+                <p className="text-neutral-400 text-xs">
                   {resource.date} · {resource.readTime}
                 </p>
               </Link>
@@ -94,7 +94,7 @@ export function ResourcesSection() {
           <div className="flex items-center gap-3 mt-10">
             <button
               onClick={() => scroll("left")}
-              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 transition-[color,border-color] duration-200"
+              className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-[#171216] hover:border-neutral-400 transition-[color,border-color] duration-200"
               aria-label="Previous"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -103,7 +103,7 @@ export function ResourcesSection() {
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/40 hover:text-white hover:border-white/40 transition-[color,border-color] duration-200"
+              className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-[#171216] hover:border-neutral-400 transition-[color,border-color] duration-200"
               aria-label="Next"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

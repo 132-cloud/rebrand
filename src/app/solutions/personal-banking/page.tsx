@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Button } from "@/components/ui/Button";
+import { FooterCTAGuide } from "@/components/sections/home/guide/FooterCTAGuide";
 import Link from "next/link";
 
 // ─── Logo Strip ──────────────────────────────────────────────────────────────
@@ -142,7 +143,7 @@ export default function PersonalBankingPage() {
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">
@@ -209,7 +210,7 @@ export default function PersonalBankingPage() {
       {features.map((feature, index) => (
         <section
           key={feature.headline}
-          className={`py-16 md:py-24 ${index % 2 === 0 ? "bg-white" : "bg-neutral-50"}`}
+          className="py-16 md:py-24 bg-white"
         >
           <div className="container-site">
             <ScrollReveal>
@@ -261,7 +262,7 @@ export default function PersonalBankingPage() {
               {stages.map((stage) => (
                 <div
                   key={stage.title}
-                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300"
+                  className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white hover:border-neutral-300 transition-[border-color] duration-300"
                 >
                   <h4 className="text-[#171216] text-base font-bold mb-3">{stage.title}</h4>
                   <p className="text-neutral-500 text-sm leading-relaxed">{stage.description}</p>
@@ -273,7 +274,7 @@ export default function PersonalBankingPage() {
       </section>
 
       {/* ─── Why Band (Testimonials) ──────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] text-center mb-14">
@@ -341,25 +342,7 @@ export default function PersonalBankingPage() {
       </section>
 
       {/* ─── Closing CTA ──────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50 border-t border-neutral-100">
-        <div className="container-site">
-          <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-6">
-                Win the primary banking relationship.
-              </h2>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Button href="/request-demo/" variant="primary" size="lg">
-                  Book a demo
-                </Button>
-                <Button href="/platform/" variant="outline" size="lg" className="!text-[#171216] !border-neutral-300 hover:!bg-neutral-100">
-                  See the platform
-                </Button>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <FooterCTAGuide heading="Win the primary banking relationship." buttonText="Book a demo" buttonHref="/request-demo/" />
     </div>
   );
 }

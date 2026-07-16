@@ -39,7 +39,7 @@ export default function PressPage() {
       <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-            <source src="/images/background-motion-rotated.webm" type="video/webm" />
+            <source src="/images/footer-cta-bg.webm" type="video/webm" />
           </video>
         </div>
         <div className="container-site relative z-10">
@@ -103,7 +103,7 @@ export default function PressPage() {
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
               {pressKitItems.map((item) => (
-                <div key={item.title} className="p-5 rounded-xl border border-neutral-200 bg-neutral-50 hover:border-neutral-300 transition-[border-color] duration-300">
+                <div key={item.title} className="p-5 rounded-xl border border-neutral-200 bg-white hover:border-neutral-300 transition-[border-color] duration-300">
                   <h4 className="text-[#171216] text-sm font-bold mb-2">{item.title}</h4>
                   <p className="text-neutral-500 text-xs leading-relaxed">{item.description}</p>
                 </div>
@@ -117,7 +117,7 @@ export default function PressPage() {
       </section>
 
       {/* ─── Section 4: Featured Coverage ─────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mb-12">
@@ -199,7 +199,7 @@ export default function PressPage() {
       </section>
 
       {/* ─── Section 6: Media Contact ─────────────────────────────────────── */}
-      <section id="media-contact" className="py-20 md:py-28 bg-neutral-50">
+      <section id="media-contact" className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">

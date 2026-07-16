@@ -438,7 +438,7 @@ export function HeroGuide() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/images/background-motion-rotated.webm" type="video/webm" />
+          <source src="/images/footer-cta-bg.webm" type="video/webm" />
         </video>
       </div>
 

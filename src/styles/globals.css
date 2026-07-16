@@ -7,6 +7,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hero background video - rotated 90 degrees with cover scaling */
+.hero-video-rotated {
+  transform: rotate(90deg) scale(1.5);
+  transform-origin: center center;
+}
+
 @theme {
   /* Primary Brand Colors */
   --color-blue: #697CB2;
@@ -216,7 +222,7 @@ html {
 
 @layer components {
   .theme-guide {
-    --guide-bg: #fcfbfc;
+    --guide-bg: #ffffff;
     --guide-text: #171216;
     --guide-text-body: #42526e;
     --guide-surface: rgba(219, 219, 219, 0.4);
@@ -265,16 +271,6 @@ html {
     font-family: "neue-haas-grotesk-text", "proxima-nova", sans-serif !important;
   }
 
-  /* Hero section - background image */
-  .theme-guide section:first-child {
-    background: url("/background---.png") center center / cover no-repeat !important;
-  }
-
-  /* Hero section - remove canvas/shader background */
-  .theme-guide section:first-child canvas {
-    display: none !important;
-  }
-
   /* Hero heading - sentence case */
   .theme-guide section:first-child h1 {
     text-transform: none !important;
@@ -282,19 +278,17 @@ html {
   }
 
   /* Override dark section backgrounds to light */
-  .theme-guide section,
   .theme-guide [class*="bg-charcoal"],
   .theme-guide [class*="bg-[#0a0a"],
   .theme-guide [class*="bg-[#0f0f"],
-  .theme-guide [class*="bg-[#111"],
-  .theme-guide [class*="bg-[#1"],
-  .theme-guide [class*="bg-[#0"] {
+  .theme-guide [class*="bg-[#111"] {
     background-color: var(--guide-bg) !important;
   }
 
-  /* ActivationPaths section - "Choose the path" bg image */
-  .theme-guide section.bg-white {
-    background: url("/images/bg (5).png") center center / cover no-repeat !important;
+  /* StatsBar section - force plain white background */
+  .theme-guide #stats-bar {
+    background-color: #ffffff !important;
+    background-image: none !important;
   }
 
   /* Make text that was white now dark */
@@ -375,6 +369,15 @@ html {
   .theme-guide > section:last-of-type .bg-gradient-to-b,
   .theme-guide section.py-32 .bg-gradient-to-b {
     display: none !important;
+  }
+
+  /* FooterCTA button - force dark fill */
+  .theme-guide section.py-32 a[href="/contact/"],
+  .theme-guide > section:last-of-type a[href="/contact/"],
+  .theme-guide .footer-cta-btn {
+    background-color: #171216 !important;
+    color: #ffffff !important;
+    border-color: #171216 !important;
   }
 }
 
