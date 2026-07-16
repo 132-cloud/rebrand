@@ -8,47 +8,123 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="pt-32 pb-16 md:pt-40 md:pb-24">
-      <div className="container-site">
-        <ScrollReveal>
-          <div className="max-w-3xl">
-            <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold mb-8">
-              Privacy Policy
-            </h1>
-            <div className="prose prose-invert max-w-none text-white/60 leading-relaxed space-y-6">
+    <div className="bg-white text-neutral-900">
+      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: "url('/background---.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="container-site relative z-10">
+          <ScrollReveal>
+            <div className="max-w-3xl">
+              <h1 className="text-[2.5rem] md:text-[3.5rem] font-bold leading-[1.08] tracking-[-0.02em] text-neutral-900 mb-6">
+                Privacy Policy
+              </h1>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="max-w-3xl prose prose-neutral max-w-none text-neutral-500 leading-relaxed space-y-6">
               <p>
-                This Privacy Policy describes how NYMBUS, Inc. (&quot;Nymbus,&quot;
-                &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses, and shares information
-                about you when you visit our website at www.nymbus.com.
+                This Privacy Policy explains how NYMBUS uses your name and email
+                information and how NYMBUS tracks visits to its website.
               </p>
-              <h2 className="text-white text-xl font-bold mt-8 mb-4">
-                Information We Collect
+
+              <h2 className="text-neutral-900 text-xl font-bold mt-8 mb-4">
+                Your Information
               </h2>
               <p>
-                We collect information you provide directly to us, such as when
-                you fill out a form, request a demo, or contact us. This may
-                include your name, email address, phone number, company name,
-                and job title.
+                When you enter www.nymbus.com you have the opportunity to
+                contact us by entering your name and email address. You may also
+                sign up to receive our newsletters and other communications. We
+                only use your information for the purpose of sending you emails
+                on relevant topics for informational or marketing purposes. You
+                may opt out of these communications at any time by following the
+                instructions contained in our emails.{" "}
+                <strong className="text-neutral-900">
+                  We will never share your information with any third party at
+                  any time
+                </strong>
+                .
               </p>
-              <h2 className="text-white text-xl font-bold mt-8 mb-4">
-                How We Use Your Information
+
+              <h2 className="text-neutral-900 text-xl font-bold mt-8 mb-4">
+                Tracking Visits to Our Website
               </h2>
               <p>
-                We use the information we collect to provide, maintain, and
-                improve our services, to communicate with you, and to comply
-                with legal obligations.
+                To better understand activity on its website, NYMBUS uses Google
+                Analytics, a service that uses &quot;cookies&quot; to track anonymous
+                information regarding your activities on www.nymbus.com. This
+                includes information about your visit, including your device
+                type, traffic source and geographic area, as well as pages
+                visited and links clicked. Some behavioral data may be provided
+                by Google &quot;cookies&quot; that show your gender and age range. This
+                data is used to better understand how visitors access
+                www.nymbus.com and provide a better overall user experience.
               </p>
-              <h2 className="text-white text-xl font-bold mt-8 mb-4">
-                Contact Us
-              </h2>
               <p>
-                If you have questions about this Privacy Policy, please contact
-                us at privacy@nymbus.com.
+                NYMBUS also uses pixels on Twitter, LinkedIn and the Adaptive
+                network to track activity on www.nymbus.com, potentially
+                including pages visited and links clicked. This data is used to
+                track the effectiveness of our advertisements, as well as to
+                build remarketing audiences based on actions taken on
+                www.nymbus.com.
+              </p>
+              <p>
+                NYMBUS takes your privacy seriously and ensures that no
+                personally identifying information is stored in the
+                &quot;cookies&quot;. To opt out of Google&apos;s cookies you can{" "}
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#697CB2] underline hover:text-[#4a5d8a]"
+                >
+                  click here
+                </a>
+                . To opt out of third party cookies you can{" "}
+                <a
+                  href="https://optout.networkadvertising.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#697CB2] underline hover:text-[#4a5d8a]"
+                >
+                  click here
+                </a>
+                .
+              </p>
+              <p className="uppercase font-semibold text-neutral-700">
+                BY VISITING WWW.NYMBUS.COM, YOU ACKNOWLEDGE, UNDERSTAND AND
+                HEREBY AGREE THAT YOU ARE GIVING NYMBUS YOUR CONSENT TO TRACK
+                YOUR ACTIVITIES THROUGH USE OF THESE TRACKING TECHNOLOGIES.
+              </p>
+
+              <hr className="border-neutral-200 my-8" />
+
+              <p>
+                <strong className="text-neutral-900">
+                  Data Protection Officer (DPO):
+                </strong>
+                <br />
+                <a
+                  href="mailto:compliance@nymbus.com"
+                  className="text-[#697CB2] underline hover:text-[#4a5d8a]"
+                >
+                  compliance@nymbus.com
+                </a>
               </p>
             </div>
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
+          </ScrollReveal>
+        </div>
+      </section>
+    </div>
   );
 }
