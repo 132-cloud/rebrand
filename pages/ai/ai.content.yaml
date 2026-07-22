@@ -1,0 +1,80 @@
+# ─── SEO METADATA ───
+page_slug: ai
+url_path: /ai
+meta_title: "Governed AI for Banking Workflows | Nymbus"
+meta_description: "Nymbus brings AI into banking operations under permissions, approvals, and audit. Inform, assist, or automate — inside the rules your institution already runs on."
+og_title: "AI That Answers to Permissions, Approvals, and Audit | Nymbus"
+og_description: "Governed and operational AI built from within the Nymbus banking platform. From surfacing answers to acting on the routine — inside your rules."
+canonical: "https://www.nymbus.com/ai"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "AI that answers to permissions, approvals, and audit."
+    subheading: null
+    body: "Governed and operational, built from within. AI that works inside the rules your institution already runs on, from surfacing answers to acting on the routine."
+    ctas:
+      - label: "Get a demo"
+        target: "/request-demo/"
+      - label: "Talk to an expert"
+        target: "/contact/?topic=ai"
+
+  - id: agents-vs-strategy
+    kind: narrative
+    eyebrow: null
+    heading: "Agents are a task. Not a strategy."
+    subheading: null
+    body: "A model that triages a fraud alert or summarizes a loan file is useful work. But a collection of agents is a collection of demos until something connects them to your data, your approvals, and your core. That connective tissue is the hard part of AI in banking, and it's the part Nymbus built."
+
+  - id: governed-by-design
+    kind: feature-grid
+    eyebrow: "Governed by Design"
+    heading: "Governed from within, not bolted on."
+    subheading: null
+    body: "Our approach brings AI into everyday banking workflows with the controls and accountability regulated institutions need, whether AI is informing, assisting, or acting on your team's behalf. AI that builds software is different from AI that makes decisions inside it, and we hold that line."
+    cards:
+      - heading: "Inside your rules."
+        body: "Start with answers, not actions. AI surfaces what your team needs, and acts only within your permissions."
+      - heading: "Explainable by default."
+        body: "Every decision is logged, searchable, and auditable, built for the scrutiny a regulator brings."
+      - heading: "Routine handled, exceptions escalated."
+        body: "AI handles the routine and escalates the rest, always with a person on exceptions."
+
+  - id: adopt-at-your-pace
+    kind: feature-grid
+    eyebrow: "Adopt at Your Pace"
+    heading: "Inform. Assist. Do. You set the line."
+    subheading: null
+    body: "AI adoption isn't all or nothing. Every institution moves at its own pace, and Nymbus works the same at every stage, under the same controls."
+    cards:
+      - heading: "AI surfaces the answer. Your team decides."
+        body: "Ask a question or research a transaction. AI explains, and takes no action on its own."
+      - heading: "AI drafts the work. Your team approves."
+        body: "AI prepares the case and recommends a decision, then routes it for sign-off. A person still owns the outcome."
+      - heading: "AI acts on the routine. Exceptions come to you."
+        body: "For the work you've cleared it to handle, AI acts on routine cases and escalates the rest, under the permissions your team already controls."
+
+  - id: nymbus-mcp
+    kind: split-panel
+    eyebrow: "Permissioned Automation"
+    heading: "Nymbus MCP, permissioned end to end."
+    subheading: null
+    body: "Nymbus MCP connects AI to real banking data and workflows, under permissions, approvals, and a full audit trail. Not a flat file from last night, but a live path to the core, so nothing executes without the sign-off your policy requires."
+
+  - id: applied-ai
+    kind: split-panel
+    eyebrow: "Building the Infrastructure for AI"
+    heading: "From model to banking outcome."
+    subheading: null
+    body: "Applied AI builds the infrastructure that turns models into governed, operational workflows, and drives real banking outcomes. It's the integration work that separates AI that changes how a bank operates from AI that only demos well."
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "AI your institution can put into production."
+    body: "See how Nymbus brings governed AI to real banking workflows, inside the controls you already run on."
+    ctas:
+      - label: "Get a demo"
+        target: "/request-demo/"

@@ -1,0 +1,42 @@
+# ─── SEO METADATA ───
+page_slug: privacy-policy
+url_path: /privacy-policy
+meta_title: "Privacy Policy | Nymbus"
+meta_description: "Read the Nymbus Privacy Policy. Learn how we use your information, track website visits, and protect your data at nymbus.com."
+og_title: "Privacy Policy | Nymbus"
+og_description: "How Nymbus uses your name and email information and tracks visits to its website."
+canonical: "https://www.nymbus.com/privacy-policy"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Privacy Policy"
+    subheading: null
+    body: null
+    ctas: []
+
+  - id: policy-body
+    kind: narrative
+    eyebrow: null
+    heading: null
+    body: "This Privacy Policy explains how NYMBUS uses your name and email information and how NYMBUS tracks visits to its website."
+
+  - id: your-information
+    kind: narrative
+    eyebrow: null
+    heading: "Your Information"
+    body: "When you enter www.nymbus.com you have the opportunity to contact us by entering your name and email address. You may also sign up to receive our newsletters and other communications. We only use your information for the purpose of sending you emails on relevant topics for informational or marketing purposes. You may opt out of these communications at any time by following the instructions contained in our emails. We will never share your information with any third party at any time."
+
+  - id: tracking
+    kind: narrative
+    eyebrow: null
+    heading: "Tracking Visits to Our Website"
+    body: "To better understand activity on its website, NYMBUS uses Google Analytics, a service that uses \"cookies\" to track anonymous information regarding your activities on www.nymbus.com. This includes information about your visit, including your device type, traffic source and geographic area, as well as pages visited and links clicked. Some behavioral data may be provided by Google \"cookies\" that show your gender and age range. This data is used to better understand how visitors access www.nymbus.com and provide a better overall user experience.\n\nNYMBUS also uses pixels on Twitter, LinkedIn and the Adaptive network to track activity on www.nymbus.com, potentially including pages visited and links clicked. This data is used to track the effectiveness of our advertisements, as well as to build remarketing audiences based on actions taken on www.nymbus.com.\n\nNYMBUS takes your privacy seriously and ensures that no personally identifying information is stored in the \"cookies\". To opt out of Google's cookies you can click here. To opt out of third party cookies you can click here.\n\nBY VISITING WWW.NYMBUS.COM, YOU ACKNOWLEDGE, UNDERSTAND AND HEREBY AGREE THAT YOU ARE GIVING NYMBUS YOUR CONSENT TO TRACK YOUR ACTIVITIES THROUGH USE OF THESE TRACKING TECHNOLOGIES."
+
+  - id: dpo-contact
+    kind: narrative
+    eyebrow: null
+    heading: null
+    body: "Data Protection Officer (DPO): compliance@nymbus.com"

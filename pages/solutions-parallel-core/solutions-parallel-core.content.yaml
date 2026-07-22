@@ -1,0 +1,142 @@
+# ─── SEO METADATA ───
+page_slug: solutions-parallel-core
+url_path: /solutions/parallel-core
+meta_title: "Parallel Core Banking — Launch Beside Your Core | Nymbus"
+meta_description: "Stand up a new digital brand, business line, or acquired portfolio alongside your existing core — without disrupting the institution you run today. Launch faster on a Nymbus parallel core."
+og_title: "Launch New Growth Alongside Your Core | Nymbus"
+og_description: "Every new brand, segment, or acquisition seems to require touching the core you can't afford to disrupt. Stand up a parallel core and launch beside the institution you run today."
+canonical: "https://www.nymbus.com/solutions/parallel-core"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Launch new growth alongside your core."
+    subheading: null
+    body: "Every new brand, segment, or acquisition seems to require touching the core you can't afford to disrupt. Stand up a parallel core and launch beside the institution you run today."
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+      - label: "See the platform"
+        target: "/platform/"
+
+  - id: logo-strip
+    kind: proof-points
+    eyebrow: "Trusted by top financial institutions"
+    heading: null
+    body: "25 digital banks launched and cores deployed on Nymbus"
+
+  - id: thesis
+    kind: narrative
+    eyebrow: null
+    heading: "One platform, two paths to market."
+    subheading: null
+    body: "Modernizing the core is one path. Launching beside it is the other. A parallel core lets institutions stand up something new, a brand, a segment, an acquisition, without disrupting the primary experience they run today."
+
+  - id: vertical-brands
+    kind: split-panel
+    eyebrow: null
+    heading: "Launch a vertical brand."
+    subheading: null
+    body: "Stand up a distinct banking brand alongside your existing core, built for a specific segment, industry, or audience. Reach a market your primary brand cannot, without disrupting the institution you run today."
+    ctas:
+      - label: "Explore vertical brands"
+        target: "/solutions/vertical-brands/"
+
+  - id: new-lines
+    kind: split-panel
+    eyebrow: null
+    heading: "Add a new line of business."
+    subheading: null
+    body: "Launch new products or segments on a parallel core, then scale what works without disruption. Test a deposit line, a business offering, or a new audience with the technology and operations connected from the start."
+    ctas:
+      - label: "Explore new lines"
+        target: "/solutions/new-line-of-business/"
+
+  - id: ma-acceleration
+    kind: split-panel
+    eyebrow: null
+    heading: "Integrate acquisitions faster."
+    subheading: null
+    body: "Stand up a parallel core to onboard acquired portfolios quickly, shortening integration timelines and de-risking the transition. Bring an acquired book onto modern infrastructure without freezing the momentum of the deal."
+    ctas:
+      - label: "See M&A acceleration"
+        target: "/solutions/accelerate-ma/"
+
+  - id: private-label
+    kind: split-panel
+    eyebrow: null
+    heading: "Bank under your own brand."
+    subheading: null
+    body: "Offer banking under your own brand with Nymbus running the infrastructure, digital experience, and managed services underneath. Carry the relationship and the balances, with the operation run by the team behind the platform."
+    ctas:
+      - label: "Explore private label"
+        target: "/solutions/private-label/"
+
+  - id: sandbox
+    kind: split-panel
+    eyebrow: null
+    heading: "Test without risk."
+    subheading: null
+    body: "Innovate in a parallel environment to build and test new banking products safely, before promoting the ones that work to production. Prove the model in market before you commit the institution to it."
+    ctas:
+      - label: "See sandbox innovation"
+        target: "/solutions/sandbox/"
+
+  - id: path-callout
+    kind: feature-grid
+    eyebrow: null
+    heading: "Built for every way institutions launch."
+    subheading: null
+    body: "Nymbus supports differentiated launch models on a parallel core, from a new vertical brand to an acquired portfolio, each running beside the primary core rather than through it."
+    cards:
+      - heading: "New brands and segments"
+        body: "A distinct brand or new line of business, launched for a market your primary institution cannot reach today."
+      - heading: "Acquisitions"
+        body: "Acquired portfolios onboarded onto modern infrastructure, with integration timelines shortened and the transition de-risked."
+      - heading: "Innovation and testing"
+        body: "A safe environment to build, test, and prove new banking products before promoting the ones that work to production."
+    ctas:
+      - label: "Explore core replacement"
+        target: "/solutions/core-replacement/"
+
+  - id: testimonials
+    kind: proof-points
+    eyebrow: null
+    heading: "Why institutions launch parallel cores on Nymbus."
+    body: null
+    cards:
+      - heading: "Sara Dolan, CFO, MSUFCU"
+        body: "\"We recognized that business owners need digital banking tools and services that fit how they operate today. Partnering with Nymbus allowed us to make that vision a reality.\""
+      - heading: "Stephen Owen, President and CEO, First Entertainment Credit Union and CineFi"
+        body: "\"This represents the future of specialized banking – combining deep industry knowledge with innovative technology.\""
+      - heading: "Jill Castilla, President & CEO, Citizens Bank of Edmond"
+        body: "\"The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.\""
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Launch new growth alongside your core."
+    body: null
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+
+faq:
+  - question: "What is a parallel core?"
+    answer: "A parallel core runs alongside the system you operate today, so you can launch a new brand, segment, or acquisition without a full-core conversion or disruption to your primary experience."
+  - question: "How fast can we launch on a parallel core?"
+    answer: "A new brand or line can launch on a parallel core faster than a traditional core build, with technology, operations, and support connected from the start."
+  - question: "Will this disrupt the core we run today?"
+    answer: "No. The parallel core operates independently of your primary core, so you can launch and scale something new without touching the institution your existing members rely on."
+  - question: "Do we have to staff the operation ourselves?"
+    answer: "No. Nymbus Managed Services can run onboarding, servicing, back-office work, and compliance behind your brand, built and operated by the team behind the platform."
+  - question: "Can we launch more than one brand or line?"
+    answer: "Yes. Institutions can run multiple brands, segments, and portfolios on parallel cores, segmenting by size, audience, industry, or growth stage without disrupting the primary experience."
+  - question: "How does M&A integration work on a parallel core?"
+    answer: "An acquired portfolio can be stood up on a parallel core and onboarded onto modern infrastructure, shortening integration timelines and de-risking the transition off legacy systems."
+  - question: "How does this connect to the systems we already use?"
+    answer: "Nymbus Connect integrates your tools and partners through modern APIs, so integration does not require custom middleware for every connection."
+  - question: "What makes Nymbus different from a traditional core project?"
+    answer: "A parallel core gives you a second path to market, launching beside your core instead of through it, so new brands, segments, and acquisitions move without a full conversion."

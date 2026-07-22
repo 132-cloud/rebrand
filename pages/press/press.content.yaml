@@ -1,0 +1,89 @@
+# ─── SEO METADATA ───
+page_slug: press
+url_path: /press
+meta_title: "Press Room — News & Media Resources | Nymbus"
+meta_description: "Press releases, approved brand assets, company information, and media resources from Nymbus. Contact the media team at media@nymbus.com."
+og_title: "Press Room — News & Media Resources | Nymbus"
+og_description: "Press releases, approved brand assets, company information, and media resources from Nymbus, in one place."
+canonical: "https://www.nymbus.com/press"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: "Press Room"
+    heading: "News and resources from Nymbus."
+    subheading: null
+    body: "Press releases, approved brand assets, company information, and media resources, in one place."
+    ctas:
+      - label: "Download press kit"
+        target: "#press-kit"
+      - label: "Contact media team"
+        target: "#media-contact"
+
+  - id: media-strip
+    kind: proof-points
+    eyebrow: "Nymbus in the Media"
+    heading: null
+    body: null
+
+  - id: press-kit
+    kind: feature-grid
+    eyebrow: null
+    heading: "Press kit."
+    subheading: null
+    body: "Company materials for media, analyst, partner, and industry use."
+    cards:
+      - heading: "Company boilerplate"
+        body: "Approved description of Nymbus, its platform, and the institutions it serves."
+      - heading: "Logo files"
+        body: "Approved Nymbus logos for digital and print use."
+      - heading: "Brand guidelines"
+        body: "Correct logo, color, and brand usage."
+      - heading: "Leadership assets"
+        body: "Approved executive headshots and bios, where available."
+      - heading: "Product overview"
+        body: "A concise overview of the platform, capabilities, and operating model."
+    ctas:
+      - label: "Download press kit"
+        target: "#"
+
+  - id: featured-coverage
+    kind: feature-grid
+    eyebrow: "Featured Coverage"
+    heading: "Nymbus in the news."
+    subheading: null
+    body: "Selected media coverage, analyst mentions, and industry features."
+    cards:
+      - heading: "Coverage headline placeholder"
+        body: "Publication placeholder"
+      - heading: "Coverage headline placeholder"
+        body: "Publication placeholder"
+      - heading: "Coverage headline placeholder"
+        body: "Publication placeholder"
+
+  - id: press-releases
+    kind: feature-grid
+    eyebrow: "Press Releases"
+    heading: "Latest company news."
+    subheading: null
+    body: "Announcements from Nymbus, including platform updates, customer news, partnerships, leadership, and company milestones."
+    cards:
+      - heading: "Press release headline placeholder"
+        body: "2025"
+      - heading: "Press release headline placeholder"
+        body: "2025"
+      - heading: "Press release headline placeholder"
+        body: "2025"
+
+  - id: media-contact
+    kind: cta
+    eyebrow: "Media Inquiries"
+    heading: "Contact the Nymbus media team."
+    subheading: null
+    body: "For press, media, and communications inquiries, reach the Nymbus media team."
+    ctas:
+      - label: "media@nymbus.com"
+        target: "mailto:media@nymbus.com"
+      - label: "Contact media team"
+        target: "mailto:media@nymbus.com"

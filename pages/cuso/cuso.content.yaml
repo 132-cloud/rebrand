@@ -1,0 +1,29 @@
+# ─── SEO METADATA ───
+page_slug: cuso
+url_path: /cuso
+meta_title: "Nymbus CUSO — Credit Union Service Organization | Nymbus"
+meta_description: "Nymbus CUSO gives credit unions access to modern banking technology, shared services, and collaborative growth opportunities. Built by credit unions, for credit unions."
+og_title: "Nymbus CUSO — Credit Union Service Organization"
+og_description: "Nymbus CUSO provides credit unions with access to modern banking technology, shared services, and collaborative growth opportunities."
+canonical: "https://www.nymbus.com/cuso"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: "Nymbus CUSO"
+    heading: "Credit Union Service Organization"
+    subheading: null
+    body: "Nymbus CUSO provides credit unions with access to modern banking technology, shared services, and collaborative growth opportunities. Built by credit unions, for credit unions."
+    ctas:
+      - label: "Learn More"
+        target: "/lp/contact-us/"
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Get Started Now"
+    body: null
+    ctas:
+      - label: "Request A Demo"
+        target: "/request-demo/"

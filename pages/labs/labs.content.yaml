@@ -1,0 +1,133 @@
+# ─── SEO METADATA ───
+page_slug: labs
+url_path: /labs
+meta_title: "Nymbus Labs — Banking Growth Team | Nymbus"
+meta_description: "Nymbus Labs embeds growth experts to architect, launch, and optimize your digital banking brand from launch through scale. Strategy, brand, and acquisition in one team."
+og_title: "Nymbus Labs — Growth Team That Drives the Launch"
+og_description: "Embed growth experts with your team to architect, launch, and optimize your digital brand from launch through scale. +459% deposits YoY across the Labs portfolio."
+canonical: "https://www.nymbus.com/labs"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Growth team that drives the launch."
+    subheading: null
+    body: "Embed growth experts with your team to architect, launch, and optimize your digital brand from launch through scale."
+    ctas:
+      - label: "Talk to a Labs expert"
+        target: "/contact/?topic=labs"
+      - label: "See the work"
+        target: "#portfolio"
+
+  - id: proof-strip
+    kind: proof-points
+    eyebrow: "Digital brands launched with Nymbus"
+    heading: null
+    body: null
+    cards:
+      - heading: "AlumniFi"
+        body: null
+      - heading: "Cinefi"
+        body: null
+      - heading: "Collegiate"
+        body: null
+      - heading: "Pillur"
+        body: null
+      - heading: "Roger"
+        body: null
+      - heading: "ValorFi"
+        body: null
+      - heading: "Zynlo"
+        body: null
+
+  - id: the-challenge
+    kind: narrative
+    eyebrow: null
+    heading: "The platform launches the bank. We grow it."
+    subheading: null
+    body: "Your core is live and the brand works. But a platform does not hand you customers. Growth takes an audience, an offer, and a plan to fund it, built as deliberately as the tech was."
+    cards:
+      - heading: "The audience."
+        body: "Define who the brand is for and why they leave the incumbent to join it."
+      - heading: "The engine."
+        body: "Build the acquisition that turns a live product into funded, growing deposits."
+      - heading: "The runway."
+        body: "Connect strategy and operations so the model keeps growing long after launch day."
+
+  - id: portfolio
+    kind: feature-grid
+    eyebrow: null
+    heading: null
+    body: null
+
+  - id: labs-method
+    kind: feature-grid
+    eyebrow: null
+    heading: "The Labs method."
+    subheading: null
+    body: "One difference: we are wired into the platform. We build on the same core, digital banking, onboarding, and operations that run the brand, so strategy becomes a live, growing bank."
+    cards:
+      - heading: "Strategy, embedded."
+        body: "We work inside your team to define the audience, the offer, and the growth model, then commit to the moves that move the numbers."
+      - heading: "Brand, built and shipped."
+        body: "We build the positioning, identity, and launch, then put the brand in market with the audience it was made for."
+      - heading: "Growth, run on live data."
+        body: "We plan and run paid, owned, and partner acquisition, then optimize on real performance after launch."
+
+  - id: paths-to-growth
+    kind: feature-grid
+    eyebrow: null
+    heading: "Paths to growth."
+    subheading: "Models we have launched, and can launch with you."
+    body: null
+    cards:
+      - heading: "Vertical banking brands."
+        body: "A brand built for a profession, community, or life stage your primary institution cannot reach."
+      - heading: "Deposit growth models."
+        body: "A focused offer and acquisition plan designed to pull in and fund deposits."
+      - heading: "New market entry."
+        body: "A dedicated brand and launch plan to enter a new geography, segment, or channel."
+      - heading: "Affinity banking."
+        body: "A brand and offer matched to a partner, employer, alumni, or community base."
+      - heading: "Product-led growth."
+        body: "A model led by one sharp offer: high-yield deposits, business banking, or a niche need."
+
+  - id: from-idea-to-brand
+    kind: narrative
+    eyebrow: null
+    heading: "From first idea to live brand."
+    subheading: "One team brings structure to growth, from the audience to the numbers after go-live."
+    body: null
+    cards:
+      - heading: "1. Define the audience and offer."
+        body: "Who it is for, why the segment matters, and how to turn the opportunity into product, pricing, and positioning that sells."
+      - heading: "2. Build the brand."
+        body: "Name, identity, message, and market approach that earn trust."
+      - heading: "3. Plan the launch."
+        body: "Acquisition, operations, and platform readiness before day one."
+      - heading: "4. Grow the model."
+        body: "Refine acquisition, engagement, and growth on live data after launch."
+
+  - id: the-numbers
+    kind: proof-points
+    eyebrow: null
+    heading: "The numbers behind the brands."
+    body: null
+    cards:
+      - heading: "+459%"
+        body: "Deposits growth across the Labs portfolio YoY 2025"
+      - heading: "$50M+"
+        body: "deposits in as little as 1.4 months"
+      - heading: "97%"
+        body: "12-month customer retention"
+
+  - id: footer-cta-form
+    kind: cta
+    eyebrow: null
+    heading: "Build the growth model behind your launch."
+    body: "Book a strategy session. Tell us what you want to grow."
+    ctas:
+      - label: "Book a session"
+        target: null

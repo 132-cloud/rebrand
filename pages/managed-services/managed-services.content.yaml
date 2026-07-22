@@ -1,0 +1,152 @@
+# ─── SEO METADATA ───
+page_slug: managed-services
+url_path: /managed-services
+meta_title: "Managed Banking Operations — Run by Nymbus | Nymbus"
+meta_description: "Nymbus Managed Services runs contact center, onboarding, back-office, compliance, and fraud operations behind your brand — built and operated by the team behind the platform."
+og_title: "We Don't Just Deploy It. We Run It. | Nymbus"
+og_description: "Nymbus Managed Services operates six banking domains behind your brand — onboarding, servicing, fraud, compliance, back-office, and business support."
+canonical: "https://www.nymbus.com/managed-services"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: "Managed Services"
+    heading: "We don't just deploy it. We run it."
+    subheading: null
+    body: "The team that builds your operations runs them too. Every fix, efficiency, and workflow we find goes straight back into the platform powering your institution."
+    ctas:
+      - label: "Talk to an expert"
+        target: "/contact/?topic=managed-services"
+
+  - id: proof-strip
+    kind: proof-points
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "6"
+        body: "Operational domains run behind your brand"
+      - heading: "140K"
+        body: "Customers supported"
+      - heading: "TBD"
+        body: "Placeholder stat"
+
+  - id: shared-services-model
+    kind: feature-grid
+    eyebrow: "The shared-services model"
+    heading: "We run the work. You keep control."
+    subheading: null
+    body: "Outsourcing the operation should not mean giving up oversight. You define the rules. Nymbus executes inside them."
+    cards:
+      - heading: "You set the thresholds."
+        body: "Define approval limits, decisioning criteria, and exception rules. Nymbus operates to them and escalates anything above your thresholds instead of acting alone."
+      - heading: "You keep regulatory ownership."
+        body: "Nymbus executes and manages the operational controls. Your institution retains regulatory responsibility, risk management, and oversight of everything run on your behalf."
+      - heading: "Automation runs inside your rules."
+        body: "Where Nymbus applies AI to operational work, it runs on your products, limits, and settings, under the same permissions, approvals, and audit trail your team controls."
+
+  - id: meet-the-team
+    kind: feature-grid
+    eyebrow: null
+    heading: "Meet the team that runs your operations."
+    subheading: null
+    body: "One team across every operation, staffed by Nymbus and running behind your brand, so you scale without standing up a back office."
+    cards:
+      - heading: "Contact center and member support"
+        body: null
+      - heading: "Application onboarding, KYC and KYB"
+        body: null
+      - heading: "Back-office processing and reconciliation"
+        body: null
+      - heading: "Risk, compliance and BSA/AML support"
+        body: null
+      - heading: "Fraud monitoring, disputes and response"
+        body: null
+      - heading: "Business and commercial banking operations"
+        body: null
+      - heading: "Chat (authenticated and unauthenticated)"
+        body: null
+
+  - id: proof-quote
+    kind: proof-points
+    eyebrow: null
+    heading: null
+    body: "\"This is the most user-friendly banking system I've ever trained on — fast, simple and intuitive.\"\n— Aleda DeMaria, Executive VP, COO, PeoplesBank"
+
+  - id: digital-onboarding
+    kind: split-panel
+    eyebrow: "Digital Onboarding"
+    heading: "Every application, decisioned in seconds."
+    subheading: null
+    body: "Nymbus scores every application the moment it is submitted and routes it automatically, so clean applicants get through fast and edge cases get worked by people, not left in a queue."
+    cards:
+      - heading: "Auto-approve, auto-deny, or refer."
+        body: "Socure ID+ scores each application on intake and routes it to one of three outcomes, so clean applicants are approved without anyone touching the file."
+      - heading: "Every refer, worked end to end."
+        body: "The onboarding team runs manual review, document and selfie verification, and fraud coordination on flagged cases, so a referred application clears with a decision, not a delay."
+
+  - id: ongoing-operations
+    kind: feature-grid
+    eyebrow: null
+    heading: "Every operation, already handled."
+    subheading: null
+    body: "Reconciliation, fraud response, and compliance monitoring run every day, behind your brand, without your team working the queue."
+    cards:
+      - heading: "Back office runs without you."
+        body: "Digital Operations reconciles GLs daily, posts and matches every card transaction to Core, and works ACH files, Positive Pay, and exceptions, so nothing sits unbalanced."
+      - heading: "Fraud is worked, not just flagged."
+        body: "The fraud team investigates disputes under Reg E and NACHA, works suspicious activity, and manages card rules and CAMS alerts, so cases close, not just open."
+      - heading: "Compliance is monitored, not filed away."
+        body: "Compliance tracks regulatory change, handles complaints, subpoenas and levies, screens against OFAC, and shares findings on your program as they surface."
+
+  - id: reporting
+    kind: narrative
+    eyebrow: "Reporting"
+    heading: "Know what is running, every month."
+    subheading: null
+    body: "Monthly reporting on support, complaints, and fraud, plus a quarterly dispute report, keeps you current on your program. Enhanced, client-specific reporting is available as an add-on."
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "The team that builds your operations runs them too."
+    body: "See how Nymbus operates the back office behind your products, run by the team that built it."
+    ctas:
+      - label: "Talk to an expert"
+        target: "/contact/?topic=managed-services"
+
+  - id: go-deeper
+    kind: feature-grid
+    eyebrow: "Go deeper"
+    heading: null
+    body: "More on how managed services work, from the people who run them."
+    cards:
+      - heading: "The shared-services model, explained"
+        body: "Whitepaper — How responsibilities split between Nymbus and your team."
+      - heading: "Inside the operation"
+        body: "Podcast — The teams running support, onboarding, fraud, and back office every day."
+      - heading: "Governed AI in banking operations"
+        body: "Whitepaper — How automation runs inside your rules, permissions, and audit trail."
+
+faq:
+  - question: "What are Nymbus Managed Services?"
+    answer: "A shared-services operation, built and run by Nymbus, covering six domains behind your brand: the Digital Experience Center (member and business support), Digital Onboarding, Digital Operations, Risk and Compliance, Fraud Operations, and Business-Specific Support."
+  - question: "How does the shared-services model work?"
+    answer: "Nymbus executes and manages the operational processes in alignment with the policies and procedures your institution defines. Your institution retains ultimate responsibility for regulatory compliance, risk management, and oversight of the work run on your behalf."
+  - question: "Do we keep control of compliance and risk?"
+    answer: "Yes. Your institution retains regulatory responsibility and program ownership. Nymbus executes the operational work under your policies and escalates anything requiring your decision."
+  - question: "Can we set our own approval thresholds and decisioning rules?"
+    answer: "Yes. Client-defined thresholds govern fee reimbursements, mobile deposit and payment limit increases, ACH exception decisioning, MRDC pay/return/refer criteria, and Positive Pay exception handling. Nymbus operates to those thresholds and escalates anything above them."
+  - question: "How does application onboarding and decisioning work?"
+    answer: "Every application is scored on intake by Socure ID+ and routed to one of three outcomes: auto-approve, auto-deny, or refer. Referred applicants receive a document and selfie verification link (Socure DocV) that expires in 72 hours, and referred cases are reviewed manually by the Onboarding team against your KYC rules."
+  - question: "Can Nymbus support business and commercial accounts?"
+    answer: "Yes. Business Digital Onboarding runs KYC on individual signers and beneficial owners through Socure ID+, and KYB verification through Socure and Middesk. Ongoing servicing includes ACH origination and Positive Pay enrollment (configurable as default-on or opt-in), wire transfer support, secondary-user access management, and business-account maintenance. Your institution retains underwriting, exposure limits, and Positive Pay exception decisioning."
+  - question: "Who does what: Nymbus vs. your team?"
+    answer: "Nymbus runs the day-to-day operational work across six areas: the Digital Experience Center, digital onboarding, digital operations, risk and compliance, fraud operations, and business-specific support. We execute against the policies, thresholds, and decisioning rules you define, while your institution keeps regulatory responsibility, risk management, and oversight of everything we run on your behalf. Dedicated support and expanded reporting are available as enhanced service tiers."
+  - question: "Is customer support provided under our brand?"
+    answer: "Yes. The Digital Experience Center handles inbound and outbound calls, secure messaging through your online and mobile banking platform, and email during your business hours, all under your brand. Email is unsecure by design and is limited to non-account-specific inquiries."
+  - question: "How are fraud disputes handled?"
+    answer: "The Fraud team investigates ACH, P2P, Bill Pay, and debit card disputes under Regulation E and NACHA rules, coordinating with DXC on intake and Digital Operations on money movement. Suspicious or unusual activity of $5,000 or more (individually or combined) is escalated to your institution via a USA ticket with investigation details, so your team gets the case already built."
+  - question: "What reporting do we receive?"
+    answer: "Monthly reporting covers support statistics (phone, chat, email), complaints, and fraud. A quarterly report covers debit card disputes. Enhanced, client-specific reporting and QA visibility are available as an additional service."

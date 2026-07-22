@@ -1,0 +1,197 @@
+# ─── SEO METADATA ───
+page_slug: home
+url_path: /
+meta_title: "Modern Banking Platform for Growth | Nymbus"
+meta_description: "Nymbus delivers core banking, digital experience, managed operations, and governed AI in one connected platform. Built for institutions ready to launch and scale."
+og_title: "Modern Banking, Built to Move | Nymbus"
+og_description: "Core, launch, operations, and growth — all in one full stack banking platform. See how Nymbus helps institutions modernize and scale."
+canonical: "https://www.nymbus.com/"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "MODERN BANKING, BUILT TO MOVE"
+    subheading: "Core, launch, operations, and growth — all in one full stack banking platform"
+    body: null
+    ctas:
+      - label: "Move to a modern core"
+        target: "/solutions/primary-core/"
+      - label: "Run smarter operations"
+        target: "/managed-services/"
+      - label: "Launch a digital brand"
+        target: "/solutions/parallel-core/"
+      - label: "Build with governed AI"
+        target: "/ai/"
+      - label: "Catch fraud early"
+        target: "/managed-services/#fraud-intelligence"
+      - label: "Talk to an expert"
+        target: "/contact/"
+
+  - id: hero-prompt-routes
+    kind: narrative
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "Modernize from the core outward."
+        body: "Deploy Nymbus as a primary core or parallel core, with digital banking, account opening, data, engagement, and managed operations connected around your strategy."
+      - heading: "Operate with more control and less internal lift."
+        body: "Activate managed services for onboarding, servicing, contact center, fraud, compliance workflows, and back-office operations, supported by the Nymbus platform."
+      - heading: "Launch a digital brand on connected banking infrastructure."
+        body: "Bring core processing, digital banking, account opening, managed operations, and Labs support together to move from growth strategy to live banking model."
+      - heading: "Connect AI to real banking workflows with control."
+        body: "Explore governed AI workflows connected to banking data, actions, permissions, approvals, and auditability."
+      - heading: "Contain fraud in one pass."
+        body: "Customer data, case investigation, and enforcement live in one workspace, so analysts contain threats in one pass instead of chasing five systems."
+      - heading: "Turn a growth idea into a funded banking model."
+        body: "Use Nymbus Labs for audience strategy, offer design, brand development, launch planning, acquisition support, and performance optimization."
+      - heading: "Move applicants from intent to funded accounts faster."
+        body: "Use connected account opening, digital banking, data, decisioning, and operational workflows to support consumer, business, and niche banking models."
+      - heading: "Launch a new institution on a connected banking platform."
+        body: "Deploy core processing, digital banking, account opening, managed operations, data, and growth support around the model you want to build."
+      - heading: "Launch a new banking line without waiting on full-institution change."
+        body: "Use a parallel core, digital banking, account opening, managed operations, and Labs support to build around a specific market, segment, or product strategy."
+      - heading: "Move faster on acquisition and integration strategy."
+        body: "Use a parallel core path to support acquired relationships, new portfolios, or integration strategies without forcing immediate change across the full institution."
+      - heading: "Launch partner-led banking models on modern infrastructure."
+        body: "Use Nymbus to support private-label banking programs with core processing, digital experience, account opening, data, and managed operations connected from the start."
+      - heading: "Test new banking models without disrupting current operations."
+        body: "Use a parallel core environment to explore new products, segments, digital experiences, or operating models before scaling them across the institution."
+      - heading: "Build deposit growth around a focused strategy."
+        body: "Use Labs, digital banking, account opening, engagement, data, and managed operations to support acquisition, activation, and ongoing growth."
+
+  - id: stats-bar
+    kind: proof-points
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "#1"
+        body: "in live digital brand launches"
+      - heading: "270%"
+        body: "deposit growth across digital brands in 2025"
+      - heading: "$4.4B"
+        body: "largest community bank on a modern core"
+      - heading: "AI-native"
+        body: "governed MCP server for core banking actions"
+
+  - id: strategy-band
+    kind: narrative
+    eyebrow: null
+    heading: "Your vision is ready. Your stack is not."
+    subheading: null
+    body: "Institutions do not stall for lack of ambition. Legacy systems, vendor roadmaps, and disconnected work have turned movement into maintenance.\n\nNymbus turns that vision into a banking model in production, the strategy and the infrastructure to run it."
+
+  - id: platform-overview
+    kind: feature-grid
+    eyebrow: null
+    heading: "One connected platform"
+    subheading: "Technology to launch. Operations to run. Growth to scale."
+    body: null
+    cards:
+      - heading: "Move to a modern core"
+        body: null
+      - heading: "Activate managed services"
+        body: null
+      - heading: "Connect data and operations"
+        body: null
+      - heading: "Onboard to funded, faster"
+        body: null
+      - heading: "Build with Labs"
+        body: null
+      - heading: "Launch intelligent digital banking"
+        body: "Try the demo"
+    ctas:
+      - label: "Explore the platform"
+        target: "/platform/"
+
+  - id: governed-ai-approach
+    kind: cta
+    eyebrow: null
+    heading: "See what AI can run inside your institution."
+    body: "Get an inside look at the real banking work AI can take on, and the infrastructure we're building to keep it permissioned every step of the way."
+    ctas:
+      - label: "Read our AI approach"
+        target: "/ai/"
+
+  - id: activation-paths
+    kind: split-panel
+    eyebrow: null
+    heading: "Launch beside your core, or replace the one holding you back."
+    body: null
+    cards:
+      - heading: "Launch in parallel."
+        body: "Stand up a digital brand, vertical offering, or new line of business alongside your existing stack."
+      - heading: "Replace your core."
+        body: "Move onto a modern core, with digital, onboarding, data, and operations connected around it, so every decision runs at your pace, not a legacy vendor's."
+
+  - id: managed-services-feature
+    kind: split-panel
+    eyebrow: "Run the operations"
+    heading: "We don't just deploy it. We run it."
+    body: "Contact center, onboarding, servicing, compliance workflows, fraud operations, and back office, built and operated by Nymbus. Ship the model without standing up an operation behind it."
+    ctas:
+      - label: "Learn about Managed Services"
+        target: "/managed-services/"
+
+  - id: labs-feature
+    kind: split-panel
+    eyebrow: "Nymbus Labs"
+    heading: "Experts that drive banking growth."
+    body: "Nymbus Labs embeds growth experts with your team to architect, launch, and optimize your digital brand from launch through scale."
+    ctas:
+      - label: "Learn about Nymbus Labs"
+        target: "/labs/"
+
+  - id: governed-ai-section
+    kind: narrative
+    eyebrow: null
+    heading: "Bring AI into real banking work. From surfacing answers to acting on the routine, inside a controlled operating model with role-based access and full auditability."
+    body: null
+    cards:
+      - heading: "Start with answers"
+        body: "AI surfaces what your team needs in one place, and acts only within your permissions."
+      - heading: "Control access and auditability"
+        body: "Approve who can initiate, review, and complete sensitive work, plus clear records of AI-supported activity."
+      - heading: "Apply AI to real work"
+        body: "Use AI inside onboarding, servicing, operations, growth, and core banking workflows."
+    ctas:
+      - label: "Build with governed AI"
+        target: "/ai/"
+
+  - id: customer-quotes
+    kind: proof-points
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "Stephen Owen, CEO, First Entertainment Credit Union"
+        body: "Speed to market and cost to serve is what this business is all about - and Nymbus has nailed both."
+      - heading: "Ami Iceman, CEO, MSUFCU"
+        body: "All of the products necessary to run it. Online banking, core, marketing, service channel. It's a single source of entry."
+      - heading: "Jill Castilla, President & CEO, Citizens Bank of Edmond"
+        body: "The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do."
+
+  - id: resources
+    kind: feature-grid
+    eyebrow: null
+    heading: "Get the latest insights on financial innovation."
+    body: null
+    cards:
+      - heading: "How parallel cores are reshaping community banking growth"
+        body: "Webinar · 2025 · 45 min"
+      - heading: "The governed AI approach to banking automation"
+        body: "Article · 2025 · 8 min"
+      - heading: "PeoplesBank modernizes its core with Nymbus"
+        body: "Case Study · 2025 · 5 min"
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Ready to move?"
+    body: null
+    ctas:
+      - label: "Get a demo"
+        target: "/request-demo/"

@@ -1,0 +1,20 @@
+# ─── SEO METADATA ───
+page_slug: careers
+url_path: /careers
+meta_title: "Careers at Nymbus — Join the Team | Nymbus"
+meta_description: "Join Nymbus and help shape the future of banking. We're hiring innovators, engineers, and strategists transforming how financial institutions serve communities."
+og_title: "Careers at Nymbus — Join the Team"
+og_description: "We're building the future of banking. Join a team of innovators, engineers, and strategists transforming how financial institutions serve their communities."
+canonical: "https://www.nymbus.com/careers"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Careers at Nymbus"
+    subheading: null
+    body: "We're building the future of banking. Join a team of innovators, engineers, and strategists who are transforming how financial institutions serve their communities."
+    ctas:
+      - label: "View Open Positions"
+        target: "https://www.glassdoor.com/Overview/Working-at-NYMBUS-EI_IE1910104.11,17.htm"

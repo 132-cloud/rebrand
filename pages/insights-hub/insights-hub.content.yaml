@@ -1,0 +1,57 @@
+# ─── SEO METADATA ───
+page_slug: insights-hub
+url_path: /insights-hub
+meta_title: "Insights Hub — Banking Innovation Resources | Nymbus"
+meta_description: "Articles, case studies, webinars, whitepapers, and podcasts on modern banking, core modernization, and digital growth. Browse the Nymbus Insights Hub."
+og_title: "Insights Hub — Banking Innovation Resources | Nymbus"
+og_description: "The latest thinking on core banking, digital brands, governed AI, and managed operations. Browse articles, case studies, and more from Nymbus."
+canonical: "https://www.nymbus.com/insights-hub"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: featured-story
+    kind: intro
+    eyebrow: "News"
+    heading: "25 cores deployed, and counting."
+    subheading: "Nymbus crossed 25 live core and digital bank launches in 2026, here's what that milestone means for institutions still deciding when to move."
+    body: "by David Barone, Chief Strategy & Marketing Officer"
+    ctas:
+      - label: null
+        target: "#"
+
+  - id: filter-bar
+    kind: narrative
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "Categories"
+        body: "All, Article, Blog, Case Study, Podcast, Report, Webinar, Whitepaper"
+
+  - id: content-grid
+    kind: feature-grid
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "How parallel cores are reshaping community banking growth"
+        body: "Webinar · 2025 · 45 min"
+      - heading: "The governed AI approach to banking automation"
+        body: "Article · 2025 · 8 min"
+      - heading: "PeoplesBank modernizes its core with Nymbus"
+        body: "Case Study · 2025 · 5 min"
+      - heading: "Why managed services are the unlock for digital brand launches"
+        body: "Blog · 2025 · 4 min"
+      - heading: "Building banking infrastructure for the next decade"
+        body: "Podcast · 2025 · 32 min"
+      - heading: "The economics of parallel core deployment"
+        body: "Whitepaper · 2025 · 12 min"
+      - heading: "State of digital banking: 2025 market data"
+        body: "Report · 2025 · 15 min"
+      - heading: "MSUFCU expands business banking on Nymbus"
+        body: "Case Study · 2025 · 5 min"
+      - heading: "From intent to funded: rethinking account opening"
+        body: "Article · 2025 · 6 min"
+    ctas:
+      - label: "Load more"
+        target: null

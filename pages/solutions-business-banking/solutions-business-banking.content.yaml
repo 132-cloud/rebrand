@@ -1,0 +1,133 @@
+# ─── SEO METADATA ───
+page_slug: solutions-business-banking
+url_path: /solutions/business-banking
+meta_title: "Business Banking Solutions for Banks & Credit Unions | Nymbus"
+meta_description: "Launch business banking for solo operators, small businesses, and commercial clients without replacing your core. Automated onboarding, payments, and controls on one platform."
+og_title: "Banking Built for How Businesses Actually Operate | Nymbus"
+og_description: "Launch the business banking experience your customers expect — automated onboarding, commercial payments, and granular controls — on a platform built to move with you."
+canonical: "https://www.nymbus.com/solutions/business-banking"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Banking built for how businesses actually operate."
+    subheading: null
+    body: "Solo operators, micros, and small businesses are leaving for fintechs that move faster than your core. Launch the banking they expect on a platform built to move with you."
+    ctas:
+      - label: "Try the demo"
+        target: "https://nymbus-joy.nymbus.com/dashboard"
+
+  - id: platform-embed
+    kind: narrative
+    eyebrow: null
+    heading: null
+    body: null
+
+  - id: icon-features
+    kind: proof-points
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "Automated business onboarding"
+        body: "Verify businesses and owners with integrated KYC, KYB, beneficial-ownership, and controlling-party workflows."
+      - heading: "Complete commercial money movement"
+        body: "Originate ACH and wires, upload payment files, run Positive Pay, and deposit checks remotely."
+      - heading: "Granular user controls"
+        body: "Give employees, accountants, and operators the right access with account-level permissions, custom roles, transaction limits, and approval workflows."
+
+  - id: thesis
+    kind: narrative
+    eyebrow: null
+    heading: "Launch business banking around the customer, not the category."
+    subheading: null
+    body: "Businesses are not one segment. Solo owners, growing operators, and established companies need different experiences, controls, and levels of support. Nymbus gives institutions the platform to serve them all, without building a separate product for each."
+
+  - id: account-opening
+    kind: split-panel
+    eyebrow: "ACCOUNT OPENING"
+    heading: "From intent to funded."
+    subheading: null
+    body: "Open and fund business accounts in a single flow, with KYC, KYB, beneficial-ownership, and controlling-party verification decisioned on intake. From sole proprietors to complex commercial entities, the right applicants clear fast and the wrong ones never open."
+    ctas:
+      - label: "Explore account opening"
+        target: "/products/account-opening/"
+
+  - id: payments
+    kind: split-panel
+    eyebrow: "PAYMENTS"
+    heading: "The money movement businesses run on."
+    subheading: null
+    body: "Originate ACH and wires, upload payment files, run Positive Pay, and deposit checks remotely. Payment depth scales with the relationship, so a solo operator and a commercial treasury team run on the same platform without a specialized build."
+    ctas:
+      - label: "See business banking tools"
+        target: "/products/digital-banking/"
+
+  - id: controls
+    kind: split-panel
+    eyebrow: "CONTROLS"
+    heading: "Controls their finance team expects."
+    subheading: null
+    body: "Give employees, accountants, and operators the right access with account-level permissions, custom roles, transaction limits, and approval workflows. It's the control depth that turns a business account into a commercial relationship your institution can keep."
+    ctas:
+      - label: "Explore the platform"
+        target: "/platform/"
+
+  - id: segment-callout
+    kind: feature-grid
+    eyebrow: null
+    heading: "Built to serve businesses at every stage."
+    subheading: null
+    body: "Nymbus supports differentiated business banking experiences across the lifecycle, from solo operators to complex commercial relationships, all on one platform."
+    cards:
+      - heading: "Solopreneurs and sole operators"
+        body: "Simple, business-ready banking for one-person businesses that need to open, manage, and move money without commercial complexity."
+      - heading: "Small businesses"
+        body: "Accounts, payments, servicing, and digital workflows for owners managing growth, cash flow, and daily operations."
+      - heading: "Commercial businesses"
+        body: "Deeper controls, permissions, treasury workflows, and operational depth for more complex finance teams."
+    ctas:
+      - label: "Explore commercial banking"
+        target: "/solutions/commercial-banking/"
+
+  - id: testimonials
+    kind: proof-points
+    eyebrow: null
+    heading: "Why institutions build business banking on Nymbus."
+    body: null
+    cards:
+      - heading: "Sara Dolan, CFO, MSUFCU"
+        body: "\"We recognized that business owners need digital banking tools and services that fit how they operate today. Partnering with Nymbus allowed us to make that vision a reality.\""
+      - heading: "Ami Iceman, CEO, MSUFCU"
+        body: "\"Speed to market and cost to serve is what this business is all about — and Nymbus has nailed both.\""
+      - heading: "Jill Castilla, President & CEO, Citizens Bank of Edmond"
+        body: "\"The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.\""
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Banking built for how businesses actually operate."
+    body: null
+    ctas:
+      - label: "Try the demo"
+        target: "https://nymbus-joy.nymbus.com/dashboard"
+
+faq:
+  - question: "Can we launch business banking without replacing our core?"
+    answer: "Yes. Nymbus can run as a parallel core beside the system you operate today, so you can launch a business offering without touching your primary core."
+  - question: "How fast can we get a business product to market?"
+    answer: "A vertical brand or new line can launch on a parallel core faster than a traditional core build, with technology, operations, and support connected from the start."
+  - question: "Which business segments does the platform support?"
+    answer: "Solo operators, microbusinesses, small businesses, and commercial clients, each served with accounts, controls, and operational depth matched to the segment."
+  - question: "Do we have to staff the operation ourselves?"
+    answer: "No. Nymbus Managed Services can run onboarding, servicing, disputes, and back-office work behind your brand, built and operated by the team behind the platform."
+  - question: "How does business account opening handle KYB and compliance?"
+    answer: "Applications can be scored and screened through integrated KYB and identity verification, with referred cases reviewed against your rules. You keep regulatory ownership; execution runs underneath."
+  - question: "Can we offer commercial-grade payment tools?"
+    answer: "Yes. Wire and ACH origination, Positive Pay, and Remote Deposit Capture can run behind your business accounts, with your team setting underwriting and exposure limits."
+  - question: "How does this connect to the systems we already use?"
+    answer: "Nymbus Connect integrates your tools and partners through modern APIs and event streaming, so new integrations move in days, not through a custom rebuild."
+  - question: "What makes Nymbus different from a traditional core for business banking?"
+    answer: "The platform is designed from the ground up to support business banking with the tools and experiences modern businesses expect, plus the differentiated controls and support each segment needs."

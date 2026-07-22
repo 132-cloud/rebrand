@@ -1,0 +1,94 @@
+# ─── SEO METADATA ───
+page_slug: platform
+url_path: /platform
+meta_title: "Modern Banking Platform — Core, Digital & AI | Nymbus"
+meta_description: "One connected platform: core processing, digital banking, account opening, payments, engagement, fraud intelligence, and governed AI — not five vendor contracts stitched together."
+og_title: "One Connected Platform | Nymbus"
+og_description: "Core processing, digital banking, account opening, managed operations, and governed AI running as one system. Explore the Nymbus banking platform."
+canonical: "https://www.nymbus.com/platform"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: "Modern Banking Platform"
+    heading: "One connected platform."
+    subheading: null
+    body: "Core processing, digital banking, account opening, managed operations, and governed AI, running as one system, not five vendor contracts stitched together."
+    ctas:
+      - label: "Get a demo"
+        target: "/request-demo/"
+
+  - id: summary-row
+    kind: proof-points
+    eyebrow: null
+    heading: null
+    body: null
+    cards:
+      - heading: "Real-time where it matters."
+        body: "Live transaction processing, event-driven services, and modern APIs power banking that responds in the moment, not just at the end of it."
+      - heading: "API-first by design."
+        body: "Modern APIs connect Core, Digital, Onboarding, payments, and partner ecosystems, so integration takes days, not a proprietary rebuild."
+      - heading: "One platform, deployed your way."
+        body: "Run Nymbus as your primary banking platform, or modernize alongside the system you run today, on your timeline."
+
+  - id: platform-diagram
+    kind: narrative
+    eyebrow: null
+    heading: "Move faster with a flexible, modern platform built for growth"
+    subheading: null
+    body: "Unify banking workflows, simplify vendor management, and connect existing systems through APIs, extensible integrations, and Nymbus MCP."
+    ctas:
+      - label: "Explore integrations"
+        target: "/products/connect/"
+
+  - id: banking-technology
+    kind: feature-grid
+    eyebrow: "Banking Technology"
+    heading: "Modern banking. Built without limits."
+    subheading: null
+    body: null
+    cards:
+      - heading: "The core, built to move."
+        body: "Run accounts, deposits, transactions, and servicing on modern core infrastructure built for primary or parallel deployment. Changing a product no longer means a multi-year vendor build."
+      - heading: "The experience customers expect."
+        body: "Give account holders the mobile banking they expect, launched as one connected experience across iOS, Android, and web, instead of a multi-year build across a patchwork of vendors."
+      - heading: "From intent to funded."
+        body: "Move applicants from intent to funded with onboarding flows built for consumer, business, and commercial banking, so accounts open and fund in a single flow."
+      - heading: "Control every payment rail."
+        body: "Route, authorize, settle, and reconcile payments from one operational platform. Replace disconnected payment systems with real-time control, unified operations, and the flexibility to add new rails without rebuilding."
+      - heading: "Nurture accounts into loyal relationships."
+        body: "Guide account holders from signup to first meaningful transaction with targeted, timely communications based on real account behavior, lifecycle stage, and engagement signals, instead of relying on broad campaigns that miss the moments that matter."
+      - heading: "Incentivize and reward profitable behaviors."
+        body: "Reward the behaviors that drive primacy, deposits, and deeper relationships, from direct deposit to recurring account activity, without the cost, complexity, or long build cycle of creating an enterprise-grade loyalty program from scratch."
+
+  - id: intelligence
+    kind: feature-grid
+    eyebrow: "Intelligence"
+    heading: "One layer. Every signal."
+    subheading: null
+    body: null
+    cards:
+      - heading: "Contain fraud in one pass."
+        body: "Customer data, case investigation, and enforcement live in one workspace, so analysts contain threats in one pass instead of chasing five systems."
+      - heading: "Decisions on evidence, not guesswork."
+        body: "Turn platform data into analytics that show what is working across products and channels, so decisions run on evidence instead of month-end reports."
+      - heading: "AI that stays governed."
+        body: "Nymbus MCP connects AI to your banking data and workflows under permissions, approvals, and a full audit trail, so automation acts on the routine and escalates the rest."
+      - heading: "Your systems and data, connected."
+        body: "Integrate third-parties and stream live data through modern APIs and event-driven architecture, so you onboard new vendors in days and put real-time data to work across the institution."
+
+  - id: proof-quote
+    kind: proof-points
+    eyebrow: null
+    heading: null
+    body: "\"The successful go-live affirmed our decision to modernize our entire banking infrastructure and positions us to deliver real, simple banking services to our customers faster and more efficiently than ever before.\"\nThomas Senecal, CEO and Chairman, PeoplesBank"
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Ready to move?"
+    body: null
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"

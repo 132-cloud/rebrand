@@ -1,0 +1,99 @@
+# ─── SEO METADATA ───
+page_slug: about
+url_path: /about
+meta_title: "About Nymbus — Banking Built to Move | Nymbus"
+meta_description: "Nymbus brings together banking infrastructure, managed operations, and growth strategy. Meet the leadership, board, and investors behind the platform."
+og_title: "About Nymbus — Banking Built to Move"
+og_description: "Meet the team and investors behind Nymbus, the modern banking platform built for institutions ready to launch, modernize, and scale."
+canonical: "https://www.nymbus.com/about"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Nymbus is banking built to move."
+    subheading: null
+    body: "Legacy systems and vendor roadmaps turn movement into maintenance, so the plan on the whiteboard never reaches production. Nymbus closes that gap, bringing together the infrastructure to launch, the operations to run, and the growth strategy to make the model work in market."
+    ctas: []
+
+  - id: leadership
+    kind: feature-grid
+    eyebrow: "Leadership"
+    heading: "Led by banking, product, and growth operators."
+    subheading: null
+    body: "Nymbus leadership brings experience across banking, product, technology, risk, operations, revenue, and growth strategy."
+    cards:
+      - heading: "Jeffery Kendall"
+        body: "Chairman & CEO"
+      - heading: "Jeffrey Fonda"
+        body: "Chief Financial Officer"
+      - heading: "Ed Gross"
+        body: "Chief Product Officer"
+      - heading: "Michelle Prohaska"
+        body: "Chief Banking & Risk Officer"
+      - heading: "David Barone"
+        body: "Chief Strategy & Marketing Officer"
+      - heading: "Matthew Terry"
+        body: "Chief Technology Officer"
+      - heading: "Meredythe Miles"
+        body: "EVP, Solutions Consulting"
+      - heading: "Ashlie Jenkins"
+        body: "EVP, Development Services"
+      - heading: "Aimee Ford"
+        body: "Chief Revenue Officer"
+      - heading: "Matt Trevathan"
+        body: "Chief Artificial Intelligence Officer"
+
+  - id: board
+    kind: feature-grid
+    eyebrow: "Board of Directors"
+    heading: "Governed with banking and investor experience."
+    subheading: null
+    body: null
+    cards:
+      - heading: "Peter Sobiloff"
+        body: "Insight Partners"
+      - heading: "Rilla Delorier"
+        body: "Independent Board Director, Coastal Community Bank"
+      - heading: "AJ Malhotra"
+        body: "Insight Partners"
+      - heading: "Rajiv Gihwala"
+        body: "Insight Partners"
+      - heading: "Casey Callinsky"
+        body: "VyStar Credit Union"
+
+  - id: investors
+    kind: proof-points
+    eyebrow: "Investors"
+    heading: "Backed by leaders in banking, fintech, and financial services."
+    subheading: null
+    body: null
+    cards:
+      - heading: "Insight Partners"
+        body: null
+      - heading: "Financial Services Capital"
+        body: null
+      - heading: "VyStar Credit Union"
+        body: null
+      - heading: "Michigan State University Federal Credit Union"
+        body: null
+      - heading: "Curql"
+        body: null
+      - heading: "ConnectOne Bank"
+        body: null
+      - heading: "PeoplesBank"
+        body: null
+      - heading: "The Banc Funds"
+        body: null
+      - heading: "Mendon Venture Partners"
+        body: null
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: "Build on Nymbus"
+    heading: "See the platform behind modern banking growth."
+    body: "Explore how Nymbus connects platform, operations, and growth support for institutions ready to launch, modernize, and scale."
+    ctas:
+      - label: "Talk to an expert"
+        target: "/contact/"

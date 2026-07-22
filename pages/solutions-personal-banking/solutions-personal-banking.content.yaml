@@ -1,0 +1,139 @@
+# ─── SEO METADATA ───
+page_slug: solutions-personal-banking
+url_path: /solutions/personal-banking
+meta_title: "Personal Banking Solutions — Win the Primary Relationship | Nymbus"
+meta_description: "Launch modern retail banking that earns primary account status — digital account opening, mobile-first experience, payments, and engagement tools on one connected platform."
+og_title: "Win the Primary Banking Relationship | Nymbus"
+og_description: "Consumers are moving their direct deposit and daily banking to apps that feel faster than your core. Launch the everyday experience they expect on a platform built to move with you."
+canonical: "https://www.nymbus.com/solutions/personal-banking"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Win the primary banking relationship."
+    subheading: null
+    body: "Consumers are moving their direct deposit and daily banking to apps that feel faster than your core. Launch the everyday experience they expect on a platform built to move with you."
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+      - label: "See the platform"
+        target: "/platform/"
+
+  - id: logo-strip
+    kind: proof-points
+    eyebrow: "Trusted by top financial institutions"
+    heading: null
+    body: null
+
+  - id: thesis
+    kind: narrative
+    eyebrow: null
+    heading: "Earn primary, not just an open account."
+    subheading: null
+    body: "Consumers keep their balances where the experience keeps up with their lives. Nymbus gives institutions the platform to deliver modern everyday banking, so the account becomes the relationship, and the relationship stays with you."
+
+  - id: account-opening
+    kind: split-panel
+    eyebrow: null
+    heading: "From intent to funded."
+    subheading: null
+    body: "Move applicants from intent to funded with digital account opening built for consumers. Identity verification, funding, and first deposit run in a single flow, so new customers clear the door in minutes instead of a branch visit."
+    ctas:
+      - label: "Explore account opening"
+        target: "/products/account-opening/"
+
+  - id: digital-experience
+    kind: split-panel
+    eyebrow: null
+    heading: "The experience they'd switch for."
+    subheading: null
+    body: "Give account holders the mobile-first banking they already expect from a neobank, across iOS, Android, and responsive web, launched as one connected experience instead of a multi-year build across a patchwork of vendors."
+    ctas:
+      - label: "Explore the platform"
+        target: "/platform/"
+
+  - id: money-movement
+    kind: split-panel
+    eyebrow: null
+    heading: "Move money the way they expect."
+    subheading: null
+    body: "ACH transfers, bill pay, person-to-person payments, card controls, and mobile check deposit run behind your accounts, so daily banking works the way consumers already expect, without sending them to another app to get it."
+    ctas:
+      - label: "Explore the platform"
+        target: "/platform/"
+
+  - id: engagement
+    kind: split-panel
+    eyebrow: null
+    heading: "Turn accounts into relationships."
+    subheading: null
+    body: "Cash flow insights, transaction categorization, alerts, credit monitoring, and rewards run inside the account, turning everyday balances and activity into loyalty, so the primary relationship deepens instead of drifting to a competitor."
+    ctas:
+      - label: "See engagement tools"
+        target: "/products/engage/"
+
+  - id: managed-operations
+    kind: split-panel
+    eyebrow: null
+    heading: "Run the operations behind retail growth."
+    subheading: null
+    body: "Retail banking creates operational load. Nymbus Managed Services can support onboarding, servicing, contact center, back-office work, compliance workflows, and fraud operations, so your team can scale everyday banking without carrying every function alone."
+    ctas:
+      - label: "Explore managed services"
+        target: "/managed-services/"
+
+  - id: customer-stages
+    kind: feature-grid
+    eyebrow: null
+    heading: "Built to serve consumers across the relationship."
+    subheading: null
+    body: "Nymbus supports differentiated retail banking experiences across the lifecycle, from the first account a customer opens to the full primary relationship they grow into."
+    cards:
+      - heading: "New account holders"
+        body: "Fast digital account opening and funding for consumers choosing where to start their banking relationship."
+      - heading: "Everyday banking customers"
+        body: "Accounts, payments, cards, and money movement for consumers managing daily finances on mobile and web."
+      - heading: "Primary relationships"
+        body: "Insights, engagement, rewards, and connected experiences for customers who make you their main financial home."
+
+  - id: testimonials
+    kind: proof-points
+    eyebrow: null
+    heading: "Why institutions build retail banking on Nymbus."
+    body: null
+    cards:
+      - heading: "Stephen Owen, President and CEO, First Entertainment Credit Union and CineFi"
+        body: "\"Our partnership with Nymbus has enabled us to create a truly digital-first experience that serves our community's specific needs wherever they may go for work.\""
+      - heading: "Jill Castilla, President & CEO, Citizens Bank of Edmond"
+        body: "\"The number one reason I worked with Nymbus is the relationships, the brand work, and knowing they care as much as I do.\""
+      - heading: "Aleda DeMaria, Executive VP, COO, PeoplesBank"
+        body: "\"This is the most user-friendly banking system I've ever trained on — fast, simple and intuitive.\""
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Win the primary banking relationship."
+    body: null
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+
+faq:
+  - question: "Can we launch a new retail experience without replacing our core?"
+    answer: "Yes. Nymbus can run as a parallel core beside the system you operate today, so you can launch a modern retail brand or experience without touching your primary core."
+  - question: "How fast can we get a retail product to market?"
+    answer: "A retail brand or new experience can launch on a parallel core faster than a traditional core build, with technology, operations, and support connected from the start."
+  - question: "Which channels does the platform support?"
+    answer: "Consumers get one connected experience across iOS, Android, and responsive web, so daily banking looks and works the same everywhere they bank."
+  - question: "Do we have to staff the operation ourselves?"
+    answer: "No. Nymbus Managed Services can run onboarding, servicing, disputes, and back-office work behind your brand, built and operated by the team behind the platform."
+  - question: "How does account opening handle identity and compliance?"
+    answer: "Applications can be scored and screened through integrated identity verification and KYC, with referred cases reviewed against your rules. You keep regulatory ownership; execution runs underneath."
+  - question: "Can we offer the money movement consumers expect?"
+    answer: "Yes. ACH transfers, bill pay, person-to-person payments, and mobile check deposit can run behind your accounts, with the controls and limits your institution sets."
+  - question: "How does this connect to the systems we already use?"
+    answer: "Nymbus Connect integrates your tools and partners through modern APIs, so integration does not require custom middleware for every connection."
+  - question: "What makes Nymbus different from a traditional core for retail banking?"
+    answer: "The platform is designed from the ground up to deliver the everyday experience modern consumers expect, plus the engagement and insight tools that turn an open account into a primary relationship."

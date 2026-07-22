@@ -1,0 +1,128 @@
+# ─── SEO METADATA ───
+page_slug: solutions-primary-core
+url_path: /solutions/primary-core
+meta_title: "Primary Core Banking — Modern Core for Banks & Credit Unions | Nymbus"
+meta_description: "Replace your legacy core or launch a new institution on modern banking infrastructure. Nymbus delivers a planned migration with technology, operations, and support connected from day one."
+og_title: "Start With a Core Built to Move | Nymbus"
+og_description: "When the foundation is rigid, every plan waits on a vendor roadmap. Move your institution onto a modern core built to move with your strategy."
+canonical: "https://www.nymbus.com/solutions/primary-core"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Start with a core built to move."
+    subheading: null
+    body: "When the foundation is rigid, every plan waits on a vendor roadmap. Move your institution onto a modern core built to move with your strategy."
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+      - label: "See the platform"
+        target: "/platform/"
+
+  - id: logo-strip
+    kind: proof-points
+    eyebrow: "Trusted by top financial institutions"
+    heading: null
+    body: "25 digital banks launched and cores deployed on Nymbus"
+
+  - id: thesis
+    kind: narrative
+    eyebrow: null
+    heading: "Replace the foundation, not just the front end."
+    subheading: null
+    body: "A modern app on a rigid core still moves at the core's pace. Nymbus replaces the foundation itself, so accounts, deposits, servicing, and every product decision run on infrastructure built to move with your strategy."
+
+  - id: core-replacement
+    kind: split-panel
+    eyebrow: null
+    heading: "Replace your core."
+    subheading: null
+    body: "Move your institution onto modern core infrastructure built to move with your strategy. Run accounts, deposits, transactions, and servicing on a system where changing a product no longer means a multi-year vendor build."
+    ctas:
+      - label: "Explore core replacement"
+        target: "/solutions/core-replacement/"
+
+  - id: de-novo
+    kind: split-panel
+    eyebrow: null
+    heading: "Launch a new institution."
+    subheading: null
+    body: "Stand up a new bank or credit union on a modern core, with technology and operational support that compresses the path from charter to first account. Reach your first funded customer without building the stack from scratch."
+    ctas:
+      - label: "Explore de novo launch"
+        target: "/solutions/de-novo/"
+
+  - id: migration
+    kind: split-panel
+    eyebrow: null
+    heading: "A migration built on a plan."
+    subheading: null
+    body: "Configuration, integration, conversion, testing, training, and launch readiness run on a defined path, so the move off legacy infrastructure has a date you can plan around."
+    ctas:
+      - label: "See implementation"
+        target: "/platform/"
+
+  - id: managed-operations
+    kind: split-panel
+    eyebrow: null
+    heading: "Run the operation from day one."
+    subheading: null
+    body: "Nymbus Managed Services can support onboarding, servicing, back-office processing, compliance, and fraud operations, built and run by the team behind the platform, so you launch without staffing every function first."
+    ctas:
+      - label: "Explore managed services"
+        target: "/managed-services/"
+
+  - id: path-callout
+    kind: feature-grid
+    eyebrow: null
+    heading: "Built for every way institutions start."
+    subheading: null
+    body: "Nymbus supports both paths to a modern primary core, whether you are moving an existing institution off legacy infrastructure or standing up an entirely new one."
+    cards:
+      - heading: "Core replacement"
+        body: "An established institution moved onto modern core infrastructure, with the migration planned, supported, and de-risked from the start."
+      - heading: "De novo launch"
+        body: "A new bank or credit union stood up on a modern core, with the path from charter to first funded account compressed."
+    ctas:
+      - label: "Explore parallel core launches"
+        target: "/solutions/parallel-core/"
+
+  - id: testimonials
+    kind: proof-points
+    eyebrow: null
+    heading: "Why institutions move their core to Nymbus."
+    body: null
+    cards:
+      - heading: "Thomas Senecal, CEO and Chairman, PeoplesBank"
+        body: "\"The successful go-live affirmed our decision to modernize our entire banking infrastructure and positions us to deliver real, simple banking services to our customers faster and more efficiently than ever before.\""
+      - heading: "Ami Iceman, CEO, MSUFCU"
+        body: "\"Speed to market and cost to serve is what this business is all about — and Nymbus has nailed both.\""
+      - heading: "Sara Dolan, CFO, MSUFCU"
+        body: "\"Pillur allows us to deliver faster, smarter, and more personalized banking experiences, and Nymbus was instrumental in ensuring a smooth, secure migration for our SMB members.\""
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Start with a core built to move."
+    body: null
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+
+faq:
+  - question: "What does moving to a modern core actually involve?"
+    answer: "Implementation covers configuration, integration, conversion support, testing, training, and launch readiness, run on a planned path with the team behind the platform beside you."
+  - question: "How long does a core conversion take?"
+    answer: "A core migration on Nymbus runs faster than a traditional multi-year vendor build, with a defined timeline and technology, operations, and support connected from the start."
+  - question: "Can we launch a brand-new institution on Nymbus?"
+    answer: "Yes. A new bank or credit union can be stood up on a modern core, with technology and operational support that compresses the path from charter to first funded account."
+  - question: "Do we have to staff the operation ourselves?"
+    answer: "No. Nymbus Managed Services can run onboarding, servicing, back-office work, compliance, and fraud operations behind your brand, built and operated by the team behind the platform."
+  - question: "How does this connect to the systems we already use?"
+    answer: "Nymbus Connect integrates your tools and partners through modern APIs, so integration does not require custom middleware for every connection."
+  - question: "What if we want to launch something new before replacing the core?"
+    answer: "You can. A parallel core lets you launch a new brand or line alongside your existing system first, then replace the primary core when the timing is right."
+  - question: "What makes Nymbus different from a traditional core provider?"
+    answer: "The core is built to move with your strategy, so changing a product, rate, or segment no longer waits on a vendor roadmap or a multi-year build."

@@ -1,0 +1,37 @@
+# ─── SEO METADATA ───
+page_slug: contact
+url_path: /contact
+meta_title: "Contact Nymbus — Talk to Our Team | Nymbus"
+meta_description: "Contact Nymbus about platform, growth, modernization, partnership, or general business inquiries. Share a few details and our team will follow up."
+og_title: "Contact Nymbus — Talk to Our Team"
+og_description: "Reach out to Nymbus about platform, growth, modernization, or partnerships. Tell us about your next move."
+canonical: "https://www.nymbus.com/contact"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: "Contact Nymbus"
+    heading: "Talk to us about your next move."
+    subheading: null
+    body: "Contact Nymbus about platform, growth, modernization, partnership, or general business inquiries below."
+    ctas: []
+
+  - id: contact-form
+    kind: cta
+    eyebrow: null
+    heading: "Send us a message"
+    subheading: null
+    body: "Share a few details and we'll follow up."
+    cards:
+      - heading: "Form fields"
+        body: "First name, Last name, Work email, Phone number, Institution or company name, Role, Inquiry type (Platform / Demo request / Partnership / Growth strategy / General inquiry), Message"
+    ctas:
+      - label: "Submit inquiry"
+        target: null
+
+  - id: form-success
+    kind: narrative
+    eyebrow: null
+    heading: "Thanks."
+    body: "We've received your inquiry and will get back to you shortly."

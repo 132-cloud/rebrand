@@ -1,0 +1,142 @@
+# ─── SEO METADATA ───
+page_slug: solutions-commercial-banking
+url_path: /solutions/commercial-banking
+meta_title: "Commercial Banking Without Core Disruption | Nymbus"
+meta_description: "Launch treasury and cash management banking on a parallel core without replacing your existing system. Multi-user controls, commercial payments, and fraud protection built for complex businesses."
+og_title: "Commercial Banking, Without Core Disruption | Nymbus"
+og_description: "Complex businesses need treasury workflows, multi-user controls, and real-time payment rails your retail core was never built for. Launch commercial banking on a parallel core."
+canonical: "https://www.nymbus.com/solutions/commercial-banking"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: null
+    heading: "Commercial banking, without core disruption."
+    subheading: null
+    body: "Treasury and cash management relationships move to larger banks because your tools were built for retail, not business. Launch commercial-grade banking on a parallel core, without touching the one you run today."
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+      - label: "See the platform"
+        target: "/platform/"
+
+  - id: logo-strip
+    kind: proof-points
+    eyebrow: "Trusted by top financial institutions"
+    heading: null
+    body: "25 digital banks launched and cores deployed on Nymbus"
+
+  - id: thesis
+    kind: narrative
+    eyebrow: null
+    heading: "Win the commercial relationship, not just the account."
+    subheading: null
+    body: "Complex businesses need depth retail cores were never built for. Multi-user controls, treasury workflows, real-time payment rails, and operating confidence. Nymbus gives institutions a purpose-built commercial platform, delivered without a core replacement."
+
+  - id: onboard-the-business
+    kind: split-panel
+    eyebrow: null
+    heading: "Onboard the whole business."
+    subheading: null
+    body: "Multi-entity onboarding runs KYB, beneficial ownership, identity verification, and document capture in one flow. Complex business structures get onboarded with the same rigor a commercial relationship demands, without a manual back-and-forth that sends prospects to a larger bank."
+    ctas:
+      - label: "Explore account opening"
+        target: "/products/account-opening/"
+
+  - id: controls
+    kind: split-panel
+    eyebrow: null
+    heading: "Controls their finance team expects."
+    subheading: null
+    body: "Multi-user roles, per-account permissions, approval limits, and money-movement limits are configured out of the box. Give a treasury team the entitlements they run on today, so the relationship no longer outgrows what your institution can offer."
+    ctas:
+      - label: "Explore the platform"
+        target: "/platform/"
+
+  - id: payments
+    kind: split-panel
+    eyebrow: null
+    heading: "The payment depth commercial runs on."
+    subheading: null
+    body: "Real-time ACH, domestic and international wires, bulk templates, NACHA upload, and approval queues run behind your commercial accounts. Treasury reporting for returns, NOCs, and transfers gives finance teams the visibility they'd otherwise leave you to get."
+    ctas:
+      - label: "See business banking tools"
+        target: "/products/digital-banking/"
+
+  - id: fraud-protection
+    kind: split-panel
+    eyebrow: null
+    heading: "Protection built for business volume."
+    subheading: null
+    body: "ACH and Check Positive Pay run with exception review, quick-rule creation, and payee name recognition, backed by fraud monitoring and risk decisioning. Commercial-scale exposure gets contained before it posts, not chased after it clears."
+    ctas:
+      - label: "See fraud and controls"
+        target: "/managed-services/fraud/"
+
+  - id: managed-operations
+    kind: split-panel
+    eyebrow: null
+    heading: "Run the operation behind commercial."
+    subheading: null
+    body: "Commercial banking carries deep operational load. Nymbus Managed Services can support onboarding, servicing, back-office processing, compliance workflows, and fraud operations, built and run by the team behind the platform, so you scale without staffing every function alone."
+    ctas:
+      - label: "Explore managed services"
+        target: "/managed-services/"
+
+  - id: segment-callout
+    kind: feature-grid
+    eyebrow: null
+    heading: "Serve every business, from SMB to commercial."
+    subheading: null
+    body: "Nymbus supports differentiated experiences across the business lifecycle, so one platform grows the relationship from a small business account to a full commercial and treasury partnership."
+    cards:
+      - heading: "Small business"
+        body: "Accounts, payments, and cash flow tools for owners managing daily operations and early growth."
+      - heading: "Growth firms"
+        body: "Role-based approvals, ACH and wire workflows, Positive Pay exceptions, and reporting for businesses that need stronger controls and speed."
+      - heading: "Commercial businesses"
+        body: "Treasury workflows, multi-entity onboarding, account analysis, and sweep and IOLTA support for complex finance teams."
+    ctas:
+      - label: "Explore small business banking"
+        target: "/solutions/business-banking/"
+
+  - id: testimonials
+    kind: proof-points
+    eyebrow: null
+    heading: "Why institutions build commercial banking on Nymbus."
+    body: null
+    cards:
+      - heading: "Stephen Owen, President and CEO, First Entertainment Credit Union and CineFi"
+        body: "\"This represents the future of specialized banking – combining deep industry knowledge with innovative technology.\""
+      - heading: "Thomas Senecal, CEO and Chairman, PeoplesBank"
+        body: "\"The successful go-live affirmed our decision to modernize our entire banking infrastructure and positions us to deliver real, simple banking services to our customers faster and more efficiently than ever before.\""
+      - heading: "Ami Iceman, CEO, MSUFCU"
+        body: "\"Speed to market and cost to serve is what this business is all about — and Nymbus has nailed both.\""
+
+  - id: footer-cta
+    kind: cta
+    eyebrow: null
+    heading: "Commercial banking, without core disruption."
+    body: null
+    ctas:
+      - label: "Book a demo"
+        target: "/request-demo/"
+
+faq:
+  - question: "Can we launch commercial banking without replacing our core?"
+    answer: "Yes. Nymbus runs as a parallel core beside the system you operate today, so you can enter or expand commercial banking without a full-core conversion."
+  - question: "How fast can we get a commercial product to market?"
+    answer: "A dedicated business banking brand or line can launch on a parallel core faster than a traditional core build, with technology, operations, and support connected from the start."
+  - question: "Which business segments does the platform support?"
+    answer: "Small businesses, growth firms, and commercial clients, each served with accounts, controls, and treasury depth matched to the segment and its stage."
+  - question: "Do we have to staff the operation ourselves?"
+    answer: "No. Nymbus Managed Services can run onboarding, servicing, back-office work, and fraud operations behind your brand, built and operated by the team behind the platform."
+  - question: "How does commercial onboarding handle KYB and beneficial ownership?"
+    answer: "Multi-entity onboarding runs KYB, identity verification, and beneficial ownership review through integrated solutions, with referred cases reviewed against your rules. You keep regulatory ownership; execution runs underneath."
+  - question: "Can we offer treasury-grade controls and reporting?"
+    answer: "Yes. Multi-user entitlements, approval limits, Positive Pay, and treasury reporting for returns, NOCs, and transfers run behind your commercial accounts, configured to how each client operates."
+  - question: "How does this connect to the systems we already use?"
+    answer: "Nymbus Connect integrates your tools and partners through modern APIs, so integration does not require custom middleware for every connection."
+  - question: "What makes Nymbus different from a traditional core for commercial banking?"
+    answer: "The platform is purpose-built for business banking, with the entitlements, payment depth, and treasury workflows complex operations require, delivered alongside your core instead of gated behind it."

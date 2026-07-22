@@ -1,0 +1,37 @@
+# ─── SEO METADATA ───
+page_slug: request-demo
+url_path: /request-demo
+meta_title: "Request a Demo — See Nymbus in Action | Nymbus"
+meta_description: "Talk with Nymbus about your growth, modernization, or operating model goals. Request a demo to see how the platform supports primary core, parallel core, and managed operations."
+og_title: "Request a Demo — See How Nymbus Fits Your Strategy"
+og_description: "Talk with the Nymbus team about your strategy. We'll show how the platform supports primary core, parallel core, and managed operations goals."
+canonical: "https://www.nymbus.com/request-demo"
+
+# ─── PAGE COPY (verbatim from live page, top to bottom) ───
+sections:
+  - id: hero
+    kind: intro
+    eyebrow: "Request a Demo"
+    heading: "See how Nymbus fits your strategy."
+    subheading: null
+    body: "Talk with Nymbus about your growth, modernization, or operating model goals. We'll show how the platform can support primary core, parallel core, and managed operations strategies."
+    ctas: []
+
+  - id: demo-form
+    kind: cta
+    eyebrow: null
+    heading: "Request a demo"
+    subheading: null
+    body: "Share a few details and our team will follow up."
+    cards:
+      - heading: "Form fields"
+        body: "First name (required), Last name (required), Work email (required), Company website (required), State (required), Company type (required: Bank / Credit Union / Fintech / Other), Anything else? (optional)"
+    ctas:
+      - label: "Request a demo"
+        target: null
+
+  - id: form-success
+    kind: narrative
+    eyebrow: null
+    heading: "Thanks."
+    body: "A member of the Nymbus team will follow up shortly."
