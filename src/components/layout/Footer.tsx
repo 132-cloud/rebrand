@@ -97,14 +97,7 @@ const socialLinks = [
   },
 ];
 
-const securityBadges = [
-  { alt: "SOC 1", src: "/images/security/soc1.png" },
-  { alt: "SOC 2", src: "/images/security/soc2.png" },
-  { alt: "PCI-DSS", src: "/images/security/pci-dss.png" },
-  { alt: "Penetration Tested", src: "/images/security/pen-test.png" },
-  { alt: "GDPR", src: "/images/security/gdpr.png" },
-  { alt: "CCPA", src: "/images/security/ccpa.png" },
-];
+
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -153,23 +146,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Security badges */}
+        {/* Bottom row: copyright, address, social */}
         <div className="mt-12 pt-8 border-t border-neutral-100">
-          <div className="flex flex-wrap items-center gap-4 mb-8">
-            {securityBadges.map((badge) => (
-              <figure key={badge.alt} className="m-0">
-                <Image
-                  src={badge.src}
-                  alt={badge.alt}
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 object-contain opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </figure>
-            ))}
-          </div>
-
-          {/* Bottom row: copyright, address, social */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-neutral-400 text-xs">
               <span>© {currentYear} NYMBUS, All rights reserved.</span>

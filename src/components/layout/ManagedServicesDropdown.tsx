@@ -67,7 +67,7 @@ export function ManagedServicesDropdown({ isActive, onOpen, onClose }: ManagedSe
                     We don&apos;t just deploy it. We run it.
                   </h3>
                   <p className="text-neutral-500 text-sm leading-relaxed">
-                    The services banking runs on, operated by Nymbus. Ship the model without standing up an operation behind it.
+                    The team that builds your operations runs them too. Ship the model without standing up an operation behind it.
                   </p>
                   <div className="mt-6">
                     <Link

@@ -293,7 +293,7 @@ export default function PlatformPage() {
                 Core processing, digital banking, account opening, managed operations, and governed AI, running as one system, not five vendor contracts stitched together.
               </p>
               <Button href="/request-demo/" variant="primary" size="lg">
-                Book a demo
+                Get a demo
               </Button>
             </div>
           </ScrollReveal>
@@ -321,17 +321,33 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* ─── Thesis Band ──────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28">
-        <div className="container-site">
+
+      {/* ─── Platform Diagram (Centerpiece) ───────────────────────────────── */}
+      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
+        {/* Interactive blueprint grid on white */}
+        <BlueprintGridLight />
+
+        <div className="container-site relative z-10">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-[2.25rem] font-bold leading-tight tracking-[-0.02em] text-[#171216] mb-5">
-                Every capability required to run a modern bank. Connected.
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] mb-5">
+                Move faster with a flexible, modern platform built for growth
               </h2>
-              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
-                Most institutions run banking across a patchwork of vendors, each with its own roadmap, its own data, and its own integration debt. Nymbus brings core, digital, onboarding, intelligence, and operations onto one platform, so the pieces work together instead of against each other.
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-6">
+                Unify banking workflows, simplify vendor management, and connect existing systems through APIs, extensible integrations, and Nymbus MCP.
               </p>
+              <Link href="/products/connect/" className="inline-flex items-center text-[#697CB2] text-sm font-semibold hover:text-[#4a5d8a] transition-colors no-underline">
+                Explore integrations
+                <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <div className="relative w-full max-w-5xl mx-auto overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/Platform v3.svg" alt="Nymbus platform architecture diagram" className="w-full h-auto scale-[1.6] origin-center" />
             </div>
           </ScrollReveal>
         </div>
@@ -409,37 +425,6 @@ export default function PlatformPage() {
             ))}
           </div>
         </ScrollReveal>
-      </section>
-
-      {/* ─── Platform Diagram (Centerpiece) ───────────────────────────────── */}
-      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-        {/* Interactive blueprint grid on white */}
-        <BlueprintGridLight />
-
-        <div className="container-site relative z-10">
-          <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] mb-5">
-                Move faster with a flexible, modern platform built for growth
-              </h2>
-              <p className="text-neutral-500 text-base md:text-lg leading-relaxed mb-6">
-                Unify banking workflows, simplify vendor management, and connect existing systems through APIs, extensible integrations, and Nymbus MCP.
-              </p>
-              <Link href="/products/connect/" className="inline-flex items-center text-[#697CB2] text-sm font-semibold hover:text-[#4a5d8a] transition-colors no-underline">
-                Explore integrations
-                <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <div className="relative w-full max-w-5xl mx-auto overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/Platform v3.svg" alt="Nymbus platform architecture diagram" className="w-full h-auto scale-[1.6] origin-center" />
-            </div>
-          </ScrollReveal>
-        </div>
       </section>
 
       {/* ─── Intelligence Feature Carousel ──────────────────────────────── */}

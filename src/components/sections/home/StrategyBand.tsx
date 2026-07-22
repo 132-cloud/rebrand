@@ -11,7 +11,7 @@ export function StrategyBand() {
             {/* Left — headline */}
             <div className="flex-1">
               <h2 className="text-[2rem] md:text-[2.75rem] leading-[1.1] tracking-[-0.02em]">
-                <span className="text-neutral-400 font-light">The strategy is ready.</span>
+                <span className="text-neutral-400 font-light">Your vision is ready.</span>
                 <br />
                 <span className="text-[#171216] font-bold">Your stack is not.</span>
               </h2>
@@ -23,7 +23,7 @@ export function StrategyBand() {
                 Institutions do not stall for lack of ambition. Legacy systems, vendor roadmaps, and disconnected work have turned movement into maintenance.
               </p>
               <p className="text-neutral-600 text-base md:text-lg leading-relaxed">
-                Nymbus is banking built to move with you, so the plan on the whiteboard becomes a banking model in production.
+                Nymbus turns that vision into a banking model in production, the strategy and the infrastructure to run it.
               </p>
             </div>
           </div>

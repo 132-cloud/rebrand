@@ -3,7 +3,6 @@ import Script from "next/script";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsent } from "@/components/layout/CookieConsent";
-import { BrandSwitcher } from "@/components/layout/BrandSwitcher";
 import { PasswordGate } from "@/components/layout/PasswordGate";
 import { CommentSystem } from "@/components/comments/CommentSystem";
 import "@/styles/globals.css";
@@ -66,7 +65,6 @@ export default function RootLayout({
           />
         </noscript>
 
-        <BrandSwitcher />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -111,7 +111,6 @@ export default function HomePage() {
       <PlatformOverviewNew />
       <GovernedAIApproach />
       <ActivationPathsNew />
-      <ManagedServicesBand />
       {/* Operations + Labs feature blocks */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-site">
@@ -180,7 +179,7 @@ export default function HomePage() {
       <GovernedAISectionGuide />
       <CustomerQuotes />
       <ResourcesSection />
-      <FooterCTAGuide heading="Ready to move?" />
+      <FooterCTAGuide heading="Ready to move?" buttonText="Get a demo" buttonHref="/request-demo/" />
     </div>
   );
 }

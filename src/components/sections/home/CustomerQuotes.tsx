@@ -13,13 +13,6 @@ const quotes = [
     logoAlt: "First Entertainment CU",
   },
   {
-    text: "This is the most user-friendly banking system I've ever trained on - fast, simple and intuitive.",
-    author: "Aleda DeMaria",
-    title: "Executive Vice President, Chief Operating Officer",
-    logoSrc: "/images/logo bar logos/Vector.png",
-    logoAlt: "Client",
-  },
-  {
     text: "All of the products necessary to run it. Online banking, core, marketing, service channel. It's a single source of entry.",
     author: "Ami Iceman",
     title: "CEO, MSUFCU",

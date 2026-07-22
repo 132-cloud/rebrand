@@ -33,6 +33,10 @@ const faqs = [
     answer: "Yes. Business Digital Onboarding runs KYC on individual signers and beneficial owners through Socure ID+, and KYB verification through Socure and Middesk. Ongoing servicing includes ACH origination and Positive Pay enrollment (configurable as default-on or opt-in), wire transfer support, secondary-user access management, and business-account maintenance. Your institution retains underwriting, exposure limits, and Positive Pay exception decisioning.",
   },
   {
+    question: "Who does what: Nymbus vs. your team?",
+    answer: "Nymbus runs the day-to-day operational work across six areas: the Digital Experience Center, digital onboarding, digital operations, risk and compliance, fraud operations, and business-specific support. We execute against the policies, thresholds, and decisioning rules you define, while your institution keeps regulatory responsibility, risk management, and oversight of everything we run on your behalf. Dedicated support and expanded reporting are available as enhanced service tiers.",
+  },
+  {
     question: "Is customer support provided under our brand?",
     answer: "Yes. The Digital Experience Center handles inbound and outbound calls, secure messaging through your online and mobile banking platform, and email during your business hours, all under your brand. Email is unsecure by design and is limited to non-account-specific inquiries.",
   },
@@ -74,6 +78,7 @@ const domains = [
   "Risk, compliance and BSA/AML support",
   "Fraud monitoring, disputes and response",
   "Business and commercial banking operations",
+  "Chat (authenticated and unauthenticated)",
 ];
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
@@ -96,7 +101,7 @@ export default function ManagedServicesPage() {
                 We don&apos;t just deploy it. We run it.
               </h1>
               <p className="text-neutral-500 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-                The team that builds your operations runs them too. Problems get fixed by the people who built them, not forwarded.
+                The team that builds your operations runs them too. Every fix, efficiency, and workflow we find goes straight back into the platform powering your institution.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button href="/contact/?topic=managed-services" variant="primary" size="lg">
@@ -156,7 +161,7 @@ export default function ManagedServicesPage() {
               </div>
               <div className="p-6 md:p-8 rounded-2xl border border-neutral-200 bg-white">
                 <h4 className="text-[#171216] text-base font-bold mb-3">Automation runs inside your rules.</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">Where Nymbus applies AI to operational work, it runs under the same permissions, approvals, and audit trail as everything else your team controls.</p>
+                <p className="text-neutral-500 text-sm leading-relaxed">Where Nymbus applies AI to operational work, it runs on your products, limits, and settings, under the same permissions, approvals, and audit trail your team controls.</p>
               </div>
             </div>
           </ScrollReveal>
@@ -281,7 +286,7 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* ─── 9. Closing CTA ───────────────────────────────────────────────── */}
-      <FooterCTAGuide heading="We build it. We run it." subtitle="See how Nymbus operates the back office behind your products, run by the team that built it." buttonText="Talk to an expert" buttonHref="/contact/?topic=managed-services" />
+      <FooterCTAGuide heading="The team that builds your operations runs them too." subtitle="See how Nymbus operates the back office behind your products, run by the team that built it." buttonText="Talk to an expert" buttonHref="/contact/?topic=managed-services" />
 
       {/* ─── 10. FAQ ──────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-white">
@@ -297,6 +302,39 @@ export default function ManagedServicesPage() {
               {faqs.map((faq) => (
                 <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
               ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ─── 11. Go Deeper ────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-neutral-50">
+        <div className="container-site">
+          <ScrollReveal>
+            <div className="mb-10">
+              <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Go deeper</p>
+              <p className="text-neutral-500 text-base md:text-lg leading-relaxed">
+                More on how managed services work, from the people who run them.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="/insights/?tag=managed-services" className="group p-6 rounded-2xl border border-neutral-200 bg-white hover:shadow-md transition-all no-underline">
+                <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Whitepaper</p>
+                <h4 className="text-[#171216] text-base font-bold mb-2 group-hover:text-[#697CB2] transition-colors">The shared-services model, explained</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">How responsibilities split between Nymbus and your team.</p>
+              </a>
+              <a href="/insights/?tag=managed-services" className="group p-6 rounded-2xl border border-neutral-200 bg-white hover:shadow-md transition-all no-underline">
+                <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Podcast</p>
+                <h4 className="text-[#171216] text-base font-bold mb-2 group-hover:text-[#697CB2] transition-colors">Inside the operation</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">The teams running support, onboarding, fraud, and back office every day.</p>
+              </a>
+              <a href="/insights/?tag=managed-services" className="group p-6 rounded-2xl border border-neutral-200 bg-white hover:shadow-md transition-all no-underline">
+                <p className="text-neutral-400 text-[11px] font-semibold uppercase tracking-wider mb-3">Whitepaper</p>
+                <h4 className="text-[#171216] text-base font-bold mb-2 group-hover:text-[#697CB2] transition-colors">Governed AI in banking operations</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">How automation runs inside your rules, permissions, and audit trail.</p>
+              </a>
             </div>
           </ScrollReveal>
         </div>

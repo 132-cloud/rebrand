@@ -116,7 +116,7 @@ function PartnerCard({ partner }: { partner: (typeof partners)[0] }) {
 
   return (
     <div
-      className={`bg-white rounded-lg p-4 pb-6 flex flex-col gap-2.5 border-t-[3px] min-h-[110px] ${topBorderColor[partner.status as keyof typeof topBorderColor] || topBorderColor.available} shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.11)] transition-shadow duration-200`}
+      className={`bg-white rounded-lg p-4 pb-6 flex flex-col gap-2.5 border-t-[3px] min-h-[140px] ${topBorderColor[partner.status as keyof typeof topBorderColor] || topBorderColor.available} shadow-[0_2px_12px_rgba(0,0,0,0.07)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.11)] transition-shadow duration-200`}
     >
       {/* Logo area */}
       <div className="flex items-center justify-between gap-2 min-h-[40px]">

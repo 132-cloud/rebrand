@@ -31,11 +31,17 @@ const SEEN_KEY = "nymbus-comments-seen";
  * Returns the anchor id and the offset (click y - anchor element top).
  */
 export function findAnchor(clickY: number): { anchorId: string; offsetY: number } | null {
-  // Gather all elements with an id on the page
+  // Gather all elements with an id on the page, excluding comment system elements
   const candidates = Array.from(document.querySelectorAll("[id]")).filter((el) => {
     const tag = el.tagName.toLowerCase();
     // Only anchor to semantic/structural elements
-    return ["section", "div", "main", "article", "header", "footer"].includes(tag);
+    if (!["section", "div", "main", "article", "header", "footer"].includes(tag)) return false;
+    // Exclude comment system elements (sidebar pins, overlays, etc.)
+    const id = el.id;
+    if (id.startsWith("sidebar-comment") || id.startsWith("comment-") || id.startsWith("pin-")) return false;
+    // Exclude elements inside the comment overlay
+    if (el.closest("[data-comment-system]")) return false;
+    return true;
   });
 
   if (candidates.length === 0) return null;

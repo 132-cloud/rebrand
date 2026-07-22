@@ -24,7 +24,7 @@ const brands: Brand[] = [
     institution: "MSU Federal Credit Union",
     descriptor: "Banking for small businesses",
     playLine: "Serving growing small businesses",
-    resultStat: "10,000+ accounts in 12 months",
+    resultStat: "",
     image: "/images/labs/pillur.png",
     caseUrl: "https://pillur.org/",
   },
@@ -34,7 +34,7 @@ const brands: Brand[] = [
     institution: "Gesa Credit Union",
     descriptor: "Banking for gig workers",
     playLine: "Reach underserved freelancers and side-hustlers",
-    resultStat: "Launched in under 6 months",
+    resultStat: "",
     image: "/images/labs/hustl.png",
     caseUrl: "https://hustlfinancial.com/",
   },
@@ -54,7 +54,7 @@ const brands: Brand[] = [
     institution: "Partner institution",
     descriptor: "Banking for veterans and military",
     playLine: "Serve a community with purpose-built banking",
-    resultStat: "5,000+ accounts in first quarter",
+    resultStat: "",
     image: "/images/labs/valorfi.png",
     caseUrl: "https://valorfiheroes.com/",
   },
@@ -64,7 +64,7 @@ const brands: Brand[] = [
     institution: "Partner institution",
     descriptor: "Alumni-powered banking",
     playLine: "Turn alumni networks into depositors",
-    resultStat: "270% deposit growth YoY",
+    resultStat: "",
     image: "/images/labs/alumnifi.png",
     caseUrl: "https://alumnifi.org/",
   },
@@ -74,7 +74,7 @@ const brands: Brand[] = [
     institution: "Partner institution",
     descriptor: "Banking built for students",
     playLine: "Enter the student market with a purpose-built brand",
-    resultStat: "Fastest student acquisition in segment",
+    resultStat: "",
     image: "/images/labs/collegiate.png",
     caseUrl: "https://collegiatecu.org/",
   },
@@ -85,7 +85,6 @@ const brands: Brand[] = [
 export function PortfolioCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [modalBrand, setModalBrand] = useState<Brand | null>(null);
 
   const navigate = useCallback((newIndex: number) => {
     if (isAnimating) return;
@@ -171,9 +170,7 @@ export function PortfolioCarousel() {
                 {/* Inner content wrapper with fade animation */}
                 <button
                   onClick={() => {
-                    if (isActive) {
-                      setModalBrand(brand);
-                    } else {
+                    if (!isActive) {
                       navigate(brandIndex);
                     }
                   }}
@@ -221,7 +218,9 @@ export function PortfolioCarousel() {
                     </p>
 
                     <div className="flex items-center gap-4">
-                      <span className="text-white text-sm font-bold">{brand.resultStat}</span>
+                      {brand.resultStat && (
+                        <span className="text-white text-sm font-bold">{brand.resultStat}</span>
+                      )}
                       {brand.caseUrl && (
                         <a
                           href={brand.caseUrl}
@@ -276,82 +275,6 @@ export function PortfolioCarousel() {
         </div>
       </div>
 
-      {/* Case Modal */}
-      {modalBrand && (
-        <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
-          onClick={() => setModalBrand(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${modalBrand.brandName} case study`}
-        >
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-
-          <div
-            className="relative bg-[#1a1a1a] rounded-xl max-w-lg w-full shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setModalBrand(null)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 flex items-center justify-center hover:bg-black/80 transition-colors"
-              aria-label="Close"
-            >
-              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            <div className="h-[220px] overflow-hidden relative">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={modalBrand.image}
-                alt={`${modalBrand.brandName} website`}
-                className="w-full h-full object-cover object-top"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={modalBrand.logo} alt={modalBrand.brandName} className="h-8 w-auto brightness-0 invert" />
-              </div>
-            </div>
-
-            <div className="p-6 pt-2">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-white/50 text-sm">{modalBrand.institution}</span>
-              </div>
-
-              <p className="text-white/90 text-sm leading-relaxed mb-4">{modalBrand.playLine}</p>
-
-              <div className="flex flex-wrap gap-2 mb-5">
-                {["Strategy", "Brand", "Launch", "Growth"].map((chip) => (
-                  <span key={chip} className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-white/80 border border-white/10">
-                    {chip}
-                  </span>
-                ))}
-              </div>
-
-              <div className="p-4 rounded-lg bg-white/5 border border-white/10 mb-5">
-                <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Headline result</p>
-                <p className="text-white text-xl font-bold">{modalBrand.resultStat}</p>
-              </div>
-
-              {modalBrand.caseUrl && (
-                <a
-                  href={modalBrand.caseUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#141414] text-sm font-bold rounded-md hover:bg-white/90 transition-colors no-underline"
-                >
-                  Visit the brand
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </a>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

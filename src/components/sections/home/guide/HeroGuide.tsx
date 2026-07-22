@@ -369,6 +369,62 @@ function ArrowUpIcon() {
   );
 }
 
+// ─── Rotating Hero Tagline ────────────────────────────────────────────────────
+
+const HERO_ROTATING_LINES = [
+  "BUILT TO MOVE",
+  "BUILT TO WIN",
+  "BUILT TO FLEX",
+  "FOR BUILDERS",
+  "BUILT WITHOUT LIMITS",
+  "BUILT FOR WHAT'S NEXT",
+];
+
+function RotatingHeroLine({ items }: { items: string[] }) {
+  const [index, setIndex] = useState(0);
+  const [animState, setAnimState] = useState<"visible" | "exiting" | "entering">("visible");
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setAnimState("exiting");
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % items.length);
+        setAnimState("entering");
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setAnimState("visible");
+          });
+        });
+      }, 400);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [items.length]);
+
+  let opacity = 1;
+  let transform = "translateY(0)";
+
+  if (animState === "exiting") {
+    opacity = 0;
+    transform = "translateY(-14px)";
+  } else if (animState === "entering") {
+    opacity = 0;
+    transform = "translateY(14px)";
+  }
+
+  return (
+    <span
+      className="inline-block text-white font-bold"
+      style={{
+        transition: animState === "entering" ? "none" : "opacity 0.4s ease-in-out, transform 0.4s ease-in-out",
+        opacity,
+        transform,
+      }}
+    >
+      {items[index]}
+    </span>
+  );
+}
+
 // ─── Main Hero Component ─────────────────────────────────────────────────────
 
 export function HeroGuide() {
@@ -464,7 +520,8 @@ export function HeroGuide() {
               className="font-bold leading-[1.05] tracking-[-0.03em] mb-4 text-white mx-auto"
               style={{ fontSize: "clamp(48px, 6.5vw, 96px)" }}
             >
-              MODERN BANKING,<br />BUILT TO MOVE
+              MODERN BANKING,<br />
+              <RotatingHeroLine items={HERO_ROTATING_LINES} />
             </h1>
 
             {/* Body text */}
@@ -472,7 +529,7 @@ export function HeroGuide() {
               className="text-lg md:text-xl max-w-3xl mx-auto mb-8 tracking-[-0.01em] whitespace-nowrap"
               style={{ color: "var(--guide-text-body, rgba(255,255,255,0.6))", lineHeight: 1.5 }}
             >
-              Launch, operate, and scale on the banking platform built to move.
+              Core, launch, operations, and growth — all in one full stack banking platform
             </p>
 
             {/* Prompt Box - expands downward when active */}

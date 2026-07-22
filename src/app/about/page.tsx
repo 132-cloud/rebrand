@@ -12,10 +12,10 @@ const leadership = [
   { name: "Michelle Prohaska", title: "Chief Banking & Risk Officer", image: "/images/leadership/michelle_prohaska_small-2.jpg" },
   { name: "David Barone", title: "Chief Strategy & Marketing Officer", image: "/images/leadership/david_barone_small-2.jpg" },
   { name: "Matthew Terry", title: "Chief Technology Officer", image: "/images/leadership/matthew_terry_small.jpg" },
-  { name: "Meredythe Miles", title: "EVP, Client Consulting Services", image: "/images/leadership/meredythe_miles_small.jpg" },
+  { name: "Meredythe Miles", title: "EVP, Solutions Consulting", image: "/images/leadership/meredythe_miles_small.jpg" },
   { name: "Ashlie Jenkins", title: "EVP, Development Services", image: "/images/leadership/ashlie_jenkins_small.jpg" },
-  { name: "Matthew Flood", title: "EVP, Client Support", image: "/images/leadership/matt_flood_small-2.jpg" },
   { name: "Aimee Ford", title: "Chief Revenue Officer", image: "/images/leadership/Aimee_Ford2.png" },
+  { name: "Matt Trevathan", title: "Chief Artificial Intelligence Officer", image: "/images/leadership/matt.png" },
 ];
 
 // ─── Board of Directors ──────────────────────────────────────────────────────
@@ -31,15 +31,15 @@ const board = [
 // ─── Investors ───────────────────────────────────────────────────────────────
 
 const investors = [
-  "Insight Partners",
-  "Financial Services Capital",
-  "VyStar Credit Union",
-  "Michigan State University Federal Credit Union",
-  "Curql",
-  "ConnectOne Bank",
-  "PeoplesBank",
-  "The Banc Funds",
-  "Mendon Venture Partners",
+  { name: "Insight Partners", logo: "/images/investors/insight-partners.svg" },
+  { name: "Financial Services Capital", logo: "/images/investors/fsc.svg" },
+  { name: "VyStar Credit Union", logo: "/images/investors/vystar.svg" },
+  { name: "Michigan State University Federal Credit Union", logo: "/images/investors/msufcu.svg" },
+  { name: "Curql", logo: "/images/investors/curql.png" },
+  { name: "ConnectOne Bank", logo: "/images/investors/connectone.svg" },
+  { name: "PeoplesBank", logo: "/images/investors/peoplesbank.svg" },
+  { name: "The Banc Funds", logo: "/images/investors/banc-funds.png" },
+  { name: "Mendon Venture Partners", logo: "/images/investors/mendon.svg" },
 ];
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
@@ -150,11 +150,24 @@ export default function AboutPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 max-w-3xl mx-auto">
-              {investors.map((name) => (
-                <span key={name} className="text-neutral-600 text-sm font-medium">
-                  {name}
-                </span>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
+              {investors.map((investor) => (
+                <div key={investor.name} className="flex items-center justify-center p-6 min-h-[80px]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={investor.logo}
+                    alt={investor.name}
+                    className="h-8 w-auto max-w-full object-contain"
+                    onError={(e) => {
+                      // Fallback to text if logo doesn't load
+                      const target = e.currentTarget;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'block';
+                    }}
+                  />
+                  <span className="text-neutral-700 text-sm font-semibold text-center hidden">{investor.name}</span>
+                </div>
               ))}
             </div>
           </ScrollReveal>

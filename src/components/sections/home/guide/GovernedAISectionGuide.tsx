@@ -105,8 +105,8 @@ function FlowFieldShaderGrey() {
 
 const aiCards = [
   {
-    title: "Govern approved actions",
-    description: "Connect AI workflows to defined banking actions, not open-ended automation.",
+    title: "Start with answers",
+    description: "AI surfaces what your team needs in one place, and acts only within your permissions.",
   },
   {
     title: "Control access and auditability",
@@ -130,9 +130,9 @@ export function GovernedAISectionGuide() {
         <ScrollReveal>
           <div className="max-w-5xl mb-4">
             <h4 className="text-[2rem] md:text-[2.15rem] mb-2 leading-tight">
-              <span className="font-bold text-[#171216]">Governed AI connected to real banking work.</span>{" "}
+              <span className="font-bold text-[#171216]">Bring AI into real banking work.</span>{" "}
               <span className="font-normal text-neutral-400">
-                Deploy AI-enabled workflows inside a controlled operating model, with approved actions, role-based access, human review paths, and auditability.
+                From surfacing answers to acting on the routine, inside a controlled operating model with role-based access and full auditability.
               </span>
             </h4>
           </div>

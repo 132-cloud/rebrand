@@ -186,7 +186,7 @@ export default function LabsPage() {
       </section>
 
       {/* ─── 5. The Labs Method ─────────────────────────────────────────── */}
-      <section id="labs-method" className="py-20 md:py-28 bg-neutral-50">
+      <section id="labs-method" className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <h2 className="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#171216] text-center mb-14">
@@ -250,7 +250,7 @@ export default function LabsPage() {
       </section>
 
       {/* ─── 7. From First Idea to Live Brand ─────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
@@ -296,8 +296,8 @@ export default function LabsPage() {
                 <p className="text-neutral-500 text-sm">Deposits growth across the Labs portfolio YoY 2025</p>
               </div>
               <div>
-                <p className="text-[2.5rem] font-bold text-[#171216] mb-1">$50M</p>
-                <p className="text-neutral-500 text-sm">In deposits in as little as 1.4 months</p>
+                <p className="text-[2.5rem] font-bold text-[#171216] mb-1">$50M+</p>
+                <p className="text-neutral-500 text-sm">deposits in as little as 1.4 months</p>
               </div>
               <div>
                 <p className="text-[2.5rem] font-bold text-[#171216] mb-1">97%</p>
@@ -309,7 +309,7 @@ export default function LabsPage() {
       </section>
 
       {/* ─── 9. Final CTA (Form) ──────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-neutral-50">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-site">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">

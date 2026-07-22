@@ -143,6 +143,7 @@ export function CommentSidebar({
 
       {/* Sidebar panel */}
       <div
+        data-comment-system
         className={`
           fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-[10001]
           shadow-2xl border-l border-neutral-200

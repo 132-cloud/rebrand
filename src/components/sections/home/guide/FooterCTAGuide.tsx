@@ -14,6 +14,7 @@ export function FooterCTAGuide({
   buttonText = "Talk to Nymbus",
   buttonHref = "/contact/",
 }: FooterCTAGuideProps) {
+  const isExternal = buttonHref.startsWith("http");
   return (
     <section
       className="relative py-32 md:py-44 lg:py-56 overflow-hidden bg-black"
@@ -48,7 +49,7 @@ export function FooterCTAGuide({
               </p>
             )}
             <div className="flex flex-wrap justify-center gap-4 mt-10">
-              <Button href={buttonHref} variant="primary" size="lg" className="footer-cta-btn">
+              <Button href={buttonHref} variant="primary" size="lg" className="footer-cta-btn" external={isExternal}>
                 {buttonText}
               </Button>
             </div>
