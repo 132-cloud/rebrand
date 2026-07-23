@@ -26,6 +26,7 @@ const board = [
   { name: "AJ Malhotra", title: "Insight Partners", image: "/images/leadership/aj_malhotra_small.jpg" },
   { name: "Rajiv Gihwala", title: "Insight Partners", image: "/images/leadership/rajiv_gihwala_small.jpg" },
   { name: "Casey Callinsky", title: "VyStar Credit Union", image: "/images/leadership/casey_callinsky_small.jpg" },
+  { name: "April Clobes", title: "MSU Federal Credit Union", image: "/images/leadership/April-Clobes.jpg" },
 ];
 
 // ─── Investors ───────────────────────────────────────────────────────────────
@@ -117,7 +118,7 @@ export default function AboutPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
               {board.map((person) => (
                 <div key={person.name} className="text-center">
                   <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-neutral-100">
