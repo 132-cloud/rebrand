@@ -48,6 +48,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Figma capture toolbar — TEMPORARY, remove when done exporting */}
+        <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
         {/* Adobe Fonts (Typekit) */}
         <link rel="stylesheet" href="https://use.typekit.net/kuk6noc.css" />
         <link rel="stylesheet" href="https://use.typekit.net/bpi2fje.css" />
