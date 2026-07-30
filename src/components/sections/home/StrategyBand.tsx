@@ -23,7 +23,7 @@ export function StrategyBand() {
                 Institutions do not stall for lack of ambition. Legacy systems, vendor roadmaps, and disconnected work have turned movement into maintenance.
               </p>
               <p className="text-neutral-600 text-base md:text-lg leading-relaxed">
-                Nymbus turns that vision into a banking model in production, the strategy and the infrastructure to run it.
+                Nymbus turns that vision into a banking model in production, with the strategy and the infrastructure to run it.
               </p>
             </div>
           </div>

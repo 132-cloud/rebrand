@@ -111,11 +111,11 @@ export function Footer() {
           <div className="col-span-12 md:col-span-2">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/images/logomark-1C.svg"
+                src="/images/nymbus-logo-footer.svg"
                 alt="Nymbus logomark"
-                width={29}
-                height={22}
-                className="h-7 w-auto"
+                width={65}
+                height={34}
+                className="h-9 w-auto"
               />
             </Link>
           </div>

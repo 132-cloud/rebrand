@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { NymbusLogo } from "@/components/icons/NymbusLogo";
+import Image from "next/image";
 import { NymbusLogomark } from "@/components/icons/NymbusLogomark";
 import { MobileNav } from "./MobileNav";
 import { MegaDropdown } from "./MegaDropdown";
@@ -166,7 +166,13 @@ export function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0" title="Nymbus">
-              <NymbusLogo className="hidden md:block h-5 w-auto text-white" />
+              <Image
+                src="/images/nymbus-logo-new.svg"
+                alt="Nymbus"
+                width={160}
+                height={20}
+                className="hidden md:block h-5 w-auto text-white"
+              />
               <NymbusLogomark className="md:hidden h-7 w-auto" />
             </Link>
 
