@@ -1,0 +1,126 @@
+NYMBUS WEBSITE - PHASE 1 URL REFERENCE
+========================================
+
+PAGES
+----------
+/                           Homepage
+/about/                     About Nymbus
+/contact/                   Let's move / Contact / Talk to an Expert / Request a demo
+/press/                     Press & News
+/privacy-policy/            Privacy Policy
+/platform/                  Platform Overview
+/managed-services/          Managed Services
+/solutions/primary-core/    Primary Core
+/solutions/parallel-core/   Parallel Core
+/solutions/business-banking/    Business Banking
+/ai/                        AI Overview / Governed AI
+/labs/                      Nymbus Labs
+/insights-hub/              Insights Hub
+
+
+CTA LINKS
+----------
+/contact/                   Let's move / Contact / Talk to an Expert / Request a demo
+[EXTERNAL-LINK COMING AUG 31]   Try the demo
+
+
+PLATFORM ANCHORS
+--------
+/platform/#core-processing           Core Processing (anchor)
+/platform/#digital-banking           Digital Banking (anchor)
+/platform/#account-opening           Account Opening (anchor)
+/platform/#payments-hub              Payments Hub (anchor)
+/platform/#levels                    Levels (anchor)
+/platform/#engage                    Engage (anchor)
+/platform/#connect                   Connect (anchor)
+/platform/#insights                  Insights (anchor)
+/platform/#fraud-intelligence        Fraud Intelligence (anchor)
+/platform/#nymbus-mcp                Nymbus MCP (anchor)
+
+
+SOLUTIONS ANCHORS
+---------
+/solutions/primary-core/#core-replacement    Core Replacement (anchor)
+/solutions/primary-core/#de-novo             De Novo Launch (anchor)
+
+/solutions/parallel-core/#vertical-brand     Vertical brand launches (anchor)
+/solutions/parallel-core/#new-lines          New Lines of Business (anchor)
+/solutions/parallel-core/#ma-acceleration    M&A Acceleration (anchor)
+/solutions/parallel-core/#private-label      Private Label Banking (anchor)
+/solutions/parallel-core/#sandbox            Sandbox Innovation (anchor)
+
+
+MANAGED SERVICES ANCHORS
+----------------
+/managed-services/#contact-center            Contact Center (anchor)
+/managed-services/#onboarding                Onboarding (anchor)
+/managed-services/#servicing                 Servicing (anchor)
+/managed-services/#back-office               Back Office (anchor)
+/managed-services/#compliance                Compliance (anchor)
+/managed-services/#fraud                     Fraud (anchor)
+/managed-services/#business-banking-support  Business Banking Support (anchor)
+/managed-services/#fraud-intelligence        Fraud Intelligence (anchor)
+
+
+AI ANCHORS
+---------
+/ai/#ai-approach            AI Approach (anchor)
+/ai/#nymbus-mcp             Nymbus MCP (anchor)
+/ai/#applied-ai             Applied AI (anchor)
+
+
+BUSINESS BANKING ANCHORS
+----------------
+/solutions/business-banking/#commercial    Commercial (anchor)
+
+
+===========================================================
+CHATBOX CTA URL REFERENCE (Phase 1)
+===========================================================
+
+Move to a modern core (2C):
+  - Explore primary core → /solutions/primary-core/
+  - Launch a parallel core → /solutions/parallel-core/
+  - Talk to an expert → /contact/
+
+Run smarter operations (2D):
+  - Explore managed services → /managed-services/
+  - Talk to an expert → /contact/
+
+Launch a digital brand (2E):
+  - Launch a digital brand → /solutions/parallel-core/
+  - See how Labs supports launch → /labs/
+  - Talk to an expert → /contact/
+
+Build with governed AI (2F):
+  - Explore governed AI → /ai/
+  - See Nymbus MCP → /ai/#nymbus-mcp
+  - Talk to an expert → /contact/
+
+Talk to an expert (2H):
+  - Direct navigation → /contact/
+
+Catch fraud early (2I):
+  - Enable Fraud Intelligence → /platform/#fraud-intelligence
+  - Talk to an expert → /contact/
+
+Build a growth strategy with Labs (2J):
+  - Explore Labs → /labs/
+  - Talk to an expert → /contact/
+
+Improve account opening (2K):
+  - Explore account opening → /platform/#account-opening
+  - Talk to an expert → /contact/
+
+Launch a de novo (2L):
+  - Explore de novo launch → /solutions/primary-core/#de-novo
+  - Explore primary core → /solutions/primary-core/
+  - Talk to an expert → /contact/
+
+Grow deposits (2M):
+  - Explore Labs → /labs/
+  - Talk to an expert → /contact/
+
+Fallback Response:
+  - Explore the platform → /platform/
+  - Talk to an expert → /contact/
