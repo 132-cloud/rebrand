@@ -175,7 +175,7 @@ Standard global nav (same as all pages):
 | Background | Gradient animates with grain overlay | https://reactbits.dev/backgrounds/grainient |
 | Input focus | Border highlight / glow (standard form UX) | — |
 | Submit hover | Specular button animation | https://reactbits.dev/components/specular-button |
-| Submit click | Button shows spinner, form submits to HubSpot | — |
+| Submit click | Button shows spinner, form POSTs to HubSpot Forms API | — |
 | Validation error | Inline field error states (all fields required) | — |
 
 ---
@@ -247,10 +247,10 @@ Users arrive at this page from CTAs across the entire site. Per Mike's Phase 1 d
         |     YES → [Button shows spinner loading state]
         |              |
         |              v
-        |         [HubSpot form submits]
+        |         [POST to HubSpot Forms API]
         |              |
         |              v
-        |         [HubSpot native success state]
+        |         [Custom success confirmation (inline)]
         |
         +---> [Validation fails?]
                   |
@@ -276,16 +276,71 @@ Users arrive at this page from CTAs across the entire site. Per Mike's Phase 1 d
 
 | Scenario | Behavior |
 |----------|----------|
-| Success | HubSpot native success state (inline confirmation) |
-| Loading | Submit button shows spinner animation |
-| Server error | Display inline error, allow retry |
+| Success | Custom inline confirmation message (styled to site branding) |
+| Loading | Submit button shows spinner animation, button disabled |
+| Server error | Display inline error message, allow retry |
+| Network error | Display friendly error, allow retry |
 | Duplicate submission | Prevent double-submit (button disabled + spinner while loading) |
 
 ### Form Backend
 
-- **Service:** HubSpot (embedded form or API submission)
-- **Integration:** HubSpot native — code coming soon
-- **Success state:** HubSpot native thank-you/confirmation message
+- **Service:** HubSpot Forms API (custom form UI, NOT embedded HubSpot widget)
+- **Portal ID:** `45317917`
+- **Form ID:** `ae6ef02e-4e24-456c-8694-bf55bfeb1a7a`
+- **Approach:** Custom-built React form component styled to Figma spec, submitting to HubSpot via their Forms API
+- **Fields:** Use the existing HubSpot form's fields as-is (no changes needed in HubSpot)
+- **Success state:** Inline confirmation message (custom styled to match site branding)
+
+**Implementation Approach — Custom Form + HubSpot API:**
+
+We build our own form UI (fully styled to the new branding) and submit data to HubSpot's Forms API endpoint. This gives us full control over styling, validation UX, animations, and loading states without fighting HubSpot's injected CSS.
+
+**API Endpoint:**
+```
+POST https://api.hsforms.com/submissions/v3/integration/submit/45317917/ae6ef02e-4e24-456c-8694-bf55bfeb1a7a
+```
+
+**Request Payload Example:**
+```json
+{
+  "fields": [
+    { "objectTypeId": "0-1", "name": "firstname", "value": "John" },
+    { "objectTypeId": "0-1", "name": "lastname", "value": "Doe" },
+    { "objectTypeId": "0-1", "name": "email", "value": "john@company.com" },
+    { "objectTypeId": "0-1", "name": "phone", "value": "5551234567" },
+    { "objectTypeId": "0-1", "name": "company", "value": "Acme Bank" },
+    { "objectTypeId": "0-1", "name": "jobtitle", "value": "VP Digital Banking" },
+    { "objectTypeId": "0-1", "name": "message", "value": "Interested in learning more..." }
+  ],
+  "context": {
+    "pageUri": "https://nymbus.com/contact/",
+    "pageName": "Contact Us"
+  }
+}
+```
+
+**Important Notes:**
+- The `name` values in the payload (e.g. `firstname`, `lastname`, `email`, `phone`, `company`, `jobtitle`, `message`) must match the internal field names configured in the existing HubSpot form. Verify these in HubSpot's form editor before implementation.
+- `objectTypeId: "0-1"` = Contact properties (standard for lead forms).
+- No API key is required for the Forms API submission endpoint — it's a public endpoint authenticated by portal ID + form ID.
+- The existing HubSpot form and its fields remain unchanged. We're simply posting to it via API instead of using the embed widget.
+
+**Why custom form instead of embed:**
+- Full control over styling (dark theme, `#DCDEE0` card background, `#6B778C` border, specular button)
+- Native React validation states and animations (spinner, fade-in, error states)
+- No HubSpot CSS overrides or iframe quirks to fight
+- Cleaner integration with Next.js and the site's design system
+
+**Legacy Jekyll Embed Code (reference only — NOT used in new site):**
+```html
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "45317917",
+    formId: "ae6ef02e-4e24-456c-8694-bf55bfeb1a7a"
+  });
+</script>
+```
 
 ---
 
@@ -323,8 +378,8 @@ All open questions have been resolved:
 |---|----------|-----------|
 | 1 | Dropdown options (Field 6) | **Removed** — dropdown field deleted from form |
 | 2 | Multiple contact pages | All CTAs → /contact for Phase 1. Phase 2 will introduce variants and routing |
-| 3 | Form submission endpoint | **HubSpot** — code coming soon |
-| 4 | Success state design | **HubSpot native** success/confirmation state |
+| 3 | Form submission endpoint | **HubSpot Forms API** — custom form UI submitting to `https://api.hsforms.com/submissions/v3/integration/submit/45317917/ae6ef02e-4e24-456c-8694-bf55bfeb1a7a` |
+| 4 | Success state design | **Custom inline confirmation** styled to site branding |
 | 5 | Body copy truncation | Full text: "Contact Nymbus about platform, growth, modernization, partnership, or general business inquiries below." |
 | 6 | Form card styling | Solid fill `#DCDEE0`, stroke `#6B778C` 0.56px weight |
 | 7 | Required field indicators | **All fields required** — add required indicators for every field |

@@ -1,0 +1,40 @@
+{
+  "posts": {
+    "total": 55,
+    "migrated": 55,
+    "errors": []
+  },
+  "images": {
+    "total": 47,
+    "copied": 43,
+    "missing": [
+      "39f06d75-535d-4375-8fc1-d847614685ee.jpg",
+      "9b68bd92-c6e1-4ef9-a12f-9d6bed1c67a7.png",
+      "launch-brochure--thumb.png?v2",
+      "0745494a-1991-4139-9c8e-cc3efce3017c.jpg"
+    ]
+  },
+  "files": {
+    "total": 12,
+    "copied": 12,
+    "missing": []
+  },
+  "byType": {
+    "guide": 8,
+    "whitepaper": 6,
+    "article": 21,
+    "case-study": 3,
+    "report": 2,
+    "ebook": 1,
+    "video": 10,
+    "webinar": 1,
+    "infographic": 2,
+    "toolkit": 1
+  },
+  "byLinkType": {
+    "external": 25,
+    "pdf": 12,
+    "lp": 18,
+    "internal": 0
+  }
+}

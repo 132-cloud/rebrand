@@ -109,9 +109,9 @@ The Footer is a global component (Figma instance) that appears at the bottom of 
 | 4Y | Link | M&A acceleration → /solutions/parallel-core/#ma-acceleration |
 | 4Z | Link | Private label banking → /solutions/parallel-core/#private-label |
 | 4AA | Link | Sandbox innovation → /solutions/parallel-core/#sandbox |
-| 4AB | Link | Retail banking → /solutions/business-banking/ |
+| 4AB | Link | Retail banking → /solutions/retail-banking/ |
 | 4AC | Link | Business banking → /solutions/business-banking/ |
-| 4AD | Link | Commercial banking → /solutions/business-banking/#commercial |
+| 4AD | Link | Commercial banking → /solutions/commercial-banking/ |
 | 4AE | Column Heading | "Resources" |
 | 4AF | Link | Insights → /insights-hub/ |
 | 4AG | Link | AI → /ai/ |
@@ -167,9 +167,9 @@ The Footer is a global component (Figma instance) that appears at the bottom of 
 | M&A acceleration | /solutions/parallel-core/#ma-acceleration | Parallel Core |
 | Private label banking | /solutions/parallel-core/#private-label | Parallel Core |
 | Sandbox innovation | /solutions/parallel-core/#sandbox | Parallel Core |
-| Retail banking | /solutions/business-banking/ | Banking Segments |
+| Retail banking | /solutions/retail-banking/ | Banking Segments |
 | Business banking | /solutions/business-banking/ | Banking Segments |
-| Commercial banking | /solutions/business-banking/#commercial | Banking Segments |
+| Commercial banking | /solutions/commercial-banking/ | Banking Segments |
 
 ### Column 4: Resources
 
@@ -305,9 +305,9 @@ The Footer is a global component (Figma instance) that appears at the bottom of 
 | THEN | User is navigated to the business banking page or anchor |
 
 **Acceptance Criteria:**
-- Retail banking (4AB) → /solutions/business-banking/
+- Retail banking (4AB) → /solutions/retail-banking/
 - Business banking (4AC) → /solutions/business-banking/
-- Commercial banking (4AD) → /solutions/business-banking/#commercial
+- Commercial banking (4AD) → /solutions/commercial-banking/
 
 ---
 
@@ -484,5 +484,5 @@ The Footer is a global component (Figma instance) that appears at the bottom of 
 1. **Logo click** — Does clicking the Nymbus logo in the footer navigate to the homepage, or is it non-interactive?
 2. **Social media URLs** — Confirm exact profile URLs for LinkedIn, Twitter/X, and Medium.
 3. **Duplicate "Insights"** — The word "Insights" appears in both the Platform column (linking to /platform/#insights) and Resources column (linking to /insights-hub/). Is this intentional, and is the distinction clear to users?
-4. **Retail vs Business banking** — Both "Retail banking" (4AB) and "Business banking" (4AC) link to /solutions/business-banking/. Should Retail have its own destination?
+4. **Retail vs Business banking** — Both "Retail banking" (4AB) and "Business banking" (4AC) now have separate pages (/solutions/retail-banking/ and /solutions/business-banking/). Confirmed resolved.
 5. **Mobile layout** — How does the 5-column footer collapse on mobile? Accordion? Stacked single column?

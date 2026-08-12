@@ -1,0 +1,28 @@
+{
+  "migrationDate": "2026-08-12T03:05:04.637Z",
+  "totalProcessed": 81,
+  "totalErrors": 0,
+  "imagesCopied": 81,
+  "byYear": {
+    "2019": 2,
+    "2020": 6,
+    "2021": 35,
+    "2022": 12,
+    "2023": 8,
+    "2024": 6,
+    "2025": 11,
+    "2026": 1
+  },
+  "byTag": {
+    "leadership": 78,
+    "product": 70,
+    "customer-news": 81,
+    "company": 55,
+    "partnership": 71,
+    "award": 36,
+    "funding": 43
+  },
+  "withVideo": 5,
+  "withImage": 71,
+  "errors": []
+}

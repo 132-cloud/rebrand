@@ -13,6 +13,8 @@ PAGES
 /solutions/primary-core/    Primary Core
 /solutions/parallel-core/   Parallel Core
 /solutions/business-banking/    Business Banking
+/solutions/retail-banking/      Retail Banking
+/solutions/commercial-banking/  Commercial Banking
 /ai/                        AI Overview / Governed AI
 /labs/                      Nymbus Labs
 /insights-hub/              Insights Hub
@@ -68,10 +70,6 @@ AI ANCHORS
 /ai/#nymbus-mcp             Nymbus MCP (anchor)
 /ai/#applied-ai             Applied AI (anchor)
 
-
-BUSINESS BANKING ANCHORS
-----------------
-/solutions/business-banking/#commercial    Commercial (anchor)
 
 
 ===========================================================

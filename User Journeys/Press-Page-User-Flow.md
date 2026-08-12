@@ -333,10 +333,54 @@ These apply across the entire Press page (consistent with site-wide patterns):
 
 ## Content Management Notes
 
-- **Press Releases:** This section likely pulls from a CMS or blog system. The 3 entries shown are placeholders — the production page should display the most recent releases dynamically.
+### Press Releases Content Source
+
+Press releases are managed as MDX files in the `/content/press/` directory. See [`/content/press/README.md`](/content/press/README.md) for full migration documentation.
+
+**Content Location:** `/content/press/releases/*.mdx`
+
+**Frontmatter Schema:**
+```yaml
+---
+title: "Press Release Title"
+slug: press-release-slug
+date: 2025-09-10
+subtitle: "Optional subtitle"              # Optional
+heroImage: ./images/PR-91.jpg              # Optional
+excerpt: "Brief description..."
+tags:                                      # Optional
+  - partnership
+  - customer-news
+videoType: vimeo                           # Optional - vimeo | youtube
+videoId: "1114058429"                      # Optional
+---
+```
+
+**URL Pattern:** `/press/[slug]`
+
+**List Page Behavior:**
+- Fetch all MDX files from `/content/press/releases/`
+- Sort by date descending (newest first)
+- Display with pagination (10 per page)
+- Each card shows: thumbnail (`heroImage`), title, "Read release →" link
+
+**Detail Page Behavior:**
+- Render full MDX body content
+- Show video embed above body if `videoType` and `videoId` present
+- Display date below title
+- Include "Back to Press" navigation
+
+**Content Stats:**
+- Total press releases: 79
+- Date range: 2019–2025
+- Images: `/content/press/images/PR-*.jpg`
+
+---
+
+### Other Content Notes
+
 - **Media Logos:** The 5 logo slots should display actual media outlet logos (publications that have covered Nymbus).
-- **Press Kit Assets:** Each card links to a downloadable file. The "Download the kit" button likely provides a bundled ZIP of all assets.
-- **Dynamic content:** Headlines, thumbnails, and dates for press releases should auto-populate from the CMS.
+- **Press Kit Assets:** Each card links to a downloadable file. The "Download the kit" button likely provides a bundled ZIP of all assets hosted in Google Drive.
 
 ---
 

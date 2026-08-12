@@ -233,9 +233,9 @@ The header navigation is a global component present on every page of the site. I
 
 | Ref | Link | Destination |
 |-----|------|-------------|
-| 3AM | Retail | /solutions/business-banking/ |
+| 3AM | Retail | /solutions/retail-banking/ |
 | 3AN | Business | /solutions/business-banking/ |
-| 3AO | Commercial | /solutions/business-banking/#commercial |
+| 3AO | Commercial | /solutions/commercial-banking/ |
 
 ### Column 4: Featured Card
 
@@ -509,9 +509,9 @@ Reserved space — no links in Phase 1.
 | **THEN** | User is navigated to the corresponding business banking page or anchor |
 
 **Destinations:**
-- Retail → /solutions/business-banking/
+- Retail → /solutions/retail-banking/
 - Business → /solutions/business-banking/
-- Commercial → /solutions/business-banking/#commercial
+- Commercial → /solutions/commercial-banking/
 
 ---
 
